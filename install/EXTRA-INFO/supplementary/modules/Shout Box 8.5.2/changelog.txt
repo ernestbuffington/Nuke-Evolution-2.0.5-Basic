@@ -1,0 +1,514 @@
+
+Shout Box - Changelog
+============================================
+
+v8.5.1 changes/additions:
+
+-Fixed the SQL installers hanging on _conf section. (thanks scott).
+
+============================================
+
+v8.5 changes/additions:
+
+-Removed a trailing space in the block on line 345 when saving the shout.
+-Fixed the Prune option deleting all shouts.
+-Fixed users entering spaces in URLs trying to get around the URL engine.
+-Fixed where if anonymous is not allowed to shout, a user had multiple tabs open, logs out in one, and tries to shout in another, they are now disallowed.
+-Fixed name input box not reshowing "Name" if a username was given, a shout was disallowed by rules, and the previous user name was fully deleted out of input box.
+-Fixed text input box not reshowing "Message" if a message was given, a shout was disallowed by rules, and the previous message/text was fully deleted out of input box.
+-Removed function expand() and function contract() from shoutbox.js
+-All browsers now use the smilies drop down code developed for FireFox, Mozilla, And NS.
+-Fixed a htmlspecialchars() bug not always protecting database from anonymous usernames (Thanks jay3ld).
+-Fixed bbcode not being translated in history search results.
+-Added support for .mobi and .xxx URL extensions approved by ICANN.
+-Expanded checks for mal-shouts.
+-Added admin option to block shouts with .xxx URLs in them.
+-The shout comment is deleted from memory as soon as javascript or a .xxx URL (if blocked) is detected. This is by design and is not a bug.
+-Added the ability to ban subnets like 123.456.*
+-Fixed the admin area not knowing what version of the shout box is installed.
+-Significant inprovements in the .php SQL installer UI.
+-Added and removed some language definitions.
+
+============================================
+
+v8.01 changes/additions:
+
+-Fixed the automatic part of the conversion tool from breaking smilies.
+
+============================================
+
+v8.0 changes/additions:
+
+-Added Google's Anti-Spam (GAS) to the URL engine. URLs will now be "gassed".
+-Added URL redirect to block to hide admin.php file name in PHP-Nuke v7.6+ (only when viewing admin area).
+-Added page title to module area.
+-Updated troubleshooter.txt
+-FTP URLs now use the redirect when viewed in the admin area in PHP-Nuke v7.6+
+-Updated install.txt
+-Smilies are now hidden in NS, Mozilla, FireFox, and any other browsers out there.
+-Wait cursor in scrolling area replaced with text cursor.
+-Improved the URL engine.
+-Added basic bbcode: [b] [i] [u]
+-Fixed the censor being caps sensative.
+-Removed id numbers from SQL installers when auto_increment is used.
+-Removed auto-increment when not necessary in SQL table.
+-Added a per-admin drop down preference to control quantity of shouts viewed on the 'Manage Shouts' tab.
+-Fixed multiple spaces in a row causing some databases to reject shouts.
+-Replaced the GraphicAdmin() call in admin area with LinkAdmin() for faster page loads while in admin.
+-Added onblur event to the Name and Message input boxes.
+-Replaced onclick event with onfocus in the Name and Message input boxes.
+-Fixed default arrow images not being set when themeing database not yet setup.
+-Removed a lot of inline CSS in favor of the CSS in the theme's .css file.
+-Added CSS instructions to install.txt
+-Reduced the font size of the copyright in the block to 9
+-SB_SQL_installer.php now sets default colors for themes if that theme is not already set.
+-Added a option for users to earn points for each shout.
+-Shout history search default changed from fuzzy to exact phrase.
+-Fixed a potential problem with arrays in shout history.
+-Fixed the version checker with certain versions of mySQL.
+-Remade the shout history page menu.
+-Added a new menu to the Manage Shouts admin page.
+-Added admin option to control the amount of shouts per page in the shout history.
+-Admin shout management is now based on pages instead of shout numbers.
+-Added page recall when submitting a sticky shout
+-Fixed a display error in admin area when viewing really old shouts from a few versions back.
+-Changed background color of "Note" on block to #FFFFE1
+-Added server timezone admin setting.
+-Timezone now follows a logged in user's profile setting.
+-Shout time and date are now saved in unix timestamp.
+-Time and date format now follows a logged in user's profile setting.
+-Compiled "display time and date" options into 1 option.
+-Reworded a few admin layout settings.
+-Old time and date format now only used for logged out and anonymous users.
+-Updated troubleshooter.txt
+-Updated Requesting Features.txt
+-Updated install.txt
+-Added Fighting spam.txt
+-Updated credits.txt
+-Added admin option to prune shouts older than X days.
+-Added Conversion_Tool.php to convert shouts to the new format.
+
+
+============================================
+
+v7.5.1 changes/additions:
+
+-Fixed a possible SQL problem in both installers.
+
+============================================
+
+v7.5 changes/additions:
+
+-Fixed mouseover cursor not changing in one instance.
+-Updated credit.txt
+-Added language definition for Remove.
+-Fixed version checker to work with newer versions of PHP.
+-Version checker now only checks once a day for a newer version.
+-Updated for PHP-Nuke v7.6 (still compatible back to v6.5).
+  -Compatible with renaming admin.php to whatever you like.
+  -URL redirect to hide admin.php file name in PHP-Nuke v7.6+
+-Improved security in case and links admin files.
+-Improved security in admin/modules/shoutbox.php
+-Added modules admin area with limited admin rights. (users of nuke 7.4 and earlier wont be able to use this).
+-Updated troubleshooter.txt
+-Updated install.txt
+
+============================================
+
+v7.0 changes/additions:
+
+-Fixed a small bug in case.shoutbox.php
+-Added checking for shoutbox.js to the setup and security monitor.
+-Re-designed the admin area.
+-The version checker now checks a small file on the OurScripts.net server for a new version.
+-Shout Box width always set to 100% now
+-Removed admin control for Table Width.
+-The shout box block now looks good in the center position.
+-Removed URL, FTP, AIM, TeamSpeak, E-Mail, IRC, and Gopher language definitions to avoid conflicts with shout editing.
+-Added ability for admins to edit shouts.
+-Changed 'Error' to 'Note' in all areas.
+-Fixed remote avatars not showing in the shout history.
+-Nickname maxlength now set in html.
+-Message maxlength now set in html.
+-Improved the name and message input boxes on the block.
+-Set maxlength on search input box to 100 characters.
+-Removed 'Odd number brackets' error.
+-Minimum length shout changed from 2 to 1 characters.
+-Whitespace will now be removed off the ends of shouts and nicknames.
+-Shouts with & in URL's will now validate (converted to &amp;).
+-Double quotes " in posts are now converted to &quot;
+-Single quotes ' in posts are now converted to &#039;
+-Wordwrap no longer trashes html characters.
+-Added Minimum Requirements.txt
+-Fixed editing shouts with email addresses.
+-Email addresses are now auto-encoded to hex to prevent spammers from harvesting addresses.
+-Combined name and text input box width controls into one control.
+-Removed _NAMEINPUTBOXWIDTH admin language definition.
+-Removed _TEXTINPUTBOXWIDTH admin language definition.
+-Added _BLOCKINPUTBOXWIDTH admin language definition.
+-Updated copyright.php
+-Replaced old theme color system:
+  -Colors are now per theme adjustable in admin area.
+  -Increased number of color options to 5.
+  -Border on shout history page menu now uses theme colors.
+  -Removed ShoutColors.php
+  -Removed theme coloring directory in install zip.
+  -Separated block background colors from the rest to allow for a background image behind scrolling shouts.
+-Improved the shoutbox.js code and trimmed 375 bytes of bloat.
+-Added optional background images to the shout box scroll area.
+-The box arrows are moved into the modules directory and controlled by the admin area.
+-Revised install.txt for new color and image themeing methods.
+-Smilies/Emoticons are now matched in whole words only and work with special characters.
+-Censor now works with special characters.
+-Added Sticky Shouts option in admin area. These shouts will always be at the top of the block scroll.
+-Moved default arrow images from smilies directory to modules/Shout_Box/images/ directory
+-Moved paypal image from smilies directory to modules/Shout_Box/images/ directory
+-Edit and Delete link hover text in module is now multi-language.
+-Moved language definitions to within the module directory to prevent overwrites and simplify setup.
+-Removed old language definitions.
+-index.html no longer lists as an image source in Emoticons drop down.
+-Updated troubleshooter.txt
+-Updated install.txt
+-Mouseover cursor in scrolling area is now 'text' instead of 'wait'.
+
+============================================
+
+v6.02 changes/additions:
+
+-Trimmed bloat from shoutbox.js. Shaved 932 bytes.
+-Renamed variables and functions in shoutbox.js to help compatability with other people's themes, modules, and blocks.
+-Updated JavaScript in block-Shout_Box.php
+-Updated SQL version to 6.02 (run SQL installer to update yours)
+-Updated copyright.php to show v6.02
+-Updated credits.txt
+-Updated Spanish language definitions.
+-Added Turkish and Italian language definitions.
+
+============================================
+
+v6.01 changes/additions:
+
+-Increased the server time offset choices to -23.5 to +23.5
+-Added mouse cursor changes to the block images, scrolling area, and smilies.
+-Added AIM links to URL's disallowed blocker.
+-Fixed the URL handler in the block dropping links to lowercase letters.
+-Fixed the URL handler in the module shout editor dropping links to lowercase letters.
+-Updated SQL version to 6.01 (run SQL installer to update yours)
+-Updated copyright.php to show v6.01
+
+============================================
+
+v6.0 changes/additions:
+
+-Added avatars to the Shout History module.
+-Removed Anonymous usernames in Shout History having links to 'Your account'.
+-Censor now only replaces on matches of whole words only. (Thank you crrj!)
+-If 'Allow URL tag in shouts' is set to No, the scanner will now successfully stop users entering URLs.
+-If URLs are allowed, they are now formatted nicely as one of the following possibilities:
+  -[URL] [FTP] [IRC] [TeamSpeak] [AIM] [Gopher] [E-Mail]
+-Word wrap for long words no longer affects URLs.
+-You can now search your shout history with various options.
+-Clicking the 'Ban' link in '10 per page' admin area now returns you to the same page.
+-Ban now covers all Shout History functions.
+-Removed Anonymous usernames in block posts having a link to 'Your Account'.
+-Fixed update counts on admin forms being off by 1.
+-Improved load time of block and shoutbox.js.
+-Removed /modules/Shout_Box/help.php
+-Firefox, Mozilla, and NS now have the smilies at the bottom of the shout box. Just click them like in the forum.
+-Changed the input box and Shout button layout when rendered on Firefox, Mozilla, and NS.
+-'Allow anonymous visitors to shout' option defaults to yes on full install
+-Added version number in database
+-Added server time offset in half hour increments +12 to -12.
+-Added a Setup and Security monitor.
+-The link in 'Last 10 shouts' now shows the user as banned instead of offering to ban them again.
+-Created a universal SQL installer + repair tool.
+-Removed old SQL files & directories.
+-Updated troubleshooter.txt
+-Rewrote SQL section of install.txt
+-Added new English language definitions to admin, module, and block.
+-Added Spanish language definitions to admin, module, and block.
+-Fixed the ' in Anonymous nicknames causing database corruption.
+-Updated copyright.php to show v6.0
+
+============================================
+
+v5.04 changes/additions:
+
+-Fixed a conflict with the uid variable in the block and another block.
+-Expanded troubleshooter.txt
+-Fixed the pause image transparency.
+
+============================================
+
+v5.03 changes/additions:
+
+-Added an area in the shoutbox.js file for adding additional window.onload events.
+-Expanded troubleshooter.txt
+-Added Requesting features.txt
+-Added JavaScript section to install.txt
+-Moved the language definitions outside the html upload directory.
+-Tweaked the install.txt language area.
+
+============================================
+
+v5.02 changes/additions:
+
+-Fixed the SQL installer (found the bug that causes the empty shoutbox on install).
+-SQL installer now looks for mainfile.php and warns if it doesn't exist.
+-SQL installer now tells you your database prefix. If it incorrect, you can take action.
+-SQL code now has column names to ensure compatability.
+-Improved the ban feature in the shout box block.
+-Added troubleshooter.txt
+-Fixed the delete link in the shout history.
+
+============================================
+
+v5.01 changes/additions:
+
+-Changed the .php SQL installers to require once mainfile.php instead of include it.
+-Fixed the version number to read v5.0 in SQL installers.
+
+============================================
+
+v5.0 changes/additions:
+
+-Clarified the 'Remove old' area in the install instructions.
+-Block area loads faster with no loss in functionality
+   -string variable added.
+   -Removed 150 bytes of marked out JavaScript.
+   -Block area uses 4.4k less bandwidth for each successive viewing of shout box (JavaScript cached).
+-Fixed 'Oldest first' not showing the latest post.
+-Removed excess global variables from shout history.
+-Completely rewrote the censor. It now works perfectly.
+-UPPERCASE letters are now allowed in posts. (censored posts in PHP 4.x will lowercase the post. PHP 5.x will not lowercase when censored post.)
+-Spaces in anonymous nicknames are now replaced with _
+-Added shout error reporting. Now users will know why a shout didn't post.
+-Fixed the 'reinstalling database SQL' in admin area breaking the smilewinkgrin.gif
+-Added admin option to choose time and date formatting (this only affects new shouts. No i cant make an option to alter old shouts).
+-Fixed the extra spacing that IE puts at the bottom of the shout box block.
+-Fixed admin spacing when viewed with IE.
+-Added title to Emoticons popup page for NS style browsers.
+-Fixed the smilies in the block not working while viewing the shout history (form name conflict).
+-Allowed for smilies drop in Konquerer 3.2.x
+-Massive decrese in use of resources.
+-Conflicts between blocks/modules and the shout box should be fixed (Most variables are now local).
+-If a shout had an error, the users nickname and previous post attempt are pre-filled in.
+-Added pre-emptive IP and nickname banning to the shout box block. No longer allows banned users to see the shout area.
+-Added banning to the shout history module.  No longer allows banned users to see the shout history.
+-Increased admin area security (Added functions and removed more globals).
+-Removed option to empty shout database (security reasons).
+-Removed option to reinstall shout database (security reasons).
+-Sorted admin functions to make code easier to maintain.
+-Censor page now loads to censor page after an action.
+-Emoticon page now loads to emoticon page after an action.
+-If no names are banned, the banned name list in admin area doesn't show.
+-If no IPs are banned, the banned IPs list in admin area doesn't show.
+-Fixed the edit/update banned names list.
+-Fixed the edit/update banned IPs list.
+-If no Emoticons are listed, the Emoticons list in admin area doesn't show.
+-Fixed the edit/update Emoticons list.
+-If no censored words are listed, the censored list in admin area doesn't show.
+-Fixed the edit/update censored words list.
+-Added ban user link in the 'Last 10' admin area.
+
+============================================
+
+v4.6 changes/additions:
+
+-Shout box history menu colors now follow admin/theme colors.
+-Language instructions added back in.
+
+============================================
+
+v4.5 changes/additions:
+
+-Fixed many JavaScript errors resulting in a significantly less CPU load.
+-Fixed 52 XHTML validation errors in the 'logged in' state in the block.
+-Tested block in all states. It now validates as XHTML 1.0 Transitional.
+-Fixed the nowrap bug in the module for validation.
+-Tested shout history module in all states. It now validates as XHTML 1.0 Transitional.
+-Simplified admin area 'Name ban' add form.
+-Simplified admin area 'IP ban' add form.
+-Split the main admin area into 3 tables for understanding of the top form.
+-Renamed 'Submit settings' to 'Save settings'
+-Placed 'IP ban add' before 'IP ban modify'
+-Placed 'Name ban add' before 'Name ban modify'
+-Fixed </li> bug in admin '10 per page' edit area.
+-Changed admin 'edit all' listing from dots to numbered.
+-Tested admin area in all states. It now validates as XHTML 1.0 Transitional.
+-Replaced all <font> tags with <span> tags.
+-Fast reverse speed now equals fast forward speed.
+-Block area loads faster with no loss in functionality.
+-Centered the block scroll, inputs, controls, and smilies.
+-Block now looks good in centered position.
+-Added 'Name input box width' admin control.
+-Added 'Text input box width' admin control.
+-Added 'Smilies per row within the drop' admin control.
+-Added 'Shouts display order' admin control.
+-Improved admin checking.
+-Renamed, updated and tested .php SQL upgrade files.
+-Updated .php SQL installer.
+-Added version number and update button to admin area.
+-Added multi-language capability to the shout box block.
+-Added multi-language capability to the shout box admin area.
+-Added shoutbox.gif admin icon.
+-Fixed journals grabbing the last comment off the shoutbox when posting a comment in the journals.
+-Clarified theme coloring and theme images instructions.
+-Clarified install.txt instructions.
+
+============================================
+
+v4.0 changes/additions:
+
+-Renamed block-ShoutBlock.php to block-Shout_Box.php
+-Minor code changes in block-Shout_Box.php for XHTML compliance and better display. (Unfortunately, this displays the IE forms bug that leaves a space after forms. All other browsers are fine.)
+-Moved the shout box arrow images and smilies to a new directory.
+-Added themeable arrow and pause images
+-Renamed the extraction directory to Shout_Box
+-Renamed the download file to Shout_Box.zip
+-Renamed shoutbox_sql_install.php to shout_box_sql_install.php
+-Renamed ShoutBlock.sql to Shout_Box.sql
+-Renamed ShoutBlock module to Shout_Box (update your links!)
+-Increased the width of the clickable area on the shout box history menu links at the bottom of the module
+-Removed the ability for anonymous users to be able to click nicknames in the Shout Box history and to view the user's profile even though they can't get any useful information.
+-Moved the 'Empty shout database' and 'Reinstall database' options in admin to the bottom and within their own table to help avoid accidental activation.
+-Registered users may now delete their own posts in the shout history if option set to yes in admin.
+-Fixed some minor items in the admin area.
+-Moved the theme colors option in admin up next to background colors options because they are related.
+-Fixed table errors in 'Manage censor' and 'Manage emoticons'.
+-Fixed admin 'manage emoticons' image display code (for validation).
+-Renamed case file in admin.
+-Renamed links file in admin.
+-Renamed admin ShoutBlock.php to shoutbox.php
+-SQL tables renamed
+-Added copyright.php to the shout history module.
+-Added ability to color backgrounds differently in each theme.
+-Fixed shout history page counting error.
+-Optimized shout history SQL code (less load on server and faster results).
+-Removed modules/Shout_Box/functions.php
+-Up, Down, and Pause images are no longer links to #
+-Replaced 'Previous 10' and 'Next 10' links in 'Last 10' area of admin with buttons that work.
+-Fixed names on Admin buttons.
+-Replaced 'remove' links with checkboxes on '10 per page' shout management
+-Grouped '10 per page' and 'All' shout management on one line.
+-Fixed manage emoticons page not reloading itself after 'update' and 'add'
+-Added: when removing shouts in 'Last 10' admin area, it now goes back to the same point in the list.
+-Fixed: IP ban area in admin now accepts IPs
+-Fixed: IP ban area in admin now accepts IP modifications.
+-Removed useless language files.
+-Removed .htaccess file in language directory.
+-Added .txt to the end of the names of some files for Windows users.
+
+============================================
+
+v3.5 changes/additions:
+
+-Netscape, Mozilla, and Firebird now display cell coloring in the scroll area.
+-Fixed many shoutbox_sql_install.php bugs.
+-Did a small fix in IP ban scan.
+-Nicknames that aren't in the database are no longer linked to in both the shout box and shout box history.
+-Completely remade the shout box history module to include:
+    -Spacing changes
+    -XHTML 1.0 Transitional and HTML 4.01 validation
+    -Removed anonymous nick linking
+    -Added history title
+    -Added language definitions
+    -Added a dynamic page menu
+-Block and module now validate XHTML 1.0 Transitional. Note: The block portion will not validate at the lesser HTML 4.01 transitional because of the use of Javascript.
+-Set new default colors using hex numbers #FFFFFF
+-Linked all background colors to the setting in admin area. Themed colors coming soon.
+-Set new welcome message.
+-Added lang-English definitions. If you use otherwise, its up to you to make translations.
+-Admin area fixes:
+    -now follows fonts in CSS themes
+    -Fixed many tables bugs
+    -Fixed alignment problems
+    -Added alternating colors to make it easier to administer.
+    -Fixed some text descriptions
+    -Added administration title
+    -Added some XHTML fixes
+
+MORE FEATURES AND FIXES TO COME! :)
+
+============================================
+
+v3.0.1 changes/additions:
+
+- Replaced $HTTP_USER_AGENT with $_SERVER['HTTP_USER_AGENT'] to fix the smilies drop down issue
+ created by different PHP installation settings and version.
+- Detailed the instructions some more.
+
+============================================
+
+v3.0.0 changes/additions:
+
+- Added anti-spamming code.
+- Added 'Manage Last 10 shouts' in Admin area. Same as 'Manage shout database' except it only lists the last 10 shouts (saves bandwidth).
+- Reversed the direction 'Manage shout database' was listed. Now is newest to oldest.
+- Added 'bottom of page' and 'cancel' Options links at the top and bottom of 'Manage shout database' page.
+- Changed format of 'Manage shout database' page to bullets (saves bandwidth and conserves screen space).
+- Renamed change file to changelog.
+- Reformatted changelog.
+- Reformatted credits (no credit is lost).
+- Renamed 'readme' to 'install'
+- Reformatted the installation instructions
+- Added 'released' text file. Shows the release dates of versions. (sorry i don't have the dates of older versions).
+
+============================================
+
+v3.0.0 beta 3 changes/additions:
+
+- Fixed the width and height properties in the admin panel not working. HINT: this will allow you to use the block in the center if you wish (more to come on this).
+
+============================================
+
+v3.0.0 beta 2 changes/additions:
+
+- Fixed the ' crashing the shoutbox. Its now replaced with `. Fixed the shoutbox_sql_install.php erroring out.
+- Removed shoutblock_OLD.php.
+
+============================================
+
+v3.0.0 beta 1 changes/additions:
+
+- Rewrote the SQL to use the abstraction layer
+- Added the auto scroller
+- Added the user scroll controls
+- Added a .sql install file
+- Added censor to the anonymous nickname input box (exact match required. fuzzy match coming)
+- Anonymous users now can't clone registered nicknames (clone attempt results in no posting to shoutbox)
+- New install instructions
+- Changed shoutbox icon in admin to faq.gif (better than using encyclopedia.gif).
+
+============================================
+
+v2.6.1 changes/additions:
+
+- Made URL paths relative instead of absolute to the web root in blocks/block-ShoutBlock.php and modules/Qshoutblock/index.php
+
+============================================
+
+v2.6 changes/additions:
+
+- Added back in the ability for anonymous users to put in a nickname.
+- Checked to see if the smilies drop works with Netscape 7.1 and Mozilla 1.3.1 and no such luck.
+
+============================================
+
+v2.5 changes/additions:
+
+- Added compatability for more browsers including Opera and Konquerer
+- Added a link to the shoutbox history module
+- Changed the smilies link for a button centered everythng nice
+- Improved the sizing of the tables
+- Fixed many coding errors
+- Fixed a spacing bug in the shoutbox module time display
+
+============================================
+
+v2.4 changes/additions:
+
+- Use site themes
+- Admin section clean up
+- Fixed username for anonymous users
+

@@ -1,0 +1,9 @@
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>  
+
+<FilesMatch "\.(gif|png|jpe?g)$">
+Order Allow,Deny
+Allow from all
+</FilesMatch>

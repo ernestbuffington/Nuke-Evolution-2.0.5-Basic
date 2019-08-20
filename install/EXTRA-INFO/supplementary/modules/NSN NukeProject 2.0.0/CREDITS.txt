@@ -1,0 +1,82 @@
+/********************************************************/
+/* NukeProject(tm)                                      */
+/* By: NukeScripts Network (webmaster@nukescripts.net)  */
+/* http://www.nukescripts.net                           */
+/* Copyright (c) 2000-2005 by NukeScripts Network         */
+/********************************************************/
+
+==========================
+NukeProject(tm) Developers
+==========================
+
+* Bob Marion :: NukeScripts Network
+~ http://www.nukescripts.net
+
+
+/********************************************************/
+/* NSN Work Board                                       */
+/* By: NukeScripts Network (webmaster@nukescripts.net)  */
+/* http://www.nukescripts.net                           */
+/* Copyright (c) 2000-2005 by NukeScripts Network         */
+/********************************************************/
+/* WorkBoard                                            */
+/* Copyright (c) 2003 by Michael Squires                */
+/* All rights reserved.                                 */
+/* http://www.burnwave.com/                             */
+/********************************************************/
+
+=====================
+Work Board Developers
+=====================
+
+* Bob Marion :: NukeScripts Network
+~ http://www.nukescripts.net
+
+* Michael K. Squires :: Burnwave Development Group
+~ http://www.burnwave.com
+
+
+/********************************************************/
+/* NSN Work Probe                                       */
+/* By: NukeScripts Network (webmaster@nukescripts.net)  */
+/* http://www.nukescripts.net                           */
+/* Copyright (c) 2000-2005 by NukeScripts Network         */
+/********************************************************/
+/* Probe                                                */
+/* Copyright (c) 2003 by Michael Squires                */
+/* All rights reserved.                                 */
+/* http://www.burnwave.com/                             */
+/********************************************************/
+
+=====================
+Probe Developers
+=====================
+
+* Bob Marion :: NukeScripts Network
+~ http://www.nukescripts.net
+
+* Michael K. Squires :: Burnwave Development Group
+~ http://www.burnwave.com
+
+
+/********************************************************/
+/* NSN Work Request                                     */
+/* By: NukeScripts Network (webmaster@nukescripts.net)  */
+/* http://www.nukescripts.net                           */
+/* Copyright (c) 2000-2005 by NukeScripts Network         */
+/********************************************************/
+/* Probe                                                */
+/* Copyright (c) 2003 by Michael Squires                */
+/* All rights reserved.                                 */
+/* http://www.burnwave.com/                             */
+/********************************************************/
+
+=====================
+Probe Developers
+=====================
+
+* Bob Marion :: NukeScripts Network
+~ http://www.nukescripts.net
+
+* Michael K. Squires :: Burnwave Development Group
+~ http://www.burnwave.com

@@ -1,0 +1,2 @@
+		{BIRTHMONTH_SELECT}
+		<input type="text" class="post" name="bday_day" size="2" maxlength="2" value="{BDAY_DAY}" onfocus="this.select()" />, <span class="gensmall">{L_OPTIONAL}</span> <input type="text" class="post" name="bday_year" size="4" maxlength="4" value="{BDAY_YEAR}" onfocus="this.select()" />

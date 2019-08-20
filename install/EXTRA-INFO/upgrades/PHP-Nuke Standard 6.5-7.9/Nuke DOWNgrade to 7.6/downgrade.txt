@@ -1,0 +1,39 @@
+/*****[NUKE-EVOLUTION BASIC: Upgrade users ]*************************
+
+ Before You Begin
+ ----------------
+ If you have not read the readme.txt in the previous folder you MUST
+ do so before you continue.
+ 
+ This upgrade is meant for those users with a PHP-Nuke version between 
+ 7.7 and 7.9.  If this is not you then you need to STOP!
+ 
+ Read EACH step COMPLETELY before attempting that step!!!
+ 
+ First Step
+ ----------
+ Upload the correct downgrade-7x-76.php file that matches your current version.
+ 
+ For example if you have Nuke 7.7 right now you need to upload downgrade-77-76.php
+ 
+ Second Step
+ -----------
+ Run http://www.yoursite.com/downgrade-7x-76.php
+ 
+ If you see an error when creating the database it might be that the field
+ exists because you had the mod already installed.  If you are unsure of the
+ errors you get or you are having a problem after the install please contact
+ us for help.
+
+ To help us better understand the problem you should WRITE DOWN the errors
+ so when asked what they were you can tell us.  Copy and paste into notepad
+ is a good way to keep them.
+ 
+ Third Step
+ ----------
+ Return to the Third Step in the readme.txt located in the previous folder
+ 
+ Manual Upgrade
+ --------------
+ 
+ ************************************************************************\

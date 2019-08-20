@@ -1,0 +1,42 @@
+/*****[NUKE-EVOLUTION BASIC: Sommaire Parametrable 2.1]******************
+      Traduzione italiana a cura di www.nuke-evolution.it
+      Staff: LuckyLuciano  pex1968  _-Paky-_
+      Info: info@nuke-evolution.it 
+
+ 
+ Primo Step
+ ----------
+ esegui il file install sql (sql/install-sommairev21ita.sql)
+ 
+ Secondo Step
+ ----------
+ Upload tutti i files nella cartella html rispettando il percorso
+ 
+ Terzo Step
+ ----------
+ 
+ Apri
+ ====
+ admin/language/lang-english.php
+ 
+ Cerca
+ =====
+ ?>
+ 
+ Dopo Aggiungi
+ ============
+ define_once("_SOMMAIRE","Menu");
+ 
+ Quarto Step
+ -----------
+ Attiva il blocco nell'amministrazione blocchi
+ 
+ Quinto Step
+ -----------
+ Configura il blocco usando il menuamministrativo
+ 
+ Sesto Step
+ ----------
+ Usalo e divertiti
+
+ ************************************************************************\

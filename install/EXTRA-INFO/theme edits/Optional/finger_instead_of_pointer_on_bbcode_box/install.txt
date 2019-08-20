@@ -1,0 +1,11 @@
+#
+#-------[ OPEN ]----------------------------------------------------
+#
+themes/YOUR_THEMES/style/style.css
+
+#
+#-------[ ADD TO END OF FILE ]--------------------------------------
+#
+
+.postimage {cursor: pointer;}
+.postimage:hover {background-color: #C2CFE5;cursor: pointer;}

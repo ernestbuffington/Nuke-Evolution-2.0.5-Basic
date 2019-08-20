@@ -1,0 +1,52 @@
+Credits for Arcade Mod 3.0.2
+
+Phantomk - http://www.nukegaming.com
+JRSweets - http://www.jeffrusso.net
+TheSwede - http://www.puppies-clan.com
+
+Rica - http://www.thehorde.be/
+--------------------------------------------
+Original Mod Author
+Giefca - http://www.gf-phpbb.com
+
+Gave us the site
+Mighty_Y - http://www.portedmods.com
+Anor - http://www.portedmods.com
+
+Arcade Blocks and Ports of old versions
+Barcrest - http://baja.ods.com
+
+Arcade Header
+Nico - http://www.leschaos.net/
+
+Favorite Games Mod
+Kaz - http://www.asianpower-td.com
+
+Add a Game ACP
+Hellmonkeys - Monkeyblade62@hotmail.com
+
+Column Titles on the Category View
+gigaboss - http://www.gigaboss-leforum.fr.st/
+
+Category Name in Arcade Site Navagation
+Raydr
+
+Translation
+Santo
+
+Many, many mods and awesome support...
+Rica
+http://www.thehorde.be/
+
+Sweets
+http://www.sweets-net.com
+
+Slicer
+http://www.slicersplace.com
+
+Anyone else that helped and is missing, sorry it is unintentional.
+
+For an active list of users contributeing to the development of the mod
+please goto http://arcade.portedmods.com or http://www.portedmods.com
+once again if you have been left out its not intentional, but you can
+blame our lack of memory recall if it makes you feel better ;)

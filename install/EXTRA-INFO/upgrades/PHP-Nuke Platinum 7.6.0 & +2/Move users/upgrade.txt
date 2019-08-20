@@ -1,0 +1,69 @@
+/*****[NUKE-EVOLUTION BASIC: Upgrade users ]*************************
+
+ Before You Begin
+ ----------------
+ If you have not read the readme.txt in the previous folder you MUST
+ do so before you continue.
+ 
+ This upgrade is meant for those that want to start the site from scratch
+ and just upgrade the users.
+ 
+ THIS WILL DELETE EVERYTHING ELSE!!!
+ 
+ Read EACH step COMPLETELY before attempting that step!!!
+ 
+ First Step
+ ----------
+ Delete ALL file and folders on your website
+  
+ Second Step
+ -----------
+ Copy all the Evo files (html/) to your server.  Delete or skip uploading 
+ the install.php file and the install/ folder.
+ 
+ Third Step
+ ----------
+ Upload upgrade.php and upgrade/ folder located in this folder to your
+ website's root.
+ 
+ Fourth Step
+ -----------
+ Run http://www.yoursite.com/upgrade.php
+ 
+ Follow the prompts in the installer until it completes.
+ 
+ If you see the safe mode error or you wish to manually install everything,
+ see the manual upgrade steps below.  Then return to the Fifth step
+ 
+ If you see an error when creating the database it might be that the field
+ exists because you had the mod already installed.  If you are unsure of the
+ errors you get or you are having a problem after the install please contact
+ us for help.
+
+ To help us better understand the problem you should WRITE DOWN the errors
+ so when asked what they were you can tell us.  Copy and paste into notepad
+ is a good way to keep them.
+
+ Fifth Step
+ ----------
+ Return to the Third Step in the readme.txt located in the previous folder
+ 
+ Manual Upgrade
+ --------------
+ 
+ DO NOT DO THIS IF YOU HAVE RUN THE INSTALLER AND IT COMPLETED SUCCESSFULLY!!!
+ 
+ Do Step 2 (- Change config.php) in the install help file (install/2-install.pdf[htm])
+ 
+ Run the drop.sql in the upgrade (upgrades/PHP-Nuke Platinum 7.6.0 & +2/Move users & forum/upgrade/) 
+ folder
+ 
+ Run the install.sql in the upgrade folder
+ 
+ Run the upgrade.sql in the upgrade folder
+ 
+ Do Step 5 (- CHMOD/Permissions) in the install help file (install/2-install.pdf[htm])
+ 
+ Do Step 6 (- .htaccess & .staccess files) in the install help file (install/2-install.pdf[htm])
+ 
+ ************************************************************************\

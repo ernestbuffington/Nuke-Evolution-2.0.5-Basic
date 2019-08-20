@@ -1,0 +1,45 @@
+/*****[NUKE-EVOLUTION BASIC: Sommaire Parametrable 2.1.2 Beta 8]**********
+
+ 
+ First Step
+ ----------
+ Run the install sql (sql/install-sommairev212beta8.sql) in your favorite
+ MySQL tool such as phpMyAdmin
+ 
+
+ Second Step
+ ----------
+ Upload all the files in the html folder to your site
+
+ 
+ Third Step
+ ----------
+ 
+ Open
+ ====
+ admin/language/lang-english.php
+ 
+ Find
+ ====
+ ?>
+ 
+ Before Add
+ ==========
+ define_once("_SOMMAIRE","Menu");
+ 
+
+ Fourth Step
+ -----------
+ Turn the block on in the block admin
+ 
+
+ Fifth Step
+ ----------
+ Configure the block using the menu admin
+ 
+
+ Sixth Step
+ ----------
+ Enjoy
+
+ ************************************************************************\

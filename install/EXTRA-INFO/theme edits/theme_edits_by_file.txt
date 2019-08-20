@@ -1,0 +1,4440 @@
+/*****[THEME EDITS BY FILE]**********************************************
+This file holds all theme edits for Nuke-Evolution Basic which has been
+sorted alphabetically by file edits. It is recommended to use this file
+for theme edits from now on (not theme_edits_by_mod.txt).
+
+This theme conversion file is now in beta phase.
+
+The admin template edits have been seperated from the normal theme edits.
+*****[THEME EDITS BY FILE]**********************************************/
+
+
+/*****[CHANGES]**********************************************************
+-=[Mod]=-
+      Attachment Mod                           v2.3.14      06/10/2005
+      Advanced Username Color                  v1.0.5       06/11/2005
+      Recent Topics                            v1.2.4       06/11/2005
+      At a Glance                              v2.2.1       06/12/2005
+      Simply Merge Threads                     v1.0.1       06/12/2005
+      Advanced BBCode Box                      v5.0.0a      11/16/2005
+      Global Announcements                     v1.2.8       06/13/2005
+      Signatures control                       v1.2.3       06/13/2005
+      Super Quick Reply                        v1.3.2       09/08/2005
+      Select Expand BBcodes                    v1.0.2       06/14/2005
+      PM Quick Reply                           v1.3.5       06/14/2005
+      Force Word Wrapping - Configurator       v1.0.16      06/15/2005
+      View Topic Name While Posting            v1.0.5       06/15/2005
+      Topic Cement                             v1.0.3       06/15/2005
+      Topic display order                      v1.0.2       06/15/2005
+      Resize Posted Images                     v2.4.5       06/15/2005
+      Resize Attached Images                   v1.0.0       06/15/2005
+      View/Disable Avatars/Signatures          v1.1.2       06/16/2005
+      Quick Search                             v3.0.1       08/24/2005
+      Advance Signature Divider Control        v1.0.0       06/16/2005
+      Lock/Unlock in Posting Body              v1.0.1       06/17/2005
+      Anti Spam                                v1.1.0       06/18/2005
+      Signature Editor/Preview Deluxe          v1.0.0       06/22/2005
+      Count PM                                 v1.0.1       06/23/2005
+      Ranks summarize                          v1.0.4       06/24/2005
+      Separate Announcements & Sticky          v2.0.0a      06/24/2005
+      Staff Site                               v2.0.3       06/24/2005
+      Board Rules                              v2.0.0       06/26/2005
+      Forum Top Navigation Links               v1.0.0       06/26/2005
+      Forum ACP Administration Links           v1.0.0       06/26/2005
+      Display Topic Icon                       v1.0.0       06/27/2005
+      Users of the day                         v2.1.0       07/02/2005
+      Custom mass PM                           v1.4.7       07/04/2005
+      Nuke Patched                             v3.1.0       07/05/2005
+      Disable Board Admin Override             v0.1.1       07/06/2005
+      Disable Board Message                    v1.0.0       07/06/2005
+      Memberlist Find User                     v1.0.0       07/06/2005
+      PHP Syntax Highlighter BBCode            v3.0.7       07/10/2005
+      YA Forum Login                           v1.0.0       07/11/2005
+      Forum ACP Link in Forum Footer           v1.0.0       07/18/2005
+      Printer Topic                            v1.0.8       07/18/2005
+      Select Expand BBcodes (PHP add-on)       v1.0.2       07/19/2005
+      Flash! XSS Hack Fix                      v1.0.1       07/19/2005
+      PM threshold                             v1.0.0       07/19/2005
+      Theme Simplifications                    v1.0.0       07/19/2005
+      BBtoNuke 2.0.16 - 2.0.17                 v2.0.17      07/20/2005
+      Welcome PM                               v2.0.0       07/22/2005
+      Limit smilies per post                   v1.0.2       07/24/2005
+      Forum Statistics                    BETA v3.0.0       07/24/2005
+      Advanced Time Management                 v2.2.0       07/26/2005
+      YA Merge                                 v1.0.0       07/28/2005
+      User Administration Link on Profile      v1.0.0       07/29/2005
+      Must vote to see results                 v1.0.0       08/03/2005
+      XData                                    v0.1.1       08/09/2005
+      View Sig                                 v1.0.0       08/11/2005
+      At a Glance Options                      v1.0.0       08/17/2005
+      At a Glance Cement                       v1.0.0       08/17/2005
+      Extended Quote Tag                       v1.0.0       08/17/2005
+      Online/Offline/Hidden                    v2.2.6       08/21/2005
+      Select Expand & Extended Quote Tag       v1.0.0       08/26/2005
+      Hide Blocks                              v1.0.0       08/29/2005
+      Report Posts                             v1.2.3       08/30/2005
+      Show Groups                              v1.0.1       09/02/2005
+      Log Actions Mod - Topic View             v2.0.0       09/18/2005
+      Bottom aligned signature                 v1.2.0       10/01/2005
+      phpBB Copyright Update                   v1.0.0       10/03/2005
+      Display Writes                           v1.0.0       10/14/2005
+      BBtoNuke 2.0.17 - 2.0.18                 v2.0.18      11/01/2005
+ ************************************************************************/
+
+
+Before we start with the theme edits, we recommend to do a cleanup on
+your theme you are going to convert for Nuke-Evolution Basic:
+
+1. Copy the whole content of the folder theme edits/html/themes/YOUR_THEME
+   into your theme you are going to convert while keeping the folder
+   structure intact (rename YOUR_THEME to the actual theme name). This will
+   add necessary mod templates and images as well as the Nuke-Evolution
+   specific index.html file to your theme.
+
+2. If you run your site on a UNIX based server, you also can delete
+   all files called Thumbs.db if they exist.
+
+3. Find all files called index.htm and delete them.
+
+4. Go into the theme edits/addons/index_html folder and
+   add this file to every folder where you do not have an
+   index.php file.
+
+5. Certain themes miss some images which you may like to add
+   such as the arrows used for browsing previous and next pages. To add
+   those images to your theme, go into the theme edits/addons/images/arrows
+   folder and depending on your theme you choose one of the available colors.
+   Now upload these within the html folder and keep the folder structure
+   intact.
+
+Note: We have also provided theme edit instructions for the phpBB
+      Forum ACP templates for those who like to have matching
+      themes also in the phpBB Forum ACP which you will find near
+      the bottom of this file.
+
+Note: If you are supposed to ADD/REPLACE something, we suggest that you make
+      sure that it matches the coding style of the specific theme you are going
+      to convert. Because every themer codes differently, we cannot provide exact
+      ADD and REPLACE statements for every theme. To make the themes fully compatible
+      with Nuke-Evolution, try to get the edits as close as possible to the way the
+      theme has been created:
+
+      EXAMPLE: In the theme called Xtrato Veil you are supposed to add a specific line
+               which will not suit the current way the theme has been created so try to
+               match that style: You are supposed to do the following in regards to our
+               theme edit instructions in memberlist_body.tpl:
+
+               #
+               #-----[ FIND ]------------------------------------------
+               # Note: This line may vary depending on your theme. If so, search for the following part:
+               # {memberrow.JOINED}
+               #
+                  <td class="{memberrow.ROW_CLASS}" align="center" valign="middle"><span class="gensmall">{memberrow.JOINED}</span></td>
+
+               #
+               #-----[ AFTER, ADD ]------------------------------------------
+               #
+                  <td class="{memberrow.ROW_CLASS}" align="center" valign="middle"><span class="gen">{memberrow.ONLINE_STATUS}</span></td>
+
+               
+               However, this theme has been coded differently so you are supposed to
+               search for {memberrow.JOINED}. You should see that this line is
+               different to the code snippet you are supposed to add just below that.
+               For Xtrato Veil, the FIND line looks like this (see above example):
+
+                  <td class="{memberrow.ROW_CLASS}" align="center" valign="middle"><span class="gensmall">{memberrow.JOINED}</span></td>
+
+               Instead of adding what you see in the above AFTER, ADD statement, try to
+               make it so that it matches the other lines. So add the following instead:
+
+                  <td class="row2" align="center" valign="middle"><span class="gen">{memberrow.ONLINE_STATUS}</span></td>
+
+               That way you will make sure that the theme will have no issues and everything
+               should be aligned properly.
+               
+               As you may see, this is more for advanced theme converters so if you do not
+               feel comfortable converting certain themes, we suggest to look for people who
+               are dedicated to theme conversions.
+
+
+Alright, lets try to convert the theme now :)
+
+
+/*****[BEGIN]******************************************
+ [ Mod:     Regular Templates Theme Edits      v1.0.0 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]------------------------------------------
+# Note 1: Due to different theme styles, the following may not be found in your theme. If you have a
+# story_home.html & story_page.html skip down to the edits for those files
+#
+# ----ALT----
+#
+# Note 2: You will do the following edits twice once in the themeindex function and once in the themearticle function
+#
+themes/YOUR_THEME/theme.php
+
+#
+#-----[ FIND ]------------------------------------------
+#
+    ."<table border=\"0\" width=\"98%\" align=\"center\"><tr><td>\n"
+    ."<a href=\"modules.php?name=News&new_topic=$topic\"><img src=\"$tipath$topicimage\" alt=\"$topictext\" border=\"0\" align=\"right\"></a>";
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+    if(!empty($topicimage)) {
+        echo "<table border=\"0\" width=\"98%\" align=\"center\"><tr><td>\n";
+        echo "<a href=\"modules.php?name=News&new_topic=$topic\"><img src=\"$tipath$topicimage\" alt=\"$topictext\" border=\"0\" align=\"right\"></a>";
+    }
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: The line before the if statement. This is an example of what it will look like
+#
+    ."<tr><td colspan=\"2\" bgcolor=\"#FFFFFF\"><br />\n"
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+;
+
+#
+#-----[ FIND ]------------------------------------------
+#
+echo "</td></tr></table>\n";
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+    if(!empty($topicimage)) {
+        echo "</td></tr></table>\n";
+    }
+
+#
+#-----[ FIND ]------------------------------------------
+#
+    "</td></tr></table><br>\n"
+
+#
+#-----[ IN LINE BEFORE, ADD]------------------------------------------
+#
+echo
+
+# ----ALT----
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/story_home.html
+
+#
+#-----[ FIND & CUT]--------------------------------------
+#
+# Note 1: This a partial search
+# You will need to paste this into code below so I would suggest pasting it into 
+# your favorite text/code editor or saving it somewhere
+#
+<img src="$t_image"
+
+# Note 2: If the img code has a <a href and/or a <td directly before it and/or a </td></a> after it
+# you must cut that too.
+# Here is an example of a whole line with all the above:
+#
+<td width="25%" align="center" class="extra"><a href="modules.php?name=News&amp;new_topic=$topic"><img src="$t_image" border="0" alt="$topictext"  /></a></td>
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+# Note: In place of the code you just removed and saved
+#
+$topic_img
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/theme.php
+
+#
+#-----[ FIND ]-------------------------------------------
+#
+function themeindex
+
+#
+#-----[ FIND INSIDE THIS FUNCTION ]----------------------
+#
+if (file_exists("themes/$ThemeSel/images/topics/$topicimage")) {
+
+#
+#-----[ BEFORE, ADD ]--------------------------------------
+#
+if(!empty($topicimage)) {
+
+#
+#-----[ FIND INSIDE THIS FUNCTION ]----------------------
+#
+$t_image = "$tipath$topicimage";
+}
+
+#
+#-----[ AFTER, ADD ]-------------------------------------
+#
+# Note 1: Replace PUT THE CUT CODE HERE with the code you took from the previous edit
+# If you have a " inside of any of the code you pasted and it does not have a \
+# preceeding it you need to change it. So it should look like \"
+#
+# Example:
+#    Before: <img src="$t_image"
+#    After:  <img src=\"$t_image\"
+#
+$topic_img = "PUT THE CUT CODE HERE";
+} else {
+    $topic_img = "";
+}
+
+# Note 2: Repeat these steps with the story_page.html and the function themearticle
+
+# ----END ALT----
+
+#
+#-----[ IN-LINE BEFORE, ADD]------------------------------------------
+#
+echo 
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+$index == 1
+
+# OR:
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+$index==1
+
+# OR:
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+if ($index)
+
+# OR:
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+if($index)
+
+#
+#-----[ REPLACE WITH ]---------------------------------------
+#
+if (blocks_visible('right') && !defined("ADMIN_FILE"))
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+blocks(left);
+
+#
+#-----[ BEFORE ADD ]---------------------------------------
+#
+if(blocks_visible('left')) {
+
+#
+#-----[ AFTER ADD ]----------------------------------------
+#
+}
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+if ($informant != "") {
+    $boxstuff = "<a href=\"modules.php?name=Your_Account&amp;op=userinfo&amp;username=$info_name\">$informant</a> ";
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+        if(defined('WRITES')) {
+         if(!empty($informant)) {
+            $boxstuff = "<a href=\"modules.php?name=Your_Account&amp;op=userinfo&amp;username=$informant\">" . UsernameColor($informant) . "</a> ";
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+# Note: You should find these twice
+#
+if ($informant != "") {
+    $content = "<a href=\"modules.php?name=Your_Account&amp;op=userinfo&amp;username=$info_name\">$informant</a> ";
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+        if(defined('WRITES')) {
+         if(!empty($informant)) {
+            $content = "<a href=\"modules.php?name=Your_Account&amp;op=userinfo&amp;username=$informant\">" . UsernameColor($informant) . "</a> ";
+
+#
+#-----[ FIND ]------------------------------------------
+#
+$boxstuff .= ""._WRITES." <i>\"$thetext\"</i>$notes\n";
+
+#
+#-----[ AFTER, ADD ]-------------------------------------
+#
+        } else {
+            $boxstuff .= "$thetext$notes\n";
+        }
+        
+#
+#-----[ FIND ]------------------------------------------
+#
+$content .= ""._WRITES." \"$thetext\"$notes\n";
+
+#
+#-----[ AFTER, ADD ]-------------------------------------
+#
+        } else {
+            $content .= "$thetext$notes\n";
+        }
+        
+#
+#-----[ FIND ]------------------------------------------
+#
+$content .= ""._WRITES." <i>\"$thetext\"</i>$notes\n";
+
+#
+#-----[ AFTER, ADD ]-------------------------------------
+#
+        } else {
+            $content .= "$thetext$notes\n";
+        }
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+function themesidebox($title, $content) {
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+function themesidebox($title, $content, $bid=0) {
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/forums/bbcode.tpl
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<!-- BEGIN quote_username_open --></span>
+<table
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+<table
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+ class="bodyline"
+
+#
+#-----[ FIND ]------------------------------------------
+#
+      <td><span class="genmed"><b>{USERNAME} {L_WROTE}:</b></span></td>
+    </tr>
+    <tr>
+      <td class="quote"><!-- END quote_username_open -->
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+      <td class="helpline"><span class="genmed"><b>{USERNAME} {L_WROTE}:</b>
+<script type="text/javascript" src="{U_SXBB_JSLIB}"></script>
+<script type="text/javascript">
+<!--
+    var id = 'SXBB' + (1000 + Math.floor(Math.random() * 5000));
+    SXBB[id] = new _SXBB(id);
+    SXBB[id].T['select'] = '{L_SELECT}';
+    SXBB[id].T['expand'] = '{L_EXPAND}';
+    SXBB[id].T['contract'] = '{L_CONTRACT}';
+    SXBB[id].writeCmd();
+//-->
+</script>
+        </span></td>
+    </tr>
+    <tr>
+      <td class="quote">
+<script type="text/javascript">
+<!--
+    SXBB[id].writeDiv();
+//-->
+</script><!-- END quote_username_open -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<!-- BEGIN quote_open --></span>
+<table
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+<table
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+ class="bodyline"
+
+#
+#-----[ FIND ]------------------------------------------
+#
+      <td><span class="genmed"><b>{L_QUOTE}:</b></span></td>
+    </tr>
+    <tr>
+      <td class="quote"><!-- END quote_open -->
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+      <td class="helpline"><span class="genmed"><b>{L_QUOTE}:</b>
+<script type="text/javascript" src="{U_SXBB_JSLIB}"></script>
+<script type="text/javascript">
+<!--
+    var id = 'SXBB' + (1000 + Math.floor(Math.random() * 5000));
+    SXBB[id] = new _SXBB(id);
+    SXBB[id].T['select'] = '{L_SELECT}';
+    SXBB[id].T['expand'] = '{L_EXPAND}';
+    SXBB[id].T['contract'] = '{L_CONTRACT}';
+    SXBB[id].writeCmd();
+//-->
+</script>
+        </span></td>
+    </tr>
+    <tr>
+      <td class="quote">
+<script type="text/javascript">
+<!--
+    SXBB[id].writeDiv();
+//-->
+</script><!-- END quote_open -->
+
+<!-- BEGIN quote_username_post_open --></span>
+<table class="bodyline" width="90%" cellspacing="1" cellpadding="3" border="0" align="center">
+<tr> 
+      <td class="helpline"><span class="genmed"><b>{USERNAME} {L_WROTE} ({U_VIEW_POST}):</b>
+<script type="text/javascript" src="{U_SXBB_JSLIB}"></script>
+<script type="text/javascript">
+<!--
+    var id = 'SXBB' + (1000 + Math.floor(Math.random() * 5000));
+    SXBB[id] = new _SXBB(id);
+    SXBB[id].T['select'] = '{L_SELECT}';
+    SXBB[id].T['expand'] = '{L_EXPAND}';
+    SXBB[id].T['contract'] = '{L_CONTRACT}';
+    SXBB[id].writeCmd();
+//-->
+</script>
+        </span></td>
+    </tr>
+    <tr>
+      <td class="quote">
+<script type="text/javascript">
+<!--
+    SXBB[id].writeDiv();
+//-->
+</script><!-- END quote_username_open -->
+<!-- BEGIN quote_post_open --></span>
+<table class="bodyline" width="90%" cellspacing="1" cellpadding="3" border="0" align="center">
+<tr> 
+      <td class="helpline"><span class="genmed"><b>{L_QUOTE} ({U_VIEW_POST}):</b>
+<script type="text/javascript" src="{U_SXBB_JSLIB}"></script>
+<script type="text/javascript">
+<!--
+    var id = 'SXBB' + (1000 + Math.floor(Math.random() * 5000));
+    SXBB[id] = new _SXBB(id);
+    SXBB[id].T['select'] = '{L_SELECT}';
+    SXBB[id].T['expand'] = '{L_EXPAND}';
+    SXBB[id].T['contract'] = '{L_CONTRACT}';
+    SXBB[id].writeCmd();
+//-->
+</script>
+        </span></td>
+    </tr>
+    <tr>
+      <td class="quote">
+<script type="text/javascript">
+<!--
+    SXBB[id].writeDiv();
+//-->
+</script><!-- END quote_post_open -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<!-- BEGIN quote_close --></td>
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+<!-- BEGIN quote_close -->
+<script type="text/javascript">
+<!--
+    document.write('</div>');
+//-->
+</script>
+        </td>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<!-- BEGIN code_open --></span>
+<table
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+<table
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+ class="bodyline"
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<!-- BEGIN img -->
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+<img
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+# Note: Should look like the following line
+# <img resizemod="on" onload="rmw_img_loaded(this)" src="{URL}" border="0" />
+#
+ resizemod="on" onload="rmw_img_loaded(this)"
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<!-- BEGIN email --><a href="mailto:{EMAIL}">{EMAIL}</A><!-- END email -->
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+<!-- BEGIN email --><a href="javascript:phpbbmail('{EMAIL2}.{EMAIL3}','{EMAIL1}')">{EMAIL1} [at] {EMAIL2} [dot] {EMAIL3}</a><!-- END email -->
+
+<!-- BEGIN s_open --><strike><!-- END s_open -->
+<!-- BEGIN s_close --></strike><!-- END s_close -->
+
+<!-- BEGIN sup_open --><sup><!-- END sup_open -->
+<!-- BEGIN sup_close --></sup><!-- END sup_close -->
+
+<!-- BEGIN sub_open --><sub><!-- END sub_open -->
+<!-- BEGIN sub_close --></sub><!-- END sub_close -->
+
+<!-- BEGIN table_open --><table style="{TABLE}"><tr><!-- END table_open -->
+<!-- BEGIN table_close --></tr></table><!-- END table_close -->
+
+<!-- BEGIN cell_open --><td style="{CELL}"><!-- END cell_open -->
+<!-- BEGIN cell_close --></td><!-- END cell_close -->
+
+<!-- BEGIN spoil_open -->
+    <div align="center">
+    <div class="spoiltitle"><b>{L_BBCODEBOX_HIDDEN}:</b>&nbsp;
+        <input class="spoilbtn" type="button" value="{L_BBCODEBOX_VIEW}" onClick="javascript:if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = '{L_BBCODEBOX_HIDE}'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = '{L_BBCODEBOX_VIEW}'; }" onfocus="this.blur();">
+    </div>
+    <div class="spoildiv">
+    <div style="display: none;">
+<!-- END spoil_open -->
+<!-- BEGIN spoil_close --></div></div></div><span class="postbody"><!-- END spoil_close -->
+
+<!-- BEGIN align_open --><div style="text-align:{ALIGN}"><!-- END align_open -->
+<!-- BEGIN align_close --></div><!-- END align_close -->
+
+<!-- BEGIN marq_open --><marquee direction="{MARQ}" scrolldelay="120"><!-- END marq_open -->
+<!-- BEGIN marq_close --></marquee><!-- END marq_close -->
+
+<!-- BEGIN table_open --><table style="{TABLE}"><tr><!-- END table_open -->
+<!-- BEGIN table_close --></tr></table><!-- END table_close -->
+
+<!-- BEGIN cell_open --><td style="{CELL}"><!-- END cell_open -->
+<!-- BEGIN cell_close --></td><!-- END cell_close -->
+
+<!-- BEGIN font_open --><span style="font-family:{FONT}"><!-- END font_open --> 
+<!-- BEGIN font_close --></span><!-- END font_close --> 
+
+<!-- BEGIN ram --><div align="center"><embed src="{URL}" align="center" width="275" height="40" type="audio/x-pn-realaudio-plugin" console="cons" controls="ControlPanel" autostart="false"></embed></div><!-- END ram -->
+
+<!-- BEGIN flash --><!-- URL's used in the movie--> 
+<!-- text used in the movie--> 
+<!-- --> 
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" WIDTH={WIDTH} HEIGHT={HEIGHT}> 
+<PARAM NAME=movie VALUE="{URL}"><PARAM NAME=quality VALUE=high> <PARAM NAME="AllowScriptAccess" VALUE="never"> <PARAM NAME=scale VALUE=noborder> <PARAM NAME=wmode VALUE=transparent> <PARAM NAME=bgcolor VALUE=#000000> 
+  <EMBED src="{URL}" quality=high scale=noborder wmode=transparent bgcolor=#000000 WIDTH={WIDTH} HEIGHT={HEIGHT} TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
+</EMBED></OBJECT><!-- END flash -->
+
+<!-- BEGIN GVideo -->
+<object width="425" height="350">
+        <param name="movie" value="http://video.google.com/googleplayer.swf?docId={GVIDEOID}"></param>
+<embed style="width:400px; height:326px;" id="VideoPlayback"
+        align="middle" type="application/x-shockwave-flash"
+        src="http://video.google.com/googleplayer.swf?docId={GVIDEOID}"
+        allowScriptAccess="sameDomain" quality="best" bgcolor="#ffffff"
+        scale="noScale" salign="TL"  FlashVars="playerMode=embedded">
+</embed>
+</object><br />
+<a href="http://video.google.com/googleplayer.swf?docId={GVIDEOID}" target="_blank">{GVIDEOLINK}</a><br />
+<!-- END GVideo -->
+
+<!-- BEGIN youtube -->
+<object width="425" height="350">
+   <param name="movie" value="http://www.youtube.com/v/{YOUTUBEID}"></param>
+   <embed src="http://www.youtube.com/v/{YOUTUBEID}" type="application/x-shockwave-flash" width="425" height="350"></embed>
+</object><br />
+<a href="http://youtube.com/watch?v={YOUTUBEID}" target="_blank">{YOUTUBELINK}</a><br />
+<!-- END youtube -->
+
+<!-- BEGIN stream --><object id="wmp" width={WIDTH} height={HEIGHT} classid="CLSID:22d6f312-b0f6-11d0-94ab-0080c74c7e95" 
+codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,0,0,0" 
+standby="Loading Microsoft Windows Media Player components..." type="application/x-oleobject"> 
+<param name="FileName" value="{URL}"> 
+<param name="ShowControls" value="1"> 
+<param name="ShowDisplay" value="0"> 
+<param name="ShowStatusBar" value="1"> 
+<param name="AutoSize" value="1"> 
+        <embed type="application/x-mplayer2" 
+pluginspage="http://www.microsoft.com/windows95/downloads/contents/wurecommended/s_wufeatured/mediaplayer/default.asp" 
+src="{URL}" name=MediaPlayer2 showcontrols=1 showdisplay=0 showstatusbar=1 autosize=1 visible=1 animationatstart=0 transparentatstart=1 loop=0 height=70 width=300> 
+</embed></object><!-- END stream -->
+
+<!-- BEGIN video -->
+<div align="center"><embed src="{URL}" width={WIDTH} height={HEIGHT}></embed></div>
+<!-- END video -->
+
+<!-- BEGIN hr --><hr noshade color='#000000' size='1'><!-- END hr -->
+
+<!-- BEGIN fade_open -->
+<span style="height: 1; Filter: Alpha(Opacity=100, FinishOpacity=0, Style=1, StartX=0, FinishX=100%)">
+<!-- END fade_open -->
+<!-- BEGIN fade_close -->
+</span>
+<!-- END fade_close -->
+
+#
+#-----[ OPEN ]------------------------------------------------
+#
+themes/YOUR_THEME/forums/faq_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+      <td class="{faq_block.faq_row.ROW_CLASS}" align="left" valign="top"><span class="postbody"><a name="{faq_block.faq_row.U_FAQ_ID}"></a><b>{faq_block.faq_row.FAQ_QUESTION}</b></span><br /><span class="postbody">{faq_block.faq_row.FAQ_ANSWER}<br /><a class="postlink" href="#Top">{L_BACK_TO_TOP}</a></span></td>
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+      <td class="{faq_block.faq_row.ROW_CLASS}" align="left" valign="top"><span class="postbody"><a name="{faq_block.faq_row.U_FAQ_ID}"></a><b>{faq_block.faq_row.FAQ_QUESTION}</b></span><br /><span class="postbody">{faq_block.faq_row.FAQ_ANSWER}<br /><a class="postlink" href="#top">{L_BACK_TO_TOP}</a></span></td>
+
+#
+#-----[ OPEN ]------------------------------------------------ 
+#
+themes/YOUR_THEME/forums/form.css
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: If you cannot find this line in one of your style, never mind.
+# You can ignore this instruction.
+#
+input { text-indent : 2px; }
+
+#
+#-----[ REPLACE WITH ]---------------------------------------- 
+#
+/* Start replacement - Advanced time management MOD */
+/* input { text-indent : 2px; }
+/* End replacement - Advanced time management MOD */
+
+#
+#-----[ OPEN ]------------------------------------------------
+#
+themes/YOUR_THEME/forums/formIE.css
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: If you cannot find this line in one of your style, never mind.
+# You can ignore this instruction.
+#
+input { text-indent : 2px; }
+
+#
+#-----[ REPLACE WITH ]---------------------------------------- 
+#
+/* Start replacement - Advanced time management MOD */
+/* input { text-indent : 2px; }
+/* End replacement - Advanced time management MOD */
+
+#
+#-----[ OPEN ]------------------------------------------------
+#
+themes/YOUR_THEME/forums/forums.cfg
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+<?php
+
+#
+#-----[ AFTER, ADD ]--------------------------------------
+# Note: Add those changes somewhere after the comments
+#
+/*****[CHANGES]**********************************************************
+-=[Mod]=-
+      Simply Merge Threads                     v1.0.1       06/12/2005
+      Global Announcements                     v1.2.8       06/13/2005
+      Super Quick Reply                        v1.3.0       06/14/2005
+      PM Quick Reply                           v1.3.5       06/14/2005
+      Ranks summarize                          v1.0.4       06/24/2005
+      Custom mass PM                           v1.4.7       07/04/2005
+      Printer Topic                            v1.0.8       07/18/2005
+      Theme Simplifications                    v1.0.0       07/19/2005
+      Report Posts                             v1.2.3       08/30/2005
+ ************************************************************************/
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: Should look like the following line
+# $images['folder_announce_new'] = "$current_template_images/folder_announce_new.gif";
+#
+$images['folder_announce_new'] =
+
+#
+#-----[ AFTER, AND ON A NEW LINE ADD ]--------------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Global Announcements               v1.2.8 ]
+ ******************************************************/
+$images['folder_global_announce'] = "$current_template_images/folder_global_announce.gif";
+$images['folder_global_announce_new'] = "$current_template_images/folder_global_announce_new.gif";
+/*****[END]********************************************
+ [ Mod:     Global Announcements               v1.2.8 ]
+ ******************************************************/
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: Should look like the following line
+# $images['reply_locked'] = "$current_template_images/{LANG}/reply-locked.gif";
+#
+$images['reply_locked'] =
+
+#
+#-----[ AFTER, AND ON A NEW LINE ADD ]--------------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Super Quick Reply                  v1.3.0 ]
+ ******************************************************/
+$images['quickreply'] = "$current_template_images/{LANG}/quickreply.gif";
+/*****[END]********************************************
+ [ Mod:     Super Quick Reply                  v1.3.0 ]
+ ******************************************************/
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+$images['topic_watch'] =
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------------
+#
+'topic_watch'
+
+#
+#-----[ IN-LINE REPLACE WITH ]---------------------------------------------
+#
+'Topic_watch'
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: The original text looks like the following
+# $images['voting_graphic'][4] = "$current_template_images/voting_bar.gif";
+#
+$images['voting_graphic'][4] =
+
+#
+#-----[ AFTER, AND ON A NEW LINE ADD ]--------------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Report Posts                       v1.2.3 ]
+ ******************************************************/
+$images['icon_report'] = "$current_template_images/icon_report.gif";
+/*****[END]********************************************
+ [ Mod:     Report Posts                       v1.2.3 ]
+ ******************************************************/
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+?>
+
+#
+#-----[ BEFORE, ADD ]-----------------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:    Simply Merge Threads                v1.0.1 ]
+ ******************************************************/
+// Merge
+$images['topic_mod_merge'] = "$current_template_images/topic_merge.gif";
+/*****[END]********************************************
+ [ Mod:    Simply Merge Threads                v1.0.1 ]
+ ******************************************************/
+
+/*****[BEGIN]******************************************
+ [ Mod:     Theme Simplifications              v1.0.0 ]
+ ******************************************************/
+$images['Mini_Index'] = "$current_template_images/icon_mini_main.gif";
+$images['Mini_Faq'] = "$current_template_images/icon_mini_faq.gif";
+$images['Mini_Search'] = "$current_template_images/icon_mini_search.gif";
+$images['Mini_Usergroups'] = "$current_template_images/icon_mini_groups.gif";
+$images['Mini_Profile'] = "$current_template_images/icon_mini_profile.gif";
+$images['Mini_Memberlist'] = "$current_template_images/icon_mini_members.gif";
+$images['Mini_Private_Messages'] = "$current_template_images/icon_mini_message.gif";
+$images['Staff'] = "$current_template_images/icon_mini_staff.gif";
+$images['Rules'] = "$current_template_images/icon_mini_rules.gif";
+$images['Statistics'] = "$current_template_images/icon_mini_statistics.png";
+$images['Mini_Login_Logout'] = "$current_template_images/icon_mini_login.gif";
+/*****[END]********************************************
+ [ Mod:     Theme Simplifications              v1.0.0 ]
+ ******************************************************/
+
+/*****[BEGIN]******************************************
+ [ Mod:    Ranks summarize                     v1.0.4 ]
+ ******************************************************/
+$images['Ranks'] = "$current_template_images/icon_mini_profile.gif";
+/*****[END]********************************************
+ [ Mod:    Ranks summarize                     v1.0.4 ]
+ ******************************************************/
+
+/*****[BEGIN]******************************************
+ [ Mod:     Custom mass PM                     v1.4.7 ]
+ ******************************************************/
+$images['mass_pm'] = "$current_template_images/mass_pm.gif";
+/*****[END]********************************************
+ [ Mod:     Custom mass PM                     v1.4.7 ]
+ ******************************************************/
+ 
+/*****[BEGIN]******************************************
+ [ Mod:    Printer Topic                       v1.0.8 ]
+ ******************************************************/ 
+$images['printer'] = "$current_template_images/icon_printer.gif";
+/*****[END]********************************************
+ [ Mod:    Printer Topic                       v1.0.8 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/forums/groupcp_info_body.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+<span class="gen"><span class="gen">
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+<span class="gen">
+
+#
+#-----[ FIND ]------------------------------------------
+#
+      <th class="thTop">{L_EMAIL}</th>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+      <th class="thTop">{L_ONLINE_STATUS}</th>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_GROUP_MODERATOR}
+#
+      <td class="catSides" colspan="8" height="28"><span class="cattitle">{L_GROUP_MODERATOR}</span></td>
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+# Note: With a template other than subSilver, this should be colspan="7"
+# it is only a weird bug in subSilver
+#
+colspan="8"
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------
+#
+# Note: ADD +1 unit to 'colspan' if other Mods have modified this part already
+#
+colspan="9"
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {MOD_EMAIL_IMG}
+#
+      <td class="row1" align="center" valign="middle"><span class="gen">{MOD_EMAIL_IMG}</span></td>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+      <td class="row1" align="center" valign="middle"><span class="gen">{MOD_ONLINE_STATUS}</span></td>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_GROUP_MEMBERS}
+#
+      <td class="catSides" colspan="8" height="28"><span class="cattitle">{L_GROUP_MEMBERS}</span></td>
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+# Note: With a template other than subSilver, this should be colspan="7"
+# it is only a weird bug in subSilver
+#
+colspan="8"
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------
+#
+# Note: ADD +1 unit to 'colspan' if other Mods have modified this part already
+#
+colspan="9"
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {member_row.EMAIL_IMG}
+#
+      <td class="{member_row.ROW_CLASS}" align="center" valign="middle"><span class="gen">{member_row.EMAIL_IMG}</span></td>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+      <td class="{member_row.ROW_CLASS}" align="center" valign="middle"><span class="gen">{member_row.ONLINE_STATUS}</span></td>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_NO_MEMBERS}
+#
+      <td class="row1" colspan="7" align="center"><span class="gen">{L_NO_MEMBERS}</span></td>
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+colspan="7"
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------
+#
+# Note: ADD +1 unit to 'colspan' if other Mods have modified this part already
+#
+colspan="8"
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_HIDDEN_MEMBERS}
+#
+      <td class="row1" colspan="7" align="center"><span class="gen">{L_HIDDEN_MEMBERS}</span></td>
+      
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+colspan="7"
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------
+#
+# Note: ADD +1 unit to 'colspan' if other Mods have modified this part already
+#
+colspan="8"
+
+#
+#-----[ FIND ]------------------------------------------
+#
+        <td class="catBottom" colspan="8" align="right"><span class="cattitle">
+            <input type="submit" name="remove" value="{L_REMOVE_SELECTED}" class="mainoption" />
+        
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+#
+        <td class="catBottom" colspan="9" align="right">
+            <span class="cattitle"><input type="submit" name="remove" value="{L_REMOVE_SELECTED}" class="mainoption" /></span>
+
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/forums/groupcp_pending_info.tpl
+
+#
+#-----[ FIND ]------------------------------------------
+#
+      <th class="thTop">{L_EMAIL}</th>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+      <th class="thTop">{L_ONLINE_STATUS}</th>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_PENDING_MEMBERS}
+#
+      <td class="catSides" colspan="8" height="28"><span class="cattitle">{L_PENDING_MEMBERS}</span></td>
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+# Note: With a template other than subSilver, this should be colspan="7"
+# it is only a weird bug in subSilver
+#
+colspan="8"
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------
+#
+# Note: ADD +1 unit to 'colspan' if other Mods have modified this part already
+#
+colspan="9"
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {pending_members_row.EMAIL_IMG}
+#
+      <td class="{pending_members_row.ROW_CLASS}" align="center"><span class="gen">{pending_members_row.EMAIL_IMG}</span></td>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+      <td class="{pending_members_row.ROW_CLASS}" align="center"><span class="gen">{pending_members_row.ONLINE_STATUS}</span></td>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+      <td class="cat" colspan="8" align="right"><span class="cattitle">
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+# Note: With a template other than subSilver, this should be colspan="7"
+# it is only a weird bug in subSilver
+#
+colspan="8"
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------
+#
+# Note: ADD +1 unit to 'colspan' if other Mods have modified this part already
+#
+colspan="9"
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/Forums/index_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for first <table
+#
+<table width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------ 
+#
+<table width="100%" cellspacing="0" cellpadding="4" border="0" align="center">
+   <tr>
+      <td width="100%" colspan="2" valign="top">
+      <!-- MOD GLANCE BEGIN -->
+      {GLANCE_OUTPUT}
+      <!-- MOD GLANCE END -->
+   </tr>
+</table>
+
+#
+#-----[ FIND ]---------------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {U_SEARCH_UNANSWERED}
+#
+        <a href="{U_SEARCH_UNANSWERED}" class="gensmall">{L_SEARCH_UNANSWERED}</a></td>
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+        <a href="{U_SEARCH_UNANSWERED}" class="gensmall">{L_SEARCH_UNANSWERED}</a><br />
+        <a href="{U_RECENT}" class="gensmall">{L_RECENT}</a></td>
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+    <td align="left"><span class="gensmall"><a href="{U_MARK_READ}" class="gensmall">{L_MARK_FORUMS_READ}</a></span></td>
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+    <td align="left">
+    <!-- BEGIN switch_user_logged_in -->
+        <span class="gensmall"><a href="{U_MARK_READ}" class="gensmall">{L_MARK_FORUMS_READ}</a></span>
+    <!-- END switch_user_logged_in -->
+    </td>
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {pending_members_row.EMAIL_IMG}
+#
+    <td class="row1" align="left"><span class="gensmall">{TOTAL_USERS_ONLINE}  [ {L_WHOSONLINE_ADMIN} ]  [ {L_WHOSONLINE_MOD} ]<br />{RECORD_USERS}<br />{LOGGED_IN_USER_LIST}</span></td>
+
+#
+#-----[ REPLACE ]---------------------------------------------
+#
+    <td class="row1" align="left"><span class="gensmall">{TOTAL_USERS_ONLINE} <br />
+    <!-- BEGIN colors -->
+    {colors.GROUPS}
+    <!-- END colors -->
+    <br />{RECORD_USERS}<br />{LOGGED_IN_USER_LIST}</span></td>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: Your theme may not have this part, simply ignore it if that happens
+#
+<form method="post" action="{S_LOGIN_ACTION}">
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<input type="hidden" name="op" value="login">
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: Your theme may not have this part, simply ignore it if that happens
+#
+<input class="post" type="password" name="password" size="10" />
+
+#
+#-----[ REPLACE WITH ]----------------------------------
+#
+<input class="post" type="password" name="user_password" size="10" />
+
+#
+#-----[ FIND ]---------------------------------------
+#
+# Note: Your theme may have {GFX} already there, just go on if that happens
+#
+        {L_AUTO_LOGIN} 
+        <input class="text" type="checkbox" name="autologin" />
+
+#
+#-----[ REPLACE WITH ]----------------------------------
+#
+{GFX}
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/login_body.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+#
+          <tr align="center">
+            <td colspan="2"><span class="gen">{L_AUTO_LOGIN}: <input type="checkbox" name="autologin" /></span></td>
+          </tr>
+
+#
+#-----[ BEFORE, ADD ]---------------------------------------------
+#
+          <!-- BEGIN switch_allow_autologin -->
+
+#
+#-----[ AFTER, ADD ]---------------------------------------------
+#
+          <!-- END switch_allow_autologin -->
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/forums/memberlist_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<form method="post" action="{S_MODE_ACTION}">
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+<form method="post" action="{S_MODE_ACTION}" name="post">
+
+#
+#-----[ FIND ]------------------------------------------
+#
+        <input type="submit" name="submit" value="{L_SUBMIT}" class="liteoption" />
+        </span></td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+    <tr>
+      <td align="left"><span class="nav">&nbsp;</span></td>
+      <td align="right" nowrap="nowrap"><span class="genmed">
+      <input type="text"  class="post" name="username" maxlength="25" size="25" tabindex="1" value="" />&nbsp;<input type="submit" name="submituser" value="{L_LOOK_UP}" class="mainoption" />&nbsp;<input type="submit" name="usersubmit" value="{L_FIND_USERNAME}" class="liteoption" onClick="window.open('{U_SEARCH_USER}', '_phpbbsearch', 'HEIGHT=250,resizable=yes,WIDTH=400');return false;" />
+      </span></td>
+    </tr>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+      <th class="thTop" nowrap="nowrap">{L_JOINED}</th>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+      <th class="thTop" nowrap="nowrap">{L_ONLINE_STATUS}</th>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+      <th class="thCornerR" nowrap="nowrap">{L_WEBSITE}</th>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+    <!-- BEGIN no_username -->
+    <tr> 
+      <td class="row1" align="center" colspan="9"><span class="gen">&nbsp;{no_username.NO_USER_ID_SPECIFIED}&nbsp;</span></td>
+    </tr>
+    <!-- END no_username -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {memberrow.JOINED}
+#
+      <td class="{memberrow.ROW_CLASS}" align="center" valign="middle"><span class="gensmall">{memberrow.JOINED}</span></td>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+      <td class="{memberrow.ROW_CLASS}" align="center" valign="middle"><span class="gen">{memberrow.ONLINE_STATUS}</span></td>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+      <td class="catBottom" colspan="8" height="28">&nbsp;
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+colspan="8"
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------
+#
+# Note: ADD +1 unit to 'colspan' if other Mods have been installed
+#
+colspan="9"
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/modcp_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_MOD_CP}
+#
+    <td class="catHead" colspan="5" align="center" height="28"><span class="cattitle">{L_MOD_CP}</span>
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------ 
+#
+colspan="5"
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------ 
+#
+colspan="6"
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_MOD_CP_EXPLAIN}
+#
+      <td class="spaceRow" colspan="5" align="center"><span class="gensmall">{L_MOD_CP_EXPLAIN}</span></td>
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------ 
+#
+colspan="5"
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------ 
+#
+colspan="6"
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_SELECT}
+#
+      <th width="5%" class="thRight" nowrap="nowrap">&nbsp;{L_SELECT}&nbsp;</th>
+
+#
+#-----[ REPLACE WITH ]------------------------------------------ 
+#
+      <th width="5%" nowrap="nowrap">&nbsp;{L_SELECT}&nbsp;</th>
+      <th width="10%" class="thRight" nowrap="nowrap">&nbsp;{L_PRIORITY}&nbsp;</th>
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the IN-LINE FIND
+# statement just below
+#
+      <td class="row1">&nbsp;<span class="topictitle">
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------------
+#
+{topicrow.TOPIC_TYPE}
+
+#
+#-----[ IN-LINE BEFORE, ADD ]---------------------------------------
+#
+{topicrow.TOPIC_ATTACHMENT_IMG}
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+      <td class="row2" align="center" valign="middle">
+        <input type="checkbox" name="topic_id_list[]" value="{topicrow.TOPIC_ID}" />
+      </td>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+      <td class="row1" align="center" valign="middle">
+        <input type="Text" name="topic_cement:{topicrow.TOPIC_ID}" value="{topicrow.TOPIC_PRIORITY}" maxlength="5" size="5" />
+      </td>
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {S_HIDDEN_FIELDS}
+#
+      <td class="catBottom" colspan="5" height="29"> {S_HIDDEN_FIELDS}
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------ 
+#
+colspan="5"
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------ 
+#
+# Note: ADD +1 unit to 'colspan' if other Mods have modified this part already
+#
+colspan="6"
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+        <input type="submit" name="unlock" class="liteoption" value="{L_UNLOCK}" />
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+        &nbsp;
+        <input type="submit" name="cement" class="liteoption" value="{L_PRIORITIZE}" />
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/forums/overall_footer.tpl
+
+#
+#-----[ FIRST LINE, ADD ]------------------------------------------
+#
+<div style="display:none" id="resizemod"></div>
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+# Note: Make sure your theme does not have a Forum ACP link already.
+# If you have it already, just ADD {REPORT_LINK}<br /><br /> BEFORE {ADMIN_LINK}
+#
+<div style="display:none" id="resizemod"></div>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+<div align="center"><span class="copyright"><br />{REPORT_LINK}<br /><br />{ADMIN_LINK}<br />
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+# Lets update the credits as well and remove the phpBB version due to security reasons :)
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# Powered by
+#
+Powered by <a href="http://www.phpbb.com/" target="_phpbb" class="copyright"><b>phpBB</a> {PHPBB_VERSION}</b> &copy; 2001, 2002 phpBB Group<br />{TRANSLATION_INFO}<br />
+
+#
+#-----[ REPLACE WITH ]------------------------------------------ 
+#
+Powered by <a href="http://www.phpbb.com/" target="_blank" class="copyright">phpBB</a> &copy; 2001, 2006 phpBB Group<br />{TRANSLATION_INFO}<br />
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/forums/overall_header.tpl
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<!-- BEGIN switch_enable_pm_popup -->
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------
+#
+<!-- start mod : Resize Posted Images Based on Max Width -->
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+var rmw_max_width = {IMAGE_RESIZE_WIDTH}; // you can change this number, this is the max width in pixels for posted images
+var rmw_max_height = {IMAGE_RESIZE_HEIGHT}; // you can change this number, this is the max heigth in pixels for posted images
+var rmw_border_1 = '1px solid {T_BODY_LINK}';
+var rmw_border_2 = '2px dotted {T_BODY_LINK}';
+var rmw_image_title = '{L_RMW_IMAGE_TITLE}';
+
+//-->
+//]]>
+</script>
+<script type="text/javascript" src="{U_RMW_JSLIB}"></script>
+<!-- fin mod : Resize Posted Images Based on Max Width -->
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+</head>
+
+#
+#-----[ BEFORE, ADD ]-----------------------------------------
+#
+<!-- Start add - Advanced time management MOD -->
+<!-- BEGIN switch_send_pc_dateTime -->
+<script type="text/javascript">
+<!-- Start Replace - window.onload = send_pc_dateTime -->
+send_pc_dateTime();
+<!-- End Replace - window.onload = send_pc_dateTime -->
+
+function send_pc_dateTime() {
+    var pc_dateTime = new Date()
+    pc_timezoneOffset = pc_dateTime.getTimezoneOffset()*(-60);
+    pc_date = pc_dateTime.getFullYear()*10000 + (pc_dateTime.getMonth()+1)*100 + pc_dateTime.getDate();
+    pc_time = pc_dateTime.getHours()*3600 + pc_dateTime.getMinutes()*60 + pc_dateTime.getSeconds();
+
+    for ( i = 0; document.links.length > i; i++ ) {
+        with ( document.links[i] ) {
+            if ( href.indexOf('{U_SELF}') == 0 ) {
+                textLink = '' + document.links[i].firstChild.data
+                if ( textLink.indexOf('http://') != 0 && textLink.indexOf('www.') != 0 && (textLink.indexOf('@') == -1 || textLink.indexOf('@') == 0 || textLink.indexOf('@') == textLink.length-1 )) {
+                    if ( href.indexOf('?') == -1 ) {
+                        pc_data = '?pc_tzo=' + pc_timezoneOffset + '&pc_d=' + pc_date + '&pc_t=' + pc_time;
+                    } else {
+                        pc_data = '&pc_tzo=' + pc_timezoneOffset + '&pc_d=' + pc_date + '&pc_t=' + pc_time;
+                    }
+                    if ( href.indexOf('#') == -1 ) {
+                        href += pc_data;
+                    } else {
+                        href = href.substring(0, href.indexOf('#')) + pc_data + href.substring(href.indexOf('#'), href.length);
+                    }
+                }
+            }
+        }
+    }
+}
+</script>
+<!-- END switch_send_pc_dateTime -->
+<!-- End add - Advanced time management MOD -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note 1: This line may vary depending on your theme. If so, search for the following part:
+# {U_FAQ}
+#
+# Note 2: If you still cannot find that part, your theme might use a flash forum navigation.
+# If that is the case you may want to edit the specific flash file and add the links there
+#
+                    <tr> 
+                        <td align="center" valign="top" nowrap="nowrap"><span class="mainmenu"><center>&nbsp;<a href="{U_FAQ}" class="mainmenu"><img src="modules/Forums/templates/subSilver/images/icon_mini_faq.gif" width="12" height="13" border="0" alt="{L_FAQ}" hspace="3" />{L_FAQ}</a>&nbsp; &nbsp;<a href="{U_SEARCH}" class="mainmenu"><img src="modules/Forums/templates/subSilver/images/icon_mini_search.gif" width="12" height="13" border="0" alt="{L_SEARCH}" hspace="3" />{L_SEARCH}</a>&nbsp; &nbsp;<a href="{U_GROUP_CP}" class="mainmenu"><img src="modules/Forums/templates/subSilver/images/icon_mini_groups.gif" width="12" height="13" border="0" alt="{L_USERGROUPS}" hspace="3" />{L_USERGROUPS}</a>&nbsp; 
+                        &nbsp;<a href="{U_PROFILE}" class="mainmenu"><img src="modules/Forums/templates/subSilver/images/icon_mini_profile.gif" width="12" height="13" border="0" alt="{L_PROFILE}" hspace="3" />{L_PROFILE}</a>&nbsp; &nbsp;<a href="{U_PRIVATEMSGS}" class="mainmenu"><img src="modules/Forums/templates/subSilver/images/icon_mini_message.gif" width="12" height="13" border="0" alt="{PRIVATE_MESSAGE_INFO}" hspace="3" />{PRIVATE_MESSAGE_INFO}</a>&nbsp; &nbsp;<a href="{U_LOGIN_LOGOUT}" class="mainmenu"><img src="modules/Forums/templates/subSilver/images/icon_mini_login.gif" width="12" height="13" border="0" alt="{L_LOGIN_LOGOUT}" hspace="3" />{L_LOGIN_LOGOUT}</a>&nbsp;</center></span></td>
+                    </tr>
+
+
+#-----[ REPLACE WITH ]------------------------------------------
+#
+                    <tr>
+                        <td align="center" valign="top" nowrap="nowrap"><center><span class="mainmenu">&nbsp;<a href="{U_INDEX}" class="mainmenu">{I_MINI_INDEX}{L_MINI_INDEX}</a>&nbsp;&nbsp;<a href="{U_SEARCH}" class="mainmenu">{I_MINI_SEARCH}{L_SEARCH}</a>&nbsp;&nbsp;<a href="{U_GROUP_CP}" class="mainmenu">{I_MINI_USERGROUPS}{L_USERGROUPS}</a>&nbsp;&nbsp;<a href="{U_PROFILE}" class="mainmenu">{I_MINI_PROFILE}{L_PROFILE}</a>&nbsp;&nbsp;<a href="{U_MEMBERLIST}" class="mainmenu">{I_MINI_MEMBERLIST}{L_MEMBERLIST}</a>&nbsp;&nbsp;<a href="{U_PRIVATEMSGS}" class="mainmenu">{I_MINI_PRIVATEMSGS}{PRIVATE_MESSAGE_INFO}</a>&nbsp;<br />
+                        &nbsp;<a href="{U_RANKS}" class="mainmenu">{I_RANKS}{L_RANKS}</a>&nbsp;&nbsp;<a href="{U_STAFF}" class="mainmenu">{I_STAFF}{L_STAFF}</a>&nbsp;&nbsp;<a href="{U_STATISTICS}" class="mainmenu">{I_STATISTICS}{L_STATISTICS}</a>&nbsp;&nbsp;<a href="{U_RULES}" class="mainmenu">{I_RULES}{L_RULES}</a>&nbsp;&nbsp;<a href="{U_FAQ}" class="mainmenu">{I_MINI_FAQ}{L_FAQ}</a>&nbsp;&nbsp;<a href="{U_LOGIN_LOGOUT}" class="mainmenu">{I_MINI_LOGIN_LOGOUT}{L_LOGIN_LOGOUT}</a>&nbsp;</span></center></td>
+                    </tr>
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+                    </tr>
+                </table></td>
+            </tr>
+        </table>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+<!-- Quick Search -->
+<!-- BEGIN switch_quick_search -->
+<br /><script language="JavaScript" type="text/javascript">
+<!--
+function checkSearch()
+{
+    {switch_quick_search.CHECKSEARCH}
+    else
+    {
+        return true;
+    }
+}
+//-->
+</script>
+<center>
+<table width="100%" cellpadding="2" cellspacing="1" border="0"><form name="search_block" method="post" action="{U_SEARCH}" onSubmit="return checkSearch()">
+  <tr>          
+    <td align="center"><span class="gensmall" style="line-height=150%">
+    {switch_quick_search.L_QUICK_SEARCH_FOR} <input class="post" type="text" name="search_keywords" size="15" /> {switch_quick_search.L_QUICK_SEARCH_AT} <select class="post" name="site_search" />{switch_quick_search.SEARCHLIST}</select>
+    <input class="mainoption" type="submit" value="{L_SEARCH}" /></span></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="{U_SEARCH}" class="gensmall">{switch_quick_search.L_ADVANCED_FORUM_SEARCH}</a></td>
+  </tr>
+<input type="hidden" name="search_fields" value="all" />
+<input type="hidden" name="show_results" value="topics" /></form>
+</table>
+</center>
+<!-- END switch_quick_search -->
+
+<!-- BEGIN boarddisabled -->
+  <br /><div align="center"><span class="gen"><b>{L_BOARD_CURRENTLY_DISABLED}</b></span></div><br />
+<!-- END boarddisabled -->
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: If you cannot find this line in one of your style, never mind.
+# You can ignore this instruction.
+#
+input { text-indent : 2px; }
+
+#
+#-----[ REPLACE WITH ]---------------------------------------- 
+#
+/* Start replacement - Advanced time management MOD */
+/* input { text-indent : 2px; }
+/* End replacement - Advanced time management MOD */
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/posting_body.tpl
+
+#
+#------[ FIND ]-----------------------------------------------------
+#
+<script language="JavaScript" type="text/javascript">
+<!--
+// bbCode control by
+// subBlue design
+// www.subBlue.com
+..
+..
+..
+..
+..
+..
+..
+..
+//-->
+</script>
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+<script src="modules/Forums/bbcode_box/bbcode_box.js" type="text/javascript" >
+</script>
+
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+<form action="{S_POST_ACTION}" method="post" name="post" onsubmit="return checkForm(this)">
+
+#
+#-----[ REPLACE WITH ]---------------------------------------
+#
+<form action="{S_POST_ACTION}" method="post" name="post" onsubmit="return checkForm(this)" {S_FORM_ENCTYPE}>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+        -> <a href="{U_VIEW_FORUM}" class="nav">{FORUM_NAME}</a></span></td>
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+        -> <a href="{U_VIEW_FORUM}" class="nav">{FORUM_NAME}</a>
+        <!-- // Begin View Topic Name While Posting MOD -->
+        <!-- BEGIN reply_mode -->
+            -> <a href="{U_VIEW_TOPIC}" class="nav">{TOPIC_SUBJECT}</a>
+        <!-- END reply_mode -->
+        <!-- // End View Topic Name While Posting MOD -->
+        </span></td>
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+<input type="text"  class="post" name="username" maxlength="25"
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------- 
+#
+name="username" maxlength="25"
+
+#
+#-----[ IN-LINE REPLACE WITH ]-------------------------------- 
+#
+name="username"
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+<!-- END switch_privmsg -->
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+    <!-- Start add - Custom mass PM MOD -->
+    <!-- BEGIN switch_groupmsg -->
+    <tr> 
+        <td class="row1"><span class="gen"><b>{L_USERNAME}</b></span></td>
+        <td class="row2"><span class="genmed">{USERNAME}</span></td>
+    </tr>
+    <!-- END switch_groupmsg -->
+    <!-- End add - Custom mass PM MOD -->
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+    {POLLBOX}
+
+#
+#-----[ BEFORE, ADD ]---------------------------------------
+#
+    {ATTACHBOX}
+
+#
+#-----[ FIND ]------------------------------------------------------
+#
+          <tr align="center" valign="middle">
+            <td><span class="genmed"> 
+              <input type="button" class="button" accesskey="b" name="addbbcode0" value=" B " style="font-weight:bold; width: 30px" onClick="bbstyle(0)" onMouseOver="helpline('b')" />
+              </span></td>
+            <td><span class="genmed"> 
+              <input type="button" class="button" accesskey="i" name="addbbcode2" value=" i " style="font-style:italic; width: 30px" onClick="bbstyle(2)" onMouseOver="helpline('i')" />
+              </span></td>
+            <td><span class="genmed"> 
+              <input type="button" class="button" accesskey="u" name="addbbcode4" value=" u " style="text-decoration: underline; width: 30px" onClick="bbstyle(4)" onMouseOver="helpline('u')" />
+              </span></td>
+            <td><span class="genmed"> 
+              <input type="button" class="button" accesskey="q" name="addbbcode6" value="Quote" style="width: 50px" onClick="bbstyle(6)" onMouseOver="helpline('q')" />
+              </span></td>
+            <td><span class="genmed"> 
+              <input type="button" class="button" accesskey="c" name="addbbcode8" value="Code" style="width: 40px" onClick="bbstyle(8)" onMouseOver="helpline('c')" />
+              </span></td>
+            <td><span class="genmed"> 
+              <input type="button" class="button" accesskey="l" name="addbbcode10" value="List" style="width: 40px" onClick="bbstyle(10)" onMouseOver="helpline('l')" />
+              </span></td>
+            <td><span class="genmed"> 
+              <input type="button" class="button" accesskey="o" name="addbbcode12" value="List=" style="width: 40px" onClick="bbstyle(12)" onMouseOver="helpline('o')" />
+              </span></td>
+            <td><span class="genmed"> 
+              <input type="button" class="button" accesskey="p" name="addbbcode14" value="Img" style="width: 40px"  onClick="bbstyle(14)" onMouseOver="helpline('p')" />
+              </span></td>
+            <td><span class="genmed"> 
+              <input type="button" class="button" accesskey="w" name="addbbcode16" value="URL" style="text-decoration: underline; width: 40px" onClick="bbstyle(16)" onMouseOver="helpline('w')" />
+              </span></td>
+          </tr>
+
+#
+#-----[ REPLACE WITH ]-------------------------------------------
+#
+          <tr align="right" valign="middle"> 
+    <td class="row2" valign="top"><span class="gen"><span class="genmed"></span> 
+        <table id="posttable" width="100%" border="1" bordercolor="#C0C0C0" style="border-collapse: collapse;" cellspacing="0" cellpadding="0" valign="top">
+          <tr align="right" valign="middle"> 
+            <td valign="center">
+                <table width="100%" cellpadding="3" cellspacing="0" bgcolor="#FFFFFF">
+                    <tr>
+                        <!--<td class="row2" valign="middle"><img src="modules/Forums/bbcode_box/images/dots.gif" style="padding-left: 4px;"></td>-->
+                        <td class="row2">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td align="left" width="70%">
+                                        <select name="addbbcode19"  style="height: 20px;" onchange="bbfontstyle('[font=' + this.form.addbbcode19.options[this.form.addbbcode19.selectedIndex].value + ']', '[/font]');this.selectedIndex=0;" onMouseOver="helpline('ft')">
+                                            <option style="font-weight : bold;" selected="selected">Font type</option>
+                                            <option value="Arial">Default font</option>
+                                            <option style="font-family: Arial;" value="Arial" class="genmed">Arial</option> 
+                                            <option style="font-family: Arial Black;" value="Arial Black" class="genmed">Arial Black</option> 
+                                            <option style="font-family: Century Gothic;" value="Century Gothic" class="genmed">Century Gothic</option>
+                                            <option style="font-family: Comic Sans MS;" value="Comic Sans MS" class="genmed">Comic Sans MS</option> 
+                                            <option style="font-family: Courier New;" value="Courier New" class="genmed">Courier New</option>
+                                            <option style="font-family: Georgia;" value="Georgia" class="genmed">Georgia</option> 
+                                            <option style="font-family: Lucida Console;"value="Lucida Console">Lucida Console</option>
+                                            <option style="font-family: Microsoft Sans Serif;" value="Microsoft Sans Serif" class="genmed">Microsoft Sans Serif</option> 
+                                            <option style="font-family: Symbol;" value="Symbol" class="genmed">Symbol</option> 
+                                            <option style="font-family: Tahoma;" value="Tahoma" class="genmed">Tahoma</option>
+                                            <option style="font-family: Trebuchet;" value="Trebuchet" class="genmed">Trebuchet</option> 
+                                            <option style="font-family: Times New Roman;" value="Times New Roman" class="genmed">Times New Roman</option> 
+                                            <option style="font-family: Verdana;" value="Verdana" class="genmed">Verdana</option> 
+                                        </select>
+                                        <select name="addbbcode20"  style="height: 20px;" onchange="bbfontstyle('[size=' + this.form.addbbcode20.options[this.form.addbbcode20.selectedIndex].value + ']', '[/size]');this.selectedIndex=0;" onMouseOver="helpline('fs')">
+                                            <option style="font-weight : bold;" selected="selected">Font Size</option>
+                                            <option style="font-size: 8;" value="8" class="genmed">{L_FONT_TINY}</option>
+                                            <option style="font-size: 10;" value="10" class="genmed">{L_FONT_SMALL}</option>
+                                            <option style="font-size: 12;" value="12" class="genmed">{L_FONT_NORMAL}</option>
+                                            <option style="font-size: 18;" value="18" class="genmed">{L_FONT_LARGE}</option>
+                                            <option style="font-size: 24;" value="24" class="genmed">{L_FONT_HUGE}</option>
+                                        </select>
+                                        <select name="addbbcode18"  style="height: 20px;" onchange="bbfontstyle('[color=' + this.form.addbbcode18.options[this.form.addbbcode18.selectedIndex].value + ']', '[/color]');this.selectedIndex=0;" onMouseOver="helpline('fc')">
+                                            <option style="font-weight : bold;" selected>Font Color</option>
+                                            <option style="color:black; value="{T_FONTCOLOR1}" value="{T_FONTCOLOR1}">{L_COLOR_DEFAULT}</option>
+                                            <option value="darkred">{L_COLOR_DARK_RED}</option>
+                                            <option style="color:red; background-color: {T_TD_COLOR1}" value="red" class="genmed">{L_COLOR_RED}</option>
+                                            <option style="color:orange; background-color: {T_TD_COLOR1}" value="orange" class="genmed">{L_COLOR_ORANGE}</option>
+                                            <option style="color:brown; background-color: {T_TD_COLOR1}" value="brown" class="genmed">{L_COLOR_BROWN}</option>
+                                            <option style="color:yellow; background-color: {T_TD_COLOR1}" value="yellow" class="genmed">{L_COLOR_YELLOW}</option>
+                                            <option style="color:green; background-color: {T_TD_COLOR1}" value="green" class="genmed">{L_COLOR_GREEN}</option>
+                                            <option style="color:olive; background-color: {T_TD_COLOR1}" value="olive" class="genmed">{L_COLOR_OLIVE}</option>
+                                            <option style="color:cyan; background-color: {T_TD_COLOR1}" value="cyan" class="genmed">{L_COLOR_CYAN}</option>
+                                            <option style="color:blue; background-color: {T_TD_COLOR1}" value="blue" class="genmed">{L_COLOR_BLUE}</option>
+                                            <option style="color:darkblue; background-color: {T_TD_COLOR1}" value="darkblue" class="genmed">{L_COLOR_DARK_BLUE}</option>
+                                            <option style="color:indigo; background-color: {T_TD_COLOR1}" value="indigo" class="genmed">{L_COLOR_INDIGO}</option>
+                                            <option style="color:violet; background-color: {T_TD_COLOR1}" value="violet" class="genmed">{L_COLOR_VIOLET}</option>
+                                            <option style="color:white; background-color: {T_TD_COLOR1}" value="white" class="genmed">{L_COLOR_WHITE}</option>
+                                            <option style="color:black; background-color: {T_TD_COLOR1}" value="black" class="genmed">{L_COLOR_BLACK}</option>
+                                        </select>
+                                    </td>
+                                    <td align="right" width="30%"><a href="http://hvmdesign.com/" class="gensmall" title="Advanced BBCode Box v5.0.0 MOD - by Disturbed One - www.HVMDesign.com" target="blank">&copy;</a></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr height="28">
+                        <!--<td class="row2" valign="middle"><img src="modules/Forums/bbcode_box/images/dots.gif" style="padding-left: 4px;"></td>-->
+                        <td class="row2" valign="middle">
+                            <img src="modules/Forums/bbcode_box/images/justify.gif" class="postimage" name="justify" type="image" onClick="BBCjustify()" onMouseOver="helpline('justify')" alt="justify"><img border="0" src="modules/Forums/bbcode_box/images/right.gif" name="right" type="image" onClick="BBCright()" onMouseOver="helpline('right')" class="postimage" alt="right"><img border="0" src="modules/Forums/bbcode_box/images/center.gif" name="center" type="image" onClick="BBCcenter()" onMouseOver="helpline('center')" class="postimage" alt="center"><img border="0" src="modules/Forums/bbcode_box/images/left.gif" name="left" type="image" onClick="BBCleft()" onMouseOver="helpline('left')" class="postimage" alt="left"><img style="padding-left: 5px; padding-right: 5px;" src="modules/Forums/bbcode_box/images/blackdot.gif" width="1" height="100%" border="0" alt=""><img border="0" src="modules/Forums/bbcode_box/images/sup.gif" class="postimage" name="supscript" type="image" onClick="BBCsup()" onMouseOver="helpline('sup')" alt="" /><img border="0" src="modules/Forums/bbcode_box/images/sub.gif" name="subs" class="postimage" type="image" onClick="BBCsub()" onMouseOver="helpline('sub')" alt="" /><img style="padding-left: 5px; padding-right: 5px;" src="modules/Forums/bbcode_box/images/blackdot.gif" width="1" height="100%" border="0" alt=""><img border="0" src="modules/Forums/bbcode_box/images/bold.gif" name="bold" type="image" onClick="BBCbold()" onMouseOver="helpline('b')" class="postimage" alt="bold"><img border="0" src="modules/Forums/bbcode_box/images/italic.gif" name="italic" type="image" onClick="BBCitalic()" onMouseOver="helpline('i')" class="postimage" alt="italic"><img border="0" src="modules/Forums/bbcode_box/images/under.gif" name="under" type="image" onClick="BBCunder()" onMouseOver="helpline('u')" class="postimage" alt="under line"><img border="0" src="modules/Forums/bbcode_box/images/strike.gif" class="postimage" name="strik" type="image" onClick="BBCstrike()" onMouseOver="helpline('strike')" alt="" /><img style="padding-left: 5px; padding-right: 5px;" src="modules/Forums/bbcode_box/images/blackdot.gif" width="1" height="100%" border="0" alt=""><img border="0" src="modules/Forums/bbcode_box/images/fade.gif" name="fade" type="image" onClick="BBCfade()" onMouseOver="helpline('fade')" class="postimage" alt="fade"><img border="0" src="modules/Forums/bbcode_box/images/grad.gif" name="grad" type="image" onClick="BBCgrad()" onMouseOver="helpline('grad')" class="postimage" alt="gradient"><img style="padding-left: 5px; padding-right: 5px;" src="modules/Forums/bbcode_box/images/blackdot.gif" width="1" height="100%" border="0" alt=""><img border="0" src="modules/Forums/bbcode_box/images/rtl.gif" name="dirrtl" type="image" onClick="BBCdir('rtl')" onMouseOver="helpline('rtl')" class="postimage" alt="Right to Left"><img border="0" src="modules/Forums/bbcode_box/images/ltr.gif" name="dirltr" type="image" onClick="BBCdir('ltr')" onMouseOver="helpline('ltr')" class="postimage" alt="Left to Right"><img style="padding-left: 5px; padding-right: 5px;" src="modules/Forums/bbcode_box/images/blackdot.gif" width="1" height="100%" border="0" alt=""><img border="0" src="modules/Forums/bbcode_box/images/marqd.gif" name="marqd" type="image" onClick="BBCmarqd()" onMouseOver="helpline('marqd')" class="postimage" alt="Marque to down"><img border="0" src="modules/Forums/bbcode_box/images/marqu.gif" name="marqu" type="image" onClick="BBCmarqu()" onMouseOver="helpline('marqu')" class="postimage" alt="Marque to up"><img border="0" src="modules/Forums/bbcode_box/images/marql.gif" name="marql" type="image" onClick="BBCmarql()" onMouseOver="helpline('marql')" class="postimage" alt="Marque to left"><img border="0" src="modules/Forums/bbcode_box/images/marqr.gif" name="marqr" type="image" onClick="BBCmarqr()" onMouseOver="helpline('marqr')" class="postimage" alt="Marque to right">
+                        </td>
+                    </tr>
+                    <tr height="28">
+                        <!--<td class="row2" valign="middle"><img src="modules/Forums/bbcode_box/images/dots.gif" style="padding-left: 4px;"></td>-->
+                        <td class="row2" valign="middle">
+                            <img border="0" src="modules/Forums/bbcode_box/images/code.gif" name="code" type="image" onClick="BBCcode()" onMouseOver="helpline('code')" class="postimage" alt="Code"><img border="0" src="modules/Forums/bbcode_box/images/php.gif" name="php" type="image" onClick="BBCphp()" onMouseOver="helpline('php')" class="postimage" alt="Php"><img border="0" src="modules/Forums/bbcode_box/images/quote.gif" name="quote" type="image" onClick="BBCquote()" onMouseOver="helpline('quote')" class="postimage" alt="Quote"><img border="0" src="modules/Forums/bbcode_box/images/spoil.gif" class="postimage" name="spoil" type="image" onClick="BBCspoil()" onMouseOver="helpline('spoil')" alt="" /><img style="padding-left: 5px; padding-right: 5px;" src="modules/Forums/bbcode_box/images/blackdot.gif" width="1" height="100%" border="0" alt=""><img border="0" src="modules/Forums/bbcode_box/images/url.gif" name="url" type="image" onClick="BBCurl()" onMouseOver="helpline('url')" class="postimage" alt="URL"><img border="0" src="modules/Forums/bbcode_box/images/email.gif" name="email" type="image" onClick="BBCmail()" onMouseOver="helpline('mail')" class="postimage" alt="Email"><img style="padding-left: 5px; padding-right: 5px;" src="modules/Forums/bbcode_box/images/blackdot.gif" width="1" height="20" border="0" alt=""><img border="0" src="modules/Forums/bbcode_box/images/img.gif" name="img" type="image" onClick="BBCimg()" onMouseOver="helpline('img')" class="postimage" alt="Image"><img border="0" src="modules/Forums/bbcode_box/images/flash.gif" name="flash" type="image" onClick="BBCflash()" onMouseOver="helpline('flash')" class="postimage" alt="Flash"><img border="0" src="modules/Forums/bbcode_box/images/video.gif" name="video" type="image" onClick="BBCvideo()" onMouseOver="helpline('video')" class="postimage" alt="Video"><img border="0" src="modules/Forums/bbcode_box/images/sound.gif" name="stream" type="image" onClick="BBCstream()" onMouseOver="helpline('stream')" class="postimage" alt="Stream"><img border="0" src="modules/Forums/bbcode_box/images/ram.gif" name="ram" type="image" onClick="BBCram()" onMouseOver="helpline('ram')" class="postimage" alt="Real Media"><img border="0" src="modules/Forums/bbcode_box/images/googlevid.gif" name="GVideo" type="image" onClick="BBCGVideo()" onMouseOver="helpline('googlevid')" class="postimage" alt="GoogleVid"><img border="0" src="modules/Forums/bbcode_box/images/youtube.gif" name="youtube" type="image" onClick="BBCyoutube()" onMouseOver="helpline('youtube')" class="postimage" alt="Youtube"><img style="padding-left: 5px; padding-right: 5px;" src="modules/Forums/bbcode_box/images/blackdot.gif" width="1" height="100%" border="0" alt=""><img border="0" src="modules/Forums/bbcode_box/images/list.gif" name="listdf" type="image" onClick="BBClist()" onMouseOver="helpline('list')" class="postimage" alt="List" /><img border="0" src="modules/Forums/bbcode_box/images/hr.gif" name="hr" type="image" onClick="BBChr()" onMouseOver="helpline('hr')" class="postimage" alt="H-Line"><img style="padding-left: 5px; padding-right: 5px;" src="modules/Forums/bbcode_box/images/blackdot.gif" width="1" height="100%" border="0" alt=""><img border="0" src="modules/Forums/bbcode_box/images/plain.gif" name="plain" type="image" onClick="BBCplain()" onMouseOver="helpline('plain')" class="postimage" alt="Remove BBcode">
+                        </td> 
+                    </tr>
+                </table>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="9"><span class="gensmall"> 
+              <input type="text" name="helpbox" size="45" maxlength="100" style="width:100%; font-size:10px" class="helpline" value="{L_STYLES_TIP}" /></span>
+             </td>
+          </tr>
+          <tr> 
+            <td colspan="9">
+                <span class="gen"><textarea name="message" rows="15" cols="35" wrap="virtual" style="width:100%; border: 0px;" tabindex="3" class="post" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);">{MESSAGE}</textarea></span>
+            </td>
+          </tr>
+        </table>
+        </span></td>
+          </tr>
+
+#
+#-----[ FIND, REMOVE ]-------------------------------------
+#
+          <tr> 
+            <td colspan="9"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><span class="genmed"> &nbsp;{L_FONT_COLOR}:
+                    <select name="addbbcode18" onChange="bbfontstyle('[color=' + this.form.addbbcode18.options[this.form.addbbcode18.selectedIndex].value + ']', '[/color]')" onMouseOver="helpline('s')">
+                      <option style="color:black; background-color: {T_TD_COLOR1}" value="{T_FONTCOLOR1}" class="genmed">{L_COLOR_DEFAULT}</option>
+                      <option style="color:darkred; background-color: {T_TD_COLOR1}" value="darkred" class="genmed">{L_COLOR_DARK_RED}</option>
+                      <option style="color:red; background-color: {T_TD_COLOR1}" value="red" class="genmed">{L_COLOR_RED}</option>
+                      <option style="color:orange; background-color: {T_TD_COLOR1}" value="orange" class="genmed">{L_COLOR_ORANGE}</option>
+                      <option style="color:brown; background-color: {T_TD_COLOR1}" value="brown" class="genmed">{L_COLOR_BROWN}</option>
+                      <option style="color:yellow; background-color: {T_TD_COLOR1}" value="yellow" class="genmed">{L_COLOR_YELLOW}</option>
+                      <option style="color:green; background-color: {T_TD_COLOR1}" value="green" class="genmed">{L_COLOR_GREEN}</option>
+                      <option style="color:olive; background-color: {T_TD_COLOR1}" value="olive" class="genmed">{L_COLOR_OLIVE}</option>
+                      <option style="color:cyan; background-color: {T_TD_COLOR1}" value="cyan" class="genmed">{L_COLOR_CYAN}</option>
+                      <option style="color:blue; background-color: {T_TD_COLOR1}" value="blue" class="genmed">{L_COLOR_BLUE}</option>
+                      <option style="color:darkblue; background-color: {T_TD_COLOR1}" value="darkblue" class="genmed">{L_COLOR_DARK_BLUE}</option>
+                      <option style="color:indigo; background-color: {T_TD_COLOR1}" value="indigo" class="genmed">{L_COLOR_INDIGO}</option>
+                      <option style="color:violet; background-color: {T_TD_COLOR1}" value="violet" class="genmed">{L_COLOR_VIOLET}</option>
+                      <option style="color:white; background-color: {T_TD_COLOR1}" value="white" class="genmed">{L_COLOR_WHITE}</option>
+                      <option style="color:black; background-color: {T_TD_COLOR1}" value="black" class="genmed">{L_COLOR_BLACK}</option>
+                    </select> &nbsp;{L_FONT_SIZE}:<select name="addbbcode20" onChange="bbfontstyle('[size=' + this.form.addbbcode20.options[this.form.addbbcode20.selectedIndex].value + ']', '[/size]')" onMouseOver="helpline('f')">
+                      <option value="7" class="genmed">{L_FONT_TINY}</option>
+                      <option value="9" class="genmed">{L_FONT_SMALL}</option>
+                      <option value="12" selected class="genmed">{L_FONT_NORMAL}</option>
+                      <option value="18" class="genmed">{L_FONT_LARGE}</option>
+                      <option  value="24" class="genmed">{L_FONT_HUGE}</option>
+                    </select>
+                    </span></td>
+                  <td nowrap="nowrap" align="right"><span class="gensmall"><a href="javascript:bbstyle(-1)" class="genmed" onMouseOver="helpline('a')">{L_BBCODE_CLOSE_TAGS}</a></span></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="9"> <span class="gensmall"> 
+              <input type="text" name="helpbox" size="45" maxlength="100" style="width:450px; font-size:10px" class="helpline" value="{L_STYLES_TIP}" />
+              </span></td>
+          </tr>
+          <tr> 
+            <td colspan="9"><span class="gen"> 
+              <textarea name="message" rows="15" cols="35" wrap="virtual" style="width:450px" tabindex="3" class="post" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);">{MESSAGE}</textarea>
+              </span></td>
+          </tr>
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+          <!-- END switch_delete_checkbox -->
+
+#
+#-----[ AFTER, ADD ]--------------------------------------- 
+#
+          <!-- BEGIN switch_topic_glance_priority -->
+           <tr> 
+            <td> 
+              <input type="checkbox" name="topic_glance_priority" {TOPIC_GLANCE_PRIORITY_CHECKED} value="1" /></td>
+            <td><span class="gen">{L_TOPIC_GLANCE_PRIORITY}</span></td>
+          </tr>
+          <!-- END switch_topic_glance_priority -->
+          <!-- BEGIN switch_lock_topic -->
+          <tr> 
+            <td> 
+              <input type="checkbox" name="lock" {S_LOCK_CHECKED} />
+            </td>
+            <td><span class="gen">{L_LOCK_TOPIC}</span></td>
+          </tr>
+          <!-- END switch_lock_topic -->
+          <!-- BEGIN switch_unlock_topic -->
+          <tr> 
+            <td> 
+              <input type="checkbox" name="unlock" {S_UNLOCK_CHECKED} />
+            </td>
+            <td><span class="gen">{L_UNLOCK_TOPIC}</span></td>
+          </tr>
+          <!-- END switch_unlock_topic -->
+          <!-- BEGIN switch_Welcome_PM -->
+          <tr> 
+            <td> 
+              <input type="checkbox" name="w_pm" {S_WELCOME_PM} />
+            </td>
+            <td><span class="gen">{L_WELCOME_PM}</span></td>
+          </tr>
+          <!-- END switch_Welcome_PM -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<img border="0" src="modules/Forums/bbcode_box/images/code.gif" name="code" type="image" onClick="BBCcode()" onMouseOver="helpline('code')" style="border-style: outset; border-width: 1" alt="Code">
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+<img border="0" src="modules/Forums/bbcode_box/images/phpcode.gif" name="php" type="image" onClick="BBCphp()" onMouseOver="helpline('php')" style="border-style: outset; border-width: 1" alt="PHP">
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/posting_preview.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+                    <span class="postbody">{MESSAGE}</span>
+
+#
+#-----[ AFTER, ADD ]---------------------------------------
+#
+                    <!-- BEGIN postrow -->
+                    {ATTACHMENTS}
+                    <!-- END postrow -->
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/posting_topic_review.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+                <td colspan="2"><span class="postbody">{postrow.MESSAGE}</span></td>
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------------
+#
+{postrow.MESSAGE}</span>
+
+#
+#-----[ IN-LINE AFTER, ADD ]---------------------------------------
+#
+{postrow.ATTACHMENTS}
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+<!-- BEGIN switch_inline_mode -->
+
+#
+#-----[ BEFORE, ADD ]--------------------------------------- 
+#
+<script language="JavaScript" type="text/javascript">
+<!--
+
+message = new Array();
+<!-- BEGIN postrow -->
+message[{postrow.U_POST_ID}] = "[quote=\"{postrow.EXT_POSTER_NAME}\";p=\"{postrow.U_POST_ID}\"]\n{postrow.PLAIN_MESSAGE}\n[/quote]";
+<!-- END postrow -->
+
+function addquote(post_id) {
+
+    window.parent.document.post.message.value += message[post_id];
+    window.parent.document.post.message.focus();
+    return;
+}
+
+//-->
+</script>
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+                <td width="100%"><img src="{postrow.MINI_POST_IMG}" width="12" height="9" alt="{postrow.L_MINI_POST_ALT}" title="{postrow.L_MINI_POST_ALT}" border="0" /><span class="postdetails">{L_POSTED}: {postrow.POST_DATE}<span class="gen">&nbsp;</span>&nbsp;&nbsp;&nbsp;{L_POST_SUBJECT}: {postrow.POST_SUBJECT}</span></td>
+
+#
+#-----[ AFTER, ADD ]--------------------------------------- 
+#
+                <td valign="top" align="right" nowrap="nowrap"><span class="genmed"><input type="button" class="button" name="addquote" value="Quote" style="width: 50px" onClick="addquote({postrow.U_POST_ID});" /></span></td>
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/privmsgs_body.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+<table border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
+  <tr> 
+
+#
+#-----[ AFTER, ADD ]---------------------------------------
+#
+# Note: Change modules/Forums/templates/subSilver/images/ to themes/YOUR_THEME/forums/images/ where 'YOUR_THEME' is the name of the theme
+#
+    <td align="right"> 
+      <!-- BEGIN switch_box_size_notice -->
+      <table width="175" cellspacing="1" cellpadding="2" border="0" class="bodyline">
+        <tr> 
+          <td colspan="3" width="175" class="row1" nowrap="nowrap"><span class="gensmall">{ATTACH_BOX_SIZE_STATUS}</span></td>
+        </tr>
+        <tr> 
+          <td colspan="3" width="175" class="row2">
+            <table cellspacing="0" cellpadding="1" border="0">
+              <tr> 
+                <td bgcolor="{T_TD_COLOR2}"><img src="modules/Forums/templates/subSilver/images/spacer.gif" width="{ATTACHBOX_LIMIT_IMG_WIDTH}" height="8" alt="{ATTACH_LIMIT_PERCENT}" /></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td width="33%" class="row1"><span class="gensmall">0%</span></td>
+          <td width="34%" align="center" class="row1"><span class="gensmall">50%</span></td>
+          <td width="33%" align="right" class="row1"><span class="gensmall">100%</span></td>
+        </tr>
+      </table>
+      <!-- END switch_box_size_notice -->
+    </td>
+
+#
+#----[ FIND ]------------------------------------------ 
+#
+# Note: If your theme is not subSilver, you will not find below part
+# so find these 4 parts and replace
+#
+# {INBOX} &nbsp;    -- REPLACE WITH -->  {INBOX}&nbsp;({TOTAL_INBOX})&nbsp;
+# {SENTBOX} &nbsp;  -- REPLACE WITH -->  {SENTBOX}&nbsp;({TOTAL_SENTBOX})&nbsp;
+# {OUTBOX} &nbsp;   -- REPLACE WITH -->  {OUTBOX}&nbsp;({TOTAL_OUTBOX})&nbsp;
+# {SAVEBOX} &nbsp;  -- REPLACE WITH -->  {SAVEBOX}&nbsp;({TOTAL_SAVEBOX})&nbsp;
+#
+#
+      <table height="40" cellspacing="2" cellpadding="2" border="0">
+        <tr valign="middle"> 
+          <td>{INBOX_IMG}</td>
+          <td><span class="cattitle">{INBOX} &nbsp;</span></td>
+          <td>{SENTBOX_IMG}</td>
+          <td><span class="cattitle">{SENTBOX} &nbsp;</span></td>
+          <td>{OUTBOX_IMG}</td>
+          <td><span class="cattitle">{OUTBOX} &nbsp;</span></td>
+          <td>{SAVEBOX_IMG}</td>
+          <td><span class="cattitle">{SAVEBOX} &nbsp;</span></td>
+        </tr>
+      </table>
+
+#
+#----[ REPLACE WITH ]------------------------------------------ 
+#
+      <table height="40" cellspacing="2" cellpadding="2" border="0">
+        <tr valign="middle"> 
+          <td>{INBOX_IMG}</td>
+          <td><span class="cattitle">{INBOX}&nbsp;({TOTAL_INBOX})&nbsp;</span></td>
+          <td>{SENTBOX_IMG}</td>
+          <td><span class="cattitle">{SENTBOX}&nbsp;({TOTAL_SENTBOX})&nbsp;</span></td>
+          <td>{OUTBOX_IMG}</td>
+          <td><span class="cattitle">{OUTBOX}&nbsp;({TOTAL_OUTBOX})&nbsp;</span></td>
+          <td>{SAVEBOX_IMG}</td>
+          <td><span class="cattitle">{SAVEBOX}&nbsp;({TOTAL_SAVEBOX})&nbsp;</span></td>
+        </tr>
+      </table>
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+    <tr> 
+      <td align="left" valign="middle">{POST_PM_IMG}</td>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+      <!-- Start add - Custom mass PM MOD -->
+      <td align="left" valign="middle">{MASS_PM_IMG}</td>
+      <!-- End add - Custom mass PM MOD -->
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+    <tr> 
+      <td align="left" valign="middle"><span class="nav">{POST_PM_IMG}</span></td>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+      <!-- Start add - Custom mass PM MOD -->
+      <td align="left" valign="middle"><span class="nav">{MASS_PM_IMG}</span></td>
+      <!-- End add - Custom mass PM MOD -->
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+      <td width="55%" valign="middle" class="{listrow.ROW_CLASS}"><span class="topictitle">&nbsp;<a href="{listrow.U_READ}" class="topictitle">{listrow.SUBJECT}</a></span></td>
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------------
+#
+<span class="topictitle">&nbsp;<a href="{listrow.U_READ}" class="topictitle">{listrow.SUBJECT}
+
+#
+#-----[ IN-LINE BEFORE, ADD ]---------------------------------------
+#
+{listrow.PRIVMSG_ATTACHMENTS_IMG}
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/privmsgs_preview.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {MESSAGE}
+#
+    <td valign="top" colspan="2" class="row1"><span class="postbody">{MESSAGE}</span></td>
+
+#
+#-----[ REPLACE WITH ]---------------------------------------
+#
+# Note: Do not form one line out of this, a <!-- --> template statement has to be on one seperate line
+#
+    <td valign="top" colspan="2" class="row1"><span class="postbody">{MESSAGE}</span>
+    <!-- BEGIN postrow -->
+    {ATTACHMENTS}
+    <!-- END postrow -->
+    </td>
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/privmsgs_read_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------
+#
+      <td width="100%" class="row2" colspan="2"><span class="genmed">{MESSAGE_FROM}</span></td>
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+{MESSAGE_FROM}</span>
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+<span class="gensmall">{POSTER_FROM_ONLINE_STATUS}</span>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+      <td width="100%" class="row2" colspan="2"><span class="genmed">{MESSAGE_TO}</span></td>
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+{MESSAGE_TO}</span>
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+<span class="gensmall">{POSTER_TO_ONLINE_STATUS}</span>
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+      <td valign="top" colspan="3" class="row1"><span class="postbody">{MESSAGE}</span></td>
+
+#
+#-----[ REPLACE WITH ]---------------------------------------
+#
+# Note: Do not form one line out of this, a <!-- --> template statement has to be on one seperate line
+#
+      <td valign="top" colspan="3" class="row1"><span class="postbody">{MESSAGE}</span>
+      <!-- BEGIN postrow -->
+      {ATTACHMENTS}
+      <!-- END postrow -->
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+        <input type="submit" name="delete" value="{L_DELETE_MSG}" class="liteoption" />
+
+#
+#-----[ AFTER, ADD ]---------------------------------------
+#
+# Note: Do not form one line out of this, a <!-- --> template statement has to be on one seperate line
+#
+        <!-- BEGIN switch_attachments -->
+        &nbsp; 
+        <input type="submit" name="pm_delete_attach" value="{L_DELETE_ATTACHMENTS}" class="liteoption" />
+        <!-- END switch_attachments -->
+
+#
+#-----[ FIND ]----------------------------------------------
+#
+</table>
+<table width="100%" cellspacing="2" border="0" align="center" cellpadding="2">
+
+#
+#-----[ BEFORE, ADD ]----------------------------------------
+#
+    {ROPM_QUICKREPLY_OUTPUT}
+
+#
+#-----[ OPEN ]------------------------------------------------ 
+#
+themes/YOUR_THEME/forums/profile_add_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {USERNAME}
+#
+    <tr> 
+        <td class="row1" width="38%"><span class="gen">{L_USERNAME}: *</span></td>
+        <td class="row2"><input type="text" class="post" style="width:200px" name="username" size="25" maxlength="25" value="{USERNAME}" /></td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]--------------------------------------
+#
+    <tr>
+        <td class="row1" width="38%"><span class="gen">{L_NAME}</span></td>
+        <td class="row2"><input type="text" class="post" style="width:200px" name="rname" size="25" maxlength="25" value="{RNAME}" /></td>
+    </tr>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<!-- END switch_edit_profile -->
+
+#
+#-----[ AFTER, ADD ]--------------------------------------
+#
+<!-- BEGIN switch_ya_merge -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {PASSWORD_CONFIRM}
+#
+      <td class="row1"><span class="gen">{L_CONFIRM_PASSWORD}: * </span><br />
+        <span class="gensmall">{L_PASSWORD_CONFIRM_IF_CHANGED}</span></td>
+      <td class="row2"> 
+        <input type="password" class="post" style="width: 200px" name="password_confirm" size="25" maxlength="100" value="{PASSWORD_CONFIRM}" />
+      </td>
+    </tr>
+    
+#
+#-----[ AFTER, ADD ]--------------------------------------
+#
+    <!-- END switch_ya_merge -->
+    <!-- BEGIN switch_silent_password -->
+    <input type="hidden" name="new_password" value="{NEW_PASSWORD}" />
+    <input type="hidden" name="password_confirm" value="{PASSWORD_CONFIRM}" />
+    <!-- END switch_silent_password -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+  <td class="row2" colspan="2"><span class="gensmall">{L_PROFILE_INFO_NOTICE}</span></td>
+</tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- BEGIN xdata -->
+<!-- BEGIN switch_is_icq -->
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+        <input type="text" name="icq" class="post"style="width: 100px"  size="10" maxlength="15" value="{ICQ}" />
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+        <input type="text" name="icq" class="post" style="width: 100px" size="10" maxlength="15" value="{ICQ}" />
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+        <input type="text" class="post"style="width: 150px"  name="aim" size="20" maxlength="255" value="{AIM}" />
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+        <input type="text" class="post" style="width: 150px" name="aim" size="20" maxlength="255" value="{AIM}" />
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+        <input type="text" class="post"style="width: 150px"  name="msn" size="20" maxlength="255" value="{MSN}" />
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+        <input type="text" class="post" style="width: 150px" name="msn" size="20" maxlength="255" value="{MSN}" />
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+        <input type="text" class="post"style="width: 150px"  name="yim" size="20" maxlength="255" value="{YIM}" />
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+        <input type="text" class="post" style="width: 150px" name="yim" size="20" maxlength="255" value="{YIM}" />
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+        <input type="text" class="post"style="width: 200px"  name="website" size="25" maxlength="255" value="{WEBSITE}" />
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+        <input type="text" class="post" style="width: 200px" name="website" size="25" maxlength="255" value="{WEBSITE}" />
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+        <input type="text" class="post"style="width: 200px"  name="location" size="25" maxlength="100" value="{LOCATION}" />
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+        <input type="text" class="post" style="width: 200px" name="location" size="25" maxlength="100" value="{LOCATION}" />
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+        <input type="text" class="post"style="width: 200px"  name="occupation" size="25" maxlength="100" value="{OCCUPATION}" />
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+        <input type="text" class="post" style="width: 200px" name="occupation" size="25" maxlength="100" value="{OCCUPATION}" />
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_INTERESTS}:</span></td>
+      <td class="row2"> 
+        <input type="text" class="post"style="width: 200px"  name="interests" size="35" maxlength="150" value="{INTERESTS}" />
+      </td>
+    </tr>
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+    <tr>
+      <td class="row1"><span class="gen">{L_INTERESTS}:</span></td>
+      <td class="row2"> 
+        <input type="text" class="post" style="width: 200px" name="interests" size="35" maxlength="150" value="{INTERESTS}" />
+      </td>
+    </tr>
+    <tr>
+      <td class="row1"><span class="gen">{L_EXTRA_INFO}</span></td>
+      <td class="row2"> 
+        <textarea wrap='virtual' class="post" cols='50' rows='5' name='extra_info' />{EXTRA_INFO}</textarea>
+      </td>
+    </tr>
+
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_SIGNATURE_EXPLAIN}
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_SIGNATURE}:</span><br /><span class="gensmall">{L_SIGNATURE_EXPLAIN}<br /><br />{HTML_STATUS}<br />{BBCODE_STATUS}<br />{SMILIES_STATUS}</span></td>
+      <td class="row2"> 
+        <textarea name="signature"style="width: 300px"  rows="6" cols="30" class="post">{SIGNATURE}</textarea>
+      </td>
+    </tr>
+
+#
+#-----[ REPLACE WITH ]---------------------------------------
+#
+<!-- END switch_is_interests -->
+<!-- BEGIN switch_is_signature -->
+    <!-- Start Replace - Signatures control MOD -->
+    <!-- BEGIN switch_signature_allowed -->
+    <tr>
+      <td class="row1"><span class="gen">{SIG_DESC}:</span></td>
+      <td class="row2">
+        <input type="button" value="{SIG_BUTTON_DESC}" onclick="window.location.href="{SIG_EDIT_LINK}" />
+      </td>
+    </tr>
+    <!-- END switch_signature_allowed -->
+    <!-- End Replace - Signatures control MOD -->
+<!-- END switch_is_signature -->
+    <!-- BEGIN switch_type_text -->
+    <tr>
+      <td class="row1">
+        <span class="gen">{xdata.NAME}</span><br /><span class="gensmall">{xdata.DESCRIPTION}</span>
+      </td>
+      <td class="row2">
+        <input type="text" class="post" style="width: 200px" name="{xdata.CODE_NAME}" size="35" maxlength="{xdata.MAX_LENGTH}" value="{xdata.VALUE}" />
+      </td>
+    </tr>
+    <!-- END switch_type_text -->
+    <!-- BEGIN switch_type_textarea -->
+    <tr>
+      <td class="row1">
+        <span class="gen">{xdata.NAME}</span><br /><span class="gensmall">{xdata.DESCRIPTION}</span>
+      </td>
+      <td class="row2">
+        <textarea name="{xdata.CODE_NAME}" style="width: 300px" rows="6" cols="30" class="post">{xdata.VALUE}</textarea>
+      </td>
+    </tr>
+    <!-- END switch_type_textarea -->
+    <!-- BEGIN switch_type_select -->
+    <tr>
+      <td class="row1">
+        <span class="gen">{xdata.NAME}</span><br /><span class="gensmall">{xdata.DESCRIPTION}</span>
+      </td>
+      <td class="row2">
+         <select name="{xdata.CODE_NAME}">
+         <!-- BEGIN options -->
+         <option value="{xdata.switch_type_select.options.OPTION}" {xdata.switch_type_select.options.SELECTED}>{xdata.switch_type_select.options.OPTION}</option>
+           <!-- END options -->
+         </select>
+      </td>
+    </tr>
+    <!-- END switch_type_select -->
+    <!-- BEGIN switch_type_radio -->
+    <tr>
+      <td class="row1">
+        <span class="gen">{xdata.NAME}</span><br /><span class="gensmall">{xdata.DESCRIPTION}</span>
+      </td>
+      <td class="row2">
+         <!-- BEGIN options -->
+         <input type="radio" name="{xdata.CODE_NAME}" value="{xdata.switch_type_radio.options.OPTION}" {xdata.switch_type_radio.options.CHECKED} />
+         <span class="gen">{xdata.switch_type_radio.options.OPTION}</span><br />
+         <!-- END options -->
+      </td>
+    </tr>
+    <!-- END switch_type_radio -->
+<!-- END xdata -->
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: this is a search by part(s) of code line(s)!
+# The original line(s) to find is(are) longer and must look like this (if no MOD has already modify them):
+#
+#       <input type="radio" name="notifypm" value="0" {NOTIFY_PM_NO} />
+#       <span class="gen">{L_NO}</span></td>
+#   </tr>
+#
+{NOTIFY_PM_NO}
+{L_NO}
+</tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+    <!-- Start add - Custom mass PM MOD -->
+    <!-- BEGIN switch_can_disable_mass_pm -->
+    <tr>
+        <td class="row1"><span class="gen">{L_ENABLE_MASS_PM}:</span><br />
+        <span class="gensmall">{L_ENABLE_MASS_PM_EXPLAIN}</span></td>
+        <td class="row2">
+        <input type="radio" name="allow_mass_pm" value="4" {ALLOW_MASS_PM_NOTIFY_CHECKED}/>
+        <span class="gen">{L_YES}</span>&nbsp;&nbsp;
+        <input type="radio" name="allow_mass_pm" value="2" {ALLOW_MASS_PM_CHECKED}/>
+        <span class="gen">{L_NO}</span>&nbsp;&nbsp;
+        <input type="radio" name="allow_mass_pm" value="0" {DISABLE_MASS_PM_CHECKED}/>
+        <span class="gen">{L_NO_MASS_PM}</span></td>
+    </tr>
+    <!-- END switch_can_disable_mass_pm -->
+
+    <!-- BEGIN switch_can_not_disable_mass_pm -->
+    <tr>
+        <td class="row1"><span class="gen">{L_ENABLE_MASS_PM}:</span><br />
+        <span class="gensmall">{L_ENABLE_MASS_PM_EXPLAIN}</span></td>
+        <td class="row2">
+        <input type="radio" name="allow_mass_pm" value="4" {ALLOW_MASS_PM_NOTIFY_CHECKED}/>
+        <span class="gen">{L_YES}</span>&nbsp;&nbsp;
+        <input type="radio" name="allow_mass_pm" value="2" {ALLOW_MASS_PM_CHECKED}/>
+        <span class="gen">{L_NO}</span></td>
+    </tr>
+    <!-- END switch_can_not_disable_mass_pm -->
+    <!-- End add - Custom mass PM MOD -->
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {ALWAYS_ALLOW_SMILIES_NO}
+#
+<input type="radio" name="allowsmilies" value="0" {ALWAYS_ALLOW_SMILIES_NO} />
+        <span class="gen">{L_NO}</span></td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+    <tr>
+      <td class="row1"><span class="gen">{L_SHOW_AVATARS}:</span></td>
+      <td class="row2">
+        <input type="radio" name="showavatars" value="1" {SHOW_AVATARS_YES} />
+        <span class="gen">{L_YES}</span>&nbsp;&nbsp;
+        <input type="radio" name="showavatars" value="0" {SHOW_AVATARS_NO} />
+        <span class="gen">{L_NO}</span></td>
+    </tr>
+    <tr>
+      <td class="row1"><span class="gen">{L_SHOW_SIGNATURES}:</span></td>
+      <td class="row2">
+        <input type="radio" name="showsignatures" value="1" {SHOW_SIGNATURES_YES} />
+        <span class="gen">{L_YES}</span>&nbsp;&nbsp;
+        <input type="radio" name="showsignatures" value="0" {SHOW_SIGNATURES_NO} />
+        <span class="gen">{L_NO}</span></td>
+    </tr>
+    <tr>
+      <td class="row1"><span class="gen">{L_NEWSLETTER}:</span></td>
+      <td class="row2">
+        <input type="radio" name="newsletter" value="1" {NEWSLETTER_YES} />
+        <span class="gen">{L_YES}</span>&nbsp;&nbsp; 
+        <input type="radio" name="newsletter" value="0" {NEWSLETTER_NO} />
+        <span class="gen">{L_NO}</span></td>
+    </tr>
+    <!-- BEGIN force_word_wrapping -->
+    <tr> 
+      <td class="row1"><span class="gen">{L_WORD_WRAP}:</span><br /><span class="gensmall">{L_WORD_WRAP_EXPLAIN}</span></td>
+      <td class="row2"><span class="gensmall"><input type="text" name="user_wordwrap" value="{WRAP_ROW}" size="2" maxlength="2" class="post" /> {L_WORD_WRAP_EXTRA}</span></td>
+    </tr>
+    <!-- END force_word_wrapping -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+# Note: this is a search by part(s) of code line(s)!
+# The original line(s) to find is(are) longer and must look like this (if no MOD has already modify them):
+#
+# <tr> 
+#   <td class="row1"><span class="gen">{L_TIMEZONE}:</span></td>
+#   <td class="row2"><span class="gensmall">{TIMEZONE_SELECT}</span></td>
+# </tr>
+#
+<tr>
+{L_TIMEZONE}
+{TIMEZONE_SELECT}
+</tr>
+
+#
+#-----[ REPLACE WITH ]----------------------------------------
+#
+    <!-- Start replacement - Advanced time management MOD -->
+    <tr>
+      <td class="row1"><span class="gen">{L_TIME_MODE}:</span><br />
+        <span class="gensmall">{L_TIME_MODE_TEXT}</span></td>
+      <td class="row2">
+        <span class="gen">{L_TIME_MODE_AUTO}</span><br />
+        <input type="radio" name="time_mode" value="6" {TIME_MODE_FULL_PC_CHECKED}/>
+        <span class="gen">{L_TIME_MODE_FULL_PC}</span>&nbsp;&nbsp;<br />
+        <input type="radio" name="time_mode" value="4" {TIME_MODE_SERVER_PC_CHECKED}/>
+        <span class="gen">{L_TIME_MODE_SERVER_PC}</span>&nbsp;&nbsp;<br />
+        <input type="radio" name="time_mode" value="3" {TIME_MODE_FULL_SERVER_CHECKED}/>
+        <span class="gen">{L_TIME_MODE_FULL_SERVER}</span>
+        <br /><br />
+        <span class="gen">{L_TIME_MODE_MANUAL}</span><br />
+        <span class="gen">&nbsp;&nbsp;{L_TIME_MODE_DST}:</span><input type="radio" name="time_mode" value="1" {TIME_MODE_MANUAL_DST_CHECKED}/><span class="gen">{L_YES}{L_TIME_MODE_DST_ON}</span>&nbsp;<input type="radio" name="time_mode" value="0" {TIME_MODE_MANUAL_CHECKED}/><span class="gen">{L_NO}{L_TIME_MODE_DST_OFF}</span>&nbsp;<input type="radio" name="time_mode" value="2" {TIME_MODE_SERVER_SWITCH_CHECKED}/><span class="gen">{L_TIME_MODE_DST_SERVER}</span><br />
+        <span class="gen">&nbsp;&nbsp;{L_TIME_MODE_DST_TIME_LAG}: </span><input type="text" name="dst_time_lag" value="{DST_TIME_LAG}" maxlength="3" size="3" class="post" /><span class="gen">{L_TIME_MODE_DST_MN}</span><br />
+        <span class="gen">&nbsp;&nbsp;{L_TIME_MODE_TIMEZONE}: </span><span class="gensmall">{TIMEZONE_SELECT}</span></td>
+    </tr>
+    <!-- End replacement - Advanced time management MOD -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+<!-- BEGIN switch_avatar_block -->
+
+#
+#-----[ BEFORE, ADD ]--------------------------------------
+#
+    <tr>
+      <td class="catSides" colspan="2"><span class="cattitle">&nbsp;</span></td>
+    </tr>
+    <tr>
+      <th class="thSides" colspan="2" height="12" valign="middle">{L_QUICK_REPLY_PANEL}</th>
+    </tr>
+    <tr>
+      <td class="row1"><span class="gen">{L_SHOW_QUICK_REPLY}:</span></td>
+      <td class="row2">{QUICK_REPLY_SELECT}</td>
+    </tr>
+    <tr>
+      <td class="row1"><span class="gen">{L_QUICK_REPLY_MODE}:</span></td>
+      <td class="row2">
+        <input type="radio" name="quickreply_mode" value="0" {QUICK_REPLY_MODE_BASIC} />
+        <span class="gen">{L_QUICK_REPLY_MODE_BASIC}</span>&nbsp;&nbsp;
+        <input type="radio" name="quickreply_mode" value="1" {QUICK_REPLY_MODE_ADVANCED} />
+        <span class="gen">{L_QUICK_REPLY_MODE_ADVANCED}</span></td>
+    </tr>
+    <tr>
+      <td class="row1"><span class="gen">{L_OPEN_QUICK_REPLY}:</span></td>
+      <td class="row2">
+        <input type="radio" name="open_quickreply" value="1" {OPEN_QUICK_REPLY_YES} />
+        <span class="gen">{L_YES}</span>&nbsp;&nbsp;
+        <input type="radio" name="open_quickreply" value="0" {OPEN_QUICK_REPLY_NO} />
+        <span class="gen">{L_NO}</span></td>
+    </tr>
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+<tr>
+  <td class="row1"><span class="gen">{L_ICQ_NUMBER}:</span></td>
+  <td class="row2">
+    <input type="text" name="icq" class="post"style="width: 100px"  size="10" maxlength="15" value="{ICQ}" />
+  </td>
+</tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_icq -->
+<!-- BEGIN switch_is_aim -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+<tr>
+  <td class="row1"><span class="gen">{L_AIM}:</span></td>
+  <td class="row2">
+    <input type="text" class="post"style="width: 150px"  name="aim" size="20" maxlength="255" value="{AIM}" />
+  </td>
+</tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_aim -->
+<!-- BEGIN switch_is_msn -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+<tr>
+  <td class="row1"><span class="gen">{L_MESSENGER}:</span></td>
+  <td class="row2">
+    <input type="text" class="post"style="width: 150px"  name="msn" size="20" maxlength="255" value="{MSN}" />
+  </td>
+</tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_msn -->
+<!-- BEGIN switch_is_yim -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+<tr>
+  <td class="row1"><span class="gen">{L_YAHOO}:</span></td>
+  <td class="row2">
+    <input type="text" class="post"style="width: 150px"  name="yim" size="20" maxlength="255" value="{YIM}" />
+  </td>
+</tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_yim -->
+<!-- BEGIN switch_is_website -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+<tr>
+  <td class="row1"><span class="gen">{L_WEBSITE}:</span></td>
+  <td class="row2">
+    <input type="text" class="post"style="width: 200px"  name="website" size="25" maxlength="255" value="{WEBSITE}" />
+  </td>
+</tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_website -->
+<!-- BEGIN switch_is_location -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+<tr>
+  <td class="row1"><span class="gen">{L_LOCATION}:</span></td>
+  <td class="row2">
+    <input type="text" class="post"style="width: 200px"  name="location" size="25" maxlength="100" value="{LOCATION}" />
+  </td>
+</tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_location -->
+<!-- BEGIN switch_is_occupation -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+<tr>
+  <td class="row1"><span class="gen">{L_OCCUPATION}:</span></td>
+  <td class="row2">
+    <input type="text" class="post"style="width: 200px"  name="occupation" size="25" maxlength="100" value="{OCCUPATION}" />
+  </td>
+</tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_occupation -->
+<!-- BEGIN switch_is_interests -->
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/profile_view_body.tpl
+
+#
+#-----[ FIND ]--------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_ABOUT_USER}
+#
+    <td class="catRight" width="60%"><b><span class="gen">{L_ABOUT_USER}</span></b></td>
+
+#
+#-----[ REPLACE WITH ]------------------------------------------------------------
+#
+    <td class="catRight" width="60%"><b><span class="gen">{L_ABOUT_USER}</span></b>
+    <!-- BEGIN switch_user_admin -->
+    <span class="gen">&nbsp;(<a target="_admin" href="{U_ADMIN_PROFILE}" class="gen">{L_USER_ADMIN_FOR} {USERNAME}</a>)</span>
+    <!-- END switch_user_admin -->
+    </td>
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+        <tr> 
+          <td valign="top" align="right" nowrap="nowrap"><span class="gen">{L_INTERESTS}:</span></td>
+          <td> <b><span class="gen">{INTERESTS}</span></b></td>
+        </tr>
+
+#
+#-----[ AFTER, ADD ]---------------------------------------
+#
+        <!-- BEGIN xdata -->
+        <tr>
+          <td valign="top" align="right" nowrap="nowrap"><span class="gen">{xdata.NAME}:</span></td>
+          <td> <b><span class="gen">{xdata.VALUE}</span></b></td>
+        </tr>
+        <!-- END xdata -->
+        <!-- BEGIN switch_upload_limits -->
+        <tr> 
+            <td valign="top" align="right" nowrap="nowrap"><span class="gen">{L_UPLOAD_QUOTA}:</span></td>
+            <td> 
+                <table width="175" cellspacing="1" cellpadding="2" border="0" class="bodyline">
+                <tr> 
+                    <td colspan="3" width="100%" class="row2">
+                        <table cellspacing="0" cellpadding="1" border="0">
+                        <tr> 
+                            <td bgcolor="{T_TD_COLOR2}"><img src="themes/DeepBlueNE/images/spacer.gif" width="{UPLOAD_LIMIT_IMG_WIDTH}" height="8" alt="{UPLOAD_LIMIT_PERCENT}" /></td>
+                        </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr> 
+                    <td width="33%" class="row1"><span class="gensmall">0%</span></td>
+                    <td width="34%" align="center" class="row1"><span class="gensmall">50%</span></td>
+                    <td width="33%" align="right" class="row1"><span class="gensmall">100%</span></td>
+                </tr>
+                </table>
+                <b><span class="genmed">[{UPLOADED} / {QUOTA} / {PERCENT_FULL}]</span> </b><br />
+                <span class="genmed"><a href="{U_UACP}" class="genmed">{L_UACP}</a></span></td>
+            </td>
+        </tr>
+        <!-- END switch_upload_limits -->
+        <!-- BEGIN show_groups -->
+        <tr>
+          <td valign="top" align="right" nowrap="nowrap"><span class="gen">{L_GROUPS}:</span></td>
+          <td> <b><span class="gen">{GROUPS}</span></b></td>
+        </tr>
+        <!-- END show_groups -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# //--></script><noscript>{ICQ_IMG}</noscript>
+#
+        <tr> 
+          <td valign="middle" nowrap="nowrap" align="right"><span class="gen">{L_ICQ_NUMBER}:</span></td>
+          <td class="row1"><script language="JavaScript" type="text/javascript"><!-- 
+
+        if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && 
+navigator.userAgent.indexOf('6.') == -1 )
+            document.write(' {ICQ_IMG}');
+        else
+            document.write('<table cellspacing="0" cellpadding="0" border="0"><tr><td nowrap="nowrap"><div 
+style="position:relative;height:18px"><div style="position:absolute">{ICQ_IMG}</div><div 
+style="position:absolute;left:3px;top:-1px">{ICQ_STATUS_IMG}</div></div></td></tr></table>');
+          
+          //--></script><noscript>{ICQ_IMG}</noscript></td>
+        </tr>
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+        <tr>
+            <td valign="middle" nowrap="nowrap" align="right"><span class="gen">{L_ONLINE_STATUS}:</span></td>
+            <td class="row1" valign="middle"><span class="gen">{ONLINE_STATUS}</span></td>
+        </tr>
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td align="right"><span class="nav"><br />{JUMPBOX}</span></td>
+  </tr>
+</table>
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------------
+#
+<!-- BEGIN user_extra -->
+<tr>
+    <td class="catLeft" align="center" height="28" colspan="2"><b><span class="gen">{L_EXTRA_INFO}</span></b></td>
+</tr>
+<tr>
+    <td class="row1" colspan="2"><table width="100%" border="0">
+        <tr><td>{EXTRA_INFO}</td></tr>
+    </table></td>
+</tr>
+<!-- END user_extra -->
+<!-- BEGIN user_sig -->
+<tr>
+    <td class="catLeft" align="center" height="28" colspan="2"><b><span class="gen">{L_SIG}</span></b></td>
+</tr>
+<tr>
+<td class="row1" valign="top" colspan="2"><table width="100%" border="0">
+    <tr><td>{USER_SIG}</td></tr>
+</table></td>
+</tr>
+<!-- END user_sig -->
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/search_body.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {S_SORT_OPTIONS}
+#
+<td class="row2" valign="middle" nowrap="nowrap"><span class="genmed"><select class="post" name="sort_by">{S_SORT_OPTIONS}</select><br /><input type="radio" name="sort_dir" value="ASC" /> {L_SORT_ASCENDING}<br />
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------------
+#
+checked />
+
+#
+#-----[ IN-LINE REPLACE WITH ]---------------------------------------------
+#
+checked="checked" />
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/search_results_posts.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+align="absmiddle">
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+align="absmiddle" />
+
+#
+#-----[ OPEN ]------------------------------------------------ 
+#
+themes/YOUR_THEME/forums/search_username.tpl
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+    opener.document.forms['post'].username.value = selected_username;
+
+#
+#-----[ REPLACE WITH ]---------------------------------------- 
+#
+    <!-- Start replacement - Custom mass PM MOD -->
+    if (opener.document.forms['post'].username.value)
+    {
+        opener.document.forms['post'].username.value = opener.document.forms['post'].username.value + ';' + selected_username;
+    }
+    else
+    {
+        opener.document.forms['post'].username.value = selected_username;
+    }
+    <!-- End replacement - Custom mass PM MOD -->
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/forums/simple_footer.tpl
+
+#
+#-----[ FIRST LINE, ADD ]------------------------------------------
+#
+<div style="display:none" id="resizemod"></div>
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+# Lets update the credits as well and remove the phpBB version due to security reasons :)
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# Powered by
+#
+Powered by <a href="http://www.phpbb.com/" target="_phpbb" class="copyright"><b>phpBB</a> {PHPBB_VERSION}</b> &copy; 2001, 2002 phpBB Group<br />{TRANSLATION_INFO}<br />
+
+#
+#-----[ REPLACE WITH ]------------------------------------------ 
+#
+Powered by <a href="http://www.phpbb.com/" target="_blank" class="copyright">phpBB</a> &copy; 2001, 2006 phpBB Group<br />{TRANSLATION_INFO}<br />
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/forums/simple_header.tpl
+
+#
+#-----[ FIND ]------------------------------------------
+#
+</head>
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------
+#
+<!-- start mod : Resize Posted Images Based on Max Width -->
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+var rmw_max_width = 400; // this max width is used in the Topic Review iframe when posting
+var rmw_border_1 = '1px solid {T_BODY_LINK}';
+var rmw_border_2 = '2px dotted {T_BODY_LINK}';
+var rmw_image_title = '{L_RMW_IMAGE_TITLE}';
+
+//-->
+//]]>
+</script>
+<script type="text/javascript" src="{U_RMW_JSLIB}"></script>
+<!-- fin mod : Resize Posted Images Based on Max Width -->
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: If you cannot find this line in one of your style, never mind.
+# You can ignore this instruction.
+#
+input { text-indent : 2px; }
+
+#
+#-----[ REPLACE WITH ]---------------------------------------- 
+#
+/* Start replacement - Advanced time management MOD */
+/* input { text-indent : 2px; }
+/* End replacement - Advanced time management MOD */
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/viewforum_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+<form method="post" action="{S_POST_DAYS_ACTION}">
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------ 
+#
+<table width="100%" cellspacing="0" cellpadding="4" border="0" align="center">
+   <tr>
+      <td width="100%" colspan="2" valign="top">
+      <!-- MOD GLANCE BEGIN -->
+      {GLANCE_OUTPUT}
+      <!-- MOD GLANCE END -->
+   </tr>
+</table>
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+<!-- BEGIN topicrow -->
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+    <!-- BEGIN divider -->
+    <tr> 
+       <td class="catHead" colspan="6" height="28"><span class="cattitle">{topicrow.divider.L_DIV_HEADERS}</span></td>
+    </tr>
+    <!-- END divider -->
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {topicrow.TOPIC_TITLE}
+#
+      <td class="row1" width="100%"><span class="topictitle">{topicrow.NEWEST_POST_IMG}{topicrow.TOPIC_TYPE}<a href="{topicrow.U_VIEW_TOPIC}" class="topictitle">{topicrow.TOPIC_TITLE}</a></span><span class="gensmall"><br />
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------------
+#
+{topicrow.NEWEST_POST_IMG}
+
+#
+#-----[ IN-LINE AFTER, ADD ]---------------------------------------
+#
+{topicrow.TOPIC_ATTACHMENT_IMG}
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {FOLDER_ANNOUNCE_IMG}
+#
+                <td width="20" align="center"><img src="{FOLDER_ANNOUNCE_IMG}" alt="{L_ANNOUNCEMENT}" width="19" height="18" /></td>
+                <td class="gensmall">{L_ANNOUNCEMENT}</td>
+
+#
+#-----[ REPLACE WITH ]---------------------------------------- 
+#
+                <!-- Start replacement - Global announcement MOD -->
+                <td width="20" align="center"><img src="{FOLDER_GLOBAL_ANNOUNCE_IMG}" alt="{L_GLOBAL_ANNOUNCEMENT}" width="19" height="18" /></td>
+                <td class="gensmall">{L_GLOBAL_ANNOUNCEMENT}</td>
+                <!-- End replacement - Global announcement MOD -->
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {FOLDER_STICKY_IMG}
+#
+                <td width="20" align="center"><img src="{FOLDER_STICKY_IMG}" alt="{L_STICKY}" width="19" height="18" /></td>
+                <td class="gensmall">{L_STICKY}</td>
+
+#
+#-----[ REPLACE WITH ]---------------------------------------- 
+#
+                <!-- Start replacement - Global announcement MOD -->
+                <td width="20" align="center"><img src="{FOLDER_ANNOUNCE_IMG}" alt="{L_ANNOUNCEMENT}" width="19" height="18" /></td>
+                <td class="gensmall">{L_ANNOUNCEMENT}</td>
+                <!-- End replacement - Global announcement MOD -->
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {FOLDER_LOCKED_IMG}
+#
+                <td class="gensmall"><img src="{FOLDER_LOCKED_IMG}" alt="{L_NO_NEW_POSTS_TOPIC_LOCKED}" width="19" height="18" /></td>
+                <td class="gensmall">{L_NO_NEW_POSTS_LOCKED}</td>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+                <!-- Start add - Global announcement MOD -->
+                <td>&nbsp;&nbsp;</td>
+                <td width="20" align="center"><img src="{FOLDER_STICKY_IMG}" alt="{L_STICKY}" width="19" height="18" /></td>
+                <td class="gensmall">{L_STICKY}</td>
+                <!-- End add - Global announcement MOD -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+# Note: This is a partial search. The full lines are longer
+#
+    <!-- END switch_no_topics -->
+    <tr> 
+      <td class="catBottom"
+      
+#
+#-----[ IN-LINE FIND ]---------------------------------------- 
+#
+{S_SELECT_TOPIC_DAYS}&nbsp;
+
+#
+#-----[ IN-LINE AFTER, ADD ]---------------------------------- 
+#
+{S_DISPLAY_ORDER}
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+# Note: You do not need to do the 'viewtopic_attach_body.tpl' edit as this has been added already. This is only for reference:
+#
+themes/YOUR_THEME/forums/viewtopic_attach_body.tpl
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+<td colspan="2" align="center"><br /><img
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+ resizemod="on" onload="rmw_img_loaded(this)"
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+themes/YOUR_THEME/forums/viewtopic_body.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for {TOPIC_TITLE} and the first <table BEFORE that
+#
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr> 
+    <td align="left" valign="bottom" colspan="2"><a class="maintitle" href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a><br />
+
+#
+#-----[ BEFORE, ADD ]--------------------------------------- 
+#
+<script language="Javascript" type="text/javascript">
+<!--
+    function open_postreview(ref)
+    {
+        height = screen.height / 3;
+        width = screen.width / 2;
+        window.open(ref, '_phpbbpostreview', 'HEIGHT=' + height + ',WIDTH=' + width + ',resizable=yes,scrollbars=yes');
+        return;
+    }
+//-->
+</script>
+
+<table width="100%" cellspacing="0" cellpadding="4" border="0" align="center">
+   <tr>
+      <td width="100%" colspan="2" valign="top">
+      <!-- MOD GLANCE BEGIN -->
+      {GLANCE_OUTPUT}
+      <!-- MOD GLANCE END -->
+   </tr>
+</table>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {postrow.U_POST_ID}
+#
+        <td width="150" align="left" valign="top" class="{postrow.ROW_CLASS}"><span class="name"><a 
+name="{postrow.U_POST_ID}"></a><b>{postrow.POSTER_NAME}</b></span>
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+{postrow.POSTER_FROM}
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+<br />{postrow.POSTER_ONLINE_STATUS}
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {postrow.POSTER_ONLINE_STATUS}
+#
+{postrow.POSTER_FROM}<br />{postrow.POSTER_ONLINE_STATUS}
+
+#
+#-----[ IN-LINE FIND ]----------------------------------------
+#
+# Note: Some themes may have the </td> on the next line and you may also need to search for </span><br>
+#
+</span><br /></td>
+
+#
+#-----[ IN-LINE REPLACE WITH ]--------------------------------
+#
+<!-- -->
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- BEGIN xdata -->
+<br />{postrow.xdata.NAME}: {postrow.xdata.VALUE}
+<!-- END xdata -->
+</span></td>
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# width="100%" height="100%" valign="top">
+#
+<td class="{postrow.ROW_CLASS}" width="100%" height="100%" valign="top">
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------- 
+#
+<table
+
+#
+#-----[ IN-LINE AFTER, ADD ]---------------------------------- 
+#
+ height="100%"
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note 1: This line may vary depending on your theme. If so, search for the following part:
+# <!-- END postrow -->
+#
+# Note 2: If you have problems to edit this part, try to find <!-- END postrow --> and add only the the code between
+# <!-- BEGIN move_message --> and <!-- END move_message --> after it
+#
+     <tr> 
+        <td class="spaceRow" colspan="2" height="1"><img src="modules/Forums/templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+    </tr>
+<!-- END postrow -->
+
+#
+#-----[ REPLACE WITH]------------------------------------------ 
+#
+# Note: Change modules/Forums/templates/subSilver/images/ to themes/YOUR_THEME/forums/images/ where 'YOUR_THEME' is the name of the theme
+#
+<!-- BEGIN switch_spacer -->
+    <tr> 
+        <td class="spaceRow" colspan="2" height="1"><img src="modules/Forums/templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+    </tr>
+<!-- END switch_spacer -->
+<!-- BEGIN move_message -->
+<tr>
+        <td class="row3" colspan="2"><span class="postdetails">{postrow.move_message.MOVE_MESSAGE}</span></td>
+</tr>
+<!-- END move_message -->
+<!-- END postrow -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: Partial search: The original line could look like that:
+# <td valign="top" align="right" nowrap="nowrap">{postrow.QUOTE_IMG} {postrow.EDIT_IMG} {postrow.DELETE_IMG} {postrow.IP_IMG}</td>
+#
+{postrow.IP_IMG}
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+ {postrow.REPORT_IMG}
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {postrow.EDITED_MESSAGE}
+#
+                <td colspan="2"><span class="postbody">{postrow.MESSAGE}{postrow.SIGNATURE}</span><span class="gensmall">{postrow.EDITED_MESSAGE}</span>
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------------
+#
+{postrow.SIGNATURE}
+
+#
+#-----[ IN-LINE BEFORE, ADD ]---------------------------------------
+#
+</span>{postrow.ATTACHMENTS}<span class="postbody">
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {U_POST_NEW_TOPIC}
+#
+<td align="left" valign="middle" nowrap="nowrap"><span class="nav"><a href="{U_POST_NEW_TOPIC}">
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_POST_REPLY_TOPIC}
+# and add the IN-LINE AFTER, ADD statement just after </a>
+#
+{L_POST_REPLY_TOPIC}" align="middle" /></a>
+ 
+#
+#-----[ IN-LINE AFTER, ADD]------------------------------------------
+#
+&nbsp;&nbsp;&nbsp;<a target="_blank" href="{U_PRINTER_TOPIC}"><img src="{PRINTER_IMG}" border="0" alt="{L_PRINTER_TOPIC}" align="middle" /></a>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {U_POST_NEW_TOPIC}
+#
+<a href="{U_POST_NEW_TOPIC}"><img src="{POST_IMG}" border="0" alt="{L_POST_NEW_TOPIC}" align="middle" /></a>&nbsp;&nbsp;&nbsp;<a href="{U_POST_REPLY_TOPIC}">
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {L_POST_REPLY_TOPIC}
+# and add the IN-LINE AFTER, ADD statement just after </a>
+#
+{L_POST_REPLY_TOPIC}" align="middle" /></a>
+
+#
+#-----[ IN-LINE AFTER, ADD ]------------------------------------------
+#
+&nbsp;&nbsp;&nbsp;<a target="_blank" href="{U_PRINTER_TOPIC}"><img src="{PRINTER_IMG}" border="0" alt="{L_PRINTER_TOPIC}" align="middle" /></a>
+
+#
+#-----[ IN-LINE FIND ]------------------------------------------
+#
+</a></span></td>
+
+#
+#-----[ IN-LINE REPLACE WITH ]------------------------------------------
+#
+</a>
+
+#
+#-----[ AFTER, AND ON A NEW LINE ADD ]--------------------------------------
+#
+    <!-- BEGIN switch_quick_reply -->
+    &nbsp;&nbsp;&nbsp;<a href="{U_POST_SQR_TOPIC}"><img src="{SQR_IMG}" border="0" alt="{L_POST_SQR_TOPIC}" align="middle" /></a>
+    <!-- END switch_quick_reply -->
+    </span></td>
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: This line may vary depending on your theme. If so, search for the following part:
+# {postrow.MESSAGE}
+#
+<td colspan="2"><span class="postbody">{postrow.MESSAGE}
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------- 
+#
+<td colspan="2"
+
+#
+#-----[ IN-LINE AFTER, ADD ]---------------------------------- 
+#
+# Note: Some themes may already have this part!
+#
+ height="100%" valign="top"
+
+#
+#-----[ IN-LINE FIND ]---------------------------------------- 
+#
+{postrow.SIGNATURE}</span><span class="gensmall">{postrow.EDITED_MESSAGE}</span></td>
+
+#
+#-----[ IN-LINE REPLACE WITH ]-------------------------------- 
+#
+</span></td>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+                <!-- Start add - Bottom aligned signature MOD -->
+                </tr> 
+                <tr> 
+                        <td colspan="2"><SPAN CLASS="postbody">{postrow.SIGNATURE}</SPAN><SPAN CLASS="gensmall">{postrow.EDITED_MESSAGE}</SPAN></td> 
+                <!-- End add - Bottom aligned signature MOD -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+# Note: This line may vary depending on your theme. If so, search for the last <table width="100%"
+#
+<table width="100%" cellspacing="2" border="0" align="center">
+
+#
+#-----[ BEFORE, ADD ]--------------------------------------
+#
+<!-- BEGIN switch_quick_reply -->
+    {QRBODY}
+<!-- END switch_quick_reply -->
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+{postrow.POSTER_AVATAR}
+
+#
+#-----[ REPLACE WITH ]-------------------------------------
+#
+<!-- BEGIN switch_showavatars --> 
+{postrow.POSTER_AVATAR} 
+<!-- END switch_showavatars -->
+
+#
+#-----[ OPEN ]------------------------------------------------ 
+#
+themes/YOUR_THEME/forums/posting_poll_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+        <tr>
+        <td class="row1"><span class="gen"><b>{L_POLL_LENGTH}</b></span></td>
+        <td class="row2"><span class="genmed"><input type="text" name="poll_length" size="3" maxlength="3" class="post" value="{POLL_LENGTH}" /></span>&nbsp;<span class="gen"><b>{L_DAYS}</b></span> &nbsp; <span class="gensmall">{L_POLL_LENGTH_EXPLAIN}</span></td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]---------------------------------------- 
+#
+
+    <tr>
+        <td class="row1"><span class="gen"><b>{L_POLL_TOGGLE}</b></span></td>
+        <td class="row2"><span class="genmed"><input type="checkbox" name="poll_view_toggle" value="1" {POLL_TOGGLE_CHECKED} /></span><span class="gen"></span> &nbsp; <span class="gensmall">{L_POLL_TOGGLE_EXPLAIN}</span></td>
+    </tr>
+
+#
+#-----[ END OF REGULAR TEMPLATES THEME EDITS ]---------------------------------------- 
+#
+
+/*****[END]********************************************
+ [ Mod:     Regular Templates Theme Edits      v1.0.0 ]
+ ******************************************************/
+
+
+
+
+/*****[BEGIN]******************************************
+ [ Mod:     Admin Templates Theme Edits        v1.0.0 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]------------------------------------------------ 
+#
+modules/Forums/templates/subSilver/admin/board_config_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------
+#
+    <tr>
+        <td class="row1">{L_TOPICS_PER_PAGE}</td>
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------
+#
+    <tr>
+        <td class="row1">{L_MAX_SMILIES}</td>
+        <td class="row2"><input class="post" type="text" name="max_smilies" size="3" maxlength="4" value="{MAX_SMILIES}" /></td>
+    </tr>
+
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+    <tr>
+        <td class="row1">{L_ALLOW_NAME_CHANGE}</td>
+        <td class="row2"><input type="radio" name="allow_namechange" value="1" {NAMECHANGE_YES} /> {L_YES}<input type="radio" name="allow_namechange" value="0" {NAMECHANGE_NO} /> {L_NO}</td>
+    </tr>
+
+#
+#-----[ REPLACE WITH ]----------------------------------------
+#
+    <!-- Start replacement - Signatures control MOD -->
+    <tr>
+        <td class="row1">{L_SIG_MAX_LINES}</td>
+        <td class="row2"><input type="text" name="sig_max_lines" value="{SIG_MAX_LINES}" maxlength="2" size="3" class="post" /></td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_WORDWRAP}</td>
+        <td class="row2"><input type="text" name="sig_wordwrap" value="{SIG_WORDWRAP}" maxlength="3" size="3" class="post" /></td>
+    </tr>
+
+    <tr> 
+        <td class="row1">{L_SIG_ALLOW_FONT_SIZES}</td>
+        <td class="row2"><input type="radio" name="sig_allow_font_sizes" value="1" {SIG_ALLOW_FONT_SIZES_YES} /> {L_SIG_ALLOW_FONT_SIZES_YES}&nbsp; &nbsp;<input type="radio" name="sig_allow_font_sizes" value="2" {SIG_ALLOW_FONT_SIZES_MAX} /> {L_SIG_ALLOW_FONT_SIZES_MAX}&nbsp; &nbsp;<input type="radio" name="sig_allow_font_sizes" value="0" {SIG_ALLOW_FONT_SIZES_IMPOSED} /> {L_SIG_ALLOW_FONT_SIZES_IMPOSED}</td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_FONT_SIZE_LIMIT}<br /><span class="gensmall">{L_SIG_FONT_SIZE_LIMIT_EXPLAIN}</td>
+        <td class="row2"><input type="text" name="sig_min_font_size" value="{SIG_MIN_FONT_SIZE}" maxlength="2" size="3" class="post" /> {L_SIG_MIN_FONT_SIZE} <input type="text" name="sig_max_font_size" value="{SIG_MAX_FONT_SIZE}" maxlength="2" size="3" class="post" /> {L_SIG_MAX_FONT_SIZE}</td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_TEXT_ENHANCEMENT}</td>
+        <td class="row2"><input style="text-indent: 0px" type="checkbox" name="sig_allow_bold" value="1" {SIG_ALLOW_BOLD_YES}> {L_SIG_ALLOW_BOLD}<br />
+                 <input type="checkbox" name="sig_allow_italic" value="1" {SIG_ALLOW_ITALIC_YES}> {L_SIG_ALLOW_ITALIC}<br />
+                 <input type="checkbox" name="sig_allow_underline" value="1" {SIG_ALLOW_UNDERLINE_YES}> {L_SIG_ALLOW_UNDERLINE}<br />
+                 <input type="checkbox" name="sig_allow_colors" value="1" {SIG_ALLOW_COLORS_YES}> {L_SIG_ALLOW_COLORS}</td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_TEXT_PRESENTATION}</td>
+        <td class="row2"><input style="text-indent: 0px" type="checkbox" name="sig_allow_quote" value="1" {SIG_ALLOW_QUOTE_YES} /> {L_SIG_ALLOW_QUOTE}<br />
+                 <input type="checkbox" name="sig_allow_code" value="1" {SIG_ALLOW_CODE_YES} /> {L_SIG_ALLOW_CODE}<br />
+                 <input type="checkbox" name="sig_allow_list" value="1" {SIG_ALLOW_LIST_YES} /> {L_SIG_ALLOW_LIST}</td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_ALLOW_URL}</td>
+        <td class="row2"><input type="radio" name="sig_allow_url" value="1" {SIG_ALLOW_URL_YES} /> {L_YES}&nbsp;&nbsp;<input type="radio" name="sig_allow_url" value="0" {SIG_ALLOW_URL_NO} /> {L_NO}</td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_ALLOW_IMAGES}</td>
+        <td class="row2"><input type="radio" name="sig_allow_images" value="1" {SIG_ALLOW_IMAGES_YES} /> {L_YES}&nbsp;&nbsp;<input type="radio" name="sig_allow_images" value="0" {SIG_ALLOW_IMAGES_NO} /> {L_NO}</td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_MAX_IMAGES}</td>
+        <td class="row2"><input type="text" name="sig_max_images" value="{SIG_MAX_IMAGES}" maxlength="2" size="3" class="post" /></td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_MAX_IMG_SIZE}<br /><span class="gensmall">{L_SIG_MAX_IMG_SIZE_EXPLAIN}</span></td>
+        <td class="row2"><input class="post" type="text" size="3" maxlength="4" name="sig_max_img_height" value="{SIG_MAX_IMG_HEIGHT}" /> x <input class="post" type="text" size="3" maxlength="4" name="sig_max_img_width" value="{SIG_MAX_IMG_WIDTH}"> {L_SIG_IMG_SIZE_LEGEND}<br />
+                 <input type="checkbox" name="sig_allow_on_max_img_size_fail" value="1" {SIG_ALLOW_ON_MAX_IMG_SIZE_FAIL_YES} /> {L_SIG_ALLOW_ON_MAX_IMG_SIZE_FAIL}</td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_MAX_IMG_FILES_SIZE}</td>
+        <td class="row2"><input type="text" name="sig_max_img_files_size" value="{SIG_MAX_IMG_FILES_SIZE}" maxlength="3" size="3" class="post" /> {L_SIG_KBYTES}</td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_MAX_IMG_AV_FILES_SIZE}<br /><span class="gensmall">{L_SIG_MAX_IMG_AV_FILES_SIZE_EXPLAIN}</span></td>
+        <td class="row2"><input type="text" name="sig_max_img_av_files_size" value="{SIG_MAX_IMG_AV_FILES_SIZE}" maxlength="3" size="3" class="post" /> {L_SIG_KBYTES}</td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_EXOTIC_BBCODES_DISALLOWED}<br /><span class="gensmall">{L_SIG_EXOTIC_BBCODES_DISALLOWED_EXPLAIN}</span></td>
+        <td class="row2"><input type="text" name="sig_exotic_bbcodes_disallowed" value="{SIG_EXOTIC_BBCODES_DISALLOWED}" maxlength="255" size="40" class="post" /></td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_ALLOW_SMILIES}</td>
+        <td class="row2"><input type="radio" name="sig_allow_smilies" value="1" {SIG_ALLOW_SMILIES_YES} /> {L_YES}&nbsp;&nbsp;<input type="radio" name="sig_allow_smilies" value="0" {SIG_ALLOW_SMILIES_NO} /> {L_NO}</td>
+    </tr>
+
+    <tr>
+        <td class="row1">{L_SIG_RESET}<br /><span class="gensmall">{L_SIG_RESET_EXPLAIN}</span></td>
+        <td class="row2"><input type="button" name="sig_reset" value="{L_RESET}" class="liteoption" onClick="window.open('{U_SIG_RESET}', '_phpbbsig_reset', 'HEIGHT=155,resizable=no,WIDTH=350');return false;" /></td>
+    </tr>
+    <!-- End replacement - Signatures control MOD -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+    <tr>
+        <th class="thHead" colspan="2">{L_AVATAR_SETTINGS}</th>
+
+#
+#-----[ BEFORE, ADD ]--------------------------------------
+#
+    <tr>
+        <th class="thHead" colspan="2">{L_SQR_SETTINGS}</th>
+    </tr>
+    <tr>
+        <td class="row1">{L_ALLOW_QUICK_REPLY}</td>
+        <td class="row2"><input type="radio" name="allow_quickreply" value="1" {QUICKREPLY_YES} /> {L_YES}&nbsp;&nbsp;<input type="radio" name="allow_quickreply" value="0" {QUICKREPLY_NO} /> {L_NO}</td>
+    </tr>
+    <tr>
+        <td class="row1">{L_ANONYMOUS_SHOW_SQR}</td>
+        <td class="row2">{ANONYMOUS_SQR_SELECT}</td>
+    </tr>
+    <tr>
+        <td class="row1">{L_ANONYMOUS_SQR_MODE}</td>
+        <td class="row2"><input type="radio" name="anonymous_sqr_mode" value="0" {ANONYMOUS_SQR_MODE_BASIC} />{L_ANONYMOUS_SQR_MODE_BASIC}&nbsp;&nbsp;<input type="radio" name="anonymous_sqr_mode" value="1" {ANONYMOUS_SQR_MODE_ADVANCED} />{L_ANONYMOUS_SQR_MODE_ADVANCED}</td>
+    </tr>
+    <tr>
+        <td class="row1">{L_ANONYMOUS_OPEN_SQR}</td>
+        <td class="row2"><input type="radio" name="anonymous_open_sqr" value="1" {ANONYMOUS_OPEN_SQR_YES} />{L_YES}&nbsp;&nbsp;<input type="radio" name="anonymous_open_sqr" value="0" {ANONYMOUS_OPEN_SQR_NO} />{L_NO}</td>
+    </tr>
+    
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: This is a search by part(s) of code line(s)!
+# The original line(s) to find is(are) longer and must look like this (if no MOD has already modify them):
+#
+# <tr>
+#   <td class="row1">{L_SYSTEM_TIMEZONE}</td>
+#   <td class="row2">{TIMEZONE_SELECT}</td>
+# </tr>
+#
+<tr>
+{L_SYSTEM_TIMEZONE}
+{TIMEZONE_SELECT}
+</tr>
+
+#
+#-----[ REPLACE WITH ]----------------------------------------
+#
+<!-- Start replacement - Advanced time management MOD -->
+<tr>
+    <td class="row1"><span class="gen">{L_TIME_MODE}</span><br />
+        <span class="gensmall">{L_TIME_MODE_TEXT}</span></td>
+    <td class="row2" nowrap="nowrap">
+        <span class="gen">{L_TIME_MODE_AUTO}</span><br />
+        <input type="radio" name="default_time_mode" value="6" {TIME_MODE_FULL_PC_CHECKED}/>
+        <span class="gen">{L_TIME_MODE_FULL_PC}</span>&nbsp;&nbsp;<br />
+        <input type="radio" name="default_time_mode" value="4" {TIME_MODE_SERVER_PC_CHECKED}/>
+        <span class="gen">{L_TIME_MODE_SERVER_PC}</span>&nbsp;&nbsp;<br />
+        <input type="radio" name="default_time_mode" value="3" {TIME_MODE_FULL_SERVER_CHECKED}/>
+        <span class="gen">{L_TIME_MODE_FULL_SERVER}</span>
+        <br /><br />
+        <span class="gen">{L_TIME_MODE_MANUAL}</span><br />
+        <span class="gen">&nbsp;&nbsp;{L_TIME_MODE_DST}:</span><input type="radio" name="default_time_mode" value="1" {TIME_MODE_MANUAL_DST_CHECKED}/><span class="gen">{L_YES}</span>&nbsp;<input type="radio" name="default_time_mode" value="0" {TIME_MODE_MANUAL_CHECKED}/><span class="gen">{L_NO}</span>&nbsp;<input type="radio" name="default_time_mode" value="2" {TIME_MODE_SERVER_SWITCH_CHECKED}/><span class="gen">{L_TIME_MODE_DST_SERVER}</span><br />
+        <span class="gen">&nbsp;&nbsp;{L_TIME_MODE_DST_TIME_LAG}: </span><input type="text" name="dst_time_lag" value="{DST_TIME_LAG}" maxlength="3" size="3" class="post" /><span class="gen">{L_TIME_MODE_DST_MN}</span><br />
+        <span class="gen">&nbsp;&nbsp;{L_TIME_MODE_TIMEZONE}: </span><span class="gensmall">{TIMEZONE_SELECT}</span></td>
+</tr>
+<!-- End replacement - Advanced time management MOD --> 
+    <tr>
+        <td class="row1">{L_ONLINE_TIME} <br /><span class="gensmall">{L_ONLINE_TIME_EXPLAIN}</span></td>
+        <td class="row2"><input class="post" type="text" size="3" maxlength="4" name="online_time" value="{ONLINE_TIME}" /></td>
+    </tr>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+    <tr>
+        <td class="row1">{L_ENABLE_PRUNE}</td>
+        <td class="row2"><input type="radio" name="prune_enable" value="1" {PRUNE_YES} /> {L_YES}&nbsp;&nbsp;<input type="radio" name="prune_enable" value="0" {PRUNE_NO} /> {L_NO}</td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+    <tr>
+        <td class="row1">{L_REPORT_EMAIL}</td>
+        <td class="row2"><input type="radio" name="report_email" value="1" {REPORT_EMAIL_YES} /> {L_YES}&nbsp;&nbsp;<input type="radio" name="report_email" value="0" {REPORT_EMAIL_NO} /> {L_NO}</td>
+    </tr>
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+    <tr>
+        <td class="row1">{L_INBOX_LIMIT}</td>
+
+#
+#-----[ BEFORE, ADD ]-----------------------------------------
+#
+    <tr>
+        <td class="row1">{L_WELCOME_PM}</td>
+        <td class="row2"><input type="radio" name="w_pm" value="0" {S_WELCOME_PM_ENABLED} />{L_ENABLED}&nbsp; &nbsp;<input type="radio" name="w_pm" value="1" {S_WELCOME_PM_DISABLED} />{L_DISABLED}</td>
+    </tr>
+    <tr>
+        <td class="row1">{L_PM_ALLOW_THRESHOLD}<br /><span class="gensmall">{L_PM_ALLOW_TRHESHOLD_EXPLAIN}</span></td>
+        <td class="row2"><input class="post" type="text" maxlength="4" size="4" name="pm_allow_threshold" value="{PM_ALLOW_THRESHOLD}" /></td>
+    </tr>
+
+#
+#-----[ FIND ]----------------------------------------------
+#
+    <tr>
+      <th class="thHead" colspan="2">{L_ABILITIES_SETTINGS}</th>
+
+
+#
+#-----[ BEFORE, ADD ]----------------------------------------
+#
+    <tr>
+        <th class="thHead" colspan="2">{L_ROPM_QUICK_REPLY}</th>
+    </tr>
+    <tr>
+        <td class="row1">{L_ENABLE_ROPM_QUICK_REPLY}</td>
+        <td class="row2"><input type="radio" name="ropm_quick_reply" value="1" {ROPM_QUICK_REPLY_YES} /> {L_YES}&nbsp;&nbsp;<input type="radio" name="ropm_quick_reply" value="0" {ROPM_QUICK_REPLY_NO} /> {L_NO}</td>
+    </tr>
+    <tr>
+        <td class="row1">{L_ROPM_QUICK_REPLY_BBC}</td>
+        <td class="row2"><input type="radio" name="ropm_quick_reply_bbc" value="1" {ROPM_QUICK_REPLY_BBC_YES} /> {L_YES}&nbsp;&nbsp;<input type="radio" name="ropm_quick_reply_bbc" value="0" {ROPM_QUICK_REPLY_BBC_NO} /> {L_NO}</td>
+    </tr>
+    <tr>
+        <td class="row1">{L_ROPM_QUICK_REPLY_SMILIES}<br /><span class="gensmall">{L_ROPM_QUICK_REPLY_SMILIES_INFO}</span></td>
+        <td class="row2"><input class="post" type="text" name="ropm_quick_reply_smilies" size="4" maxlength="4" value="{ROPM_QUICK_REPLY_SMILIES}" /></td>
+    </tr>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+    <tr>
+        <th class="thHead" colspan="2">{L_COOKIE_SETTINGS}</th>
+    </tr>
+
+#
+#-----[ BEFORE, ADD ]-----------------------------------
+#
+<!-- Start Force Word Wrapping -->
+    <tr>
+        <th class="thHead" colspan="2">{L_WRAP_TITLE}</th>
+    </tr>
+    <tr>
+        <td class="row1">{L_ENABLE_WRAP}</td>
+        <td class="row2"><input type="radio" name="wrap_enable" value="1" {WRAP_ENABLE} /> {L_ENABLED}&nbsp;&nbsp;<input type="radio" name="wrap_enable" value="0" {WRAP_DISABLE} /> {L_DISABLED}</td>
+    </tr>
+    <tr>
+        <td class="row1">{L_WRAP_MIN}</td>
+        <td class="row2"><input class="post" type="text" size="3" maxlength="3" name="wrap_min" value="{WRAP_MIN}" /> {L_WRAP_UNITS}</td>
+    </tr>
+    <tr>
+        <td class="row1">{L_WRAP_DEF}</td>
+        <td class="row2"><input class="post" type="text" size="3" maxlength="3" name="wrap_def" value="{WRAP_DEF}" /> {L_WRAP_UNITS}</td>
+    </tr>
+    <tr>
+        <td class="row1">{L_WRAP_MAX}</td>
+        <td class="row2"><input class="post" type="text" size="3" maxlength="3" name="wrap_max" value="{WRAP_MAX}" /> {L_WRAP_UNITS}</td>
+    </tr>
+<!-- End Force Word Wrapping -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+        <td class="row2"><input type="radio" name="override_user_style" value="1" {OVERRIDE_STYLE_YES} /> {L_YES}&nbsp;&nbsp;<input type="radio" name="override_user_style" value="0" {OVERRIDE_STYLE_NO} /> {L_NO}</td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]--------------------------------------------
+#
+    <!-- Start Quick Search -->
+    <tr>
+        <td class="row1">{L_QUICK_SEARCH_ENABLE}<br /><span class="gensmall">{L_QUICK_SEARCH_ENABLE_EXPLAIN}</span></td>
+        <td class="row2"><input type="radio" name="quick_search_enable" value="1" {S_QUICK_SEARCH_ENABLE_YES} /> {L_YES}&nbsp;&nbsp;<input type="radio" name="quick_search_enable" value="0" {S_QUICK_SEARCH_ENABLE_NO} /> {L_NO}</td>
+    </tr>
+    <!-- End Quick Search -->
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+    <tr>
+        <th class="thHead" colspan="2">{L_COOKIE_SETTINGS}</th>
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------ 
+#
+<!-- Advanced Signature Divider Control -->
+    <tr>
+        <th class="thHead" colspan="2">{L_SIG_TITLE}</th>
+    </tr>
+    <tr> 
+             <td class="row1">{L_SIG_INPUT}<br /><span class="gensmall">{L_SIG_EXPLAIN}</span></td> 
+             <td class="row2"><input type="text" maxlength="255" name="sig_line" value="{SIG_DIVIDERS}" /></td> 
+    </tr> 
+<!-- Advanced Signature Divider Control -->
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+    <tr>
+        <td class="row1">{L_DISABLE_BOARD}<br /><span class="gensmall">{L_DISABLE_BOARD_EXPLAIN}</span></td>
+        <td class="row2"><input type="radio" name="board_disable" value="1" {S_DISABLE_BOARD_YES} /> {L_YES}  <input type="radio" name="board_disable" value="0" {S_DISABLE_BOARD_NO} /> {L_NO}</td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+    <tr>
+        <td class="row1">{L_DISABLE_BOARD_MSG}<br /><span class="gensmall">{L_DISABLE_BOARD_MSG_EXPLAIN}</span></td>
+        <td class="row2"><input class="post" type="text" maxlength="255" size="40" name="board_disable_msg" value="{DISABLE_BOARD_MSG}" /></td></td>
+    </tr>
+    <tr>
+        <td class="row1">{L_DISABLE_BOARD_ADMINVIEW}<br /><span class="gensmall">{L_DISABLE_BOARD_ADMINVIEW_EXPLAIN}</span></td>
+        <td class="row2"><input type="radio" name="board_disable_adminview" value="1" {S_DISABLE_BOARD_ADMINVIEW_YES} /> {L_YES}  <input type="radio" name="board_disable_adminview" value="0" {S_DISABLE_BOARD_ADMINVIEW_NO} /> {L_NO}</td>
+    </tr>
+
+#
+#-----[ OPEN ]------------------------------------------------ 
+#
+modules/Forums/templates/subSilver/admin/forum_edit_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+    <tr> 
+      <td class="catBottom" colspan="2" align="center">{S_HIDDEN_FIELDS}<input type="submit" name="submit" value="{S_SUBMIT_VALUE}" class="mainoption" /></td>
+
+#
+#-----[ BEFORE, ADD ]-----------------------------------------
+#
+    <tr>
+        <td class="row1">{L_FORUM_DISPLAY_SORT}</td>
+        <td class="row2">
+            <select name="forum_display_sort">{S_FORUM_DISPLAY_SORT_LIST}</select>&nbsp;
+            <select name="forum_display_order">{S_FORUM_DISPLAY_ORDER_LIST}</select>&nbsp;
+        </td>
+    </tr>
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+modules/Forums/templates/subSilver/admin/group_edit_body.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+    <!-- END group_edit -->
+
+#
+#-----[ BEFORE, ADD ]---------------------------------------
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_UPLOAD_QUOTA}</span></td>
+      <td class="row2">{S_SELECT_UPLOAD_QUOTA}</td>
+    </tr>
+    <tr> 
+      <td class="row1"><span class="gen">{L_PM_QUOTA}</span></td>
+      <td class="row2">{S_SELECT_PM_QUOTA}</td>
+    </tr>
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+{L_GROUP_HIDDEN}</td>
+</tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+    <!-- Start add - Initial Usergroup Mod -->
+    <tr>
+      <td class="row1" width="38%"><span class="gen">{L_GROUP_INITIAL}:</span>
+          <br />
+          <span class="gensmall">{L_GROUP_INITIAL_EXPLAIN}</span></td>
+      <td class="row2" width="62%">
+        <input type="radio" name="initial_group" value="{S_GROUP_INITIAL_YES_TYPE}" {S_GROUP_INITIAL_YES_CHECKED} /> {L_YES} &nbsp;&nbsp;<input type="radio" name="initial_group" value="{S_GROUP_INITIAL_NO_TYPE}" {S_GROUP_INITIAL_NO_CHECKED} /> {L_NO}</td>
+    </tr>
+    <!-- End add - Initial Usergroup Mod -->
+    <!-- Start add - Custom mass PM MOD -->
+    <tr> 
+      <td class="row1" width="38%"><span class="gen">{L_GROUP_ALLOW_PM}:</span><br/>
+      <span class="gensmall">{L_GROUP_ALLOW_PM_EXPLAIN}</span></td>
+      <td class="row2" width="62%">
+        <input type="radio" name="group_allow_pm" value="{S_GROUP_ALL_ALLOW_PM}" {S_GROUP_ALL_ALLOW_PM_CHECKED} /> {L_GROUP_ALL_ALLOW_PM} 
+        <input type="radio" name="group_allow_pm" value="{S_GROUP_REG_ALLOW_PM}" {S_GROUP_REG_ALLOW_PM_CHECKED} /> {L_GROUP_REG_ALLOW_PM} 
+        <input type="radio" name="group_allow_pm" value="{S_GROUP_PRIVATE_ALLOW_PM}" {S_GROUP_PRIVATE_ALLOW_PM_CHECKED} /> {L_GROUP_PRIVATE_ALLOW_PM} 
+        <input type="radio" name="group_allow_pm" value="{S_GROUP_MOD_ALLOW_PM}" {S_GROUP_MOD_ALLOW_PM_CHECKED} /> {L_GROUP_MOD_ALLOW_PM} 
+        <input type="radio" name="group_allow_pm" value="{S_GROUP_ADMIN_ALLOW_PM}" {S_GROUP_ADMIN_ALLOW_PM_CHECKED} /> {L_GROUP_ADMIN_ALLOW_PM} 
+      </td> 
+    </tr>
+    <!-- End add - Custom mass PM MOD -->
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+modules/Forums/templates/subSilver/admin/index_navigate.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+        <tr>
+          <th height="25" class="thHead"><b>{L_ADMIN}</b></th>
+        </tr>
+
+#
+#-----[ AFTER, ADD ]---------------------------------------
+#
+        <tr>
+          <td class="row1"><span class="genmed"><a href="{U_HOME_NUKE}" target="_parent" class="genmed">{L_HOME_NUKE}</a></span></td>
+        </tr>
+        <tr>
+          <td class="row1"><span class="genmed"><a href="{U_ADMIN_NUKE}" target="_parent" class="genmed">{L_ADMIN_NUKE}</a></span></td>
+        </tr>
+
+#
+#-----[ OPEN ]---------------------------------------------
+#
+modules/Forums/templates/subSilver/admin/user_edit_body.tpl
+
+#
+#-----[ FIND ]---------------------------------------------
+#
+      <td class="row1" colspan="2"><span class="gensmall">{L_SPECIAL_EXPLAIN}</span></td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]---------------------------------------
+#
+    <tr>
+      <td class="row1"><span class="gen">{L_UPLOAD_QUOTA}</span></td>
+      <td class="row2">{S_SELECT_UPLOAD_QUOTA}</td>
+    </tr>
+    <tr> 
+      <td class="row1"><span class="gen">{L_PM_QUOTA}</span></td>
+      <td class="row2">{S_SELECT_PM_QUOTA}</td>
+    </tr>
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: This is a search by part(s) of code line(s)!
+# The original line(s) to find is(are) longer and must look like this (if no MOD has already modify them):
+#
+# <tr>
+#     <td class="row1"><span class="gen">{L_ALLOW_AVATAR}</span></td>
+#
+<tr>
+{L_ALLOW_AVATAR}
+
+#
+#-----[ BEFORE, ADD ]-----------------------------------------
+#
+<!-- Start add - Signatures control MOD -->
+<tr> 
+  <td class="row1"><span class="gen">{L_SIG_ALLOW_SIGNATURE}</span></td>
+  <td class="row2"> 
+    <input type="radio" name="user_allowsignature" value="2" {ALLOW_SIGNATURE_YES_NOT_CONTROLED} />
+    <span class="gen">{L_SIG_YES_NOT_CONTROLED}</span>&nbsp;
+    <input type="radio" name="user_allowsignature" value="1" {ALLOW_SIGNATURE_YES_CONTROLED} />
+    <span class="gen">{L_SIG_YES_CONTROLED}</span>&nbsp;
+    <input type="radio" name="user_allowsignature" value="0" {ALLOW_SIGNATURE_NO} />
+    <span class="gen">{L_NO}</span></td>
+</tr>
+<!-- End replacement - Signatures control MOD -->
+
+#
+#-----[ FIND ]------------------------------------------
+#
+    <tr> 
+      <th class="thSides" colspan="2" height="12" valign="middle">{L_AVATAR_PANEL}</th>
+
+#
+#-----[ BEFORE, ADD ]--------------------------------------
+#
+    <tr>
+      <th class="thSides" colspan="2" height="12" valign="middle">{L_QUICK_REPLY_PANEL}</th>
+    </tr>
+    <tr>
+      <td class="row1"><span class="gen">{L_SHOW_QUICK_REPLY}:</span></td>
+      <td class="row2">{QUICK_REPLY_SELECT}</td>
+    </tr>
+    <tr>
+      <td class="row1"><span class="gen">{L_QUICK_REPLY_MODE}:</span></td>
+      <td class="row2">
+        <input type="radio" name="quickreply_mode" value="0" {QUICK_REPLY_MODE_BASIC} />
+        <span class="gen">{L_QUICK_REPLY_MODE_BASIC}</span>&nbsp;&nbsp;
+        <input type="radio" name="quickreply_mode" value="1" {QUICK_REPLY_MODE_ADVANCED} />
+        <span class="gen">{L_QUICK_REPLY_MODE_ADVANCED}</span></td>
+    </tr>
+    <tr>
+      <td class="row1"><span class="gen">{L_OPEN_QUICK_REPLY}:</span></td>
+      <td class="row2">
+        <input type="radio" name="open_quickreply" value="1" {OPEN_QUICK_REPLY_YES} />
+        <span class="gen">{L_YES}</span>&nbsp;&nbsp;
+        <input type="radio" name="open_quickreply" value="0" {OPEN_QUICK_REPLY_NO} />
+        <span class="gen">{L_NO}</span></td>
+    </tr>
+    <tr>
+      <td class="catSides" colspan="2"><span class="cattitle">&nbsp;</span></td>
+    </tr>
+
+#
+#-----[ FIND ]------------------------------------------
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_BOARD_LANGUAGE}</span></td>
+      <td class="row2">{LANGUAGE_SELECT}</td>
+    </tr>
+
+#
+#-----[ BEFORE, ADD ]-----------------------------------
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_WORD_WRAP}:</span><br /><span class="gensmall">{L_WORD_WRAP_EXPLAIN}</span></td>
+      <td class="row2"><span class="gensmall"><input type="text" name="user_wordwrap" value="{WRAP_ROW}" size="2" maxlength="2" class="post" /> {L_WORD_WRAP_EXTRA}</span></td>
+    </tr>
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: This is a search by part(s) of code line(s)!
+# The original line(s) to find is(are) longer and must look like this (if no MOD has already modify them):
+#
+# <tr>
+#   <td class="row1"><span class="gen">{L_TIMEZONE}</span></td>
+#   <td class="row2">{TIMEZONE_SELECT}</td>
+# </tr>
+#
+<tr>
+{L_TIMEZONE}
+{TIMEZONE_SELECT}
+</tr>
+
+#
+#-----[ REPLACE WITH ]----------------------------------------
+#
+<!-- Start replacement - Advanced time management MOD -->
+<tr>
+    <td class="row1"><span class="gen">{L_TIME_MODE}</span><br />
+        <span class="gensmall">{L_TIME_MODE_TEXT}</span></td>
+    <td class="row2" nowrap="nowrap">
+        <span class="gen">{L_TIME_MODE_AUTO}</span><br />
+        <input type="radio" name="time_mode" value="6" {TIME_MODE_FULL_PC_CHECKED}/>
+        <span class="gen">{L_TIME_MODE_FULL_PC}</span>&nbsp;&nbsp;<br />
+        <input type="radio" name="time_mode" value="4" {TIME_MODE_SERVER_PC_CHECKED}/>
+        <span class="gen">{L_TIME_MODE_SERVER_PC}</span>&nbsp;&nbsp;<br />
+        <input type="radio" name="time_mode" value="3" {TIME_MODE_FULL_SERVER_CHECKED}/>
+        <span class="gen">{L_TIME_MODE_FULL_SERVER}</span>
+        <br /><br />
+        <span class="gen">{L_TIME_MODE_MANUAL}</span><br />
+        <span class="gen">&nbsp;&nbsp;{L_TIME_MODE_DST}:</span><input type="radio" name="time_mode" value="1" {TIME_MODE_MANUAL_DST_CHECKED}/><span class="gen">{L_YES}{L_TIME_MODE_DST_ON}</span>&nbsp;<input type="radio" name="time_mode" value="0" {TIME_MODE_MANUAL_CHECKED}/><span class="gen">{L_NO}{L_TIME_MODE_DST_OFF}</span>&nbsp;<input type="radio" name="time_mode" value="2" {TIME_MODE_SERVER_SWITCH_CHECKED}/><span class="gen">{L_TIME_MODE_DST_SERVER}</span><br />
+        <span class="gen">&nbsp;&nbsp;{L_TIME_MODE_DST_TIME_LAG}: </span><input type="text" name="dst_time_lag" value="{DST_TIME_LAG}" maxlength="3" size="3" class="post" /><span class="gen">{L_TIME_MODE_DST_MN}</span><br />
+        <span class="gen">&nbsp;&nbsp;{L_TIME_MODE_TIMEZONE}: </span><span class="gensmall">{TIMEZONE_SELECT}</span></td>
+</tr>
+<!-- End replacement - Advanced time management MOD --> 
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+        <input type="radio" name="allowsmilies" value="0" {ALWAYS_ALLOW_SMILIES_NO} />
+        <span class="gen">{L_NO}</span></td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------ 
+#
+    <tr>
+        <td class="row1"><span class="gen">{L_SHOW_AVATARS}:</span></td>
+        <td class="row2">
+            <input type="radio" name="showavatars" value="1" {SHOW_AVATARS_YES} />
+            <span class="gen">{L_YES}</span>
+            <input type="radio" name="showavatars" value="0" {SHOW_AVATARS_NO} />
+            <span class="gen">{L_NO}</span></td>
+    </tr>
+    <tr>
+        <td class="row1"><span class="gen">{L_SHOW_SIGNATURES}:</span></td>
+        <td class="row2">
+            <input type="radio" name="showsignatures" value="1" {SHOW_SIGNATURES_YES} />
+            <span class="gen">{L_YES}</span>
+            <input type="radio" name="showsignatures" value="0" {SHOW_SIGNATURES_NO} />
+            <span class="gen">{L_NO}</span></td>
+    </tr>
+    
+#
+#-----[ FIND ]------------------------------------------------
+#
+      <td class="row2" colspan="2"><span class="gensmall">{L_PROFILE_INFO_NOTICE}</span></td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- BEGIN xdata -->
+<!-- BEGIN switch_is_icq -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_ICQ_NUMBER}</span></td>
+      <td class="row2"> 
+        <input class="post" type="text" name="icq" size="10" maxlength="15" value="{ICQ}" />
+      </td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_icq -->
+<!-- BEGIN switch_is_aim -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+    <tr>
+      <td class="row1"><span class="gen">{L_AIM}</span></td>
+      <td class="row2"> 
+        <input class="post" type="text" name="aim" size="20" maxlength="255" value="{AIM}" />
+      </td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_aim -->
+<!-- BEGIN switch_is_msn -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_MESSENGER}</span></td>
+      <td class="row2"> 
+        <input class="post" type="text" name="msn" size="20" maxlength="255" value="{MSN}" />
+      </td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_msn -->
+<!-- BEGIN switch_is_yim -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_YAHOO}</span></td>
+      <td class="row2"> 
+        <input class="post" type="text" name="yim" size="20" maxlength="255" value="{YIM}" />
+      </td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_yim -->
+<!-- BEGIN switch_is_website -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_WEBSITE}</span></td>
+      <td class="row2"> 
+        <input class="post" type="text" name="website" size="35" maxlength="255" value="{WEBSITE}" />
+      </td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_website -->
+<!-- BEGIN switch_is_location -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+    <tr>
+      <td class="row1"><span class="gen">{L_LOCATION}</span></td>
+      <td class="row2"> 
+        <input class="post" type="text" name="location" size="35" maxlength="100" value="{LOCATION}" />
+      </td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_location -->
+<!-- BEGIN switch_is_occupation -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_OCCUPATION}</span></td>
+      <td class="row2"> 
+        <input class="post" type="text" name="occupation" size="35" maxlength="100" value="{OCCUPATION}" />
+      </td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_occupation -->
+<!-- BEGIN switch_is_interests -->
+
+#
+#-----[ FIND ]------------------------------------------------
+#
+    <tr> 
+      <td class="row1"><span class="gen">{L_SIGNATURE}</span><br />
+        <span class="gensmall">{L_SIGNATURE_EXPLAIN}<br />
+        <br />
+        {HTML_STATUS}<br />
+        {BBCODE_STATUS}<br />
+        {SMILIES_STATUS}</span></td>
+      <td class="row2"> 
+        <textarea class="post" name="signature" rows="6" cols="45">{SIGNATURE}</textarea>
+      </td>
+    </tr>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- END switch_is_signature -->
+    <!-- BEGIN switch_type_text -->
+    <tr>
+      <td class="row1">
+        <span class="gen">{xdata.NAME}</span><br /><span class="gensmall">{xdata.DESCRIPTION}</span>
+      </td>
+      <td class="row2">
+        <input type="text" class="post"style="width: 200px" name="{xdata.CODE_NAME}" size="35" maxlength="{xdata.MAX_LENGTH}" value="{xdata.VALUE}" />
+      </td>
+    </tr>
+    <!-- END switch_type_text -->
+    <!-- BEGIN switch_type_textarea -->
+    <tr>
+      <td class="row1">
+        <span class="gen">{xdata.NAME}</span><br /><span class="gensmall">{xdata.DESCRIPTION}</span>
+      </td>
+      <td class="row2">
+        <textarea name="{xdata.CODE_NAME}"style="width: 300px" rows="6" cols="30" class="post">{xdata.VALUE}</textarea>
+      </td>
+    </tr>
+    <!-- END switch_type_textarea -->
+    <!-- BEGIN switch_type_select -->
+    <tr>
+      <td class="row1">
+        <span class="gen">{xdata.NAME}</span><br /><span class="gensmall">{xdata.DESCRIPTION}</span>
+      </td>
+      <td class="row2">
+         <select name="{xdata.CODE_NAME}">
+           <!-- BEGIN options -->
+           <option value="{xdata.switch_type_select.options.OPTION}" {xdata.switch_type_select.options.SELECTED}>{xdata.switch_type_select.options.OPTION}</option>
+           <!-- END options -->
+         </select>
+      </td>
+    </tr>
+    <!-- END switch_type_select -->
+    <!-- BEGIN switch_type_radio -->
+    <tr>
+      <td class="row1">
+        <span class="gen">{xdata.NAME}</span><br /><span class="gensmall">{xdata.DESCRIPTION}</span>
+      </td>
+      <td class="row2">
+         <!-- BEGIN options -->
+         <input type="radio" name="{xdata.CODE_NAME}" value="{xdata.switch_type_radio.options.OPTION}" {xdata.switch_type_radio.options.CHECKED} />
+         <span class="gen">{xdata.switch_type_radio.options.OPTION}</span><br />
+         <!-- END options -->
+      </td>
+    </tr>
+    <!-- END switch_type_radio -->
+<!-- END xdata -->
+
+<!-- BEGIN show_glance -->
+    <tr> 
+      <td class="row1"><span class="gen">{L_GLANCE_SHOW}</span></td>
+      <td class="row2">{GLANCE_SHOW}</td>
+    </tr>
+<!-- END show_glance -->
+
+<!-- BEGIN hide_images -->
+    cc
+      <td class="row1"><span class="gen">{L_HIDE_IMAGES}</span></td> 
+      <td class="row2"> 
+        <input type="radio" name="hide_images" value="1" {HIDE_IMAGES_YES} />
+        <span class="gen">{L_YES}</span>&nbsp;&nbsp; 
+        <input type="radio" name="hide_images" value="0" {HIDE_IMAGES_NO} />
+        <span class="gen">{L_NO}</span>
+      </td>
+    </tr>
+<!-- END hide_images -->
+
+#
+#-----[ OPEN ]------------------------------------------------ 
+#
+modules/Forums/templates/subSilver/admin/page_header.tpl
+
+#
+#-----[ FIND ]------------------------------------------------ 
+#
+# Note: If you cannot find this line in one of your style, never mind.
+# You can ignore this instruction.
+#
+input { text-indent : 2px; }
+
+#
+#-----[ REPLACE WITH ]---------------------------------------- 
+#
+/* Start replacement - Advanced time management MOD */
+/* input { text-indent : 2px; }
+/* End replacement - Advanced time management MOD */
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+modules/Forums/templates/subSilver/admin/styles_edit_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------
+#
+    <tr>
+        <td class="row1">{L_SPAN_CLASS_3}:</td>
+        <td class="row2"><input class="post" type="text" size="25" maxlength="25" name="span_class3" value="{SPAN_CLASS3}"></td>
+        <td class="row2"><input class="post" type="text" size="25" maxlength="100" name="span_class3_name" 
+value="{SPAN_CLASS3_NAME}">
+    </tr>
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+    <tr>
+        <th colspan="3">{L_ONLINE_SETTING}</th>
+    </tr>
+    <tr>
+        <td class="row1">{L_ONLINE_COLOR}:</td>
+        <td class="row2" colspan="2"><input class="post" type="text" size="6" maxlength="6" name="online_color" value="{ONLINE_COLOR}"/></td>
+    </tr>
+    <tr>
+        <td class="row1">{L_OFFLINE_COLOR}:</td>
+        <td class="row2" colspan="2"><input class="post" type="text" size="6" maxlength="6" name="offline_color" value="{OFFLINE_COLOR}"/></td>
+    </tr>
+    <tr>
+        <td class="row1">{L_HIDDEN_COLOR}:</td>
+        <td class="row2" colspan="2"><input class="post" type="text" size="6" maxlength="6" name="hidden_color" value="{HIDDEN_COLOR}"/></td>
+    </tr>
+
+/*****[END]********************************************
+ [ Mod:     Admin Templates Theme Edits        v1.0.0 ]
+ ******************************************************/
+
+
+Please re-check your theme conversion and edits after completion. If you receive any errors, please post them on the forums.
+
+Regards,
+The Nuke-Evolution Team
+www.nuke-evolution.com

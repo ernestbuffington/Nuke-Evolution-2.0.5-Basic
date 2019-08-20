@@ -1,0 +1,48 @@
+/***********************************************************************************/
+/* ForumNews Advance v3.0                                               UN-INSTALL */
+/*                                                                                 */
+/* Installation instructions:                                                      */
+/* Steps to complete: 4                                                            */
+/*                                                                                 */
+/* 1. Upload modules/ForumNews/install.php to modules/ForumNews/                   */
+/*                                                                                 */
+/* 2. Go to www.yoursite.com/modules.php?name=ForumNews&file=install               */
+/*    Overview: Select uninstall and click Adjust DB.                              */
+/*    Info: This will remove relevant tables from your site database.              */
+/*                                                                                 */
+/* 3. Delete the folder modules/ForumNews                                          */
+/*    Delete the folder modules/Forums_Archive                                     */
+/*    Delete the folder modules/ForumTopics                                        */
+/*    Overview: This folders and their files are no longer needed.                 */
+/*                                                                                 */
+/* 4. Delete the file forumnewsbackend.php                                         */
+/*    Delete the file blocks/block-FNA_Biggeststory.php                            */
+/*    Delete the file blocks/block-FNA_Oldarticles.php                             */
+/*    Delete the file blocks/block-FNA_Randomheadlines.php                         */
+/*    Delete the file images/admin/forumnews.gif                                   */
+/*    Delete the file modules/Forums/admin/admin_approve.php                       */
+/*    Delete the file modules/Forums/language/lang_english/lang_news.php           */
+/*    Delete the file modules/Forums/tamplates/subSilver/admin/approve_detail.tpl  */
+/*    Delete the file modules/Forums/tamplates/subSilver/admin/approve_forums.tpl  */
+/*    Delete the file modules/Forums/tamplates/subSilver/admin/approve_header.tpl  */
+/*    Delete the file modules/Forums/tamplates/subSilver/admin/approve_index.tpl   */
+/*    Delete the file modules/Forums/tamplates/subSilver/admin/approve_posts.tpl   */
+/*    Delete the file modules/Forums/tamplates/subSilver/admin/approve_topics.tpl  */
+/*    Delete the file modules/Forums/tamplates/subSilver/admin/approve_users.tpl   */
+/*    Overview: This files are no longer needed.                                   */
+/*                                                                                 */
+/***********************************************************************************/
+/*                                                                                 */
+/* See Code-Area51.com for detailed information on the ForumNews Advance           */
+/*                                                                                 */
+/***********************************************************************************/
+/*                                                                                 */
+/* Copyright (c) 2002 - 2006 by http://www.code-area51.com                         */
+/*     Mighty_Y - Yannick Reekmans           (webmaster@code-area51.com)           */
+/*                                                                                 */
+/***********************************************************************************/
+/* All content and includes from this package is intellectual                      */
+/* property of Code-Area51.com unless stated otherwise. Replication of             */
+/* and copyrighted material is a civil and criminal act and                        */
+/* voilations may result in legal action.                                          */
+/***********************************************************************************/

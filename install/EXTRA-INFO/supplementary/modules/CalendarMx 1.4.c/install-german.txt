@@ -1,0 +1,74 @@
+
+KalenderMx v1.4.c
+=================
+
+Calendar Module for pragmaMx & phpNuke 5.5-7.9
+Copyright (c) 2004 by A.Ellsel (kalender@pragmamx.org)
+http://www.pragmamx.org & http://ww.shiba-design.de
+License: GPL-2
+
+
+Installationsvoraussetzungen:
+-----------------------------
+PHP-Version ab 4.1.x
+MySql Version ab 3.23.x
+phpNuke ab Version 5.5, oder ein auf diesen Versionen basierendes vkp
+
+Um die Konfiguration und die Kategoriedateien automatisch zu speichern, 
+sollte php safe_mode abgeschaltet sein, 
+ausserdem müssen Schreibrechte auf die Ordner:
+ /modules/Kalender/config
+ /modules/Kalender/categories
+bestehen.
+
+
+
+Installation:
+-------------
+Die Zipdatei entpacken. Alle Dateien im Verzeichnis html werden 
+gemäss ihrer Ordnerstruktur auf den Webserver kopiert.
+Nach dem kopieren der Dateien, wird die Installroutine über folgenden 
+URL aufgerufen:
+   http://deinedomain.xx/admin.php?op=CalSetup
+Die Installationsroutine erkennt automatisch, ob bereits die 
+Datenbanktabellen einer kompatiblen Kalenderversion vorhanden sind.
+Ist dies der Fall, so wird nach betätigen des "Weiter"-Buttons, die 
+Tabellenstruktur aktualisiert und die bestehenden Daten entsprechend 
+konvertiert. Zusätzlich wird eine Sicherheitskopie der Tabellen, 
+unter anderem Namen, in der Datenbank angelegt.
+Ist noch keine kompatible Kalenderversion vorhanden, so wird die 
+benötigte Datenbanktabelle erstellt. Zusätzlich können hierbei 
+verschiedene Beispieltermine mit installiert werden.
+Nach der Tabelleninstallation wird auf das Administrationsmenü des 
+Kalenders weitergeleitet. Hier bitte die Grundeinstellungen überprüfen 
+und ggf. ändern. 
+Fertig....
+
+
+Update:
+-------
+Genau wie bei Installation beschrieben.
+Die alte Konfiguration und die Kategorienamen des Kalenders werden 
+bei einem Update von einer Version -vor 1.3- NICHT übernommen, dies 
+kann aber leicht über das Administrationsmenü angepasst werden.
+
+
+Kompatible Vor-Versionen:
+-------------------------
+unter Anderem:
+- KalenderMx 1.3 / 1.4
+- nukeCalendar 1.x, von shiba-design, alle Versionen
+- nukeCalendar 1.2, von Einhorn, http://phpnuke-style.de
+- Event Calendar Original, von Rob Sutton / Bob Marion
+  versch. Versionen (eventcal_205, CalendarAddOn, Calendar22, EventCalendar 2.0, etc.)
+- My Calendar Suite v1.0.0 von Bob Marion
+- 4n Calendar, Version 0.9x
+  wobei bei den 4n-Kalendern, vor der Installation, die Tabelle {prefix}_4ncal 
+  in {prefix}_events umbenannt werden muss
+- weitere, die auf dem Modul von Rob Sutton basieren
+
+
+
+
+___________________________________________________________________________________________________
+CVS: $Id: install-german.txt,v 1.5 2005/11/09 00:43:05 Andreas Ellsel Exp $

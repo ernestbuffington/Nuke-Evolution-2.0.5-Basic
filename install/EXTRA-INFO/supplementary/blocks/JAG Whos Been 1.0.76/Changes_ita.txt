@@ -1,0 +1,34 @@
+
+/* -------------------------------------------------------- for PHP-Nuke v7.6 v1.0.76  */
+/*                                                                                     */
+/*      ////////// //\\ \\\\\\\\\\       Created by Dashe at http://nsd.jagamarog.com  */
+/*             // //  \\ \\                                                            */
+/*            // //    \\ \\             Email Address: dashe@jagamarog.com            */
+/*           // /////\\\\\ \\   \\\\\                                                  */
+/*          // //        \\ \\      \\   For More Scripts Visit Our Site               */
+/*         // //          \\ \\\\\\\\\\                                                */
+/* /////////  a g a m a r o g . c o m   N u k e   S c r i p t   D e v e l o p m e n t  */
+/*                                                */
+/* Updated to work with PHP-Nuke 7.6 : BlueLion (admin@phpnuke-nederland.com)           */
+/*                                                                                     */     
+/* Original Who Is Where Developed at Surf 4 All [http://www.surf4all.com]             */ 
+/*                                                                                     */
+/* ----------------------------------------------------------------------------------- */
+Traduzione italiana a cura di www.nuke-evolution.it
+      Staff: LuckyLuciano  pex1968  _-Paky-_
+      Info: info@nuke-evolution.it 
+
+Questo file contiene tuttele modifiche nate da versione a versione, Le maggiori modifiche
+sono nate in una nuova release e ci sono state vaie fixes. In ordine le novità sono:
+
+/* JAG Whos Been v1.0.76 [for PHP-Nuke 7.6] ------------------------------------------ */
+
+   - Aggiornato per funzionare con PHP-Nuke 7.6
+
+
+/* JAG Whos Been v1.0 [for PHP-Nuke v6.5~7.0] ---------------------------------------- */
+
+   - Prima realizzazione del blocco
+
+
+/* End of File ----------------------------------------------------------------------- */

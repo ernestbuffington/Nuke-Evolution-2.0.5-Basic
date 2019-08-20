@@ -1,0 +1,32 @@
+/* CBACK.DE Registration Info for phpBB */
+/* Taken from VBulletin */
+
+/* Fully validates as CSS 2.1 - http://jigsaw.w3.org/css-validator/ */
+
+#infobar {
+   font: message-box;
+   overflow: hidden;
+}
+
+#infobar a, #infobar a:link, #infobar a:visited, #infobar a:active
+{
+  display: block;
+  float: left;
+  width:100%;
+  clear: both;
+  color: InfoText;
+  /* background: InfoBackground url(../../../images/icon_warning.gif) no-repeat fixed .3em .3em; */
+  background: InfoBackground no-repeat fixed .3em .3em;
+  padding: .45em .0em .45em .0em;
+  border-bottom: .16em outset;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#infobar a:hover
+{
+  color: HighlightText;
+  /* background: Highlight url(../../../images/icon_warning_hover.gif) no-repeat fixed .3em .3em; */
+  background: Highlight no-repeat fixed .3em .3em;
+}

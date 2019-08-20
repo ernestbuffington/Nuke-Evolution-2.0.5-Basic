@@ -1,0 +1,115 @@
+
+Shout Box - Troubleshooter
+============================================
+
+Problem: The format of the time and date of shouts changes when I login.
+
+Solution:
+  -This is correct behavior. Details:
+    -The shout box follows each user's date format setting in their profile.
+    -If you want to see a different format, go to Your Account -> Your Info -> Forums Date format
+    -Changing this will not affect other logged in user's time and date format.
+
+------------------------------------
+
+Problem: The time a shout is shouted changes when a user logs in.
+
+Solution:
+  This is correct behavior. Details:
+    -The shout box calculates the difference between the server time and the user's timezone set in their preferences.
+    -When a user logs out, it can no longer use a setting from that person, so it instead uses server time and the server offset.
+
+------------------------------------
+
+Problem: I just shouted in the box and the time doesnt match my local time.
+
+Solution:
+  -Check the server time in shout box admin area.
+  -Check your timezone setting in your preferences:
+    -Your Account -> Your Info -> Forums timezone
+  -Note: The default timezone for users is +10 which is most likely incorrect. Encourage your user's update their profile.
+
+------------------------------------
+
+Problem: The text is the wrong color or size
+
+Solution:
+   -Adjust TD, class content, or class title in your themes (themes/YOUR_THEME/style/style.css).
+
+------------------------------------
+
+Problem: Shout Box is too wide/narrow
+
+Solution:
+  -Decrease/increase the 'Block input box width'. This is not measured in pixels.
+  -Decrease the amount of 'Smilies per row'
+
+------------------------------------
+
+Problem: Shout Box is too wide when the smilies drop open
+
+Solution:
+  -Decrease the amount of 'Smilies per row'
+
+------------------------------------
+
+Problem: A different block's information appears when clicking the copyright symbol at the bottom of the module.
+  -One of your blocks is using the same code and is overrunning the module. Contact that block's creator.
+  -This will happen to all of your modules, not just the shout box.
+
+------------------------------------
+
+Problem: Shout Box doesn't scroll or work
+
+Check:
+  -No shouts in database. Try posting one.
+  -Check shout history for any shouts. If none present, try posting a shout.
+  -Disable any Source Code Encryption (some themes have this, some dont).
+  -Javascript is disabled in your browser. Re-enable it.
+  -Make sure shoutbox.js is in your nuke root (directory mainfile.php is in).
+  -Check for shoutbox SQL tables in phpMyadmin and see if they exist.
+  -Check permissions: files should be 644 and directories should be 755.
+  -A second block on the site uses javascript. See install.txt section 8.
+  -If you are loading images from another site like a paypal donate image, host the image locally. The shout box won't start scrolling until the page is fully loaded.
+
+------------------------------------
+
+Problem: Text in Shout Box admin area, block, or module look like this: _SHOUTTEXT
+
+Check:
+  -You haven't uploaded the modules directory. /modules/Shout_Box/
+  -Not all languages are provided. Create your own in:
+    -Admin: /modules/Shout_Box/lang-admin/
+    -Block: /modules/Shout_Box/lang-block/
+    -Module: /modules/Shout_Box/language/
+  -Check language definition repository at OurScripts.net in the downloads area under PHP-Nuke language.
+  -If only a few definitions are missing, you will need to create the translations for them.
+
+------------------------------------
+
+Problem: After clicking the Shout Box icon in the admin area, it tells me my current condition is marginal or critical.
+
+Solution:
+  -Click the analyze button and follow its recommendations.
+
+------------------------------------
+
+Problem: Fatal error: Call to undefined function: html_entity_decode()
+
+Solution: Upgrade your PHP version to a minimum 4.3.0
+
+------------------------------------
+
+Problem: Any other problem
+
+Check:
+   -Check for a newer version of shout box at OurScripts.net
+   -Have the SQL repair tool built into SB_SQL_installer.php scan your database for problems.
+   -Go to the Layout tab in admin and repair any problems that the Setup and Security monitor report.
+
+------------------------------------
+
+If you are still having an issue, please post in our User Support forum (not in our shout box).
+
+User Support forum: http://www.ourscripts.net/modules.php?name=Forums&file=viewforum&f=10
+

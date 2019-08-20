@@ -1,0 +1,187 @@
+############################################################################
+##           ORIGINAL AUTHOR INFO
+############################################################################
+## MOD Author: Giefca - giefca@hotmail.com - http://www.gf-phpbb.com
+## Simplified for Nuke-Evolution by Rodmar
+## 
+## MOD Description: 
+## Adds the Arcade Mod as a Forum.
+## 
+############################################################################
+##           PHPNUKE AUTHOR INFO
+############################################################################
+## MOD Title:  Arcade Index Addon
+## MOD Description: Adds the Arcade Mod as a Forum.
+## 
+## MOD Compatibility: phpNuke 6.5+ (Hopefully)
+## 
+## Difficulty Level: Easy
+## Installation Time: 5 Minutes
+## 
+## MOD Files to Edit :
+##          modules/Forums/index.php 
+##          modules/Forums/templates/subSilver/index_body.tpl (**)
+##          
+##         (**) Replace modules/Forums/templates/subSilver with themes/your-theme/forums/ if you use a combined theme.
+##
+## MOD Included Files : 
+##            None
+##
+############################################################################
+##           NOTES
+############################################################################
+## 
+## This Part is not neccessary and does not work with some themes and forum
+## modifications.
+## 
+## Known Issues:
+##     -Category Hierarchy
+##    
+############################################################################
+
+#
+#-----[ NOTE ]-----------------------------------------
+#
+For every file you open you will see something like:
+
+/*****[CHANGES]**********************************************************
+-=[Base]=-
+      Nuke Patched                             v3.1.0       06/26/2005
+-=[Mod]=-
+      Advanced Username Color                  v1.0.5       06/11/2005
+      At a Glance                              v2.2.1       06/12/2005
+      Global Announcements                     v1.2.8       06/13/2005
+      Number Format Total Posts                v1.0.0       06/24/2005
+      At a Glance Options                      v1.0.0       08/17/2005
+ ************************************************************************/
+
+I would suggest adding an entry for the arcade in every file but that
+is completely up to you.  Here is what that would look like:
+
+/*****[CHANGES]**********************************************************
+-=[Base]=-
+      Nuke Patched                             v3.1.0       06/26/2005
+-=[Mod]=-
+      Advanced Username Color                  v1.0.5       06/11/2005
+      At a Glance                              v2.2.1       06/12/2005
+      Global Announcements                     v1.2.8       06/13/2005
+      Number Format Total Posts                v1.0.0       06/24/2005
+      At a Glance Options                      v1.0.0       08/17/2005
+      Arcade Index Add-On                      v1.0.0       09/20/2005
+ ************************************************************************/
+
+## 
+##-----[ OPEN ]---------------------------------------- 
+## 
+modules/Forums/index.php
+
+## 
+##-----[ FIND ]---------------------------------------- 
+## 
+if ( $is_auth_ary[$forum_id]['auth_view'] )
+{
+
+## 
+##-----[ AFTER, ADD ]----------------------------------
+## 
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Index Add-On                v1.0.0 ]
+ ******************************************************/
+if ( $forum_data[$j]['forum_name'] == "Arcade" )
+{
+   $folder_image = "<img src=\"$phpbb_root_path/games/pics/arcade.gif\" alt=\"Arcade\" />";
+   $template->assign_block_vars("catrow.arcaderow",array(
+   'FORUM_NAME' => $forum_data[$j]['forum_name'],
+   'FORUM_DESC' => $forum_data[$j]['forum_desc'],
+   'U_VIEWFORUM' => append_sid("arcade.$phpEx"),
+   'U_TOPARCADE' => append_sid("toparcade.$phpEx"),
+   'BEST_SCORES' => $lang['best_scores'],
+   'FOLDER' => $folder_image)
+   );
+
+   // Recupération du dernier record aux jeux
+   $sqlArcade = " SELECT g.* , u.username FROM " . GAMES_TABLE . " g left join " . USERS_TABLE . " u on g.game_highuser = u.user_id ORDER BY game_highdate DESC LIMIT 0,1 " ;
+   if ( !($resultArcade = $db->sql_query($sqlArcade)) )
+   {
+      message_die(GENERAL_ERROR, 'Impossible d\'acceder aux tables games/users', '', __LINE__, __FILE__, $sqlArcade);
+   }
+   if ($rowArcade = $db->sql_fetchrow($resultArcade))
+   {
+     if ( $rowArcade['game_highuser']!=0 )
+      {
+      $template->assign_block_vars("catrow.arcaderow.bestscore",array(
+      'LAST_SCOREGAME' => '<a href="' . append_sid("games.$phpEx?gid=" . $rowArcade['game_id']) . '">' . $rowArcade['game_name'] . '</a>',
+      'LAST_SCOREDATE' => create_date($board_config['default_dateformat'], $rowArcade['game_highdate'] , $board_config['board_timezone']),
+      'LAST_SCOREUSER' => '<a href="' . append_sid("profile.$phpEx?mode=viewprofile&amp;" . POST_USERS_URL . "=" . $rowArcade['game_highuser']) . '">' . $rowArcade['username'] . '</a>',
+      'LAST_SCORE' => $rowArcade['game_highscore'])
+      );
+      }
+   }
+}                                                                                     
+else
+{
+/*****[END]********************************************
+ [ Mod:     Arcade Index Add-On                v1.0.0 ]
+ ******************************************************/
+
+## 
+##-----[ FIND ]---------------------------------------- 
+## 
+'U_VIEWFORUM' => append_sid("viewforum.$phpEx?" . POST_FORUM_URL . "=$forum_id"))
+);
+
+## 
+##-----[ AFTER, ADD ]---------------------------------- 
+## 
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Index Add-On                v1.0.0 ]
+ ******************************************************/
+} // == "Arcade"
+/*****[END]********************************************
+ [ Mod:     Arcade Index Add-On                v1.0.0 ]
+ ******************************************************/
+
+## 
+##-----[ OPEN ]---------------------------------------- 
+##
+themes/ALL_THEMES/forums/index_body.tpl
+
+AND
+
+modules/Forums/templates/subSilver/index_body.tpl
+
+## 
+##-----[ FIND ]---------------------------------------- 
+## 
+  <!-- END forumrow -->
+
+## 
+##-----[ AFTER, ADD ]---------------------------------- 
+## 
+  <!-- BEGIN arcaderow -->
+  <tr>
+   <td class="row1" align="center" valign="middle" height="75">{catrow.arcaderow.FOLDER}</td>
+   <td class="row1" colspan="1" width="100%" height="50"><span class="forumlink"> <a href="{catrow.arcaderow.U_VIEWFORUM}" class="forumlink">{catrow.arcaderow.FORUM_NAME}</a><br />
+     </span> <span class="genmed">{catrow.arcaderow.FORUM_DESC}</span><br />
+     <span class="forumlink"> <a href="{catrow.arcaderow.U_TOPARCADE}" class="forumlink">{catrow.arcaderow.BEST_SCORES}</a>
+   </td>
+   <td class="row2" colspan="3" width="100%" height="50" align="center">
+  <!-- BEGIN bestscore -->
+      <span class="gensmall">
+        {catrow.arcaderow.bestscore.LAST_SCOREDATE}<br />{catrow.arcaderow.bestscore.LAST_SCOREUSER}<br />
+      received a score of<br />{catrow.arcaderow.bestscore.LAST_SCORE} à {catrow.arcaderow.bestscore.LAST_SCOREGAME}
+     </span>
+  <!-- END bestscore -->
+   </td>
+  </tr>
+  <!-- END arcaderow -->
+
+## 
+##-----[ ACTION ]-------------------------------------- 
+## 
+Create a new forum "Arcade" by the administration panel.
+  
+## 
+##-----[ SAVE/CLOSE/UPLOAD ALL FILES ]------------------------------------------
+## 
+## EoM

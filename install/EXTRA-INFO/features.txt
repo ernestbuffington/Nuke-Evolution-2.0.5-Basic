@@ -1,0 +1,95 @@
+/*****[FEATURES]*********************************************************
+ Special features implemented in Nuke-Evolution Basic: This document
+ shows some of the unique features of Nuke-Evolution Basic.
+ ************************************************************************/
+     
+Base:
+
+     - PHP Nuke 7.6
+     - Nuke Patched 3.1
+     - PHPBB 2.0.21
+     - HTML 4.01 Transitional
+     
+Security:
+
+     - Custom Encryption for all passwords.
+     - It will now track failed admin logins in admin/logs (as long as you chmod it).
+     - Admin IP lock
+     - Password strength meter
+     - SSL Administration Protection (if ssl installed)
+     - NukeSentinel fully integrated with Nuke-Evolution
+     - Input filtering of dangerous html code
+     - User IP Lock
+
+Database Support:
+
+     - MySQL
+     - MySQLi
+
+Key Features:
+
+     - Cache w/ Complete Admin Panel
+     - Error logger. Logs all mysql errors so you can find those hidden errors.
+     - Theme Management allowing admin to manage site's themes
+     - Auto Optimize; automatically optimizes database every 24 hours
+     - Massive query improvements bringing queries down to about 35 queries per page
+     - Automatic language selection on first visit
+
+Preinstalled Modules:
+
+     - Simplified Downloads
+     - Site Map
+     - Spambot Killer
+     - Credits
+     - NSN News
+     - NSN Supporters
+     - Legal Docs
+     - FCK WYSIWYG Editor (optional)
+
+Preinstalled Mods:
+
+     - New download module based on NSN's download module
+     - Change the position of the admin icons/links
+     - Hide or show blocks per module
+     - Database Manager
+     - Choose to have the topic icon with or without the news article
+     - Evolution Version Checker
+     - BBtoNuke Forum Logout works
+     - 'Advanced Username Color' Integration globally across site
+     - 'Advanced Username Color' Groups
+     - 'Smilies in Topic Titles' Integration globally across the board
+     - 'Advance Signature Divider Control' Integration globally across the board
+     - Auto Rank
+     - Initial Usergroups
+     - phpBB User Groups Integration in place of Nuke groups
+     - BBCode Box in most text areas
+     - BBCode in most text areas
+     - Smile Box in most text areas
+     - Smiles in most text areas
+     - CNB Your Account Modifications
+     - Custom Language File
+     - At a Glance Options
+     - At a Glance Cement
+     - Lock Modules
+     - Newsletter Opt out
+     - Checks for errors when setting up Nuke & Forum URL's
+     - Welcome PM for new users
+     - Option to hide images and links in forum profile
+     - Forum Profile Module
+     - Forum Group Control Panel Module
+     - CNB Your Account and Forum Profile merged
+     - Must first vote to see results (optional)
+     - RSS Improvements
+     - Forum attachment mod
+     - Forum dynamic titles
+     - DHTML Slide Menu for ACP
+     - Simply Merge Threads
+     - Advanced BBCode Box
+     - Global Announcement
+     - Super Quick Reply
+     - Report Posts
+     - Resize Posted Images
+     - Spambot Killer & Antispam
+     - IE PNG Fix
+     - Fully integrated phpBB mods with Nuke-Evolution and other phpBB mods
+     - And so many more!

@@ -1,0 +1,32 @@
+
+KalenderMx v1.4.c  Update von Version 1.3.x 
+===========================================
+
+
+Update:
+-------
+Die Zipdatei entpacken. Alle Dateien im Verzeichnis html werden 
+gemäss ihrer Ordnerstruktur auf den Webserver kopiert.
+
+Alle bereits vorhandenen Einstellungen werden übernommen. An der
+Datenbank-Tabellenstruktur hat sich nichts verändert.
+
+Nach der Installation bitte einmal im Adminmenü die Kalender-Grundeinstellungen 
+überprüfen und neu abspeichern!
+
+
+
+
+Kompatible Vor-Versionen:
+-------------------------
+NUR KalenderMx 1.4
+
+
+viel Spass :-)
+
+
+
+
+
+___________________________________________________________________________________________________
+CVS: $Id: update_from_1.4-german.txt,v 1.2 2005/10/09 08:48:33 Andreas Ellsel Exp $

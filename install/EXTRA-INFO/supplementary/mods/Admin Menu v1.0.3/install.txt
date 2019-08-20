@@ -1,0 +1,113 @@
+#################################################################
+## MOD Title:           Admin Menu
+##
+## MOD Author:          Technocrat (www.nuke-evolution.com)
+##
+## MOD Description:     Adds a java admin menu to the side of the screen
+## Version:             1.0.3
+##
+## 
+## Installation Level:  Easy
+## Installation Time:   5 Mins
+## Files To Edit (#):   1
+##                      
+##
+## Lines To Add:         includes/javascript.php
+##
+############################################################## 
+## Included Files:    includes/java_admin_menu.php
+##                      includes/menu/example.mnu
+##
+############################################################## 
+## For Security Purposes, Please Check: www.nuke-evolution.com for updates or help
+############################################################## 
+## Author Notes: 
+## 
+##     Tested on Nuke Evolution 1.0.2
+##
+##    Any suggestions, issues, changes, ideas, comments, etc please visit nuke-evolution.com
+## 
+## Features: 
+##
+##     See discription
+##
+## Credits: 
+## 
+##    Maximus (http://www.absolutegb.com/maximus)
+##      Platinum from nuke-evolution.com
+##
+## Additional: 
+##    
+##    This is setup to ONLY work when the user is logged into the nuke admin
+##
+##    A mnu file MUST be made for EACH admin you want to have a menu
+## 
+## Special Thanks to: 
+##
+##    Everyone at nuke-evolution.com
+## 
+## This MOD is released under the GPL License. 
+############################################################## 
+## History: 
+##
+##        2006-01-19 - Version 1.0.0 [ BETA ]
+##            - Created / Ported
+##
+##        2006-01-20 - Version 1.0.1 [ BETA ]
+##            - Created function to change admin.php to correct adminfile
+##            - Added parse tags
+##
+##        2006-01-20 - Version 1.0.2
+##            - Added all of platinum's changes
+##
+##        2006-09-21 - Version 1.0.3
+##            - Added all of MWard's changes
+##
+############################################################## 
+## Before Adding This MOD To Your Site, You Should Back Up All Files Related To This MOD 
+##############################################################
+#
+# Here starts the Installation, follow the steps very close and be sure that you have found the 
+#   correct lines
+
+#
+# STEP NUMBER I: Copy Files
+#
+Copy includes/java_admin_menu.php
+
+#
+# STEP NUMBER II: Create menu
+#
+Make a copy of example.mnu and rename it to the admin username
+It must be all lowercase!!!
+For example technocrat.mnu
+
+Open the file and customize how you would like it to look
+
+Upload to includes/menu/
+
+#
+# STEP NUMBER III: Modifying existing Files
+#
+
+#
+#-----[ OPEN ]------------------------------------------ 
+#  
+includes/javascript.php
+
+# 
+#-----[ FIND ]------------------------------------------
+# 
+global $more_js;
+
+# 
+#-----[ BEFORE ADD ]------------------------------------
+# 
+include(NUKE_INCLUDE_DIR.'java_admin_menu.php');
+
+
+# 
+#-----[ NOTES ]----------------------------------------- 
+#
+
+# EoM

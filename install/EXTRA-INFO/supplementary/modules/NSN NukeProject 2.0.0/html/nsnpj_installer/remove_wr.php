@@ -1,0 +1,38 @@
+<?php
+/*=======================================================================
+ Nuke-Evolution Basic: Enhanced PHP-Nuke Web Portal System
+ =======================================================================*/
+
+/********************************************************/
+/* NSN Work Request                                     */
+/* By: NukeScripts Network (webmaster@nukescripts.net)  */
+/* http://www.nukescripts.net                           */
+/* Copyright (c) 2000-2005 by NukeScripts Network         */
+/********************************************************/
+
+$pagetitle = "NSN Work Request: Removal";
+include_once(NUKE_BASE_DIR.'header.php');
+OpenTable();
+$label = "<tr><td align='center' class='title'>$pagetitle</td></tr>";
+$warning = "";
+include_once(NUKE_BASE_DIR."nsnpj_installer/default.php");
+echo "<br /><br /><strong>Operation Status!</strong><hr>\n";
+$message = "Everything seems to have completed succeesfully :)\n";
+$result = $db->sql_query("DROP TABLE IF EXISTS ".$prefix."_nsnwr_requests_config");
+if(!$result) { echo "Remove ".$prefix."_nsnwr_requests_config failed<br />\n"; $message = ""; }
+$result = $db->sql_query("DROP TABLE IF EXISTS ".$prefix."_nsnwr_requests");
+if(!$result) { echo "Remove ".$prefix."_nsnwr_requests failed<br />\n"; $message = ""; }
+$result = $db->sql_query("DROP TABLE IF EXISTS ".$prefix."_nsnwr_requests_comments");
+if(!$result) { echo "Remove ".$prefix."_nsnwr_requests_comments failed<br />\n"; $message = ""; }
+$result = $db->sql_query("DROP TABLE IF EXISTS ".$prefix."_nsnwr_requests_members");
+if(!$result) { echo "Remove ".$prefix."_nsnwr_requests_members failed<br />\n"; $message = ""; }
+$result = $db->sql_query("DROP TABLE IF EXISTS ".$prefix."_nsnwr_requests_status");
+if(!$result) { echo "Remove ".$prefix."_nsnwr_requests_status failed<br />\n"; $message = ""; }
+$result = $db->sql_query("DROP TABLE IF EXISTS ".$prefix."_nsnwr_requests_types");
+if(!$result) { echo "Remove ".$prefix."_nsnwr_requests_types failed<br />\n"; $message = ""; }
+echo "$message<br /><hr>\n";
+echo "<strong>Operation Complete!</strong><br />\n";
+CloseTable();
+include_once(NUKE_BASE_DIR.'footer.php');
+
+?>

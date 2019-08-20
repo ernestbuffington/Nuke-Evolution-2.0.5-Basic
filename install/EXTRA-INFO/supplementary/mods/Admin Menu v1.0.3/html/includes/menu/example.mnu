@@ -1,0 +1,76 @@
+// ssmItems[...]=[name, link, target, colspan, endrow?] - leave 'link' and 'target'' blank to make a header
+
+//Make sure to have all the numbers of the items correct if you miss one it will create a blank page
+
+//If you are using an admin file name other than admin then just leave the link as admin.php it will be changed in code later
+
+/*================================================================
+ Codes:
+    NSNST           = Number of blocked ips in sentinel
+    USERNAME        = This users name
+    SITENAME        = Your site name
+
+// mods added by platinum @ www.GamersDatabase.com
+
+    NUMBROKENL           = Broken web links
+    NUMWAITL             = Web links
+    NUMMODREQL           = Mod. web links
+    NUMSUPPEN            = Supportes susspended
+    NUMSUPACT            = Supportes Active
+    NUMSUPDEA            = Supportes Pending
+    NUMWAITS             = Your site name
+    NUMBROKEN            = Broken Downloads
+    NUMWAITD             = Downloads
+    NUMMODREQD           = Mod. Downloads
+    BANNERSINACTIVE      = Inactive banners
+    BANNERSACTIVE        = Active banners
+    NUMWAITREVIEWS       = Waiting Reviews
+
+// mods added by MWard | Dev @ www.evo-themez.com | www.dragonlightdesignz.com
+
+    CACHENABLED		 = States if Cache is Enabled/Disabled
+    CACHELAST		 = When cache was last cleared
+    CACHEFILES		 = How many files are in the cache
+    CACHEDIR		 = States cache directory status (Good/Bad)
+
+ =================================================================*/
+
+ssmItems[0]=["<center>Admin Menu for<br />USERNAME</center>"] //create header
+ssmItems[1]=["<img src='images/arrow.gif' border='0' alt=''>Admin [Nuke-Evo]", "admin.php", ""]
+ssmItems[2]=["<img src='images/arrow.gif' border='0' alt=''>Admin [Forums]", "modules/Forums/admin/index.php", ""]
+ssmItems[3]=["<img src='images/arrow.gif' border='0' alt=''>Settings", "admin.php?op=Configure", ""]
+ssmItems[4]=["<img src='images/arrow.gif' border='0' alt=''>Themes", "admin.php?op=themes", ""]
+ssmItems[5]=["<img src='images/arrow.gif' border='0' alt=''>Cache", "admin.php?op=cache", ""]
+ssmItems[6]=["<img src='images/arrow.gif' border='0' alt=''>Downloads", "admin.php?op=DLMain", ""]
+ssmItems[7]=["<img src='images/arrow.gif' border='0' alt=''>NukeSentinel", "admin.php?op=ABMain", ""]
+ssmItems[8]=["<img src='images/arrow.gif' border='0' alt=''>News", "admin.php?op=adminStory", ""]
+ssmItems[9]=["<img src='images/arrow.gif' border='0' alt=''>Blocks", "admin.php?op=blocks", ""]
+ssmItems[10]=["<img src='images/arrow.gif' border='0' alt=''>Modules", "admin.php?op=modules", ""]
+ssmItems[11]=["<img src='images/arrow.gif' border='0' alt=''>CNBYA", "modules.php?name=Your_Account&file=admin", ""]
+ssmItems[12]=["<img src='images/arrow.gif' border='0' alt=''>Messages", "admin.php?op=messages", ""]
+ssmItems[13]=["<img src='images/arrow.gif' border='0' alt=''>Who Is Online", "admin.php?op=who", ""]
+ssmItems[14]=["<img src='images/arrow.gif' border='0' alt=''>Database", "admin.php?op=database", ""]
+ssmItems[15]=["<img src='images/arrow.gif' border='0' alt=''>Clear Cache", "admin.php?op=cache_clear", ""]
+ssmItems[16]=["<img src='images/arrow.gif' border='0' alt=''>Logout", "admin.php?op=logout", ""]
+ssmItems[17]=["<center>Submissions</center>"]
+ssmItems[18]=["<img src='images/arrow.gif' border='0' alt=''>Submissions NUMWAITS", "admin.php?op=submissions", ""]
+ssmItems[19]=["<strong>Downloads </strong>"]
+ssmItems[20]=["<img src='images/arrow.gif' border='0' alt=''>Broken Downloads NUMBROKEN", "admin.php?op=DownloadBroken", ""]
+ssmItems[21]=["<img src='images/arrow.gif' border='0' alt=''>Downloads NUMWAITD", "admin.php?op=DownloadNew", ""]
+ssmItems[22]=["<img src='images/arrow.gif' border='0' alt=''>Mod. Downloads NUMMODREQD", "admin.php?op=DownloadModifyRequests", ""]
+ssmItems[23]=["<strong>Supporters </strong>"]
+ssmItems[24]=["<img src='images/arrow.gif' border='0' alt=''>Waiting Supporters NUMSUPPEN", "admin.php?op=SPPending", ""]
+ssmItems[25]=["<img src='images/arrow.gif' border='0' alt=''>Active Supporters NUMSUPACT", "admin.php?op=SPActive", ""]
+ssmItems[26]=["<img src='images/arrow.gif' border='0' alt=''>Inactive Supporters NUMSUPDEA", "admin.php?op=SPInactive", ""]
+ssmItems[27]=["<strong>Banners </strong>"]
+ssmItems[28]=["<img src='images/arrow.gif' border='0' alt=''>Active Banners BANNERSACTIVE", "admin.php?op=BannersAdmin", ""]
+ssmItems[29]=["<img src='images/arrow.gif' border='0' alt=''>Inactive Banners BANNERSINACTIVE", "admin.php?op=BannersAdmin", ""]
+ssmItems[30]=["<strong>Reviews </strong>"]
+ssmItems[31]=["<img src='images/arrow.gif' border='0' alt=''>Waiting Reviews NUMWAITREVIEWS", "admin.php?op=reviews", ""]
+ssmItems[32]=["<center>Current Cache Status</center>"]
+ssmItems[33]=["<center>Cache Status: <strong>CACHENABLED</strong></center>", "", ""]
+ssmItems[34]=["<center>Last Cleared: <strong>CACHELAST</strong></center>", "", ""]
+ssmItems[35]=["<center>Cache Items: <strong>CACHEFILES</strong></center>", "", ""]
+ssmItems[36]=["<center>Cache Dir: <strong>CACHEDIR</strong></center>", "", ""]
+ssmItems[37]=["<strong>Clear Cache</strong>", "admin.php?op=cache", ""]
+ssmItems[38]=["<center>SITENAME</center>"] //create footer

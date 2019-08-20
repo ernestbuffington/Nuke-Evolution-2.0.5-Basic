@@ -1,0 +1,395 @@
+#################################################################
+## MOD Title: Arcade Thread Mod
+## MOD Author: Rica <ricalawaba00@ifrance.com> - http://www.thehorde.be
+## MOD Description: Provides a messages thread for each game, shown under the playing page.
+##
+## MOD Version: 1.0.2
+##
+## Installation Level: easy
+## Installation Time: 2 Minutes
+## Files To Edit: 
+##            games_body.tpl
+##            games.php
+##            modules/Forums/comments_new.php 
+##            modules/Forums/commentspopup_new.php 
+##
+## Included Files: 
+##                     arcade_gamethread.php
+##
+##############################################################
+## For Security Purposes, Please Check: http://arcade.portemods.com/ or http://www.thehorde.be/ for the
+## latest version of this MOD. Downloading this MOD from other sites could cause malicious code
+## to enter into your site.
+##############################################################
+#################################################################
+##
+## MOD History:
+##
+## 2004-12-3 Adapted for V3.0.2
+## 2004-10-X -v1.0.1
+## - Added BBCode and Smiley Supports
+## - Cosmetic Design
+##
+## 2004-10-6 -v1.0.0
+## - Initial Release
+##
+#################################################################
+##
+## Author Notes:  Thanks to the http://arcade.portedmods.com team
+##    and in particular to JRSweets (because I just took his 
+##    installation file template :p )
+#################################################################
+## Before Adding This MOD To Your Forum, You Should Back Up All Files Related To This MOD
+#################################################################
+#
+#-----[ UPLOAD ]------------------------------------------
+#
+Upload all the files in the html folder keeping the
+directory structure.
+
+modules/Forums/arcade_gamethread.php -> modules/Forums/arcade_gamethread.php
+
+#
+#-----[ SQL ]----------------------------------------   
+# 
+CREATE TABLE `nuke_bbarcade_message` (
+  `message_id` int(11) NOT NULL auto_increment,
+  `game_id` int(11) NOT NULL default '0',
+  `user_id` int(11) NOT NULL default '0',
+  `message_date` int(11) NOT NULL default '0',
+  `message` mediumtext NOT NULL,
+  PRIMARY KEY  (`message_id`,`game_id`)
+) TYPE=MyISAM; 
+
+#
+#-----[ NOTE ]-----------------------------------------
+#
+For every file you open you will see something like:
+
+/*****[CHANGES]**********************************************************
+-=[Base]=-
+      Nuke Patched                             v3.1.0       09/20/2005
+-=[Mod]=-
+      Advanced Username Color                  v1.0.5       09/20/2005
+ ************************************************************************/
+
+I would suggest adding an entry for the arcade in every file but that
+is completely up to you.  Here is what that would look like:
+
+/*****[CHANGES]**********************************************************
+-=[Base]=-
+      Nuke Patched                             v3.1.0       09/20/2005
+-=[Mod]=-
+      Advanced Username Color                  v1.0.5       09/20/2005
+      Arcade Thread Add-On                     v1.0.0       09/20/2005
+ ************************************************************************/
+
+#
+#-----[ OPEN ]---------------------------------------- 
+#
+modules/Forums/games.php
+
+#
+#-----[ FIND ]---------------------------------------- 
+#
+require_once('includes/bbcode.'. $phpEx);
+
+#
+#-----[ AFTER, ADD ]-----------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+include("includes/functions_post.php");
+/*****[END]********************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+
+#
+#-----[ FIND ]---------------------------------------- 
+#
+$template->set_filenames(array(
+   'body' => 'games_body.tpl')
+);
+        
+#
+#-----[ AFTER, ADD ]-----------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+generate_smilies('inline', PAGE_POSTING);
+/*****[END]********************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+    
+#
+#-----[ FIND ]---------------------------------------- 
+#
+        'GAMEHASH' => $gamehash_id,
+
+#
+#-----[ AFTER, ADD ]-----------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+        'GID'=>$gid,
+        'USER_ID'=> $userdata['user_id'],
+        'URL_POST_THREAD'=> append_sid("arcade_gamethread?mode=insert"),
+/*****[END]********************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+
+#
+#-----[ FIND ]---------------------------------------- 
+#
+include($phpbb_root_path . 'whoisplaying.'.$phpEx);
+
+#
+#-----[ BEFORE, ADD ]---------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+require_once("includes/bbcode.php");
+$sql="SELECT gt.* ,u.username FROM ".$prefix."_bbarcade_message gt left join ".USERS_TABLE." u on u.user_id=gt.user_id WHERE gt.game_id=$gid ORDER BY gt.message_date DESC LIMIT 0,10";
+$result=$db->sql_query($sql);
+$adminlink="";
+if (!$db->sql_numrows($result)) {
+    $template->assign_block_vars('nogamethread',array());
+}else
+while($row=$db->sql_fetchrow($result)){
+    $bbuid=make_bbcode_uid();
+    if ($userdata["user_level"]==ADMIN) {
+        $adminlink="<nobr>&nbsp;[&nbsp;<a href='".append_sid("arcade_gamethread?mode=delete&gid=$gid&mid=".$row["message_id"])."'>del</a>&nbsp;]</nobr>";
+    }
+
+    $template->assign_block_vars('gamethread',array(
+        'POSTER' => "<nobr><a href='".append_sid("profile.$phpEx?mode=viewprofile&u=".$row["user_id"])."'>".$row["username"]."</a></nobr>",
+        'ADMINLINK' =>$adminlink,
+           'POSTDATE' => create_date( $board_config['default_dateformat'] , $row["message_date"] , $board_config['board_timezone'] ), 
+           'MESSAGE' => nl2br( smilies_pass(bbencode_second_pass(bbencode_first_pass($row["message"],$bbuid),$bbuid)))) 
+       ); 
+
+}
+/*****[END]********************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]---------------------------------------- 
+#
+themes/ALL_THEME/forums/games_body.tpl
+
+AND
+
+modules/Forums/templates/subSilver/games_body.tpl
+
+#
+#-----[ FIND ]---------------------------------------- 
+#
+</script>
+
+#
+#-----[ BEFORE, ADD ]---------------------------------
+#
+function emoticon(text) {
+    text = ' ' + text + ' ';
+    if (document.post.message.createTextRange && document.post.message.caretPos) {
+        var caretPos = document.post.message.caretPos;
+        caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? text + ' ' : text;
+        document.post.message.focus();
+    } else {
+    document.post.message.value  += text;
+    document.post.message.focus();
+    }
+}
+
+#
+#-----[ FIND ]---------------------------------------- 
+#  
+{WHOISPLAYING}
+
+#
+#-----[ BEFORE, ADD ]-----------------------------------
+#
+<!-- Game Thread MOD-->
+  <table  width="99%" align="center" class="bodyline" cellpadding="2" cellspacing="1" >
+    <tr>
+        <th colspan="2" class="thTop" height="28" align="center">{L_GAME} Player's messages</th>
+    </tr>
+        <!-- BEGIN nogamethread -->
+    <tr>
+        <td colspan="2">
+            <table width='100%'  class="bodyline" cellpadding="5" cellspacing="1">
+                <tr>
+                    <td class='row1' align='center'><em>There is no Player's message for this game.</em><br />You can add a message in the box below.</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+        <!-- END nogamethread -->
+        <!-- BEGIN gamethread -->
+    <tr>
+        <td colspan="2">
+            <table width='100%'  class="bodyline" cellpadding="5" cellspacing="1">
+                <tr>
+                    <td width='180' class='row2'>From {gamethread.POSTER}<br />on {gamethread.POSTDATE}</td>
+                    <td class='row1'>{gamethread.MESSAGE}</td>
+                    <td class='row2' width='40'>{gamethread.ADMINLINK}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- END GAMETHREAD -->
+    <tr>
+        <td  valign="middle" align="center" > <br />
+              <table width="100" border="0" cellspacing="0" cellpadding="5">
+                <tr align="center">
+                  <td colspan="{S_SMILIES_COLSPAN}" class="gensmall"><strong>{L_EMOTICONS}</strong></td>
+                </tr>
+                <!-- BEGIN smilies_row -->
+                <tr align="center" valign="middle">
+                  <!-- BEGIN smilies_col -->
+                  <td><img src="{smilies_row.smilies_col.SMILEY_IMG}" border="0" onmouseover="this.style.cursor='hand';" onclick="emoticon('{smilies_row.smilies_col.SMILEY_CODE}');" alt="{smilies_row.smilies_col.SMILEY_DESC}" title="{smilies_row.smilies_col.SMILEY_DESC}" /></a></td>
+                  <!-- END smilies_col -->
+                </tr>
+                <!-- END smilies_row -->
+                <!-- BEGIN switch_smilies_extra -->
+                <tr align="center">
+                  <td colspan="{S_SMILIES_COLSPAN}"><span  class="nav"><a href="{U_MORE_SMILIES}" onclick="window.open('{U_MORE_SMILIES}', '_phpbbsmilies', 'HEIGHT=300,resizable=yes,scrollbars=yes,WIDTH=250');return false;" target="_phpbbsmilies" class="nav">{L_MORE_SMILIES}</a></span></td>
+                </tr>
+                <!-- END switch_smilies_extra -->
+              </table>
+            </td>
+        <td align="center">
+            <form action='{URL_POST_THREAD}' method='POST' name='post'>
+                <input type="hidden" name="gid" value="{GID}">
+                <input type="hidden" name="uid" value="{USER_ID}">
+                <textarea class="post" name="message"  cols="100" rows="10"></textarea>
+                <br /><br /><input type="submit" value="Add Message">
+            </form>
+        </td>
+    </tr>
+  </table>
+<!-- Game Thread MOD-->
+
+#
+#-----[ OPEN ]---------------------------------------- 
+#
+modules/Forums/comments_new.php
+
+#
+#-----[ FIND 2 TIMES ]---------------------------------------- 
+#
+            //If they don't match, the comments is not entered and error message is displayed.
+            $user_id = $userdata['user_id'];
+
+#
+#-----[ AFTER, ADD ]---------------------------------------- 
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+
+#
+#-----[ FIND 2 TIMES ]---------------------------------------- 
+#
+$sql = "SELECT game_highuser 
+
+#
+#-----[ INLINE AFTER, ADD ]---------------------------------------- 
+#
+,game_highscore
+
+#
+#-----[ AFTER AND ON A NEW LINE, ADD ]---------------------------------------- 
+#
+/*****[END]********************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+
+#
+#-----[ FIND ]---------------------------------------- 
+#
+$sql = "UPDATE " . COMMENTS_TABLE . " SET comments_value = '$comment_text' WHERE game_id = $game_id";
+
+#
+#-----[ BEFORE, ADD ]---------------------------------------- 
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+         $message="[ [u]New High-Score:[/u] [b]".$row["game_highscore"]."[/b] ]\n\n".$comment_text;
+         $sql = "INSERT INTO ".$prefix."_bbarcade_message (message_id,game_id,user_id,message_date,message) "
+              ."VALUES(null,$game_id,$user_id,".time().",'$message')";
+    
+         if (!($result = $db->sql_query($sql))) {
+            message_die(GENERAL_ERROR, "Error inserting game's message", '', __LINE__, __FILE__, $sql);
+         }
+/*****[END]********************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]---------------------------------------- 
+#
+modules/Forums/commentspopup_new.php 
+
+#
+#-----[ FIND 2 TIMES ]---------------------------------------- 
+#
+            //If they don't match, the comments is not entered and error message is displayed.
+            $user_id = $userdata['user_id'];
+
+#
+#-----[ AFTER, ADD ]---------------------------------------- 
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+
+#
+#-----[ FIND 2 TIMES ]---------------------------------------- 
+#
+$sql = "SELECT game_highuser 
+
+#
+#-----[ INLINE AFTER, ADD ]---------------------------------------- 
+#
+,game_highscore
+
+#
+#-----[ AFTER AND ON A NEW LINE, ADD ]---------------------------------------- 
+#
+/*****[END]********************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+
+#
+#-----[ FIND ]---------------------------------------- 
+#
+$sql = "UPDATE " . COMMENTS_TABLE . " SET comments_value = '$comment_text' WHERE game_id = $game_id";
+
+#
+#-----[ BEFORE, ADD ]---------------------------------------- 
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+         $message="[ [u]New High-Score:[/u] [b]".$row["game_highscore"]."[/b] ]\n\n".$comment_text;
+         $sql = "INSERT INTO ".$prefix."_bbarcade_message (message_id,game_id,user_id,message_date,message) "
+              ."VALUES(null,$game_id,$user_id,".time().",'$message')";
+    
+         if (!($result = $db->sql_query($sql))) {
+            message_die(GENERAL_ERROR, "Error inserting game's message", '', __LINE__, __FILE__, $sql);
+         }
+/*****[END]********************************************
+ [ Mod:     Arcade Thread Add-On               v1.0.2 ]
+ ******************************************************/
+
+#
+#-----[ SAVE/CLOSE/UPLOAD ALL FILES ]------------------------------------------
+#
+# EoM

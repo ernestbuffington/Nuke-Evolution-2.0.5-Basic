@@ -1,0 +1,81 @@
+/** 
+* 
+* @version V2.0 
+* @date 5 December 2004 
+* 
+* Arcade Games Nuke 6.5+ Module 
+* ----------------------------- 
+* Author: Rica http://www.thehorde.be 
+* Date: 5 December 2004 
+* License: Free/GPL 
+* 
+* Purpose: PHP-Nuke 6.5+ Module Addon for the ported Arcade Mod 
+*          from http://arcade.portedmods.com  V3.1 and above 
+*          - It's an independant module that permit users to search 
+*          games in the 'Arcade Mod' database. 
+*          - Alternative to the phpBB main Arcade Page 
+*          - Allow to view list of newest games , last played games, 
+*          Most and Least Popular, TOP 10 players, Last High Scores 
+* 
+* Languages: 
+*          Danish   - NiceM http://www.origon.dk 
+*          English - Rica http://www.thehorde.be 
+*          French  - Rica http://www.thehorde.be 
+*          Spanish - Socket http://www.los-elegidos.com 
+*          Thai   - 9uiTarZ Chaiyaphat Jirawibhas : guitarzonline@hotmail.com 
+* 
+* Interest: 
+*          Pure Nuke Module, you dont need to modify/hack any files 
+*          from the ported arcade modules. 
+* 
+* Installation: 
+*          Same for all PHPNuke modules : 
+*           - Upload html/* to Nukeroot/* 
+*           - Check your Administration/Modules in PHP-Nuke and 
+*             Activate the 'Arcade Games' Module 
+*           - Set permission to Administrator , if you just want to test it 
+*             or visitors/members/subscribers depending of your preferences. 
+* 
+* 
+* I would like to thanks : 
+*       - original Author of the Arcade Module : 
+*             Giefca from http://www.Gf-phpBB.com 
+* 
+*       - The portedmods Team that made the port 
+*             Barcrest 
+*             JRSweets 
+*             PhantomK 
+*             TheSwede 
+*              
+*       - Portedmods Admins - http://www.portedmods.com 
+*             Anor 
+*             Mighty-Y 
+* 
+* Legal Warnings: 
+*          My code are test code. Use it at your own risk. If you cant afford 
+*          the risk. Dont use it ! 
+* 
+* Version Information 
+* 2.0 5 December 2004 
+*       - Language files (Thanks to all guys who translate the language files) 
+*       - Added an All Games Links 
+*       - Added Arcade Thread Message support 
+*       - Added Arcade Rate-It Mode Support 
+*       - Added Play in Popup Link 
+*       - 
+*       - Added extra admin configuration Option 
+*          - Right Block 
+*          - Game Icon Size 
+*          - Games by page 
+*          - Top Message (with bbcode support) 
+*          - Rating 
+*          - Arcade Thread  (with bbcode suppport) 
+*          - Popup Link 
+* 
+* NB: Of course , enable option for modules you have installed only ..... :) 
+*              It's not enough to enable "Rating" if you didnt install "Rate mod" 
+*             or Aracade thread . 
+* NB2:         Popup Link  is a feature of the V3.0.2 
+* 
+* 1.0 First Release 5 October 2004 
+**/ 

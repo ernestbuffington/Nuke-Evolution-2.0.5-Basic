@@ -1,0 +1,68 @@
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/theme.php
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+function themeindex ($aid, $informant, $time, $title, $counter, $topic, $thetext, $notes, $morelink, $topicname, $topicimage, $topictext) {
+    global $anonymous, $tipath, $theme_name;
+
+#
+#-----[ REPLACE ]------------------------------------------ 
+#
+    global $anonymous, $tipath, $theme_name;
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+    global $anonymous, $tipath, $theme_name, $sid;
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/theme_info.php
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+<?
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+<?php
+
+#
+#-----[ REPLACE ]------------------------------------------ 
+#
+themes/YOUR_THEME/forums/viewtopic_quickreply.tpl
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+theme/forums/viewtopic_quickreply.tpl
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/forum/profile_add_body.tpl
+
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+<!-- END switch_type_textarea -->
+
+#
+#-----[ AFTER ADD ]------------------------------------- 
+#
+<!-- BEGIN switch_type_checkbox -->
+      	<td class="row1">
+        	<span class="gen">{xdata.NAME}</span><br /><span class="gensmall">{xdata.DESCRIPTION}</span>
+	</td>
+	<td class="row2">
+		<input type="checkbox" name="{xdata.CODE_NAME}" {xdata.switch_type_checkbox.CHECKED} /><br>
+	</td>
+<!-- END switch_type_checkbox -->

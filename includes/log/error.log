@@ -1,0 +1,32 @@
+---------[SQL Error]------------------------------------------------------------------------------------------------------------
+- [25 Oct 2007 - 16:03:03] - 
+User: <span style="color: #FFA34F"><strong>Shadow</strong></span>
+IP: 127.0.0.1
+URL: <a href="http://localhost/evo/modules.php?name=Forums&file=posting&sid=c1b3af7d15ce3d75bdb380b3e5ad4ab0">/evo/modules.php?name=Forums&file=posting&sid=c1b3af7d15ce3d75bdb380b3e5ad4ab0</a>
+
+File: C:\xampp\htdocs\evo\includes\functions_search.php
+Line: 378
+Message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                                        GROUP BY word_id
+                   ' at line 3
+Code: 1064
+Query: SELECT word_id
+                                        FROM nuke_bbsearch_wordmatch
+                                        WHERE word_id IN ()
+                                        GROUP BY word_id
+                                        HAVING COUNT(word_id) = 1
+---------------------------------------------------------------------------------------------------------------------------------
+
+---------[SQL Error]------------------------------------------------------------------------------------------------------------
+- [25 Oct 2007 - 16:48:49] - 
+User: Shadow
+IP: 127.0.0.1
+URL: <a href="http://localhost/evo/admin.php">/evo/admin.php</a>
+
+File: C:\xampp\htdocs\evo\admin\functions.php
+Line: 98
+Message: Duplicate entry 'Shadow' for key 1
+Code: 1062
+Query: INSERT INTO `nuke_nsnst_admins` (`aid`, `login`, `protected`) VALUES ('Shadow', 'Shadow', '1')
+---------------------------------------------------------------------------------------------------------------------------------
+

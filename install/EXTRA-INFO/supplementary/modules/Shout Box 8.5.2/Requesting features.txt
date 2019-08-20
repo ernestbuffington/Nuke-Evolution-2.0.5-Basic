@@ -1,0 +1,21 @@
+
+Shout Box - Requesting features
+============================================
+
+Hello everyone! I, Aric Bolf (SuperCat), am the current developer of this Shout Box.
+I am thankful for everyone's input. A lot of features begin with people
+requesting them. I have a forum set up just for this type of thing.
+However, there are a few features i do not want any more requests for:
+
+1. Having the shout box not refresh the whole page when posting.
+2. Removing or turning off the scrolling.
+
+If you have a request other than these, please feel free to submit a request.
+
+Before submitting a request:
+
+ 1. Check to make sure you have the latest version. Your request may already exist.
+ 2. Check the work board to see if the feature is slated to be made.
+ 3. Check thru the requests forum to see if others have requested that feature. If it is, reply to it with your thoughts.
+
+ http://www.ourscripts.net/modules.php?name=Forums&file=viewforum&f=9

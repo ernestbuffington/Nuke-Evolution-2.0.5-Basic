@@ -1,0 +1,40 @@
+PHP-Nuke Shout Box credits
+
+v2.5 thru v8.5 credit is due to SuperCat.   webmaster@ourscripts.net
+
+Special thanks to these indiviuals:
+  -crrj for helping me with the various SQL questions.
+
+  -Fahad for the Arabic language definitions.
+
+  -Michel (mf1) for the French language definitions.
+
+  -chiroptera for the German language definitions.
+
+  -The_cobra666 for the Dutch language definitions.
+
+  -Nybble for helping me fix and improve the automatic version checker.
+
+  -Rich Browning for the BlueLCD.jpg background image!
+
+  -Helio for helping code and test the 'Latest version checker'!
+
+  -ZaKaTRoN for the Spanish language defintions!
+
+  -Ciscoski for the Italian language defintions!
+
+  -Baris Bayram Konca for the Turkish language defintions!
+
+  -JRSweets for tipping me off to the timestamp option in date().
+   This allowed me to quickly resolve the server time offset feature that was so highly requested.
+
+  -Dilandou for helping me with the PHP and JS mixing.
+
+==> Please link to us: http://www.ourscripts.net <==
+
+============================================
+
+Original version (2.4 and older) by:
+- Quiecom Developers
+- http://www.quiecom.com
+

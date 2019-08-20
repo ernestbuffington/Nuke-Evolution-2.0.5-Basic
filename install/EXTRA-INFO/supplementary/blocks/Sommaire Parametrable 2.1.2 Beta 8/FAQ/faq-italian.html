@@ -1,0 +1,802 @@
+<html><head><title>FAQ Sommaire Paramétrable (Menu) v. 2.1</title>
+<style type="text/css"><!--
+  body, td  { font-family: arial; font-size: x-small; }
+  a         { color: #0000BB; text-decoration: none; }
+  a:hover   { color: #FF0000; text-decoration: underline; }
+  .headline { font-family: arial black, arial; font-size: 28px; letter-spacing: -1px; }
+  .headline2{ font-family: verdana, arial; font-size: 12px; }
+  .subhead  { font-family: arial, arial; font-size: 18px; font-weight: bold; font-style: italic; }
+  .backtotop     { font-family: arial, arial; font-size: xx-small;  }
+  .code     { background-color: #EEEEEE; font-family: Courier New; font-size: x-small;
+              margin: 5px 0px 5px 0px; padding: 5px;
+              border: black 1px dotted;
+            }
+
+--></style>
+
+</head>
+<body>
+<a name="top"></a>
+
+<div align=center>
+<span class="headline">Sommaire Paramétrable (Menu) 2.1</span><br />
+<span class="headline2">Aggiunte e caratteristiche del menu per  PHP-Nuke.</span>
+</div>
+
+<p align="center"><font size="2">Traduzione in italiano a cura di </font><a href="http://www.nuke-evolution.it"><font size="2">Nuke-Evolution.it 
+</font></a><font size="2">- i</font><a href="mailto:info@nuke-evolution.it"><font size="2">nfo@nuke-evolution.it</font></a><font size="2"> 
+- Staff: </font><strong><font size="2">LuckyLuciano &nbsp;pex1968 &nbsp;_-Paky-_</font></strong><font size="2"> 
+</font></p>
+<div align=center>
+<hr>
+</div>
+
+<!-- TOC -->
+
+<p class="subhead">Introduzione</p>
+
+<a href="#intro1">Cosa è  'Sommaire Paramétrable' ?</a><br />
+<a href="#intro2">Come sono i menu generati con  SP ?</a><br />
+<font color="#000099">Come lavorano con i Browser</font> <a href="#intro3">?</a><br />
+
+<p class="subhead">Installazione</p>
+
+<a href="#setup1">Come si installa  Sommaire Paramétrable ?</a><br />
+<a href="#setup2">Non voglio usare lo script di installazione, posso installarlo 
+manualmente ?</a><br />
+<a href="#setup3">Lo script di installazzione genera un backup dei file di lingua 
+posso cancellarli ?</a><br />
+
+<p class="subhead">Risposte a domande frequenti &nbsp;(F.A.Q.)</p>
+<a href="#faq0">A proposito delle interrogazioni   SQL...</a><br />
+<a href="#faq1">Come funzionano i&nbsp;&quot;Links esterni&quot; ?</a><br />
+<a href="#faq2">Come apro una pagina in una nuova finestra internet o nella 
+stessa finestra ?</a><br />
+<a href="#faq3">Come apro un link a popup ?</a><br />
+<a href="#faq4">Come modifico il colore del testo, la grandezza, il font,  etc... ?</a><br />
+<a href="#faq5">Come posso usare le immagini (icone) in Sommaire ?</a><br />
+<a href="#faq6">Alcuni moduli appaiono come dei bottoncini nel blocco Sommaire 
+(non selezionati in admin Sommaire), non voglio farli comparire !</a><br />
+<a href="#faq7">Come funziona l'opzione &quot;Identifica le novità automaticamente&quot; ?</a><br />
+<a href="#faq8">Sommaire Paramétrable non è tradotta nella mia lingua come posso 
+tradurla ?</a><br />
+<a href="#faq9" style="color: red"><strong>Amo Sommaire Paramétrable,</strong> posso aiutare 
+il progetto ?</a><br />
+<a href="#faq_error"><strong>Ho un messaggio di errore : 'Il PESO non è corretto. Il 
+valore del PESO deve essere compreso tra 0 e 98!!', come posso risolvere il 
+problema ?</strong></a><br />
+<a href="#faq10">Come creo un menu  <strong>Multilingua</strong> ?</a><br />
+<p class="subhead">Bugs conosciuti e Soluzioni</p>
+
+<a href="#bugs1">Problemi usando alcuni   browsers</a><br />
+<a href="#bugs2">Shoutblock va in conflitto con Sommaire Paramétrable! --&gt;Soluzione</a><br />
+<a href="#bugs3">Il mio WYSIWYG editor crea un conflitto con Sommaire Paramétrable! --&gt;</a><a href="faq-italian.html#bugs2">Soluzione</a><br />
+<a href="#bugs4">La patch di sicurezza phpSecure nel  mainfile.php crea un conflitto 
+con Sommaire Paramétrable! --&gt;</a><a href="faq-italian.html#bugs2">Soluzione</a><br />
+<a href="#bugs5">'Ho selezionato l'opzione  &quot;<strong>grassetto</strong>&quot;, 
+ma i links non sono in grassetto!</a><br />
+
+<p class="subhead">Change Log</p>
+
+<a href="#changelog">Vedi Change Log</a><br />
+
+
+
+<br /><br />
+
+<!-- INTRODUCTION -->
+
+<hr><p><span class="subhead">Introduzione</span> <a href="#top" class="backtotop">Torna 
+all'inizio</a></p>
+<dl>
+
+<a name="intro1"></a>
+<p></dl>
+
+<a href="faq-italian.html#intro1"><font color="black">Cosa è  'Sommaire Paramétrable' ?</font></a><font color="black"><br />
+</font><dl>
+
+<dd>Sommaire Paramétrable è un'utilità che permette di controllare totalmente 
+    il contenuto e la grafica del tuo Sommaire&nbsp;(il blocco menu del tuo 
+    sito PHP-Nuke):
+<p><ul>
+<li>Menu diviso in categorie con icone</li>
+<li>Mostra i moduli installati, con un'icona</li>
+<li>Mostra i&nbsp;links esterni (ogni url valido), con un'icona</li>
+<li>I links esterni che puntano ad una pagina specifica vengono trattati come 
+        moduli (quando l'accesso ad un modulo è riservato, viene visulizzata 
+        un'icona di  &quot;divieto d'accesso')</li>
+<li>Menu dinamico  (Il contenuto delle  categorie è visulizzato con un semplice click)</li>
+<li>Visulalizza Nuovi contenuti nel sito : <br />
+1. Aggiunta manuale di una  'NUOVA&quot; icona in ogni categoria o modulo<br />
+2. Aggiunta automatica di una  'NUOVA&quot; icona in ogni modulo  PHP-Nuke, con 
+        la scelta della durata della novità.</li>
+<li>Opzione di visulizzare una categoria o un modulo/link in grassetto</li>
+<li>Opzione di visulizzare una categoria o un modulo/link usando una listbox</li>
+<li>Opzione di visulizzare una categoria o un modulo/link usando (CSS)</li>
+<li>Le categorie possono essere visulizzate usando solo un'imaggine (no testo)</li>
+<li>Moduli/Links possono essere visulizzate usando solo un'imaggine (no testo)</li>
+<li>Può essere usata una linea orizzontale per separare due categorie o due 
+        moduli/links</li>
+<li>Opzione di centrare il titolo delle categorie</li>
+<li>Opzione di modificare il colore di sfondo della categoria</li>
+<li>Visualizza l'icona di un  &quot;Nuovo messaggio Privato&quot; agli utenti 
+        che non hanno letto I messaggi privati.</li>
+<li>Opzione  per nascondere agli anonimi i moduli che sono riservati a soli 
+        membri, con rilevazione dei gruppi di utenti  PHP-Nuke v.7+</li>
+<li>E' possibile usare  FLASH .swf file  (FLASH support by MAC06 - magetmac06@hotmail.com)</li>
+<li>Sommaire funziona con Google Tap NExtGEn (http://gt.audioslaved.com) con  GT-NExtGEn  Menu 
+        Principale.</li>
+<li>e molto altro ancora... </li>
+</ul>
+<a name="intro2"></a>
+<p><dt><strong>Come sono visulizzati I menu creati con SP ?</strong></dt>
+<dd>Puoi avere differenti menu con  Sommaire Paramétrable, dipende solo dalla 
+    tua  imaginazione, le immagini che vuoi usare, etc...
+<br />Ecco alcuni esempi:
+<br /></dd><table><tr>
+<td><img src="images/exemple1-shrink.gif" onMouseOver='this.src="images/exemple1-expand.gif"' onMouseOut='this.src="images/exemple1-shrink.gif"'></td>
+<td><img src="images/exemple3-shrink.gif" onMouseOver='this.src="images/exemple3-expand.gif"' onMouseOut='this.src="images/exemple3-shrink.gif"'></td>
+<td><img src="images/exemple0-shrink.gif" onMouseOver='this.src="images/exemple0-expand.gif"' onMouseOut='this.src="images/exemple0-shrink.gif"'></td>
+<td><img src="images/exemple2-shrink.gif" onMouseOver='this.src="images/exemple2-expand.gif"' onMouseOut='this.src="images/exemple2-shrink.gif"'></td>
+<td><img src="images/exemple4-shrink.gif" onMouseOver='this.src="images/exemple4-expand.gif"' onMouseOut='this.src="images/exemple4-shrink.gif"'></td>
+<td><img src="images/exemple5-shrink.gif" onMouseOver='this.src="images/exemple5-expand.gif"' onMouseOut='this.src="images/exemple5-shrink.gif"'></td>
+</tr></table>
+<br />
+
+<a name="intro3"></a>
+<p><dt><strong>E' compatibile con tutti i  browsers ?</strong></dt>
+<dd>Sommaire Paramétrable è compatibile con tutti i browsers.<br />
+Ma la funzione  &quot;menu dinamico&quot; può essere visulizzata solo con i 
+    &nbsp;browser più recenti.<br />
+Sommaire Paramétrable v2.1 è stato testato su Internet Explorer 6, Opera 7, Konqueror 3.1.4.<br />
+Gli utilizzatori di Mozilla non visulizzano correttamente la funzione &quot;dinamica&quot;, 
+    quindi la funzionè è disabilitata automaticamente agli utilizzatori di  Mozilla.<br />
+Per altri dettagli leggi la sezione  <a href="#bugs1">Bugs</a>.</dd></dl>
+
+<!-- INSTALLATION / SETUP -->
+
+<hr><p><span class="subhead">Installazione </span><a class="backtotop" href="#top">Torna 
+all'inizio</a></p>
+<dl>
+
+<a name="setup1"></a>
+<p><dt><strong>Come s'installa  Sommaire Paramétrable  ?</strong></dt>
+<dd>E' molto semplice, basta seguire queste indizazioni :
+
+<p><ol>
+<li>Fai il downloads dell'ultima versione di Sommaire Paramétrable (v2.1).</li>
+<li>Decomprimi l'archivio della struttura in una cartella</li>
+<li>Invia sul server il contenuto rispettando la struttura del tuo sito  PHP-Nuke .<br />
+(install-sommairev21.php va inserito nella cartella html (la root)  block-Sommaire.php è 
+        una sottocartella /blocks/ etc...)</li>
+ 
+<li>Lancia install-sommairev21.php con il tuo  browser, e segui le istruzioni.</li>
+<li>Il blocco  &quot;Sommaire&quot; è automaticamente aggiunto nel tuo database, ora 
+        puoi disattivare il tuo blocco originario &quot;Modules&quot;.<br />
+(nell'amministrazione blocchi (admin.php?op=BlocksAdmin) puoi scegliere il peso 
+        del blocco. Puoi anche modificare il titolo del blocco &quot;Sommaire&quot;  cliccando 
+        se 'Modifica' nell'admin blocchi.)</li>
+<li>Ora puoi configurare il tuo  menu! Clicca sull'icona  'Menu' in amministrazione 
+        di PHP-Nuke (admin.php?op=sommaire)</li>
+</ol><a name="setup2"></a>
+<p><dt>&nbsp;</dt>
+    <dt><strong>Non voglio usare lo script d'installazione, posso installarlo manualmente ?</strong><dd>Se 
+    preferisci effettuare la modifiche nel tuo database e nei file di lingua 
+    manualmente, segui le istruzioni del manuale /manual-install/readme.txt nel 
+    file Sommaire zip.<br />
+</dd></dl>
+
+<a name="setup3"></a>
+<p>
+<dl>
+<dt><strong>Lo script d'nstallazione crea un  backup dei file di lingua, posso cancellarli ?</strong></dt>
+<dd>Durante l''installazione viene effettuato un backup dei file di lingua per 
+    prevenire eventuali modifiche.<br />
+I file creati avranno nomi come questi : lang-XXX.php.sommairebackup20040401<br />
+Se l'installazione va a buon fine &nbsp;senza messaggi di errore, questi file 
+    ossono essere cancellati. (hai questa possibilità alla fine del processo 
+    d'installazione : cliccando sul pulsante corrispondente...)<br />
+Se l'installazione non va a buon fine alcuni file di lingua non possono essere 
+    modificati, o le modifiche sono incomplete.<br />
+In questo caso la migliore soluzione, è rimpiazzare I file di backup  (lang-XXX.php.sommairebackup20040401) e 
+    effettuare le modifiche manualmente (le istruzioni sono in /manual-install/readme.txt , del 
+    file zip sommaire).<br />
+<br />
+Se disinstalli completamente  Sommaire Paramétrable, &nbsp;puoi cancellare il 
+    testo aggiunto nel file language durante l'installazione.<br />
+
+<br />
+<em><u>Nota</u></em> :Questo testo non interferisce con il tuo sito, anche se 
+    non userai più  Sommaire Paramétrable.<br />
+<br />
+</dd>
+</dl>
+<!-- FREQUENTLY ASKED QUESTIONS -->
+
+<hr><p><span class="subhead">Risposte a Domande Frequenti</span> <a class="backtotop" href="faq-italian.html#top">Torna 
+all'inizio</a></p>
+<dl>
+<br />
+<a name="faq0"></a>
+<p><dt><strong>Circa le interrogazioni&nbsp;SQL ...</strong></dt>
+<dd>Il codice del blocco  Sommaire nella versione 2.1 è stato modificato per 
+    ridurre la maggioranza dei requisiti SQL. Una riscrittura completa del codice 
+    del blocco era necessaria completamente da ottimizzare il numero di richieste 
+    di SQL e da aggiungere le nuove caratteristiche.<br /><br />
+<strong>Confronto</strong><br />
+Il confronto è stato fatto in ogni situazione: se le pagine sono state viste 
+    da un visitatore (anonimo), un Membro, un Amministratore non loggato e loggato 
+    come membro.
+<ol>
+<p><li>Blocco Originale Modules</li>
+<ul><li>Visitatori : 3 interrogazioni</li>
+<li>Membri : 4 interrogazioni</li>
+<li>Ammistratore : 81 interrogazioni</li>
+<li>Administratore + Membro : 82 interrogazioni</li></ul><br />
+<li>Sommaire Paramétrable v2.1</li>
+<ul><li>Visitatori : <strong>4</strong> interrogazioni</li>
+<li>Membri : <strong>6</strong> interrogazioni</li>
+<li>Amministratore : <strong>7</strong> interrogazioni</li>
+<li>Amministratore + Membro : <strong>9</strong> interrogazioni</li></ul>
+Aggiunta <strong>1</strong> interrogazione per PHP-Nuke v7+ : Sommaire Paramétrable rende 
+        a gruppi di utenti l'autorizzazione per i moduli limitati.<br />
+Aggiunte  da <strong>0 a 6</strong> interrogazioni se il rilevamento&nbsp;delle &quot;Novità&quot; è 
+        attivato.<br /><br />
+<li>Sommaire Paramétrable v2.0</li>
+<ul><li>Visitatori : 7 interrogazioni</li>
+<li>Membri : 30 interrogazioni</li>
+<li>Amministratore : appross. da 300 a 400 interrogazioni</li>
+<li>Amministratore + Membro : appross.da  300 a 400 interrogazioni</li></ul><br />
+</ol>
+<dd>
+Se non vuoi usare la rivelazione dei gruppi utenti (avviato con PHP-Nuke 7), puoi 
+    modificare la linea 43 in block-Sommaire.phpper rismarmiare 1 richiesta 
+    SQL (metti $gestiongroupe = 0).<br />
+Se non vuoi usare i  'Messaggi Privati', modifica il valore di  $detectPM in 
+     block-Sommaire.php, linea 44 (metti 0) , per risparmiare  1 interrogazione SQL.<br />
+</dd>
+<br /><br />
+<a name="faq1"></a>
+<p><dt><strong>Come posso utilizzare dei  &quot;Links esterni&quot; ?</strong></dt>
+<dd>
+I links estern possono essere facilmente creati inserendo un collegamento nel 
+    tuo menu.<br />
+Per usare la funzione, seleziona &quot; *Links esterni* &quot;  (dove sono elencati 
+    I moduli), nel pannello amministativo di Sommaire.<br />
+Verranno generate due nuove caselle di testo, quando inserisci l'url del link 
+    e il nome del link, il collegamento esterno sarà presente nel menu.<br />
+<br />Nei links esterni possono essere utilizzati tutti I tipi di url (link ad 
+    un file, streaming, etc...).<br />
+<br /><strong><font color="#FF0000">NOVITA' :</font></strong> Se il link punta 
+    ad una pagina specifica (parte di un  modulo) del tuo sito, l'accesso a 
+    questo link nel menu può essere collegato a quel modulo.<br />
+Esempio : il modulo  Downloads è riservato ai soli  membri. il links esterno 
+    sarà : &quot;<em>modules.php?name=Downloads&amp;d_op=viewdownload&amp;cid=1</em>&quot; puntando 
+    alla categoria specifica del modulo &quot;Downloads&quot; che è invisibile 
+    ai visitatori anonimi.</dd>
+    <dd><em>Note :</em> il link deve cominciare con &quot;<em>modules.php</em>&quot;, non 
+    con &quot;<em>http://www.yoursite.com/modules.php</em>&quot; : è un link 
+    relativo.
+    <p><br /><br />
+<a name="faq2"></a>
+<p><dt><strong>Posso aprire un link in una nuova finestra di del browser  ?</strong></dt>
+<dd>E' molto facile : per aprire un linkh in una nuova finestra, il collegamento 
+    deve cominciare per :
+<ul type="disc">
+<li><strong>http://</strong></li>
+<li><strong>https://</strong></li>
+<li><strong>ftp://</strong></li>
+<li>link relativo (link ad una pagina specifica del tuo sito, esempio: &quot;<em>modules.php?name=Topics</em>&quot;)</li>
+</ul>
+Per aprire un link nella stessa finestra, il collegamento deve cominciare per :
+<ul type="disc">
+<li><strong>HTTP://</strong></li>
+<li><strong>HTTPS://</strong></li>
+<li><strong>FTP://</strong></li>
+</ul>
+</dl>
+
+
+<p>Per aiutarti a vedere rapidamente se il collegamento si aprirà o non in una 
+nuova finestra, nel pannello amministrativo di Sommaire lo stato dell'icona 
+cambia vicino al collegamento creato.
+</p>
+<dl>
+<br />
+<a name="faq3"></a>
+<p><dt><strong>Posso aprire un link in una popup ?</strong></dt>
+<dd>Per aprire un link in una  popup, &nbsp;devi usare la funzione di &quot;Links 
+    esterno&quot;.
+    <dd>
+Nella casella l 'url', deve contenere  :<br /><br />
+<div class="code">javascript:window.open('http://www.url.com','popup_sommaire','directories=no,menubar=no,status=no,location=no,scrollbars=no,resizable=no')</div><br />
+Ovviamente, devi sostituire il link <a href="http://www.url.com">www.url.com</a> 
+    con quello da te desiderato...<br />
+<br />Puoi anche modificare le opzioni di visualizzazione della  popup :<br />
+<TABLE border=1 cellpadding=1 cellspacing=0>
+<TR><TD width=150><strong>Proprietà</strong></TD><TD width=300><strong>Effetti</strong></TD><TD width=200><strong>Valori 
+                possibili</strong></TD></TR>
+<TR><TD>directories</TD><TD>Visualizza la barra dei collegamenti</TD><TD>si | no</TD></TR>
+<TR><TD>menubar</TD><TD>Visulizza la barra del menu</TD><TD>si | no</TD></TR>
+<TR><TD>status</TD><TD>Visualizza al barra di stator</TD><TD>si | no</TD></TR>
+<TR><TD>location</TD><TD>Visualizza la barra degli indirizzi</TD><TD>si | no</TD></TR>
+<TR><TD>scrollbars</TD><TD>Visulizza la barra scorrevole</TD><TD>si | no | auto</TD></TR>
+<TR><TD>resizable</TD><TD>Modifica la dimensione della popup</TD><TD>si | no</TD></TR>
+<TR><TD>height</TD><TD>Altezza  in pixels</TD><TD class=texte>numero</TD></TR>
+<TR><TD>width</TD><TD>Larghezza in pixels</TD><TD class=texte>numero</TD></TR>
+<TR><TD>left</TD><TD>Posizione orizzontale sul monitor, in pixels</TD><TD>numero</TD></TR>
+<TR><TD>top</TD><TD>Posizione verticale sul monitor, in pixels</TD><TD>numero</TD></TR>
+<TR><TD>fullscreen</TD><TD>Popup a pieno schermo (versione 5 e +)</TD><TD>si | no</TD></TR>
+</TABLE>
+<br />Per altre informazioni sulle  popups, puoi leggere <a href="http://www.toutjavascript.com/savoir/savoir15.php3" target="_blank">Tout Javascript - Les popups</a> (in francese).
+</dd><br />
+<a name="faq4"></a>
+<p><dt><strong>Come modifico il colore del testo, la grandezza, il font, etc... ?</strong></dt>
+<dd>Puoi modificare la visulizzazione del testo in ogni modulo/link.<br />
+Se utilizzi  i <em>CSS </em>.E' molto facile :<br />
+Con i&nbsp;CSS puoi modificare la visulizzazione del testo: colore, grandezza, font, ecc...<br />Per 
+    altre informazioni sui  CSS, puoi leggere <a href="http://hotwired.lycos.com/webmonkey/reference/stylesheet_guide/" target="_blank">Webmonkey's stylesheets guide</a> (in inglese), il 
+    link francese è : <a href="http://www.media-box.net/tuts.php?iddr=282" target="_blank">QUI</a> 
+    per capire i  CSS, <a href="http://www.media-box.net/tuts.php?iddr=283" target="_blank">QU</a>I 
+    trovi degli esempi pratici, <a href="http://dicolive.media-box.net/docCSS/css.php?orderByType=1" target="_blank">QUI</a> 
+    invece per istruzioni  complete sulle proprietà CSS, &nbsp;e  <a href="http://www.openweb.eu.org/css/" target="_blank">QUI</a>: altri 
+    articoli interessanti.<br />
+Ecco alcuni esempi per categorie :<br /><br />
+<div class="code">.sommairecat {FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px; COLOR: #000000; FONT-WEIGHT: bold;}</div><br />
+Copia questa linea nel file /themes/YOURTHEME/style/style.css (modificabile 
+    con il  notepad o il tuo editor).<br />
+e tornando all'admin del Sommaire: modifica la  &quot;Classe usata per le categorie&quot; (nel 
+    pulsante della tabella), nel &quot;sommairecat&quot;. (il valore di default è <em>storytitle</em>)<br />
+<br /> Ecco alcuni esempi per categoriedel tuo  menu :<br /><br />
+<div class="code">.sommairelink {FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px; COLOR: #000000;}</div><br />
+ Come sopra: copia questa linea nel file style.css, e modifica il  CSS per  links/moduli 
+    nell'amministrazione Sommaire. (il valore di default è <em>boxcontent</em>)<br /><br />
+Puoi applicare stili differenti per  categoria e  link/modulo : cliccando su &quot; [+] &quot; (altre 
+    opzioni) nell'amministrazione del Sommaire, mettendo il nome del CSS dove 
+    vuoi usarlo.
+</dd><br /><br />
+<a name="faq5"></a>
+<p><dt><strong>Come uso altre immagini (icone) in Sommaire ?</strong></dt>
+<dd>Facile: aggiungi le tue immagini nella directory:
+<ul type="disc">
+<li><strong>/images/sommaire/</strong> per le immagini delle categorie</li>
+<li><strong>/images/sommaire/categories/</strong> per le immagini di links/moduli</li>
+</ul>
+Le immagini appaiono automaticamente nella casella di selezione in sommaire admin.<br />
+<br />
+Per modificare la 'NUOVA' icona, &nbsp;puoi sostituire il file:
+<ul type="disc">
+<li><strong>/images/sommaire/admin/new.gif</strong></li>
+</ul>
+con l'immagine che preferisci.<br />
+</dd><br /><br />
+<a name="faq6"></a>
+<p><dt><strong>Alcuni moduli compaiono nella parte inferiore del blocco Sommaire (non 
+    selezionato nell'admin Sommaire), voglio visulizzare anche quelli !</strong></dt>
+<dd>Con la versione 2.1, I moduli che non sono selezionati nell'admin sommaire 
+    sono visibili agli<strong><em> amministratori</em></strong>.<br />
+Sono visulizzati in  3 gruppi :
+<ul type="disc">
+<li><strong>Moduli <em>attivi</em> e <em>visibili</em>, ma non selezionati:</strong> Questi 
+        moduli sono normalmente visulizzati nel menu, ma sono stati  &quot;dimenticati&quot;. Essi 
+        sono accessibili ai membri o agli anonimi se scrivono il link.</li>
+<li><strong>Moduli <em>attivi</em> e <em>invisibili</em></strong> : Questi moduli 
+        non vengono visulizzati nel menu (puoi modificare i permessi nel pannello 
+        amministrativo : Cliccando su on 'Modifica' e rendi  'Visibile nel blocco-moduli').</li>
+<li><strong>Moduli  <em>inattivi</em></strong> : Questi moduli non sono accessibili 
+        nè a membri nè agli anonimi, quando vengono scritti gli url manualmente. Solo 
+        il  Superadmins può vedere questi moduli.</li>
+</ul>
+<br />
+Solo gli amministratori possono vedere I 3 gruppi di moduli, è totalmente invisibile 
+    a membri e anonimi.
+</dd><br /><br />
+<a name="faq7"></a>
+<p><dt><strong>Come posso selezionare l'individuazione automatica delle novità ?</strong></dt>
+<dd>Questa opzione, selezione nel blocco Sommaire I nuovi contenuti dei sguenti 
+    moduli:
+<ul type="disc">
+<li><strong>Downloads</strong></li>
+<li><strong>Web Links</strong></li>
+<li><strong>Content</strong></li>
+<li><strong>Reviews</strong></li>
+<li><strong>Journal</strong></li>
+<li><strong>News</strong> solo se il modulo è in homepage!</li>
+</ul>
+Le  'novità' sono individuate usando la  'data' nel campo delle tabelle corrispondenti 
+    al database .
+<br />
+<strong>Se un link esterno punta direttamente alla pagina di questi moduli, l'individuazione 
+    dei  'nuovi' contenuti è creato! (puoi facimente creare un link diretto 
+    ad alcune categorie di download, etc...)</strong><br />
+(Il link deve cominciare con '<em>http://</em>' or '<em>HTTP://</em>', e con 
+    l'aggiunta di '<em>modules.php?name=</em>')
+</dd><br /><br />
+<a name="faq8"></a>
+<p><dt><strong>Sommaire Paramétrable non è tradotto nella mia lingua, posso tradurlo ?</strong></dt>
+<dd>Certo !<br />
+Tutti I file di lingua sono situati inn <strong><em>/admin/language/lang-YOURLANG.php</em></strong>.<br />
+I file di lingua del blocco invece sono situati  in <strong><em>/admin/language/lang-*.php</em></strong>.<br />
+Per installare lo script bisogna installare il file (install-sommairev21.php), 
+    per l'installazione italiana il file è (install-sommairev21ita-sql).<br />
+<br />
+Se hai tradotto l'addons nella tua lingua, invia le tue traduzioni a : <a href="mailto:marcoledingue@free.fr?subject=translation%20Sommairev21">marcoledingue@free.fr</a>.<br />
+Aggiungerò queste traduzioni nel pacchetto  Sommaire Paramétrable.
+Puoi anche tradurre queste FAQ !
+</dd><br /><br />
+<a name="faq9"></a>
+<p><dt><b style="color: red">Amo Sommaire Paramétrable, posso aiutare il progetto ?</strong></dt>
+<dd>
+La prima cosa per aiutare lo sviluppo di questo progetto è inviare le traduzioni 
+    o correzioni.<br />
+Puoi anche contribuire inviando  bugs/incompatibilità che tu hai notato.<br />
+Ogni tua idea o tuo commento sarà sempre apprezzato !<br />
+<br />
+Puoi anche offrire supporto al progetto effettuando uan donazione (usando Paypal 
+    nel tuo stesso sistema) al creatore  (<a href="mailto:marcoledingue@free.fr?subject=Paypal">marcoledingue@free.fr</a>) !
+</dd><br /><br />
+<a name="faq_error"></a>
+<p><dt><strong>Ho un messaggio di errore : </strong><strong>Ho un messaggio di errore : 'Il PESO non è corretto. Il 
+valore del PESO deve essere compreso tra 0 e 98!!', come posso risolvere il 
+problema ?</strong><br />
+</dt>
+<dd>Questo errore può avere differenti cause.<br />
+<ul type="disc">
+<li><strong>Il Peso indicato non è corretto !</strong><br />
+La prima causa, la più frequente è che hai utilizzato un Peso non valido per 
+        una categoria! Correggi e ricomincia and retry.</li>
+<br /><li><strong>La tabella non è accessibile</strong><br />
+Il messaggio può apprire perchè la tabella Sommaire nel tuo database, non è 
+        accessibile.<br />
+Il motivo potrebbe essere una cattiva installazione. Leggi il manuale di installazione (instruzioni 
+        nel file zip Sommaire : /manual-install/readme.txt)<br />
+Se leggi il manuale modifica il  <strong><em>prefix</em></strong> delle tue 
+        tabelle nel  DB, nel file  sql.</li>
+<br /><li><strong>Hai installato un addon che crea conflitto interferendo con 
+        l'amministrazione di Sommaire</strong><br />
+Ci sono, solo  3 addons che hanno identificato questo problema :<br />
+<ol><li>Shoutblock (<a href="#bugs2">Risolvi il problema)</a></li>
+<li>alcuni editor WYSIWYG  (<a href="faq-italian.html#bugs3">Risolvi il problema)</a></li>
+<li>la  patch Php-Secure nel mainfile.php (a volte dipende anche dalla versione 
+            di PHP-Nuke installata)   (<a href="faq-italian.html#bugs4">Risolvi 
+            il problema)</a></li></ol>
+<br /> Leggi le relative FAQ per risolvere il problema.</li></ul>
+<br />
+</dl>
+
+
+<a name="faq10"></a>
+
+<p>
+<dl>
+<dt><strong>Come creo un menu Multiligua ?</strong></dt>
+<dd>In  Sommaire Paramétrable puoi creare un menu multilingua.<br />
+I visitatori che scelgono una differente lingua possono vedere il nome delle 
+    delle categorie e I links/moduli nella loro lingua !  <br />
+<br />
+Per fare ciò segui queste istruzioni:<br />
+</dl>
+<ol>
+<li>Nell'amministrazione di Sommaire, devi settare inomi delle categorie in 
+    questo modo :<br />
+<strong>'LANG:_SOMCAT0'</strong> per la prima categoria,<br />
+<strong>'LANG:_SOMCAT1'</strong> per la seconda categoria, etc...<br /><br />
+</li><br />
+<li>Alcuni moduli possono essere visulizzati con  links esterni'.<br />
+--&gt; modifica l'indirizzo del modulo, per esempio <strong>'modules.php?name=Name_of_Module'</strong><br />
+--&gt; modifica il &nbsp;testo del link con  : <strong>'LANG:_NameOfModule'</strong> (ex. 'LANG:_SOMSURVEYS')
+</li><br />
+<li>Qundo modifichi I files di lingua (website root /language/lang-xxx.php)<br />
+--&gt; aggiungi una nuova linea per la corretta visulizzazione, ad esempio :<br />
+ex.<br />
+<div class="code">define (&quot;_SOMCAT0&quot;,&quot;Home&quot;);<br />
+define (&quot;_SOMCAT1&quot;,&quot;Content&quot;);<br />
+define (&quot;_SOMSURVEYS&quot;,&quot;Surveys&quot;);<br /></div>
+etc...<br />
+--&gt; Puoi copiare queste linee in tutti I files di lingua e tradurre il testo.<br />
+ex. per  francese può essere :<br />
+<div class="code">define (&quot;_SOMCAT0&quot;,&quot;Accueil&quot;);<br />
+    define (&quot;_SOMCAT1&quot;,&quot;Contenu&quot;);<br />
+    define (&quot;_SOMSURVEYS&quot;,&quot;Sondages&quot;);<br /></div>
+etc...
+</li><br />
+<li>Vai in Amministrazione-&gt;Moduli, e edita il modulo :<br />
+rendendo  &quot;visibile nel blocco moduli&quot;.
+</li>
+</ol>
+
+<br /></dd><p><!-- KNOWN BUGS AND ISSUES -->
+
+&nbsp;<hr><p> <span class="subhead">Bugs conosciuti e Soluzioni</span>  <a class="backtotop" href="faq-italian.html#top">Torna 
+all'inizio</a></p>
+<dl>
+
+<a name="bugs1"></a>
+<p><dt><strong>Problemi usando alcuni browsers</strong></dt>
+<dd>Sommaire Paramétrable è stato testato con <strong><a href="http://www.microsoft.com/windows/ie/default.asp" target="_blank">Internet Explorer6</a></strong> e <strong><a href="http://www.opera.com" target="_blank">Opera 7</a></strong> (ultima versione: 7.23). Non 
+    sono stati segnalati problemi.<br /><br />
+<strong>Problemi con <a href="http://www.konqueror.org" target="_blank">Konqueror</a> (version 
+    testata : 3.1.4)</strong> :
+<li>Nell'amministrazione di Sommaire, cliccando sulla casella  'Nuovo' non modifica 
+    la  'Nuova' immagine.</li>
+<li>Clicca nell'amministrazione di Sommaire sulla casella 'Individuazione Automatica 
+    delle Novità' non modificare il testo nella casella &quot;numero di giorni&quot; .</li>
+<li>Nessun problema con l'opzione di Menu Dinamico.</li><br />
+<strong>Problemi con  <a href="http://www.mozilla.org" target="_blank">Mozilla</a> (versione 
+    testata : 1.6)</strong> : L'opzione di Menu Dinamico non è visualizzata 
+    correttamente, è automaticamente disabilitata per gli utenti Mozilla. L'amministrazione 
+    del pannello di controllo funziona correttamente.
+
+</dd><br /><br />
+<a name="bugs2"></a>
+<p><dt><strong>Shoutblock crea un bug in Sommaire Paramétrable! --&gt;Soluzione</strong></dt>
+<dd>Shoutblock v2.4 &nbsp;è stato testato ed ha un bug. Le versioni recenti 
+    sono state corrette.<br />
+ Il bug è nella forma del tag nel blocco  shoutblock's e non è chiuso correttamente.
+    <dd>Per risolvere il bug edita il file <strong><em>/blocks/block-Shoutblock.php</em></strong> :<br />
+Linea 353 cerca:
+<div class="code">} else {   $content .= &quot;&lt;tr&gt;&quot;;<br />
+$content .= &quot;&lt;td&gt;&lt;input type=\&quot;submit\&quot; name=\&quot;Submit\&quot; value=\&quot;shout\&quot;&gt;&lt;/td&gt;&quot;;<br />
+$content .= &quot;&lt;td align=right&gt;&lt;a href=\&quot;#\&quot; onClick=\&quot;popup('modules/Qshoutblock/help.php', 'Win1', 500, 300); return false\&quot;&gt;Emoticon Help&lt;/a&gt;&lt;/td&gt;&quot;;<br />
+$content .= &quot;&lt;/tr&gt;&quot;; }<br />
+//$content .= &quot;&lt;/td&gt;&quot;;<br />
+//$content .= &quot;&lt;/tr&gt;&quot;;<br />
+$content .= &quot;&lt;/tbody&gt;&quot;;<br />
+$content .= &quot;&lt;/form&gt;&quot;;<br />
+$content .= &quot;&lt;/table&gt;&quot;;<br />
+}<br /><br />
+?&gt;</div><br />
+<br />
+Sostituisci il &nbsp;tag &lt;form&gt; con questo :
+<div class="code">   } else {   $content .= &quot;&lt;tr&gt;&quot;; <br />
+                      $content .= &quot;&lt;td&gt;&lt;input type=\&quot;submit\&quot; name=\&quot;Submit\&quot; value=\&quot;shout\&quot;&gt;&lt;/td&gt;&quot;; <br />
+                    $content .= &quot;&lt;td align=right&gt;&lt;a href=\&quot;#\&quot; onClick=\&quot;popup('modules/Qshoutblock/help.php', 'Win1', 500, 300); return false\&quot;&gt;Emoticon Help&lt;/a&gt;&lt;/td&gt;&quot;; <br />
+               $content .= &quot;&lt;/tr&gt;&quot;; } <br />
+                        //$content .= &quot;&lt;/td&gt;&quot;; <br />
+                 //$content .= &quot;&lt;/tr&gt;&quot;; <br />
+                 $content .= &quot;&lt;/tbody&gt;&quot;; <br />
+   $content .= &quot;&lt;/table&gt;&quot;; <br />
+   } <br />
+$content .= &quot;&lt;/form&gt;&quot;; <br />
+?&gt;</div><br />
+<br />
+
+</dd><a name="bugs3"></a>
+<p><dt><strong>Il mio editor  WYSIWYG crea un bug in  Sommaire Paramétrable  ! --&gt;Soluzione</strong></dt>
+<dd>Alcuni editors wysiwyg possono interferire nell'amministrazione di  sommaire, per 
+    effetto di alcune modifiche nel codice di visulizzazione del form html.<br />
+<br />Prima di tutto  : disinstalla il  wysiwyg e fai un test per verificare se 
+    il  Sommaire fuziona correttamente.
+<br /><br />WYSIWYG editor aggiunge un nuovo file nella cartella  /includes/ e modifica 
+    il file  header.php e il file footer.php <br />
+Devi mettere il codice aggiunto dal wysiwyg all'interno di queste linee:<br />
+<div class="code">if (!(eregi(&quot;admin.php&quot;, $_SERVER['PHP_SELF']) AND $_GET['op']==&quot;sommaire&quot;)) { <br />
+<br />
+HERE THE CODE ADDED BY WYSIWYG IN HEADER.PHP, OR FOOTER.PHP, OR ALL THE CODE OF THE FILE ADDED BY WYSIWYG IN /includes/ .<br />
+<br />
+}</div>
+<br /><br />
+Per esempio un editor wysiwyg chiede di aggiungere nel file  header.php :<br />
+<br />
+<em>include(&quot;includes/wysiwyg.php&quot;); <br />
+WysiwygJscriptHeader(); </em><br />
+<br />
+Infatti dovresti avere nel tuo  header.php :<br />
+<div class="code">
+function head() { <br />
+    global $slogan, $sitename, $banners, $nukeurl, $Version_Num, $artpage, $topic, $hlpfile, $user, $hr, $theme, $cookie, $bgcolor1, $bgcolor2, $bgcolor3, $bgcolor4, $textcolor1, $textcolor2, $forumpage, $adminpage, $userpage, $pagetitle; <br />
+    $ThemeSel = get_theme(); <br />
+    include(&quot;themes/$ThemeSel/theme.php&quot;); <br />
+    echo &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//W3C//DTD HTML 4.01 Transitional//EN\&quot;&gt;\n&quot;; <br />
+    echo &quot;&lt;html&gt;\n&quot;; <br />
+    echo &quot;&lt;head&gt;\n&quot;; <br />
+    echo &quot;&lt;title&gt;$sitename $pagetitle&lt;/title&gt;\n&quot;; <br />
+<br />
+    include(&quot;includes/meta.php&quot;); <br />
+    include(&quot;includes/javascript.php&quot;); <br />
+    <br />
+<br />
+    include(&quot;includes/wysiwyg.php&quot;); <br />
+    WysiwygJscriptHeader();    <br />
+<br />
+<br />
+    if (file_exists(&quot;themes/$ThemeSel/images/favicon.ico&quot;)) { <br />
+   echo &quot;&lt;link REL=\&quot;shortcut icon\&quot; HREF=\&quot;themes/$ThemeSel/images/favicon.ico\&quot; TYPE=\&quot;image/x-icon\&quot;&gt;\n&quot;; <br />
+    }<br />
+</div>
+<br />
+==&gt; devi cambiarlo con :<br />
+
+<div class="code">
+function head() { <br />
+    global $slogan, $sitename, $banners, $nukeurl, $Version_Num, $artpage, $topic, $hlpfile, $user, $hr, $theme, $cookie, $bgcolor1, $bgcolor2, $bgcolor3, $bgcolor4, $textcolor1, $textcolor2, $forumpage, $adminpage, $userpage, $pagetitle; <br />
+    $ThemeSel = get_theme(); <br />
+    include(&quot;themes/$ThemeSel/theme.php&quot;); <br />
+    echo &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//W3C//DTD HTML 4.01 Transitional//EN\&quot;&gt;\n&quot;; <br />
+    echo &quot;&lt;html&gt;\n&quot;; <br />
+    echo &quot;&lt;head&gt;\n&quot;; <br />
+    echo &quot;&lt;title&gt;$sitename $pagetitle&lt;/title&gt;\n&quot;; <br />
+<br />
+    include(&quot;includes/meta.php&quot;); <br />
+    include(&quot;includes/javascript.php&quot;); <br />
+    <br />
+<br />if (!(eregi(&quot;admin.php&quot;, $_SERVER['PHP_SELF']) AND $_GET['op']==&quot;sommaire&quot;)) {<br />
+    include(&quot;includes/wysiwyg.php&quot;); <br />
+    WysiwygJscriptHeader();    <br />
+    }<br />
+<br />
+<br />
+    if (file_exists(&quot;themes/$ThemeSel/images/favicon.ico&quot;)) { <br />
+   echo &quot;&lt;link REL=\&quot;shortcut icon\&quot; HREF=\&quot;themes/$ThemeSel/images/favicon.ico\&quot; TYPE=\&quot;image/x-icon\&quot;&gt;\n&quot;; <br />
+    }<br />
+</div>
+<br />
+for the file added in /includes/, you have to put all the code between the patch lines, except the opening/closing php tags :<br />
+<div class="code">
+&lt;?php <br />
+if (!(eregi(&quot;admin.php&quot;, $_SERVER['PHP_SELF']) AND $_GET['op']==&quot;sommaire&quot;)) { <br />
+ALL THE CODE OF THE FILE, EXCEPT THE FIRST LINE AND THE LAST LINE : &lt;?php and ?&gt; <br />
+} <br />
+?&gt;
+</div>
+
+<br /><br />
+<a name="bugs4"></a>
+<p><dt><strong>La patch  phpSecure crea un conflitto con  Sommaire Paramétrable ! --&gt;Soluzione</strong></dt>
+<dd><br />
+<u><em>Nota</em></u> : Questa  patch può inclusa nel tuo PHP-Nuke, dipende dalla 
+    versione installata sul tuo sito.<br />
+<br /> Cerca questo codice nel tuo mainfile.php :<br />
+<div class="code">
+// Security By phpSecure.info <br />
+$user=base64_decode($user); <br />
+if (eregi(&quot;\'&quot;,$user) || eregi(&quot;&lt;&quot;,$user) || eregi(&quot;&gt;&quot;,$user) || eregi('\&quot;',$user)) { <br />
+    $user=base64_encode(htmlspecialchars($user,ENT_QUOTES)); <br />
+     $_COOKIE[&quot;user&quot;] = $user; <br />
+    $HTTP_COOKIE_VARS[&quot;user&quot;] = $user; <br />
+}else{ <br />
+    $user=base64_encode($user); <br />
+    $_COOKIE[&quot;user&quot;] = $user; <br />
+    $HTTP_COOKIE_VARS[&quot;user&quot;] = $user; <br />
+} <br />
+<br />
+<br />
+$admin=base64_decode($admin); <br />
+if (eregi(&quot;\'&quot;,$admin) || eregi(&quot;&lt;&quot;,$admin) || eregi(&quot;&gt;&quot;,$admin) || eregi('\&quot;',$admin)) { <br />
+    $admin=base64_encode(htmlspecialchars($admin,ENT_QUOTES)); <br />
+    $_COOKIE[&quot;admin&quot;] = $admin; <br />
+    $HTTP_COOKIE_VARS[&quot;admin&quot;] = $admin; <br />
+}else{ <br />
+    $admin=base64_encode($admin); <br />
+    $_COOKIE[&quot;admin&quot;] = $admin; <br />
+    $HTTP_COOKIE_VARS[&quot;admin&quot;] = $admin; <br />
+} <br />
+<br />
+<br />
+<br />
+foreach ($_REQUEST as $key=&gt;$value) { <br />
+<br />
+    if (is_admin(array($admin)) != 1){ <br />
+<br />
+   $value = str_replace(
+array('script','&lt;object','&lt;iframe','&lt;applet','&lt;meta','&lt;style','&lt;form','&lt;img','&lt;body','&lt;link'), 
+array('script','&lt;object','&lt;iframe','&lt;applet','&lt;meta','&lt;style','&lt;form','&lt;img','&lt;body','&lt;link'),$value); <br />
+<br />
+<br /><br />
+   $value = str_replace(array(')','|'),array(')','|'),$value); <br />
+   <br />
+   $value = str_replace( <br />
+   array('url(','expression(','onclick','ondblclick','onhelp','onmousedown', 
+'onmousemove','onmouseout','onmouseover','onmouseup','onblur', 
+'onafterupdate','onbeforeupdate','onkeydown','onkeypress','onkeyup', 
+'onfocus','onerror','onload','onunload'), 
+array('url*(','noexpression(','on*click','on*dblclick','on*help', 
+'on*mousedown','on*mousemove','on*mouseout','on*mouseover', 
+'on*mouseup','on*blur','on*afterupdate','on*beforeupdate','on*keydown', 
+'on*keypress','on*keyup','on*focus','on*error','on*load','on*unload'), 
+$value); <br />
+<br />
+    } <br />
+    <br />
+    <br />
+    if (get_magic_quotes_gpc()==0) { <br />
+        $value = addslashes($value); // This will reproduce the option magic_quotes_gpc=1 <br />
+    } <br />
+<br />
+    ${$key} = $value; <br />
+    $_REQUEST[$key] = $value; <br />
+    if (isset($_POST[$key])) { $_POST[$key] = $value; } <br />
+    if (isset($_COOKIE[$key])) { $_COOKIE[$key] = $value; } <br />
+    if (isset($_FILE[$key])) { $_FILE[$key] = $value; } <br />
+    if (isset($_GET[$key])) { $_GET[$key] = $value; } <br />
+    if (isset($HTTP_POST_VARS[$key])) { $HTTP_POST_VARS[$key] = $value; } <br />
+    if (isset($HTTP_COOKIE_VARS[$key])) { $HTTP_COOKIE_VARS[$key] = $value; } <br />
+    if (isset($HTTP_FILE_VARS[$key])) { $HTTP_FILE_VARS[$key] = $value; } <br />
+    if (isset($HTTP_GET_VARS[$key])) { $HTTP_GET_VARS[$key] = $value; } <br />
+<br />
+} <br />
+// End Security<br />
+</div>
+<br /><br />
+<strong>==&gt; Questa  linea :</strong><br />
+<div class="code">if (is_admin(array($admin)) != 1){ </div><br />
+<strong>sostituiscila con questa : 
+</strong><div class="code">if (is_admin() != 1){</div>
+
+<br /><br />
+<a name="bugs5"></a>
+</dl>
+
+<dl>
+    <dt><strong>Ho selezionato l'opzione &quot;grassetto&quot;, ma I links non sono 
+    in grassetto!</strong><dd>Se hai selezionato il <strong>grassetto</strong> nella casella, ma 
+    il testo del link/modulo non viene modificato, verifica che l'attributo 
+     BOLD sia presente nel CSS !<br />
+</dd>
+</dl>
+<!-- CHANGE LOG -->
+
+<hr>
+<a name="changelog"></a>
+<p><span class="subhead">Change Log</span> <a class="backtotop" href="faq-italian.html#top">Torna 
+all'inizio</a></p>
+<dl>
+
+May, 2004 : v.2.1 release<br />
+-------------------------------------<br />
+- new feature : dynamic menu!<br />
+- new feature : Automatic detection of new content in the website<br />
+- new feature : manual addition of 'new' icon on categories and modules/links<br />
+- new feature : external links pointing to a specific page of a module are now treated like modules (for access restriction)<br />
+- new feature : displays categories content as listboxes<br />
+- new feature : popups are now supported<br />
+- new feature : set a different CSS class for each category and each module/link<br />
+- new feature : an horizontal rule can be added between two modules/links<br />
+- new feature : displays categories and modules/links in bold<br />
+- new feature : detects the user group (if PHP-Nuke v.7+) and restrict access to unauthaurized users (for modules)<br />
+- new feature : external links can now be displayed through the image only. (have to set the link's name as a blank space)<br />
+- new feature : now sommaire tests 'https://' pages to automatically detect if the link should be displayed in the same window or in a new one. (thanks Ment van der Plas for pointing out this)<br />
+- new feature : now sommaire should work with Google Tap NExtGEn (http://gt.audioslaved.com) with  GT-NExtGEn Main Menu Tweak.<br />
+- new feature : the multilingual option was improved : now you can also set a language-dependant URL.<br />
+<br />
+- ergonomic change : when deleting a category, prompts to save changes before deleting<br />
+- ergonomic change : modified the icon 'new window' and 'same window' for external links<br />
+- ergonomic change : modules active and visible, but not selected in Sommaire's admin are now visible only to admins<br />
+<br />
+- bug corrected : categories without name weren't displayed. (a category could have no name if you use an image to represent it)<br />
+- bug corrected : when using multilanguage, the option to hide modules to visitors now works correctly. (using the new 'external link' behavior)<br />
+- bug corrected : now all languages should appear correctly (charsets different than ISO-8859-1 (Latin) should be displayed correctly)<br />
+- bug corrected : the block needs a lot less SQL queries<br />
+<br />
+<br />
+July, 2003 : v.2.0 release<br />
+------------------------------------<br />
+<br />
+many changes were made :<br />
+<br />
+- integration of the administration console within PHPNuke's admin system<br />
+- modification of DB structure : 2 tables are needed now.<br />
+- new feature : multi-language is now supported<br />
+- new feature : external links are now supported<br />
+- new feature : set a background color for a category<br />
+- new feature : center the category's title<br />
+- new feature : hide/mark with icon/display members only modules for visitors<br />
+- new feature : change the class used for the categories' titles<br />
+- new feature : support of FLASH files (.swf) for the categories' names [THANKS TO MAC06 FOR THIS HACK]<br />
+- new feature : setting different image files is possible for the content of a category<br />
+- administration console made easier for use :use of list boxes for modules and images choices.<br />
+- better theme integration : alignment of module names (and external links) are now dependent of the width of the category's image. (alignment is independent of the font size)<br />
+- some bugfixes<br />
+<br />
+<br />
+March, 2003 : first official release (v.1.0)<br />
+----------------------------------------------------------<br />
+<br />
+First release, using PHPNuke's module system to make an administration console.<br />
+<br />
+Some bugs were reported, in particular when changing the name of module's folder, and some display problems (name of categories weren't displayed properly in the admin console).<br />
+</dl>
+
+<br /><br /><br />
+</body></html>

@@ -1,0 +1,24 @@
+****Arcade_Forum_Navigation_Link****
+Adds a new Forum Navigation Link which points to the Arcade.
+
+****Arcade_Games2.0RC1****
+Gives the ability to add Arcade as a module.
+
+****Arcade_Header_Addon****
+Adds the header for the arcade to the games page.
+
+****Arcade_Index_Addon****
+Will add a link directly on your forum to the arcade, alternatively you can access the arcade via this link
+http://www.YOURDOMAIN.com/modules.php?name=Forums&file=arcade
+
+****Dynamic Page Titles****
+Adds dynamic page title to your arcade and forums.
+
+****Arcade Rate Mod****
+Adds Rating to your Arcade Mod 
+
+****Arcade Thread Mod****
+Provides a messages thread for each game, shown under the playing page.
+
+****Arcade Tweaks 1.0 RC2****
+Tools to help manage the arcade.

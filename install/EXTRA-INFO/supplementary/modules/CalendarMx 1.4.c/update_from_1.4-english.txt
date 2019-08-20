@@ -1,0 +1,31 @@
+
+KalenderMx v1.4.c update from version 1.4.x
+===========================================
+
+
+Update: 
+------ 
+
+The Zipdatei unpack. All files in the folder
+HTML are copied in accordance with their file structure on the Web
+server.
+
+All already existing settings are taken over. At the data base table
+structure nothing changed.
+
+Examine and store the calendar basic adjustments again after
+the installation please once in the Adminmenue!
+
+
+
+
+Compatible preversions: 
+-----------------------
+ONLY KalenderMx 1.4
+
+
+have fun :-)
+
+
+___________________________________________________________________________________________________
+CVS: $Id: update_from_1.4-english.txt,v 1.2 2005/10/09 08:48:33 Andreas Ellsel Exp $

@@ -1,0 +1,99 @@
+/*****[TO DO]************************************************************
+ Current To Do list of Nuke-Evolution Basic: This document shows a recent
+ To Do list as well as completed tasks and changes which might be
+ included in further releases.
+ ************************************************************************/
+
+
+TO DO:
+
+UTF8 Support as default charactor set is not multilingual
+
+Before release of Release 2.0.5:
+
+- mostever online problem still present -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=62636#62636
+- Update theme_edits_by_file.txt files
+- Fix it so autogroup can be disabled per-user -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=65410#65410
+- image resize mod (nuke side) problem in IE -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=65517#65517
+- moving user from one group to another loses AUC -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=66212#66212
+- attachment thumbnails gets enlarged -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=66214#66214
+- ajax issues? -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=66684#66684
+- ability to turn off image resize mod in messages (admin.php?op=messages) module since it's already admin manageable? or exclude it altogether
+- http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=71170#71170
+- sql import still not working in admin.php?op=database -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=61054#61054
+- remote avatar filesize mismatch to show an error message instead of a debug error - http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=76016#76016
+- Allow other image types in the captcha
+- Who is online "forum location link" error -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=81296#81296
+- http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=81082#81082
+
+
+
+
+Would be nice, but would not stop Release 2.0.5:
+- Ability to remove users from Arcade -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=13795#13795
+- Multiple spaces Mod sometimes causes the nbsp;  problem
+- Move news options -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=15865#15865
+- Delete avatars -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=23122#23122
+- Add more help to sys info -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=24276#24276
+- Add password strength meter to edit profile
+- Nicer comments system (with sig, bbcode, avatar, link to profile, etc.) make comments attractive
+- Move downloads between cats -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=29248#29248
+- Improve Downloads conversion regarding the fields 'homepage', 'version' and 'filesize' -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=28939#28939
+- A new and better word wrap mod? one that works with url similar to what shoutbox does, renames it to [URL]
+- Option to keep xdata fields private
+- AUC 1.0.6? -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&t=5773
+- Users can export PMs to text files (kind of PM Export hack)
+- Add DB Optimize space saved info to output.
+- Theme Management Options - Working Stats (View Statistics)
+- Donations for each month will only reset if cache is cleared
+    Cache will expire every week which is close
+    
+For a future version:
+- New Welcome PM with admin panel? -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=29014#29014
+- Change ... in the ranks page to show everyone with that rank
+- Have welcome PM attach sender name to the sender name in the PM
+
+
+Upgrade scripts
+- PNC -> Seems to be only used slighty
+- CPG Dragonfly
+- AP -> Renamed and will most likely be used in Advanced
+- RVN
+- PostNuke
+
+- Check all mods & modules for new versions
+
+
+DONE:
+- http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=69757#69757
+- double clicking blocks in admin.php?op=blocks does not work (SVN only)
+- modules.php?name=Submit_News produces an error (The topic you entered in Submit_News was not valid) - http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&t=9349
+- RSS check -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=71325#71325
+- Remove [+] symbol in sommaire admin, does not work -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=61782#61782
+- Close module block cats ->http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&t=8261&start=0&postdays=0&postorder=asc&highlight=
+- Web_links module says "Please enter the correct GFX code" even if correct code is entered (when adding a link)
+- NSN Mailing List is looking for unknown NSNbanner tables -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=59863#59863
+- editing God Admin password while logged in as God Admin causes illegal operation -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=65588#65588
+- SQR not working with google tap enabled -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=67445#67445
+- make the email address of deactivated users to just blank to avoid emailer.php error
+- Remove adminSSL option
+- Remove dead themes
+- http://ravenphpscripts.com/posts13183-highlight-.html
+- Version checker shows "Unable to use socket functions" error.
+
+
+POSSIBLE NEW FEATURES/CHANGES:
+- One level quoteing
+- Add option to lock profile & YA views
+- Move modules/Forums/files folder to /files?
+- Replace CNBYA with 5.0?
+- Ignore Users / Simple Ignore Mod?
+- Post Associator? -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=4232#4232
+- Assign Forum permissions while creating Forum in Forum ACP -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&p=2542#2542
+- PM Storage -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&t=1022
+- Real Name -> http://www.nuke-evolution.com/modules.php?name=Forums&file=viewtopic&t=1024
+- Make hidden users optional
+
+
+Drink A LOT
+Sleep A LITTLE

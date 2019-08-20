@@ -1,0 +1,115 @@
+Shout Box installation instructions
+============================================
+
+First: Review Minimum Requirements.txt
+
+1) REMOVE OLD:
+     -Remove all old files, blocks, images, and directories when upgrading from v3.5.
+     -Do not use this shout box in conjunction with any other shout box.
+     -See 'remove old files.txt' to see which files you may safely remove.
+     -Remove old language file definitions from admin area. They moved to module area to avoid overwrites.
+
+2) SQL:
+     -Upload SB_SQL_installer.php (in the sql directory) to your nuke root folder (the one mainfile.php is in).
+     -Open your web browser (Opera, Firefox, Mozilla, or Netscape recommended).
+     -Login as Super Administrator (GOD)
+     -Browse to the file (example: http://www.mysite.com/SB_SQL_installer.php).
+     -Follow on-screen instructions.
+     -Delete SB_SQL_installer.php from your server when SQL install is complete.
+     -If this method fails, you do have the option of the .sql file to upload to phpMyAdmin.
+
+3) LANGUAGE DEFINITIONS:
+     -Some languages are included but may be incomplete.
+     -If you need a different language, you will have to create them yourself. (some are available for download).
+     -Some definitions may be missing or incorrect, you will have to edit them yourself in Wordpad or KATE. Do not use Word.
+     -3 areas of definitions:
+        -Module: /modules/Shout_Box/language/
+        -Block: /modules/Shout_Box/lang-block/
+        -Admin: /modules/Shout_Box/lang-admin/
+     -I am seeking new definitions for other languages. My E-Mail: webmaster@ourscripts.net
+
+4) UPLOAD NEW FILES:
+     -Upload files within the html directory to your website/server.
+     -All files should be placed in corresponding directories on your server to what they are in the html directory.
+     -Make sure to upload BOTH admin areas. Each has different capabilities.
+     -Example: /Shout_Box/public_html/blocks/block-Shout_Box.php uploads to public_html/blocks/block-Shout_Box.php
+     -Make sure you upload and overwrite all files. Make their permissions 644 -rw-r--r--
+     -Make sure directory permissions are set at 755 drwxr-xr-x
+
+5) THEME COLORING: Go to the Themeing tab in the admin area. Each theme will have a default color for each area. Adjust them to your liking.
+    -A good starting point for a light colored theme is: #EBEBEB #FFFFFF #BBBBBB #EBEBEB #FFFFFF
+    -A good starting point for a dark colored theme is: #000000 #212121 #000000 #101010 #212121
+
+6) THEME IMAGES: There are two sections of theme images, Box Arrows and Box Background. You can control them in the Themeing tab in the admin area. Here are a few things to remember when using this area:
+
+    -BOX ARROWS are mandatory to have.
+    -The Black.gif arrow set is used by default.
+    -If you make your own box arrows:
+         -Make sure they are 9 pixels wide and 5 pixels high.
+         -Do not put spaces in the image names. Use _ instead.
+         -If you name your images according to their hex value: FFFFFF.gif, do not put # in the name.
+         -Make sure you create all 3 with the same name, but place each image in thier respective directories.
+         -Use this pattern for making them: /up/Black.gif   /down/Black.gif   /pause/Black.gif
+         -You can use any image type: .gif .png .jpg .bmp etc...
+         -If you upload a new up image, but do not have a down or pause image yet, you will not have the choice to use it until you have a matching set.
+         -Upload your new image set to modules/Shout_Box/images/down/  modules/Shout_Box/images/up/ and   modules/Shout_Box/images/pause/
+        -After uploading an image set, refresh the Themeing tab in admin, the option for it will appear.
+    -Make sure you at least have the Black.gif image set uploaded. If any images aren't available, the black set is used.
+    -If you install a new theme, default colors will be set for it.
+
+    -BOX BACKGROUNDS are optional and are off for each theme by default.
+    -Some background images come with the Shout Box.
+    -Although these images look nice, they might not be the correct size for your setup. If this is true, you will have to make your own.
+    -If you set a background image, the Shout Box 1 and 2 colors set in Theme Coloring are ignored.
+    -If your background image becomes inaccessable, the Shout Box reverts back to the alternating colors set in Theme Coloring.
+    -Background images will tile if the shout box scroll area is larger than the background image.
+    -It is ok if the scroll area is smaller than the background image.
+    -If you make your own background images:
+        -Do not put spaces in the image names. Use _ instead.
+        -Upload them to modules/Shout_Box/images/background/
+        -After uploading an image, refresh the Themeing tab in admin, the option for it will appear.
+        -Remember that is the image KB is too large, it will take your users a long time to download it.
+        -Try to stay under 10kb.
+        -If you use the shout box in the center position, try to make an image that tiles nicely.
+        -Remember people have to read the scrolling text. Try to not make an image that obscures it.
+        -Apply the background image and get your friends advice about it.
+        -Have a background image you'd like to include in the Shout Box distribution? E-mail me: webmaster@ourscripts.net
+
+7) ADMIN SETTINGS:
+    -Log into phpnuke as an administrator
+    -Go to Blocks and activate Shout Box. Recommended set to 'All Visitors'.
+    -Go to Modules and activate Shout Box. Recommended set to 'All Visitors'.
+    -Go to the Shout Box icon within the admin panel and set your preferences.
+    -Users of PHP-Nuke v7.5+ can now add module administrators for managing shouts and bans.
+
+8) Removed!
+
+9) CSS in theme check.
+    -Open /themes/<YOUR_THEME>/style/style.css in an editor like wordpad or KATE.
+    -Make sure you have set the TD section to cover fonts. Here is an example:
+
+TD
+{
+font-family: Verdana,Helvetica,serif;
+font-size: 11px;
+margin: 0px;
+color: #000000;
+}
+
+10) FIGHTING SPAM
+    -Please read Fighting spam.txt
+
+11) CONVERSION TOOL
+    -This only applies to previous users of the shout box.
+    -Shouts are saved in a new format now and the need has come up for this conversion too.
+    -Converting your shouts to the new format is not mandatory, but is highly recommended.
+    -Upload the conversion tool to the directory mainfile.php is in.
+    -Run it in the browser and follow onscreen instructions.
+    -I realize that this tool is likely to create some confusion. If you need help, come to our user support forum:
+      http://www.ourscripts.net/modules.php?name=Forums&file=viewforum&f=10
+
+
+Thank you everyone for all your kind compliments about the work done on this project!
+
+Please link to us: http://www.ourscripts.net
+

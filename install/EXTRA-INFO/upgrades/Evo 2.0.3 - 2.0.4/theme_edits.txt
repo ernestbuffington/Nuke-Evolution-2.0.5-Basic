@@ -1,0 +1,46 @@
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/YOUR_THEME/forums/posting_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+                                        <select style="height: 20px;" name="ft" onChange="BBCft()" onMouseOver="helpline('ft')">
+
+#
+#-----[ REPLACE WITH ]------------------------------------------ 
+#
+                                        <select name="addbbcode19"  style="height: 20px;" onchange="bbfontstyle('[font=' + this.form.addbbcode19.options[this.form.addbbcode19.selectedIndex].value + ']', '[/font]');this.selectedIndex=0;" onMouseOver="helpline('ft')">
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+                                        <select style="height: 20px;" name="fs" onChange="BBCfs()" onMouseOver="helpline('fs')">
+
+
+#
+#-----[ REPLACE WITH ]------------------------------------------ 
+#
+                                        <select name="addbbcode20"  style="height: 20px;" onchange="bbfontstyle('[size=' + this.form.addbbcode20.options[this.form.addbbcode20.selectedIndex].value + ']', '[/size]');this.selectedIndex=0;" onMouseOver="helpline('fs')">
+
+#
+#-----[ FIND ]------------------------------------------ 
+#
+                                        <select style="height: 20px;" name="fc" onChange="BBCfc()" onMouseOver="helpline('fc')">
+
+
+#
+#-----[ REPLACE WITH ]------------------------------------------ 
+#
+                                        <select name="addbbcode18"  style="height: 20px;" onchange="bbfontstyle('[color=' + this.form.addbbcode18.options[this.form.addbbcode18.selectedIndex].value + ']', '[/color]');this.selectedIndex=0;" onMouseOver="helpline('fc')">
+
+#
+#-----[ REPLACE ]------------------------------------------ 
+#
+themes/YOUR_THEME/forums/viewtopic_quickreply.tpl
+
+#
+#-----[ REPLACE WITH ]------------------------------------------
+#
+theme/forums/viewtopic_quickreply.tpl

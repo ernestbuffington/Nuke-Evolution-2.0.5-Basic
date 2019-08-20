@@ -1,0 +1,48 @@
+1+c+y+ALTER TABLE+`TBLPREFIX_bbtopics`+ADD+`topic_priority`+smallint(6) NOT NULL default '0'
+2+c+y+ALTER TABLE+`TBLPREFIX_bbtopics`+ADD+`topic_attachment`+tinyint(1) NOT NULL default '0'
+3+c+y+ALTER TABLE+`TBLPREFIX_bbtopics`+ADD+`topic_glance_priority`+smallint(6) NOT NULL default '0'
+4+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`approvtxt`+longtext NOT NULL
+5+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`denytxt`+longtext NOT NULL
+6+c+y+ALTER TABLE+`TBLPREFIX_bbposts`+ADD+`post_attachment`+tinyint(1) NOT NULL default '0'
+7+c+y+ALTER TABLE+`TBLPREFIX_bbposts`+ADD+`post_move`+tinyint(1) NOT NULL default '0'
+9+c+n+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+CHANGE+`keyfld`+`keyfld` INT( 11 ) NOT NULL AUTO_INCREMENT
+10+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`current`+tinyint(1) NOT NULL default '0'
+11+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`formno`+int(11) NOT NULL default '0'
+12+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`formtitle`+varchar(64) NOT NULL default ''
+13+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`emdetail`+tinyint(1) NOT NULL default '1'
+14+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`fpdetail`+tinyint(1) NOT NULL default '1'
+15+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`group_id`+mediumint(8) NOT NULL default '0'
+16+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`forum_id`+smallint(5) NOT NULL default '0'
+17+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`tytxt`+longtext NOT NULL
+18+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`noapptxt`+longtext NOT NULL
+19+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`appslimit`+tinyint(1) NOT NULL default '0'
+20+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`appslimitno`+int(11) NOT NULL default '0'
+21+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`appsfull`+tinyint(1) NOT NULL default '0'
+22+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`group_add`+mediumint(8) NOT NULL default '0'
+23+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`block_multi_apps`+tinyint(1) NOT NULL default '1'
+24+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`email_admin`+tinyint(1) NOT NULL default '1'
+25+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`mailgroup`+tinyint(1) NOT NULL default '0'
+26+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`topicwatch`+tinyint(1) NOT NULL default '0'
+27+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`emuser`+tinyint(1) NOT NULL default '0'
+28+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`annon`+tinyint(1) NOT NULL default '0'
+29+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`VertAlign`+tinyint(1) NOT NULL default '0'
+30+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`auto_group`+tinyint(1) NOT NULL default '0'
+31+c+y+ALTER TABLE+`TBLPREFIX_MA_mapp`+ADD+`formno`+int(11) NOT NULL default '0'
+32+c+y+ALTER TABLE+`TBLPREFIX_MA_mapp`+ADD+`fldord`+int(11) NOT NULL default '0'
+33+c+y+ALTER TABLE+`TBLPREFIX_MA_mapp`+ADD+`fldname`+text NOT NULL
+34+c+y+ALTER TABLE+`TBLPREFIX_MA_mapp`+ADD+`requrd`+char(1) NOT NULL default ''
+35+c+y+ALTER TABLE+`TBLPREFIX_MA_mapp`+ADD+`inuse`+char(1) NOT NULL default ''
+36+c+y+ALTER TABLE+`TBLPREFIX_MA_mapp`+ADD+`format`+char(1) NOT NULL default ''
+37+c+y+ALTER TABLE+`TBLPREFIX_MA_mapp`+ADD+`parent`+smallint(6) NOT NULL default '0'
+38+c+y+ALTER TABLE+`TBLPREFIX_MA_mapp`+ADD+`isdel`+tinyint(1) NOT NULL default '0'
+39+c+y+ALTER TABLE+`TBLPREFIX_MA_mapp`+ADD+`rgextxt`+text
+40+c+y+ALTER TABLE+`TBLPREFIX_MA_mappresp`+ADD+`formno`+int(11) NOT NULL default '0'
+41+c+y+ALTER TABLE+`TBLPREFIX_MA_mappresp`+ADD+`appnum`+bigint(20) NOT NULL default '0'
+42+c+y+ALTER TABLE+`TBLPREFIX_MA_mappresp`+ADD+`userno`+bigint(20) NOT NULL default '0'
+43+c+y+ALTER TABLE+`TBLPREFIX_MA_mappresp`+ADD+`qno`+bigint(20) NOT NULL default '0'
+44+c+y+ALTER TABLE+`TBLPREFIX_MA_mappresp`+ADD+`response`+longtext NOT NULL
+45+c+y+ALTER TABLE+`TBLPREFIX_MA_mappresp`+ADD+`adate`+text NOT NULL
+46+c+y+ALTER TABLE+`TBLPREFIX_MA_mappresp`+ADD+`appstatus`+tinyint(4) NOT NULL default '0'
+47+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`formlist`+tinyint(1) NOT NULL default '0'
+48+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`compat`+tinyint(1) NOT NULL default '0'
+49+c+y+ALTER TABLE+`TBLPREFIX_MA_mapcfg`+ADD+`emhtml`+tinyint(1) NOT NULL default '0'

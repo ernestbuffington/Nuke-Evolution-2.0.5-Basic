@@ -1,0 +1,170 @@
+#################################################################
+## Mod Title:    Arcade Rate Mod
+## Mod Version:  v1.0
+## Mod Author:   Rica
+## Simplified for Nuke-Evolution by Rodmar
+##
+## Mod Description:  Adds Rating to your Arcade Mod 
+##
+## Installation Level:  easy
+## Installation Time:   <2 Minutes
+## Files To Edit:       2
+##                  modules/Forums/games.php
+##                  modules/Forums/templates/subSilver/games_body.tpl
+##
+## Included Files:  html/modules/Forums/arcade_rate.php
+##
+#################################################################
+##
+## Author Note:
+##
+##
+##
+#################################################################
+## Before Adding This MOD To Your Forum, 
+## You Should Back Up All Files Related To This MOD
+#################################################################
+##
+## VERSION HISTORY
+##
+##    V1.0
+##
+#################################################################
+#
+#-----[ UPLOAD ]------------------------------------------
+#
+Upload all the files in the html folder keeping the
+directory structure.
+
+#
+#-----[ NOTE ]-----------------------------------------
+#
+For every file you open you will see something like:
+
+/*****[CHANGES]**********************************************************
+-=[Base]=-
+      Nuke Patched                             v3.1.0       09/20/2005
+-=[Mod]=-
+      Advanced Username Color                  v1.0.5       09/20/2005
+ ************************************************************************/
+
+I would suggest adding an entry for the arcade in every file but that
+is completely up to you.  Here is what that would look like:
+
+/*****[CHANGES]**********************************************************
+-=[Base]=-
+      Nuke Patched                             v3.1.0       09/20/2005
+-=[Mod]=-
+      Advanced Username Color                  v1.0.5       09/20/2005
+      Arcade Rate Add-On                       v1.0.0       09/20/2005
+ ************************************************************************/
+#
+# Here starts the Installation, follow the steps very close.
+#
+
+#
+#-----[ STEP 1 ]---------------------------------------
+Upload all the files in the html folder keeping the
+directory structure.
+
+#
+#-----[ SQL ]------------------------------------------
+#
+CREATE TABLE `nuke_bbgames_rate` (
+  `game_id` int(11) NOT NULL default '0',
+  `user_id` int(11) NOT NULL default '0',
+  `rate` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`game_id`,`user_id`)
+) TYPE=MyISAM; 
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+modules/Forums/games.php
+
+#
+#-----[ FIND ]------------------------------------------
+#
+include($phpbb_root_path . 'whoisplaying.'.$phpEx);
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Rate Add-On                 v1.0.0 ]
+ ******************************************************/
+$template->assign_block_vars('ratemod',array());
+$sql="SELECT count(*) as numberrate,SUM(rate) as sumrate FROM ".$prefix."_bbgames_rate WHERE game_id='$gid'";
+$result=$db->sql_query($sql)
+    or die("Cannot read games rating table");
+$row=$db->sql_fetchrow($result)    ;
+$template->assign_vars(array(
+        'NUMBERRATINGS' => $row["numberrate"],
+           'RATERESULT' => $row["numberrate"]>0?number_format($row["sumrate"]/$row["numberrate"],2):"-",
+        'U_RATEGAME'=>append_sid("arcade_rate"),
+        'GID'=>$gid )
+       ); 
+/*****[END]********************************************
+ [ Mod:     Arcade Rate Add-On                 v1.0.0 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]------------------------------------------
+#
+themes/ALL_THEME/Forums/games_body.tpl
+
+AND
+
+modules/Forums/templates/subSilver/games_body.tpl
+
+#
+#-----[ FIND ]------------------------------------------
+#
+    <!-- END scorerow -->
+     </table>
+
+#
+#-----[ AFTER, ADD ]------------------------------------------
+#
+<!-- BEGIN ratemod -->
+                        <table><tr><td></td></tr></table>
+                        <table width="100%" class="bodyline" cellpadding="2" cellspacing="1" >
+                            <tr>
+                                <td class="row2" align="center" colspan="2"><span class="cattitle">Ratings</span></td>
+                            </tr>
+                            <tr>
+                                <td class="row1" align="center"><span class="gensmall">Results:</span></td>
+                                <td class="row1" align="center"><span class="gensmall">{RATERESULT}/10</span></td>
+                            </tr>
+                            <tr>
+                                <td class="row1" align="center" colspan="2"><span class="gensmall">{NUMBERRATINGS} votes</span></td>
+                            </tr>
+                            <tr>
+                                <td class="row1" align="center">Rate-It</td>
+                                <td class="row1" align="center">
+                                    <form action="{U_RATEGAME}" method="POST">
+                                    <input type="hidden" name="gid" value="{GID}">
+                                    <SELECT name="ratevalue">
+                                        <OPTION>0 - Bad</OPTION>
+                                        <OPTION>1 - </OPTION>
+                                        <OPTION>2 - </OPTION>
+                                        <OPTION>3 - </OPTION>
+                                        <OPTION>4 - </OPTION>
+                                        <OPTION selected>5 - Average</OPTION>
+                                        <OPTION>6 - </OPTION>
+                                        <OPTION>7 - </OPTION>
+                                        <OPTION>8 - </OPTION>
+                                        <OPTION>9 - </OPTION>
+                                        <OPTION>10- Uber</OPTION>
+                                    </SELECT><br /><input type="submit" />
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+<!-- END ratemod -->
+
+#
+#-----[ SAVE/CLOSE/UPLOAD ALL FILES ]------------------------------------------
+#
+
+# EoM

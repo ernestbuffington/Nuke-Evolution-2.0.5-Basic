@@ -1,0 +1,424 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40"
+xmlns:ns1="http://schemas.microsoft.com/office/2004/12/omml">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="1-requirements_files/filelist.xml">
+<title>Requirements for PHP-Nuke Evolution</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Technocrat</o:Author>
+  <o:LastAuthor>Bryan Heath</o:LastAuthor>
+  <o:Revision>11</o:Revision>
+  <o:TotalTime>7</o:TotalTime>
+  <o:LastPrinted>2006-01-10T23:03:00Z</o:LastPrinted>
+  <o:Created>2005-08-04T17:21:00Z</o:Created>
+  <o:LastSaved>2006-11-09T22:40:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>367</o:Words>
+  <o:Characters>2021</o:Characters>
+  <o:Company>Placer County Water Agency</o:Company>
+  <o:Lines>51</o:Lines>
+  <o:Paragraphs>34</o:Paragraphs>
+  <o:CharactersWithSpaces>2354</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>75</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <m:mathPr>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:lMargin m:val="1440"/>
+   <m:rMargin m:val="1440"/>
+   <m:preSp m:val="120"/>
+   <m:postSp m:val="120"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:smallFrac m:val="off"/>
+   <m:naryGrow/>
+  </m:mathPr>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--p.MSONORMAL
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;}
+li.MSONORMAL
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;}
+div.MSONORMAL
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;}
+a:link
+	{mso-style-unhide:no;}
+span.MSOHYPERLINK
+	{mso-style-unhide:no;}
+a:visited
+	{mso-style-unhide:no;}
+span.MSOHYPERLINKFOLLOWED
+	{mso-style-unhide:no;}
+
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:70.9pt 56.7pt 70.9pt 56.7pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:898516025;
+	mso-list-template-ids:378205688;}
+@list l0:level1
+	{mso-level-start-at:3;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1242831576;
+	mso-list-template-ids:-387160456;}
+@list l1:level1
+	{mso-level-start-at:2;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1734425534;
+	mso-list-template-ids:1718104028;}
+@list l2:level1
+	{mso-level-start-at:4;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1749960865;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1211237486 67698703 1666995134 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level2
+	{mso-level-number-format:none;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1808083096;
+	mso-list-template-ids:128752754;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<link rel=dataStoreItem href="1-requirements_files/item0001.xml"
+id="X_B1FF79F5-F38C-4408-A7F5-6F18CCB88E85">
+<link rel=themeData href="1-requirements_files/themedata.thmx">
+<link rel=colorSchemeMapping href="1-requirements_files/colorschememapping.xml">
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:10.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:20.0pt'>Requirements
+for Nuke-Evolution<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='color:green;mso-list:l3 level1 lfo3;tab-stops:list .5in'><b
+     style='mso-bidi-font-weight:normal'>Hosting<o:p></o:p></b></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level2 lfo3;
+tab-stops:list 1.0in'><![if !supportLists]><span style='mso-list:Ignore'>.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Linux or Windows</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-1.5in;mso-text-indent-alt:
+-9.0pt;mso-list:l3 level3 lfo3;tab-stops:list 1.5in'><![if !supportLists]><span
+style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Must be configured and running correctly</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-1.5in;mso-text-indent-alt:
+-9.0pt;mso-list:l3 level3 lfo3;tab-stops:list 1.5in'><![if !supportLists]><span
+style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Must be able to meet all the following requirements as
+well</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level2 lfo3;
+tab-stops:list 1.0in'><![if !supportLists]><span style='mso-list:Ignore'>.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>At least 50MB of available web space</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-1.5in;mso-text-indent-alt:
+-9.0pt;mso-list:l3 level3 lfo3;tab-stops:list 1.5in'><![if !supportLists]><span
+style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>100MB or more is recommended</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level2 lfo3;
+tab-stops:list 1.0in'><![if !supportLists]><span style='mso-list:Ignore'>.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>At least 100MB of monthly transfer</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-1.5in;mso-text-indent-alt:
+-9.0pt;mso-list:l3 level3 lfo3;tab-stops:list 1.5in'><![if !supportLists]><span
+style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>500MB or more is recommended</p>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal style='color:green;mso-list:l3 level1 lfo3;tab-stops:list .5in'><b
+     style='mso-bidi-font-weight:normal'>Website Software<o:p></o:p></b></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level2 lfo3;
+tab-stops:list 1.0in'><![if !supportLists]><span style='mso-list:Ignore'>.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Apache</p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal style='color:green;mso-list:l3 level1 lfo3;tab-stops:list .5in'><b
+     style='mso-bidi-font-weight:normal'>PHP<o:p></o:p></b></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level2 lfo3;
+tab-stops:list 1.0in'><![if !supportLists]><span style='mso-list:Ignore'>.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>4.1.x – 5.x.x</p>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal style='color:green;mso-list:l3 level1 lfo3;tab-stops:list .5in'><b
+     style='mso-bidi-font-weight:normal'>Database Software<o:p></o:p></b></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l3 level2 lfo3;
+tab-stops:list 1.0in'><![if !supportLists]><span style='mso-list:Ignore'>.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span class=SpellE>MySQL</span> 4.x.x-5.x.x</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-1.5in;mso-text-indent-alt:
+-9.0pt;mso-list:l3 level3 lfo3;tab-stops:list 1.5in'><![if !supportLists]><span
+style='mso-list:Ignore'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span class=SpellE>MySQL</span> 4.2.x is recommended</p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:18.0pt'>Notes<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:16.0pt;color:green'>Hosting:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:16.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal>Hosting can be done on your local machine as long as all the
+requirements are met. You can use <span class=SpellE>wamp</span> or <span
+class=SpellE>xampp</span> to accomplish this. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Other operating systems can also be used as long as it can
+run software to meet the requirements. Please note that only Linux and Windows
+have been used in testing this product.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>You might require more web space or monthly transfer depending
+on your site. The requirements stated above are for an average site.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>If you need suggestions on web hosting please feel free to
+contact any of the authors and we would be happy to give you suggestions. You
+can also check out <a href="http://www.webhostingtalk.com/">http://www.webhostingtalk.com/</a>
+for more information and choices.</p>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:16.0pt;color:green'>Website Software:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Apache is highly recommended. You can download it from <a
+href="http://httpd.apache.org/">http://httpd.apache.org/</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>It might be possible to use another type of website
+software, but it is not recommend. IIS for example can work but some people
+have experienced a number of issues with it.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b><span style='font-size:16.0pt;mso-bidi-font-size:12.0pt;
+color:green'>PHP<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>PHP can be downloaded from <a href="http://www.php.net/">http://www.php.net</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>You <b style='mso-bidi-font-weight:normal'>must</b> use version
+4.1.x or version 5.x.x or better. Version 3.x may not work correctly.</p>
+
+<p class=MsoNormal><span style='color:green'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:16.0pt;mso-bidi-font-size:12.0pt;
+color:green'>Database Software<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE>MySQL</span> is highly recommended. You
+can download it from <a href="http://www.mysql.com/">http://www.mysql.com/</a></p>
+
+<p class=MsoNormal><span class=SpellE>MySQLi</span> Extension is also supported
+but is experimental. <a href="http://php.net/mysqli/">http://php.net/mysqli/</a>
+</p>
+
+<p class=MsoNormal><span lang=DE-CH style='mso-ansi-language:DE-CH'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal>All other types of DB software have been removed except <span
+class=SpellE>MySQL</span> and <span class=SpellE>MySQLi</span> . This was done
+due to the speed updates that were made and the general feeling that <span
+class=SpellE><span class=GramE>MySQL</span></span><span class=GramE>(</span><span
+class=SpellE>i</span>) is the most popular DB software.<span
+style='mso-spacerun:yes'>  </span>If you have a need to use a DB type other
+then these 2 choices we have included ADODB in the supplementary folder as a
+possible option for you.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>If you do not have access to <span class=SpellE>MySQL</span>
+version 4.x. It may be possible to use version 3.x but it is not
+recommended.<span style='mso-spacerun:yes'>  </span><span class=SpellE>MySQL</span>
+v5.x has been tested and is working correctly.</p>
+
+</div>
+
+</body>
+
+</html>

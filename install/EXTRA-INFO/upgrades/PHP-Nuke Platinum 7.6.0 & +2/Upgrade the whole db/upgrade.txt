@@ -1,0 +1,157 @@
+/*****[NUKE-EVOLUTION BASIC: Upgrade the whole DB ]******************
+
+ Before You Begin
+ ----------------
+ If you have not read the readme.txt in the previous folder you MUST
+ do so before you continue.
+ 
+ This will destroy Reviews.  If you have a working reviews module
+ then you must change the installer to save it.  See save reviews
+ below BEFORE YOU BEGIN.
+ 
+ Once you have completed you will need to reconfigure NSN Supporters
+ if you had modified it in anyway.
+ 
+ Read EACH step COMPLETELY before attempting that step!!!
+ 
+ First Step
+ ----------
+ Delete the following folders and files if they exist on your site.  Do
+ not panic if you do not have these files or folders.  Some of them are 
+ not standard in the install or were removed by the patch packs.
+ 
+ PLEASE NOTE that the files and folders are sentinel not nukesentinel.  So
+ DO NOT DELETE any nukesentinel files or folders.
+ 
+ Files
+ =====
+ admin/case/case.blocker.php
+ admin/case/case.sentinel.php 
+ admin/links/links.blocker.php
+ admin/links/links.sentinel.php
+ admin/modules/blocker.php
+ admin/modules/sentinel.php
+ includes/banned.php
+ includes/blocker.php
+ includes/sentinel.php
+ modules/Forums/admin/common.php
+ 
+ Folders
+ =======
+ admin/language/protector/
+ includes/ps_blocker/
+ modules/Protector/
+ modules/Sentinel/
+ modules/Downloads/
+ 
+ Second Step
+ -----------
+ Copy all the Evo files (html/) to your server.  Replace all the files and 
+ folders that currently exist.  DO NOT have it append files!
+ 
+ Delete or skip uploading the install.php file and the install/ folder.
+ 
+ Third Step
+ ----------
+ Upload upgrade.php and upgrade/ folder located in this folder to your
+ website's root.
+ 
+ Fourth Step
+ -----------
+ Run http://www.yoursite.com/upgrade.php
+ 
+ Follow the prompts in the installer until it completes.
+ 
+ If you see the safe mode error or you wish to manually install everything,
+ see the manual upgrade steps below.  Then return to the Fifth step.
+ 
+ If you see an error when creating the database it might be that the field
+ exists because you had the mod already installed.  If you are unsure of the
+ errors you get or you are having a problem after the install please contact
+ us for help.
+
+ To help us better understand the problem you should WRITE DOWN the errors
+ so when asked what they were you can tell us.  Copy and paste into notepad
+ is a good way to keep them.
+
+ Fifth Step
+ ----------
+ Return to the Third Step in the readme.txt located in the previous folder
+ 
+ Manual Upgrade
+ --------------
+ 
+ DO NOT DO THIS IF YOU HAVE RUN THE INSTALLER AND IT COMPLETED SUCCESSFULLY!!!
+ 
+ Do Step 2 (- Change config.php) in the install help file (install/2-install.pdf[htm])
+ 
+ Run the drop.sql in the upgrade (upgrades/PHP-Nuke Platinum 7.6.0 & +2/Upgrade the whole db/upgrade/) 
+ folder
+ 
+ Run the install.sql in the upgrade folder
+ 
+ Run the upgrade.sql in the upgrade folder
+
+ Run the nukesentinel.sql in the upgrade folder
+ 
+ Do Step 5 (- CHMOD/Permissions) in the install help file (install/2-install.pdf[htm])
+ 
+ Do Step 6 (- .htaccess & .staccess files) in the install help file (install/2-install.pdf[htm])
+ 
+ 
+ 
+ Save Reviews
+ ------------
+ 
+ Open
+ ====
+ upgrade/drop.sql
+ 
+ Find & Delete
+ =============
+ DROP TABLE IF EXISTS `nuke_reviews`;
+ DROP TABLE IF EXISTS `nuke_reviews_cats`;
+ DROP TABLE IF EXISTS `nuke_reviews_comments`;
+ DROP TABLE IF EXISTS `nuke_reviews_conf`;
+ DROP TABLE IF EXISTS `nuke_reviews_pend`;
+ DROP TABLE IF EXISTS `nuke_reviews_sub_cats`;
+ 
+ Open
+ ====
+ upgrade/install.sql
+ 
+ Find & Delete
+ =============
+ CREATE TABLE `nuke_reviews` (
+   `id` int(10) NOT NULL auto_increment,
+   `date` date NOT NULL default '0000-00-00',
+   `title` varchar(150) NOT NULL default '',
+   `text` text NOT NULL,
+   `reviewer` varchar(25) default NULL,
+   `email` varchar(60) default NULL,
+   `score` int(10) NOT NULL default '0',
+   `cover` varchar(100) NOT NULL default '',
+   `url` varchar(100) NOT NULL default '',
+   `url_title` varchar(50) NOT NULL default '',
+   `hits` int(10) NOT NULL default '0',
+   `rlanguage` varchar(30) NOT NULL default '',
+   PRIMARY KEY  (`id`),
+   KEY `id` (`id`)
+ ) TYPE=MyISAM AUTO_INCREMENT=1 ;
+
+ Find & Delete
+ =============
+ CREATE TABLE `nuke_reviews_comments` (
+   `cid` int(10) NOT NULL auto_increment,
+   `rid` int(10) NOT NULL default '0',
+   `userid` varchar(25) NOT NULL default '',
+   `date` datetime default NULL,
+   `comments` text,
+   `score` int(10) NOT NULL default '0',
+   PRIMARY KEY  (`cid`),
+   KEY `cid` (`cid`),
+   KEY `rid` (`rid`),
+   KEY `userid` (`userid`)
+ ) TYPE=MyISAM AUTO_INCREMENT=1 ;
+ 
+ ************************************************************************\

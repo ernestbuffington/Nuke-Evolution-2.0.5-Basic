@@ -1,0 +1,32 @@
+Uploads Installation:
+
+You have 2 possibilities to install this module. One is the regular way with executing the included SQL
+file. The other way would be to simply upload it and let the module do the setup.
+
+
+1. Regular Installation:
+
+   1.1 Simply upload the content within the html folder to your root directory
+   1.2 Execute the uploads_4_4_0.sql (located in the sql folder) in phpMyAdmin
+   1.3 CHMOD the folder /files to 777 (If your host is running PHP as CGI, set its to 755 and make sure proper pemissions is set in config.php)
+   1.4 Go to your Nuke-Evolution Modules Administration and activate the module
+
+
+2. Automatic setup:
+
+   2.1 Simply upload the content within the html folder to your root directory
+   2.2 Go to your Nuke-Evolution Modules Administration and activate the module
+
+   2.3 Point your browser to the following location:
+
+       http://www.yoursite.com/modules.php?name=Uploads
+
+       -> This will install the necessary database tables
+       -> After you have successfully installed the tables, you should be
+          redirected to a new page where you can set up the patch.
+          
+          NOTE: There's already a folder available in the root directory of
+                your website called /files. Make sure you have CHMODDED it to
+                777. If you want to store your files somewhere else, you can
+                safely delete this folder. (If your host is running PHP as CGI,
+				set it to 755 and make sure proper pemissions is set in config.php)

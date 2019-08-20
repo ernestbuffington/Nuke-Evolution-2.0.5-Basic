@@ -1,0 +1,82 @@
+
+/* -------------------------------------------------------- for PHP-Nuke v7.6 v1.0.76  */
+/*                                                                                     */
+/*      ////////// //\\ \\\\\\\\\\       Created by Dashe at http://nsd.jagamarog.com  */
+/*             // //  \\ \\                                                            */
+/*            // //    \\ \\             Email Address: dashe@jagamarog.com            */
+/*           // /////\\\\\ \\   \\\\\                                                  */
+/*          // //        \\ \\      \\   For More Scripts Visit Our Site               */
+/*         // //          \\ \\\\\\\\\\                                                */
+/* /////////  a g a m a r o g . c o m   N u k e   S c r i p t   D e v e l o p m e n t  */
+/*                                                */
+/* Updated to work with PHP-Nuke 7.6 : BlueLion (admin@phpnuke-nederland.com)           */
+/*                                                                                     */     
+/* Original Who Is Where Developed at Surf 4 All [http://www.surf4all.com]             */ 
+/*                                                                                     */
+/* ----------------------------------------------------------------------------------- */
+
+/* INSTALLAZIONE---------------------------------------------------------------------- */
+
+************ FAI UN BACKUP DEI TUOI FILES E DEL TUO DB PRIMA DI FARE MODIFICHE***********
+************   TUTTI I FILE SARANNO MODIFICATI NEL DB, FAI ATTENZIONE!!   ***************
+
+1) Estrai tutti i file dal file zippato.
+
+2) Upload tutti i file estratti nel relativo percorso del tuo sito. I
+   files da installare sul tuo sito sono i seguenti:
+   
+   - JAG_Whos_Been-Install.php
+   - admin/case/case.JAG_Whos_Been.php
+   - admin/links/links.JAG_Whos_Been.php
+   - admin/modules/JAG_Whos_Been.php
+   - blocks/block-JAG_Whos_Been.php
+   - images/admin/whosbeen.png
+   - includes/custom_files/JAG_Whos_Been_Copy.php
+   - includes/custom_files/custom_head_JAG_Whos_Been.php
+   - language/JAG_Whos_Been/lang-english.php
+   - sql/jag_whos_been.sql ---------------------------------> NON NECESSITA DI AGGIORNAMENTO !!!
+
+3) Esegui il file d'installazione per l'installazione delle tabelle nel tuo DB. Scrivi sul tuo browser:
+   
+   http://YOUR_SITE_ROOT/JAG_Whos_Been-Install.php
+   
+   dove YOUR_SITE_ROOT è il nome del tuo sito!
+   
+4) Apri includes/custom_files/custom_head.php
+
+   Cerca:
+   //define_once("JAG_WHO", true);
+   //include_once("includes/custom_files/custom_head_JAG_Whos_Been.php");
+   
+   Cancella tutte  // prima di entrambe le linee
+
+   Salva questo file in custom_head.php e aggiorna questo file in includes/custom_files/
+   
+5) Loggati come Admin nel tuo sito e vai in amministrazione Blocchi. Seleziona il blocco
+   e attivalo inserendolo a sinistra o destra.
+
+6) Puoi controllare la visulizzazione del blocco, aggiungendo/eliminando differenti dettagli, 
+   cliccando sul link "JAG NSD Whos Been" ora attivo nel pannello amministrativo di 
+   PHP-Nuke. Tutte le features sono attive di default.
+
+
+/* AIUTO ------------------------------------------------------------------------------ */
+
+Se noti dei problemi cerca questo blocco  "JAG NSD" nel forum disponibile a questo url 
+http://nsd.jagamarog.com. 
+
+/* SUGGErimenti ----------------------------------------------------------------------- */
+
+Per suggerimenti e modifiche consulta http://nsd.jagamarog.com
+/* TO DO FOR NEXT RELEASE ------------------------------------------------------------ */
+
+Per mantenere il blocco aggiornato se fai qualunque modifica al blocco ti saremmo grati se 
+puoi spedirli via mail al creatore del blocco, - l'accreditamento completo sarà dato a tutti.
+
+Fine e Buon divertimento, 
+
+Dashe, 
+Site Admin, JAG NSD
+http://nsd.jagamarog.comm
+
+/* EOF ------------------------------------------------------------------------------- */

@@ -1,0 +1,292 @@
+/*****[CHANGELOG RELEASE 2]***********************************************
+ Changelog of the releases of Nuke-Evolution Basic: The document is split
+ up into developers, change date and sorted ascending.
+ ************************************************************************/
+
+05/11/2007 - 2.0.5
+        TECHNOCRAT
+        -[05/11/2007] Updated Enhanced Journal to 2.0.1 -> thanks SLiCK_303
+        -[05/13/2007] Fixed submit news error
+        -[05/13/2007] Fixed forum common.php typo
+        -[05/13/2007] Added default to variable class
+        -[05/13/2007] Fixed admin socket error
+        -[05/13/2007] Fixed at a glance offset issue
+        -[05/16/2007] Updated swiftmailer 3.2.2
+        -[05/17/2007] Fixed new lines in YA emails
+        -[05/17/2007] Took out SQL cache in SwiftMail
+        -[05/17/2007] Commented out Sendmail (left it in case someone wants to try and make it work)
+        -[05/17/2007] Find a minor warning with evo_mail
+        -[05/21/2007] Fixed a typo in the board_config
+        -[05/21/2007] Added new sites to the Nuke-Evolution block
+        -[05/21/2007] Added x_click to donations
+        
+        TULISAN
+        -[05/15/2007] Changed <br \> to <br /> in modcp (Thanks Rodmar)
+
+        REORGANISATION
+        -[05/17/2007] 1st part of phpBB changes -> board-config directory
+        
+        
+03/14/2007 - 2.0.4
+        TECHNOCRAT
+        -[03/14/2007] Updated the random sig generator (will now do animated gifs)
+        -[03/14/2007] Added left blocks hide to the theme edit files
+        -[03/16/2007] Fixed footer & badbots trap
+        -[03/16/2007] Fixed browser css not always working
+        -[03/16/2007] Fixed waiting news saying array
+        -[03/19/2007] Fixed news topic display not always showing readmore
+        -[03/19/2007] Fixed statistics and timestamp -> Thanks D_Grunt
+        -[03/23/2007] Fixed XData bbcode trying to activate on register and creating an error
+        -[03/26/2007] Fixed polls not showing sometimes
+        -[03/30/2007] Fixed viewtopic sql error
+        -[03/30/2007] Fixed sentinel templates -> Thanks Luckyluciano
+        -[04/04/2007] Changed news admin to show a better preview of the article
+        -[04/05/2007] Changed submit news preview
+        -[04/11/2007] Fixed security issue in Supporters module
+        -[04/11/2007] Improved speed in Supporters module
+        -[04/11/2007] Fixed a bug in active modules
+        -[04/11/2007] Fixed site up function not working correctly
+        -[04/11/2007] Fixed custom RSS blocks not saving
+        -[04/11/2007] Fixed RSS blocks not launching right away
+        -[04/12/2007] Fixed downloads to strip . and , in filesize for all areas
+        -[04/17/2007] Added SwiftEmailer
+        -[04/17/2007] Changed all mail() functions execpt forums to run off new evo_mail function which ties SMTP to forum settings
+        -[04/17/2007] Fix donations block not using the correct button -> thanks SLiCK_303
+        -[04/18/2007] Header will now look for favicon in root, then images, then themes/your_theme/images  -> thanks SLiCK_303
+        -[04/18/2007] Cached favicon and custom header file locations  -> thanks SLiCK_303
+        -[04/18/2007] Cleaned up statistics  -> thanks SLiCK_303
+        -[04/18/2007] Removed adminssl
+        -[04/18/2007] Themes admin will not prune missing themes
+        -[04/18/2007] Cleaned up invalid new lines
+        -[04/18/2007] Improved security
+        -[04/18/2007] Added lines to .htaccess to help stop hacks
+        -[04/20/2007] Added the ability to force a lanague locale in donations
+        -[04/25/2007] Fixed programmed articles
+        -[05/03/2007] Removed debug code left in by mistake
+        -[05/07/2007] Fixed Opera not being identified
+        -[05/07/2007] Added blackberry to browser types
+        -[05/07/2007] Nuke Sentinel 2.5.08
+        -[05/07/2007] Fixed read_article
+        -[05/07/2007] Fixed a warning on striping slashes
+        -[05/07/2007] Backported v3 variables class
+        -[05/07/2007] Fixed error when donation date was empty
+        -[05/07/2007] Added new var security to donations
+        -[05/11/2007] Fixed programmed articles deleting to many
+        -[05/11/2007] Fixed new variable class stripping all slashes
+        -[05/11/2007] Added AUC to newest member in the forums - Thanks RottNKorpse
+        
+        TULISAN
+        -[03/16/2007] Added missing $user_prefix globals
+        -[03/17/2007] Fixed NSN Mailing list not sending correct activation link
+        -[03/18/2007] Fixed deleteconfirm.php to set email address as blank
+        -[03/18/2007] Fixed some more UTF-8 space errors
+        -[03/18/2007] Added more block style options in evouserblock
+        -[03/20/2007] Fixed supporters block not centering (Thanks RottNKorpse)
+        -[03/28/2007] Updated other posting_body.tpl related edits
+        -[03/29/2007] Added missing field in nuke_bbxdata_fields table in install sqls
+        -[03/30/2007] Fixed deprecated syntax in banner module
+
+        REVOLUTION
+        REORGANISATION
+        -[03/27/2007] Fixed Select-Boxes in Reply to Posts (Thanks ZeroQL) 
+        -[04/15/2007] Fixed sessions.php -> Include-Path for constants.php set 
+        -[04/29/2007] Fixed mainfile.php -> Changed position of PHP-Input-Filer. Must be called after functions_evo.php         
+        -[04/30/2007] GFX.php in Downloads deleted and index.php changed. Security Check is done by Evo-Standard functions.
+                       
+        
+01/30/2007 - 2.0.3
+        TECHNOCRAT
+        -[01/31/2007] Gave cache a TTL of 1 week (backported from v3)
+        -[01/31/2007] Improved version checker timeout
+        -[01/31/2007] Added missing sentinel language
+        -[01/31/2007] Fixed modules block not working
+        -[02/02/2007] Cleaned up javascript.php
+        -[02/02/2007] Fixed styles.php bgcolor error
+        -[02/06/2007] Fixed all footers.php to use base path
+        -[02/06/2007] Fixed donations URL
+        -[02/08/2007] Updated XDATA to 1.0.3
+        -[02/08/2007] Fixed donation date error
+        -[02/10/2007] Fixed a typo in theme edits
+        -[02/12/2007] Fixed downloads not making upload folder
+        -[02/12/2007] Fixed downloads not uploading files to correct location
+        -[02/12/2007] Removed session_commit because it requires 4.3.11
+        -[02/12/2007] Fixed forum hightlight to use span
+        -[02/12/2007] Turned off XSS on TOS submit
+        -[02/14/2007] Raven's sentinel speed tweak
+        -[02/14/2007] Removed the news code checking for Nuke > 6.6
+        -[02/15/2007] Fixed URL in install docs
+        -[02/20/2007] Minor changes to the bbcode_box
+        -[02/20/2007] Fixed nukesentinel
+        -[02/21/2007] Fixed url issues in donations
+        -[02/23/2007] Fixed is_array error
+        -[02/23/2007] Added bad bots trap
+        -[02/28/2007] Fixed downloads not working if exention was uppercase
+        -[03/01/2007] Fixed forum admin userlist
+        -[03/02/2007] Nukesentinel 2.5.6
+        -[03/02/2007] Changed block RSS to not run if site is not reachable
+        -[03/03/2007] Member application 2.1.1
+        -[03/06/2007] Made styles.php not load all the styles
+        -[03/06/2007] Made javascript.php only load what is needed
+        -[03/08/2007] Removed Evo-Themez from the install block
+        -[03/08/2007] Increased the FAQ id size
+        -[03/09/2007] Collapsing blocks stay collapsed
+        -[03/09/2007] Fixed dateformat to use EvoDate
+        -[03/09/2007] News & Downloads now show proper date
+        -[03/09/2007] Allowed for different style.css per browser (style_ie.css, style_mozilla.css, style_opera.css)
+        -[03/09/2007] Minor tweak to browser
+        -[03/12/2007] Change Evo_User to use $user_prefix
+        -[03/12/2007] Fixed $user_prefix
+        -[03/12/2007] Fixed Encyclopedia not showing content
+        -[03/13/2007] Fixed a bunch of UTF-8 space errors
+        
+        TULISAN
+        -[02/01/2007] Added theme edits in upgrades folder
+        -[02/02/2007] Fixed characters changed by UTF8 
+        -[02/02/2007] Fixed italian language characters in install changed by UTF8 (Thanks Luckyluciano)
+        -[02/05/2007] Reverted changes to styles.php to fix the double-click error
+        -[02/08/2007] Updated viewtopic_quickreply.tpl to use bbcode_box.js instead     
+        -[02/08/2007] Added function sqr_show_hide() and function sqr_show() in bbcode_box.js
+        -[02/08/2007] Cleaned up and fixed bbcode_box.js and add_bbcode.js some more
+        -[02/08/2007] Removed id session check
+        -[03/09/2007] Fixed sentinel config in upgrade.sql
+        -[03/09/2007] Changed $nsnab_ver_info to 2.5.06 in sql's
+        -[03/09/2007] Fixed CalendarMx not CHMODding properly
+        -[03/09/2007] Changed hardcoded chmod permissions to use variable instead
+        -[03/09/2007] Changed iconn+.png to icon-plus.png (some servers don't accept "+" for a filename) in Downloads
+        -[03/11/2007] Removed [+] symbol in sommaire admin
+        -[03/11/2007] Removed selection of downloads and banner system in NSN Mailing List
+        -[03/11/2007] Removed caching in block-Forums.php
+        -[03/14/2007] Added missing file edit in FNA install.txt
+        
+        REVOLUTION
+
+        REORGANISATION
+        -[02/25/2007] nukesentinel.php fixed as described in Forum (Security Fix)
+        -[02/25/2007] nukesentinel.php changed because of errors occuring on some systems
+        -[02/28/2007] RSS: now decodes Siteslogan too
+        -[03/10/2007] Added $db->freeresult + added sort order to themes.php
+        
+11/17/2006 - 2.0.2
+        TECHNOCRAT
+        -[11/17/2006] Fixed nukesentinel
+        -[11/17/2006] Attachment mod 2.4.5
+        -[11/17/2006] Advanced time management 2.2.1
+        -[11/21/2006] Fixed db info error
+        -[11/21/2006] Fixed TOS bbcode
+        -[11/21/2006] Fixed forum paganation - Thanks Rodmar
+        -[11/21/2006] Minor fixes to referers
+        -[11/21/2006] Minor change to sentinels referal blocker
+        -[11/21/2006] Fixed not being able to use remove image in module block cat image
+        -[11/27/2006] Fixed at a glance news not working
+        -[11/27/2006] Minor clean up
+        -[11/28/2006] Fixed survey coments error
+        -[12/01/2006] Fixed full debug showing everyone
+        -[12/01/2006] Fixed a rare error with showblocks
+        -[12/01/2006] Fixed embed not working in IE7
+        -[12/04/2006] Fixed add download not showing error
+        -[12/04/2006] Made sure all php tags were long tags
+        -[12/05/2006] Fixed empty search - Thanks forgotz
+        -[12/05/2006] Fixed simple quickreply not working
+        -[12/05/2006] Fixed PM popup link
+        -[12/05/2006] Fixed modcp bug
+        -[12/13/2006] Fixed admin log - Thanks Rodmar
+        -[12/13/2006] Added Rodmar's RSS changes
+        -[12/15/2006] Added rand_seed
+        -[12/15/2006] Fixed the ability for multiple accounts
+        -[12/15/2006] Fixed sitemap
+        -[12/15/2006] Fixed Donations to work with older dates
+        -[12/27/2006] PHPBB 2.0.22
+        -[12/27/2006] Fixed a download bug
+        -[12/27/2006] Changed download to switch to direct if the readfile fails
+        -[12/27/2006] NukeSentinel 2.5.04
+        -[12/29/2006] Fixed download permissions not saving
+        -[12/29/2006] Fixed quickreply killing modcp options
+        -[12/29/2006] Fixed modify themes not working
+        -[01/02/2007] Removed the ability to change home in block modules
+        -[01/02/2007] Secured weblinks a little bit
+        -[01/02/2007] Fixed glance news showing wrong date and time
+        -[01/02/2007] Fixed invalid session error on posting
+        -[01/02/2007] Changed autogroup to not grab anyone except regular users
+        -[01/04/2007] Fixed get_author to user $user_prefix - Thanks Rodmar
+        -[01/04/2007] Changed type validation back to using is_type
+        -[01/11/2007] Fixed a few minor type bugs
+        -[01/11/2007] Changed forum sessions to not append the sids when its a bot
+        -[01/23/2007] Added ability to turn off Sentinel
+        -[01/23/2007] RSS now does not have sentinel nor input filtering
+        -[01/23/2007] Removed illegal variables from the authors admin
+        -[01/24/2007] Improved donations check
+        -[01/24/2007] Added new icons to donations
+        -[01/24/2007] Added the ability to use cookie tracking
+        -[01/25/2007] Changed userinfo to get anon user
+        -[01/25/2007] Improved the logos
+        -[01/25/2007] Made sure there was user data in the session
+        -[01/26/2007] Fixed cache key problem
+        -[01/29/2007] Fixed YA cache problem
+        -[01/29/2007] Added sessions to YA signup
+        -[01/29/2007] Silenced mime_magic
+        -[01/29/2007] Checked for array in theme admin
+        -[01/29/2007] Approved users get AUC and PM
+        -[01/30/2007] Nuke Sentinel 2.5.05
+        -[01/30/2007] Fixed forum staff error
+    
+        JEFFB68CAM
+        -[11/21/2006] Fixed download error
+        -[12/21/2006] Fixed Statistics bug
+
+        TULISAN
+        -[11/18/2006] Fixed "more" link in Topics module
+        -[11/21/2006] Fixed hardcoded language in javascript.php
+        -[11/23/2006] Fixed TOS COPPA layout in YA (Thanks The_Mortal)
+        -[11/24/2006] Fixed bug redirection bug in PM (Thanks Rodmar)
+        -[11/24/2006] Integrated AUC in YA (Thanks Rodmar)
+        -[11/24/2006] Added AUC and Group Colors in Forums Admin Sections (Thanks Rodmar)
+        -[11/24/2006] Changed the links to groups module and profile module so it will go directly 
+                      to the right location and changed all & to ampersand in the URL's (Thanks Rodmar)
+        -[11/24/2006] Added AUC in Uploads Module (Thanks Rodmar)
+        -[11/25/2006] Fixed Include the block lang files typo in mainfile.php (Thanks Rodmar)
+        -[11/25/2006] Fixed wrong includes dir path in JAG_Whos_Been_Copy.php
+        -[11/25/2006] Minor code cleanup
+        -[11/25/2006] More <b></b> to <strong></strong> changes
+        -[11/26/2006] Added AUC in error log (Thanks Rodmar)
+        -[11/26/2006] Fixed bug in MetOpen Home Page
+        -[11/27/2006] Fixed hardcoded text in modules.php (Thanks X-Ception)
+        -[11/28/2006] Added downloads folder in theme edits folder
+        -[11/28/2006] Fixed bug in commentspopup_new.php
+        -[11/28/2006] Changed custom links to open in same window in blocks-Modules.php
+        -[12/05/2006] Removed remnants of forum scroll block mod (Thanks Rodmar)
+        -[12/07/2006] Fixed a bug that causes Wrong datatype error in admin/modules/blocks.php
+        -[12/07/2006] Fixed Tiny_MCE not loading more than once
+        -[12/12/2006] Added features splash page image in supp folder (Thanks MWard!)
+        -[12/14/2006] Fixed NUKE_BASE_DIR define and avatar directory size in forums (Thanks Rodmar)
+        -[12/15/2006] Fixed ad alignment bug in centrium theme (Thanks The_Mortal)
+        -[12/15/2006] Fixed includes/log/error.log not being CHMODDED in install.php (Thanks LiveFree)
+        -[12/16/2006] Fixed CHMOD problem in CalendarMx
+        -[12/16/2006] Fixed CHMOD var in FCKEditor
+        -[12/16/2006] Fixed installer bug in NSN Project
+        -[12/16/2006] Renamed class BBCode() to class BBCode_Arcade in arcade mod
+        -[12/19/2006] Added AUC in NSN News Module (Thanks Rodmar)
+        -[12/19/2006] Changed in Home icon in YA uncommented to show again 
+        -[12/31/2006] Got rid of the wrong data type for second argument warning
+        -[01/05/2007] Changed $prefix to $user_prefix in modules\Donations\admin\includes\add.php
+        -[01/07/2007] Added missing $user_prefix global in mainfile.php
+        -[01/11/2007] Fixed user_name to username in weblinks (Thanks Rodmar)
+        -[01/12/2007] Corrected use of $tipath in some modules
+        -[01/31/2007] Added The_Mortal's fix in the centrium theme
+        -[01/31/2007] Adjusted sentinel version in install.sql
+        -[01/31/2007] Adjusted sentinel version title in sentinel_upgrade.php
+
+        REVOLUTION
+
+        REORGANISATION
+        -[11/26/2006] Auto-Join Group -> sql-statement in functions_post fixed
+        -[11/26/2006] FancyNewsletter -> Delete Statement inserted (Thanks chrisy)
+        -[12/13/2006] Installer -> Changed check if safemod is on
+        -[12/14/2006] Encyclopedia -> Small bug in security-fix fixed
+        -[12/15/2006] usercp_register -> changed $prefix_users_temp to $user_prefix_users_temp
+        -[12/19/2006] changed those endless story with bbcode. posting_body.tpl now includes ../modules/Forums/bbcode_box/bbcode_box.js
+                      so changes have to be done only on one point. It there are other files ... they will follow
+        -[12/22/2006] changed path in posting_body.tpl -> tested with several php-versions and flash-themes
+        -[12/26/2006] AUC in NSN News Module (index.php) was missing -> added
+        -[01/04/2007] Fixed WebLinks -> Subcategory describtion wasn`t shown (Thanks ZeroQL)
+        -[01/04/2007] Added AUC_TABLE in constants.php
+        -[01/04/2007] staff.php -> Changed fix Tabledefinitions - now only selects active Teammembers from Users-Table

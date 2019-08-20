@@ -1,0 +1,24 @@
+// BEGIN - Add style sheet for collapsing forum block
+echo <<<_JS_
+<style type="text/css">
+<!--
+
+#listbutton{
+border:1px solid #4B4B4B;
+background-color:#F3F3F3;
+width:60px;
+height:12px;
+font: normal 11px Arial, Verdana, Helvetica, sans-serif;
+text-align:center;
+cursor:pointer;cursor:pointer;
+vertical-align:top;
+}
+
+.expandhighlight, .expandhighlight a{
+color:red;
+}
+
+-->
+</style>
+_JS_;
+// END - Add style sheet for collapsing forum block

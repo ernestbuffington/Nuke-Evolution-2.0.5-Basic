@@ -1,0 +1,35 @@
+/*****[NUKE-EVOLUTION BASIC: Upgrade PHPBB-Nuke ]************************
+
+ Before You Begin
+ ----------------
+ If you have not read the readme.txt in the previous folder you MUST
+ do so before you continue.
+ 
+ This upgrade is for those that need to bring thier phpbb 2.0.20 db to
+ a Nuke 7.6 DB
+ 
+ Read EACH step COMPLETELY before attempting that step!!!
+ 
+ First Step
+ ----------
+ Upload upgrade.php and the upgrade/ folder (upgrades\PHPBB\phpbb db - nuke db\upgrade\)
+ and all its files to your website's root.
+  
+ Second Step
+ -----------
+ Run http://www.yoursite.com/upgrade.php
+ 
+ This will give you 2 prompts:
+ Users - will upgrade the Users table and DELETE everything else!!
+ Users & Forum - Will upgrade your entire phpbb site to nuke and will delete nothing
+ 
+ Follow the prompts in the installer until it completes.
+ 
+ If you have any errors please write them down and bring them to the Evolution
+ support forums for help
+ 
+ Third Step
+ ----------
+ Return to the Third Step in the readme.txt located in the previous folder
+  
+ ************************************************************************\

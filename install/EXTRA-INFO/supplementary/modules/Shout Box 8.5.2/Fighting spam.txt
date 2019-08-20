@@ -1,0 +1,21 @@
+Shout Box - Fighting Spam
+-------------------------------------------
+
+First i want to mention that I hate spam as much as everyone else. I have always been aware that the shout box is yet another target for spammers. With this in mind, i have always been adding new mechanisms to the shout box to try to curb spam. The typical scenario for a spammer is to post a URL (link) in the shout box because they want you to go to their web site or improve their site's rankings.
+
+In versions previous to v8.0, i added some spam fighting tools to include:
+  -Duplicate posts are disallowed. This keeps spammers form posting their address over and over.
+  -Any email addresses put into the shout box are automatically encoded to combat harvesting.
+  -All URLs are made into the these formats [URL] [FTP] [AIM] [IRC] [TeamSpeak] [E-Mail] [Gopher]. This makes the links uninteresting, and unless you want to read the link URL by hovering over it with your mouse, you are not subjected to reading their website address. It also makes the shout box look cleaner.
+
+Some admins disallowed anonymous users from posting in the shout box alltogether. This did limit spam but it also limited the shout box's usability. v8.0 is yet another version with even more spam fighting tools. I rewrote the URL engine to address these and other issues.
+
+I added "Split permissions". This allows admins to disallow anonymous users from posting URLs in the shout box, yet allow registered users to post URLs in the shout box. Yes you can turn URLs off altogether. Now that you can disallow anonymous users from posting URLs, which are most likely spam anyways, you may now safely re-allow anonymous users to post comments in the shout box. The default option is to disallow anonymous user's from posting URLs.
+
+Another mechanism i have added in v8.0 is Google's "nofollow" tag to URLs. This will further discourage users from spamming links to try to boost their site's rankings due to link popularity. Forums and blogs will be implementing this mechanism as well. This cannot be turned off and will always be there.
+
+In version 8.5, i added a new admin option to block .xxx URLs no matter who posts them (even admins). This option is on by default. I also added code to stop attempts at defeating the URL engine with URLs like  "www . google . com". You can now ban subnets like 123.456.* format incase you are having trouble with spammers from another country.
+
+If you have more ideas about how to combat spam, please email me: webmaster@ourscripts.net
+
+Aric Bolf (SuperCat)

@@ -1,0 +1,130 @@
+#################################################################
+## MOD Title:           Random Sig
+##
+## PNP Version:         2.0.1
+##
+## MOD Author:          Technocrat (http://www.nuke-evolution.com)
+##
+## MOD Description:     Allows you to have a random sig (or image) displayed on sites
+## 
+## Installation Level:  Easy
+## Installation Time:   1 minute
+## Files To Edit (#):   .htaccess
+##
+## Lines To Add:         4
+##
+############################################################## 
+## Included Files:      sig.php
+##
+############################################################## 
+## Author Notes:
+##
+##    Any suggestions, issues, changes, ideas, comments, etc please visit nuke-evolution.com
+## 
+## Features:
+##
+##     Randomly displays jpg, gif, flash, and/or png sigs (or any other images).
+##
+## Credits:
+## 
+##    Everyone at http://www.platinummods.com for thier help testing this
+##
+## Additional:
+##    
+##    This currently will only work with jpgs, gifs, flash, and pngs.
+##    This will also only work with Apache sites that allow you to edit the .htaccess file & allows RewriteRules
+##    You must have at least 2 valid image files in the directory
+##    In theory this should work with any site that allows signatures or images
+## 
+##   Special Thanks to:
+##
+##        DaChaos for the help with the dynamic sig code
+## 
+## This MOD is released under the GPL License.
+############################################################## 
+## Mod History:
+##
+##        2007-04-05 - Version 2.0.1
+##            - Added flash
+##
+##        2007-03-14 - Version 2.0.0
+##            - Works now with animated gifs
+##            - Code cleanup
+##
+##        2005-03-08 - Version 1.0.0 [BETA 1]
+##            - Created
+##
+############################################################## 
+## Before Adding This MOD To Your Site, You Should Back Up All Files Related To This MOD 
+##############################################################
+#
+# STEP NUMBER I: Copy Files
+#
+Upload the content within the html folder. 
+
+You must first create a folder for each user you would like to share the sigs with. Example:
+    sigs/Technocrat/ -> will become sig-Technocrat.gif
+    sigs/JeFFb68CAM/ -> will become sig-JeFFb68CAM.gif
+
+Copy all the sigs you want to be displayed in your sigs folder
+  (DO NOT UPLOAD thumbs.db, index.html or anything else invalid, IMAGES ONLY!!).
+If you want to have another folder name for you sigs, just rename it and edit the sig.php file to match your new directory.
+  Instructions can be found at the bottom of this file.
+
+#
+# STEP NUMBER II: Modifying existing Files
+#
+
+# 
+#-----[ OPEN ]------------------------------------------ 
+# This should be on the root of your public_html or www and is the first file
+.htaccess
+
+# 
+#-----[ AT THE END ADD ]-------------------------------- 
+# Note: Make sure that you do not have the entry 'RewriteEngine on' already
+#       If you do then do not add RewriteEngine on again
+# 
+RewriteEngine on
+
+# Index
+RewriteRule ^sig-(.*).gif$ sig.php?user=$1 [L]
+
+# 
+#-----[ SAVE/CLOSE ALL FILES ]------------------------------------------------------ 
+# 
+
+# 
+#-----[ NOTES ]----------------------------------------- 
+# 
+On the site you want to have the random sig use
+Replace USERNAME with the name of the folder you created inside of the /sigs/ directory.
+
+[img]http://www.yoursite.com/sig-USERNAME.gif[/img]
+
+If you did everything correctly it should work
+
+# 
+#-----[ NOTES ]----------------------------------------- 
+# 
+http://www.yoursite.com/sig-USERNAME.gif 
+will work any where actually so feel free to play with it
+
+# 
+#-----[ NOTES ]----------------------------------------- 
+#
+If you want to use this for anything else like avatars
+
+Simply change the sig.php to whatever.php
+
+Open whatever.php and change
+
+//Change me
+$sig_folder = '/sigs/';
+To:
+//Change me
+$sig_folder = '/whatever/';
+
+Then follow the above steps again changing sig to whatever
+
+# EoM

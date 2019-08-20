@@ -1,0 +1,24 @@
+upgrade/install.sql
+upgrade/upgrade.sql
+config.php
+upgrade/config_blank.php
+###
+.htaccess [666]
+.staccess [666]
+ultramode.txt [777]
+includes/log/error.log [757]
+includes/log/admin.log [757]
+modules/Forums/cache/ [757]
+modules/Forums/files/ [757]
+modules/Forums/files/thumbs/ [757]
+modules/Forums/images/avatars/ [757]
+modules/Forums/language/lang_english/lang_bbcode.php [666]
+modules/Forums/language/lang_english/lang_faq.php [666]
+modules/Forums/language/lang_english/lang_faq_attach.php [666]
+modules/Forums/language/lang_english/lang_rules.php [666]
+modules/Forums/modules/ [757]
+modules/Forums/modules/cache/ [757]
+modules/Forums/modules/cache/explain/ [757]
+modules/Supporters/images/supporters/ [757]
+modules/Fancy_NewsLetter/archives/ [757]
+includes/cache/ [757]

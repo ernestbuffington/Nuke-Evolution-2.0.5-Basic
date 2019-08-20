@@ -1,0 +1,195 @@
+##############################################################
+## MOD Title:  Arcade Forum Navigation Link 1.0.0
+##
+## MOD Author: Rodmar - http://www.evolved-systems.net
+##
+## MOD Description: This MOD will add a new Forum Navigation Link
+##                  which points to the Arcade.
+##
+## Difficulty : Easy
+## Installation Time : 3 Minutes
+##
+## Files to Edit :
+## --------------------
+##
+##         includes/page_header.php
+##
+##         modules/Forums/templates/subSilver/subSilver.cfg
+##
+##         themes/YOUR_THEME/forums/forums.cfg
+##
+##         themes/YOUR_THEME/forums/overall_header.tpl
+##
+##         modules/Forums/templates/subSilver/overall_header.tpl
+##
+## Included Files :
+## ----------------
+##
+##          themes/YOUR_THEME/forums/images/icon_mini_arcade.gif
+##
+##          modules/Forums/templates/subSilver/images/icon_mini_arcade.gif
+##
+##############################################################
+
+#
+#-----[ NOTE ]-----------------------------------------
+#
+For every file you open you will see something like:
+/*****[CHANGES]**********************************************************
+-=[Mod]=-
+      Advanced Username Color                  v1.0.5       06/11/2005
+      Recent Topics                            v1.2.4       06/11/2005
+      Resize Posted Images                     v2.4.5       06/15/2005
+      Quick Search                             v3.0.1       08/23/2005
+      Ranks summarize                          v1.0.4       06/24/2005
+      Staff Site                               v2.0.3       06/24/2005
+      Forum Statistics                         v3.0.0       06/25/2005
+      Users of the day                         v2.1.0       07/02/2005
+      CNBYA Modifications                      v1.0.0       07/05/2005
+      Disable Board Admin Override             v0.1.1       07/06/2005
+      Theme Simplifications                    v1.0.0       07/19/2005
+      Advanced Time Management                 v2.2.0       09/12/2005
+      Online/Offline/Hidden                    v2.2.6       08/21/2005
+      Hidden Status Viewing                    v1.0.0       08/21/2005
+      Online Time                              v1.0.0       08/21/2005
+      Show Users Today Toggle                  v1.0.0       08/24/2005
+      Suppress Popup                           v1.0.0       09/13/2005
+ ************************************************************************/
+
+I would suggest adding an entry for the arcade navigation addon in every
+file but that is completely up to you.  Here is what that would look like:
+/*****[CHANGES]**********************************************************
+-=[Mod]=-
+      Advanced Username Color                  v1.0.5       06/11/2005
+      Recent Topics                            v1.2.4       06/11/2005
+      Resize Posted Images                     v2.4.5       06/15/2005
+      Quick Search                             v3.0.1       08/23/2005
+      Ranks summarize                          v1.0.4       06/24/2005
+      Staff Site                               v2.0.3       06/24/2005
+      Forum Statistics                         v3.0.0       06/25/2005
+      Users of the day                         v2.1.0       07/02/2005
+      CNBYA Modifications                      v1.0.0       07/05/2005
+      Disable Board Admin Override             v0.1.1       07/06/2005
+      Theme Simplifications                    v1.0.0       07/19/2005
+      Advanced Time Management                 v2.2.0       09/12/2005
+      Online/Offline/Hidden                    v2.2.6       08/21/2005
+      Hidden Status Viewing                    v1.0.0       08/21/2005
+      Online Time                              v1.0.0       08/21/2005
+      Show Users Today Toggle                  v1.0.0       08/24/2005
+      Suppress Popup                           v1.0.0       09/13/2005
+      Theme Simplifications (Arcade)           v1.0.0       10/18/2005
+ ************************************************************************/
+
+#
+#-----[ UPLOAD ]------------------------------------------
+#
+Change YOUR_THEME to the actual theme name and upload all
+the files in the html folder keeping the directory
+structure.
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+includes/page_header.php
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+        'I_MINI_LOGIN_LOGOUT' => '<img src="' . $images['Mini_Login_Logout'] . '" width="12" height="13" border="0" alt="' . $lang['Login_Logout'] . '" hspace="3" />',
+/*****[END]********************************************
+ [ Mod:     Theme Simplifications              v1.0.0 ]
+ ******************************************************/
+
+#
+#-----[ REPLACE WITH ]-----------------------------------
+#
+        'I_MINI_LOGIN_LOGOUT' => '<img src="' . $images['Mini_Login_Logout'] . '" width="12" height="13" border="0" alt="' . $lang['Login_Logout'] . '" hspace="3" />',
+/*****[BEGIN]******************************************
+ [ Mod:     Theme Simplifications (Arcade)     v1.0.0 ]
+ ******************************************************/
+        'I_MINI_ARCADE' => '<img src="' . $images['Mini_Arcade'] . '" width="12" height="13" border="0" alt="' . $lang['lib_arcade'] . '" hspace="3" />',
+        'U_ARCADE' => append_sid("arcade.$phpEx"),
+        'L_ARCADE' => $lang['lib_arcade'],
+/*****[END]********************************************
+ [ Mod:     Theme Simplifications (Arcade)     v1.0.0 ]
+ [ Mod:     Theme Simplifications              v1.0.0 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+modules/Forums/templates/subSilver/subSilver.cfg
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+$images['Mini_Login_Logout'] = "modules/Forums/$current_template_images/icon_mini_login.gif";
+/*****[END]********************************************
+ [ Mod:     Theme Simplifications              v1.0.0 ]
+ ******************************************************/
+
+#
+#-----[ REPLACE WITH ]-----------------------------------
+#
+$images['Mini_Login_Logout'] = "modules/Forums/$current_template_images/icon_mini_login.gif";
+/*****[BEGIN]******************************************
+ [ Mod:     Theme Simplifications (Arcade)     v1.0.0 ]
+ ******************************************************/
+$images['Mini_Arcade'] = "modules/Forums/$current_template_images/icon_mini_arcade.gif";
+/*****[END]********************************************
+ [ Mod:     Theme Simplifications (Arcade)     v1.0.0 ]
+ [ Mod:     Theme Simplifications              v1.0.0 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+themes/YOUR_THEME/forums/forums.cfg
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+$images['Mini_Login_Logout'] = "$current_template_images/icon_mini_login.gif";
+/*****[END]********************************************
+ [ Mod:     Theme Simplifications              v1.0.0 ]
+ ******************************************************/
+
+#
+#-----[ REPLACE WITH ]-----------------------------------
+#
+$images['Mini_Login_Logout'] = "$current_template_images/icon_mini_login.gif";
+/*****[BEGIN]******************************************
+ [ Mod:     Theme Simplifications (Arcade)     v1.0.0 ]
+ ******************************************************/
+$images['Mini_Arcade'] = "$current_template_images/icon_mini_arcade.gif";
+/*****[END]********************************************
+ [ Mod:     Theme Simplifications (Arcade)     v1.0.0 ]
+ [ Mod:     Theme Simplifications              v1.0.0 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+themes/YOUR_THEME/forums/overall_header.tpl
+
+AND
+
+modules/Forums/templates/subSilver/overall_header.tpl
+
+#
+#-----[ FIND ]-----------------------------------------
+# Note: Depending on your theme, the below line might vary
+#       If so, try to look for:
+# &nbsp;<a href="{U_RANKS}"
+#
+&nbsp;<a href="{U_RANKS}" class="mainmenu">{I_RANKS}{L_RANKS}</a>
+
+#
+#-----[ BEFORE, ADD ]-----------------------------------
+#
+&nbsp;<a href="{U_ARCADE}" class="mainmenu">{I_MINI_ARCADE}{L_ARCADE}</a>&nbsp;
+
+#
+#-----[ SAVE/CLOSE/UPLOAD ALL FILES ]------------------------------------------
+#
+# EoM

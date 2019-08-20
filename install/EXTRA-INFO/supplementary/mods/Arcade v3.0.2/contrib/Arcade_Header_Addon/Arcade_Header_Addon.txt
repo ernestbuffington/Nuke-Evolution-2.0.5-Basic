@@ -1,0 +1,218 @@
+############################################################## 
+## MOD Title : Add-On Arcade Header
+## MOD Author : CanoScan < CanoScan_102@hotmail.com >
+## MOD Ported By : Phantomk
+## Simplified for Nuke-Evolution by Rodmar
+## 
+## MOD Description : Adds a header to the games page.
+##
+## MOD Version : 1.0 
+##
+## MOD Compatibility: phpNuke 6.5+ and Mod Arcade V3.0.0 + ONLY
+## 
+## Difficulty Level : Easy 
+## Installation Time :  2 minutes 
+##
+## MOD Files to Edit :
+##      modules/Forums/games.php  
+##      modules/Forums/templates/subSilver/games_body.tpl (**)
+##
+##      (**)Replace modules/Forums/templates/subSilver with themes/ALL_THEMES/forums/ if you use a combined theme.
+##
+##
+############################################################## 
+## Check www.portemods.com or www.nukegaming.com for updates and 
+## the latest version of this port
+############################################################## 
+## Historique du MOD : 
+##   2004-07-01 - Version 1.0
+##      - La version est cloturé et n'est plus une beta.
+##   2004-06-25 - Version 0.5.2
+##      - Amélioration de la diposition de l'entete.
+##   2004-06-25 - Version 0.5.1
+##      - Affichage d'une image "aucun avatar", si le membre en question n'en a pas.
+##   2004-06-25 - Version 0.5.0
+##      - Affichage du dernier score éfféctué.
+##   2004-06-25 - Version 0.4.0
+##      - Affichage des 5 derniers record éfféctués.
+##   2004-06-25 - Version 0.3.0
+##      - Add-on totalement intégré dans un fichier à part, ce qui permit la correction d'un bug.
+##   2004-06-15 - Version 0.2.2
+##      - Correction des defauts du tableau
+##      - Redimensionnage des avatars exedant la valeur definie dans la configuration de l'arcade
+##      - Si le membre ne possede pas d'avatar, alors il y aura une image : No avatar
+##   2004-06-13 - Version 0.2.1
+##      - Correction de bugs
+##   2004-06-14 - Version 0.2.0
+##      - Ajout de l'affichage de l'avatar dans l'entete
+##      - Ajout de l'affichage du pseudo dans l'entete
+##      - Ajout de l'affichage du rang dans l'entete
+##      - Ajout de l'affichage du top10 des meilleurs joueur dans l'entete
+##   2004-06-13 - Version 0.1.1
+##      - Correction de bugs
+##   2004-06-12 - Version 0.1.0 
+##      - Affichage du nombre de victoires
+##      - Affichage d'un lien menant vers les statistiques du membre
+## 
+###############################################################
+
+###################################################################################
+#                                                                                 #
+# The following modifications are optional. If you want the stats to be displayed #
+# at the top of the page when you play the games then make the following          #
+# modifications:                                                                  #
+#                                                                                 #
+###################################################################################
+#
+#-----[ UPLOAD ]------------------------------------------
+#
+Upload all the files in the html folder keeping the
+directory structure.
+
+#
+#-----[ NOTE ]-----------------------------------------
+#
+For every file you open you will see something like:
+
+/*****[CHANGES]**********************************************************
+-=[Base]=-
+      Nuke Patched                             v3.1.0       09/20/2005
+-=[Mod]=-
+      Advanced Username Color                  v1.0.5       09/20/2005
+ ************************************************************************/
+
+I would suggest adding an entry for the arcade in every file but that
+is completely up to you.  Here is what that would look like:
+
+/*****[CHANGES]**********************************************************
+-=[Base]=-
+      Nuke Patched                             v3.1.0       09/20/2005
+-=[Mod]=-
+      Advanced Username Color                  v1.0.5       09/20/2005
+      Arcade Header Add-On                     v1.0.0       09/20/2005
+ ************************************************************************/
+
+# 
+#-----[ OPEN ]----------------------------------------------------------- 
+# 
+modules/Forums/games.php
+
+# 
+#-----[ FIND ]----------------------------------------------------------- 
+# 
+include($phpbb_root_path . 'whoisplaying.'.$phpEx);
+
+# 
+#-----[ AFTER, ADD ]-----------------------------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Header Add-On               v1.0.0 ]
+ ******************************************************/
+include($phpbb_root_path . 'headingarcade.'.$phpEx);
+/*****[END]********************************************
+ [ Mod:     Arcade Header Add-On               v1.0.0 ]
+ ******************************************************/
+
+# 
+#-----[ OPEN ]----------------------------------------------------------- 
+# 
+themes/ALL_THEMES/forums/games_body.tpl
+
+AND
+
+modules/Forums/templates/subSilver/games_body.tpl
+
+# 
+#-----[ FIND ]----------------------------------------------------------- 
+# 
+            <a href="{U_INDEX}" class="nav">{L_INDEX}</a>
+            {NAV_DESC}&nbsp;>
+        </span>
+        <span class="nav">{L_GAME}</span>
+      </td>
+    </tr>
+  </table>
+
+# 
+#-----[ AFTER, ADD ]----------------------------------------------------- 
+#
+<br />
+{HEADINGARCADE}
+<br />
+
+
+
+###################################################################################
+#                                                                                 #
+# The following modifications are optional.  In addition to the users statistics  #
+# at the bottom of the games.php page, it will display an image and "No Wins" if  #
+# the champion in question does not have any.                                     #
+#                                                                                 #
+###################################################################################
+# 
+#-----[ OPEN ]----------------------------------------------------------- 
+# 
+modules/Forums/games.php
+
+# 
+#-----[ FIND ]---------------------------------------------------------- 
+# 
+        'HIGHSCORE' => number_format($row['highscore']),
+
+# 
+#-----[ AFTER, ADD ]---------------------------------------------------- 
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Header Add-On               v1.0.0 ]
+ ******************************************************/
+        'URL_STATS' => '<a class="genmed" href="' . append_sid("statarcade.$phpEx?uid=" . $userdata['user_id'] ) . '">' . $lang['statuser'] . '</a> ', 
+/*****[END]********************************************
+ [ Mod:     Arcade Header Add-On               v1.0.0 ]
+ ******************************************************/
+
+# 
+#-----[ FIND ]---------------------------------------------------------- 
+# 
+                case USER_AVATAR_GALLERY: 
+                    $avatar_img = ( $board_config['allow_avatar_local'] ) ? '<img src="' . $board_config['avatar_gallery_path'] . '/' . $user_avatar . '" alt="" border="0"  hspace="20" align="center" valign="center"  onload="resize_avatar(this)"/>' : ''; 
+                    break; 
+        } 
+}
+
+# 
+#-----[ AFTER, ADD ]---------------------------------------------------- 
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade Header Add-On               v1.0.0 ]
+ ******************************************************/
+If ( empty($avatar_img) ) 
+{ 
+        $avatar_img = '<img src="modules/Forums/templates/subSilver/images/noavatar.gif" alt="No Avatar" border="0" />'; 
+}
+/*****[END]********************************************
+ [ Mod:     Arcade Header Add-On               v1.0.0 ]
+ ******************************************************/
+
+# 
+#-----[ OPEN ]----------------------------------------------------------- 
+# 
+themes/ALL_THEMES/forums/games_body.tpl
+
+AND
+
+modules/Forums/templates/subSilver/games_body.tpl
+
+# 
+#-----[ FIND ]---------------------------------------------------------- 
+# 
+{URL_SCOREBOARD}]
+
+# 
+#-----[ AFTER, ADD ]---------------------------------------------------- 
+#
+&nbsp;-&nbsp;[<span class="cattitle">&nbsp;{URL_STATS}</span>]
+
+# 
+#-----[ SAVE/CLOSE/UPLOAD ALL FILES ]------------------------------------------
+# 
+# EoM

@@ -1,0 +1,197 @@
+#################################################################
+## MOD Title:           ImageShack Image Uploader
+##
+## Version:        1.0.0
+## MOD Description:     Adds an area to your forums to upload an image to the
+##                      ImageShack website.
+##
+## MOD Author:          Technocrat
+## 
+## Installation Level:  Easy
+## Installation Time:   2 Mins
+## Files To Edit (#):   1
+##                      
+##
+## Lines To Add:         5
+##
+############################################################## 
+## Included Files:    html/blocks/block-ImageShack
+##
+############################################################## 
+## For Security Purposes, Please Check: www.nuke-evolution.com for updates or help
+############################################################## 
+## Author Notes: 
+## 
+##     Tested on Nuke-Evolution Beta 1 & Beta 2
+##
+##    Any suggestions, issues, changes, ideas, comments, etc please visit nuke-evolution.com
+## 
+## Features: 
+##
+##     See discription
+##
+## Credits: 
+## 
+##    muratti & Effectica for pointing this out
+##
+## Additional: 
+##    
+##    The included block is rather large and would NOT be good for a side block.
+## 
+## Special Thanks to: 
+##
+##    Everyone at platinummods.com & nuke-evolution.com
+## 
+## This MOD is released under the GPL License. 
+############################################################## 
+## History: 
+##
+##        2005-10-14 - Version 1.0.0
+##            - Created
+##
+############################################################## 
+## Before Adding This MOD To Your Site, You Should Back Up All Files Related To This MOD 
+##############################################################
+#
+# Here starts the Installation, follow the steps very close and be sure that you have found the 
+#   correct lines
+
+#
+# STEP NUMBER I: Modifying existing Files
+#
+
+#
+#-----[ NOTE ]------------------------------------------
+#
+The block and module are OPTIONAL.  If you would like to use those
+with or instead of editing your theme you can simply upload the coresponding file(s)
+and activate it.
+
+#
+#-----[ NOTE ]------------------------------------------
+#
+The following steps will show you how to put this in different places on your
+Forum or Site.  You DO NOT have to do all of these.  Read where the edits
+will place it and decide if that is where you want it to be.
+
+#
+#-----[ NOTE ]------------------------------------------
+#
+If you would like to change the text color you can do so by changing
+111111 to the correct HEX color number in the following adds or inside
+of the blocks/block-ImageShack or modules/ImageShack/index.php
+
+
+=========================================================================
+#
+#-----[ NOTE ]------------------------------------------
+#
+This will place the uploader at the bottom of the posting window
+just below the submit button but above the jump to box
+
+#
+#-----[ OPEN ]------------------------------------------ 
+#
+themes/YOUR_THEMES/forums/posting_body.tpl
+
+# 
+#-----[ FIND ]------------------------------------------
+#
+<table width="100%" cellspacing="2" border="0" align="center">
+  <tr> 
+    <td valign="top" align="right">{JUMPBOX}</td>
+  </tr>
+</table>
+
+# 
+#-----[ BEFORE ADD ]------------------------------------
+#
+<iframe src="http://imageshack.us/iframe.php?txtcolor=111111&type=blank&size=30" scrolling="no" allowtransparency="true" frameborder="0" width="280" height="70">Update your browser for ImageShack.us!</iframe>
+
+
+
+=========================================================================
+#
+#-----[ NOTE ]------------------------------------------
+#
+This will place the uploader either above the attachment box
+or below it depending on what you choose, on the posting window.
+
+#
+#-----[ OPEN ]------------------------------------------ 
+#
+themes/YOUR_THEMES/forums/posting_body.tpl
+
+# 
+#-----[ FIND ]------------------------------------------
+#
+{ATTACHBOX}
+
+#
+#-----[ BEFORE ADD ]------------------------------------
+#
+# If you would like this after the attachment box then add this code
+# after the Find line
+#
+<tr align="left"><td class="row1" valign="top">
+<iframe src="http://imageshack.us/iframe.php?txtcolor=111111&type=blank&size=30" scrolling="no" allowtransparency="true" frameborder="0" width="280" height="70">Update your browser for ImageShack.us!</iframe>
+</td><td class="row1" valign="top"></td></tr>
+
+
+
+=========================================================================
+#
+#-----[ NOTE ]------------------------------------------
+#
+This will place the uploader below the smiles on the posting window
+
+#
+#-----[ OPEN ]------------------------------------------ 
+#
+themes/YOUR_THEMES/forums/post_body.tpl
+
+# 
+#-----[ FIND ]------------------------------------------
+#
+                <!-- END switch_smilies_extra -->
+              </table>
+            </td>
+          </tr>
+
+#
+#-----[ AFTER ADD ]-------------------------------------
+#
+<tr align="center" valign="middle"><td>
+<iframe src="http://imageshack.us/iframe.php?txtcolor=111111&type=blank&size=30" scrolling="no" allowtransparency="true" frameborder="0" width="280" height="70">Update your browser for ImageShack.us!</iframe>
+</td></tr>
+
+
+
+=========================================================================
+#
+#-----[ NOTE ]------------------------------------------
+#
+This will place the uploader at the bottom of the screen
+above the footer for the entire site
+
+#
+#-----[ OPEN ]------------------------------------------ 
+#
+footer.php
+
+# 
+#-----[ FIND ]------------------------------------------
+#
+foot();
+
+#
+#-----[ BEFORE ADD ]------------------------------------
+#
+echo '<iframe src="http://imageshack.us/iframe.php?txtcolor=111111&type=blank&size=30" scrolling="no" allowtransparency="true" frameborder="0" width="280" height="70">Update your browser for ImageShack.us!</iframe>';
+
+
+#
+#-----[ SAVE/CLOSE/UPLOAD ALL FILES ]------------------------------------------
+#
+
+# EoM

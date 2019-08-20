@@ -1,0 +1,15 @@
+/************************************************************************
+   Nuke-Evolution: No Queries Modules Block
+   ============================================
+   Copyright (c) 2005 by The Nuke-Evolution Team
+  
+   Filename      : install.txt
+   Author        : Quake (www.nuke-evolution.com)
+   Version       : 1.0.0
+   Date          : 11/05/2005 (mm-dd-yyyy)
+                                                                        
+   Notes         : When caching enabled, this block shows all of your
+                   active modules without using any queries. Saves speed ;)
+************************************************************************/
+
+[ Just copy block-Modules.php in your blocks folder and your done :) ]

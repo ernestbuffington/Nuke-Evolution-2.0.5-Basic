@@ -1,0 +1,20 @@
+
+Shout Box - remove old files
+============================================
+
+You may safely remove these files. They have either moved or are no longer needed:
+
+  /modules/Shout_Box/help.php
+  /themes/<YOUR_THEMES>/shoutColors.php
+  /themes/<YOUR_THEMES>/images/shout_box/up.gif
+  /themes/<YOUR_THEMES>/images/shout_box/down.gif
+  /themes/<YOUR_THEMES>/images/shout_box/pause.gif
+  /images/blocks/Shout_Box/paypal.gif
+  /images/blocks/Shout_Box/up.gif
+  /images/blocks/Shout_Box/down.gif
+  /images/blocks/Shout_Box/pause.gif
+
+  You may remove the shout box language definitions from within
+  the admin files: /admin/language/lang-english.php
+  the block files : /language/lang-english.php
+  You will need to edit these files and re-upload.

@@ -1,0 +1,30 @@
+/*****[NUKE-EVOLUTION BASIC: Upgrade PHPBB ]***************************
+
+ Before You Begin
+ ----------------
+ If you have not read the readme.txt in the previous folder you MUST
+ do so before you continue.
+ 
+ This upgrade is for those that need to bring thier phpbb db to 2.0.20
+ 
+ Read EACH step COMPLETELY before attempting that step!!!
+ 
+ First Step
+ ----------
+ Upload the upgrade/ folder (upgrades\PHPBB\phpbb 2.0.x-2.0.20\upgrade\) and 
+ all its files to your website's root.
+  
+ Second Step
+ -----------
+ Run http://www.yoursite.com/upgrade/update_to_latest.php
+ 
+ Follow the prompts in the installer until it completes.
+  
+ If you have any problems or errors you can find more information at
+ http://www.phpbb.com
+ 
+ Third Step
+ ----------
+ Return to the Second Step in the readme.txt located in the previous folder
+  
+ ************************************************************************\

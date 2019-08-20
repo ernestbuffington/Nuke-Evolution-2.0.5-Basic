@@ -1,0 +1,4 @@
+AvantGo Installation:
+
+1. Simply upload the content within the html folder to your root directory
+2. Go to your Nuke-Evolution Modules Administration and activate the module

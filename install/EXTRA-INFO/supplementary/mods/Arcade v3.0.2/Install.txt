@@ -1,0 +1,499 @@
+##############################################################
+## MOD Title:  Arcade v 3.0.2
+##
+## phpBB MOD Author: Giefca - giefca@hotmail.com - http://www.gf-phpbb.com
+## Ported by a team of dedicated Nukers at www.portedmods.com
+## Simplified for Nuke-Evolution by Technocrat & Rodmar
+##
+## Difficulty : Easy
+## Installation Time : 15 Minutes
+##
+## Files to Edit :
+## --------------------
+##
+##         index.php
+##
+##         includes/constants.php
+##         includes/usercp_viewprofile.php
+##
+##         modules/Forums/viewonline.php
+##
+##         modules/Forums/admin/index.php
+##         modules/Forums/admin/admin_users.php
+##         
+##         modules/Forums/language/lang_english/lang_main.php
+##
+##         themes/YOUR_THEME/forums/profile_view_body.tpl
+##         modules/Forums/templates/subSilver/profile_view_body.tpl
+##
+## Included Files :
+## ----------------
+##
+##          arcade.php
+##          newscore.php
+## 
+##          blocks/block-Arcade.php
+##          blocks/block-Arcade-Center.php
+##          blocks/block-Random-Games.php
+## 
+##          images/arcadelogo.gif
+## 
+##          includes/functions_arcade.php
+## 
+##          modules/Forums/arcade.php
+##          modules/Forums/arcade_search.php
+##          modules/Forums/comments.php
+##          modules/Forums/comments_list.php
+##          modules/Forums/comments_new.php
+##          modules/Forums/commentspopup_new.php
+##          modules/Forums/games.php
+##          modules/Forums/gamespopup.php
+##          modules/Forums/hall_of_fame.php
+##          modules/Forums/headingarcade.php
+##          modules/Forums/proarcade.php
+##          modules/Forums/scoreboard.php
+##          modules/Forums/statarcade.php
+##          modules/Forums/toparcade.php
+##          modules/Forums/whoisplaying.php
+## 
+##          modules/Forums/admin/admin_arcade.php
+##          modules/Forums/admin/admin_arcade_add.php
+##          modules/Forums/admin/admin_arcade_auth.php
+##          modules/Forums/admin/admin_arcade_checking.php
+##          modules/Forums/admin/admin_arcade_comments.php
+##          modules/Forums/admin/admin_arcade_games.php
+##          modules/Forums/admin/arcade_elmt.php
+##
+##          modules/Forums/gf_funcs/gen_funcs.php
+##          modules/Forums/gf_funcs/index.html
+##
+##          modules/Forums/games/index.html
+##          modules/Forums/games/pics/arcade.gif
+##          modules/Forums/games/pics/index.html
+##
+##          modules/Forums/images/arrow_ltr.gif
+##
+##          modules/Forums/language/lang_english/lang_main_arcade.php
+##          modules/Forums/language/lang_english/lang_admin_arcade.php
+##
+##          themes/YOUR_THEME/forums/arcade_body.tpl 
+##          themes/YOUR_THEME/forums/arcade_cat_body.tpl 
+##          themes/YOUR_THEME/forums/comments_body.tpl 
+##          themes/YOUR_THEME/forums/comments_list_body.tpl 
+##          themes/YOUR_THEME/forums/comments_new_body.tpl 
+##          themes/YOUR_THEME/forums/comments_select_body.tpl 
+##          themes/YOUR_THEME/forums/commentspopup_new_body.tpl 
+##          themes/YOUR_THEME/forums/games_body.tpl 
+##          themes/YOUR_THEME/forums/gamespopup_body.tpl 
+##          themes/YOUR_THEME/forums/gamespopup_finish.tpl 
+##          themes/YOUR_THEME/forums/hall_of_fame.tpl 
+##          themes/YOUR_THEME/forums/headingarcade_body.tpl 
+##          themes/YOUR_THEME/forums/scoreboard_body.tpl 
+##          themes/YOUR_THEME/forums/statarcade_body.tpl 
+##          themes/YOUR_THEME/forums/toparcade_body.tpl 
+##          themes/YOUR_THEME/forums/whoisplaying_body.tpl
+##
+##          modules/Forums/templates/subSilver/admin/admin_arcade_comments_body.tpl
+##          modules/Forums/templates/subSilver/forums/admin/admin_edit_comments_body.tpl
+##          modules/Forums/templates/subSilver/forums/admin/admin_edit_games.tpl
+##          modules/Forums/templates/subSilver/forums/admin/arcade_add_body.tpl
+##          modules/Forums/templates/subSilver/forums/admin/arcade_cat_delete_body.tpl
+##          modules/Forums/templates/subSilver/forums/admin/arcade_cat_manage_body.tpl
+##          modules/Forums/templates/subSilver/forums/admin/arcade_catedit_body.tpl
+##          modules/Forums/templates/subSilver/forums/admin/arcade_config_body.tpl
+##          modules/Forums/templates/subSilver/forums/admin/arcade_manage_body.tpl
+##          modules/Forums/templates/subSilver/forums/admin/auth_arcade_body.tpl
+## 
+##          modules/Forums/templates/subSilver/images/couronne.gif
+##          modules/Forums/templates/subSilver/images/delfavs.gif
+##          modules/Forums/templates/subSilver/images/favs.gif
+##          modules/Forums/templates/subSilver/images/loupe.gif
+##          modules/Forums/templates/subSilver/images/scoreboard.gif
+##
+##############################################################
+#
+#-----[ UPLOAD ]------------------------------------------
+#
+Upload all the files in the html folder keeping the
+directory structure.
+
+#
+#-----[ SQL ]------------------------------------------
+#
+Use the SQL file located in the SQL folder 
+OR 
+Upload arcade_install.php to the root of your site and 
+run http://www.yoursite.com/arcade_install.php , it's up to you :)
+
+#
+#-----[ NOTE ]-----------------------------------------
+#
+For every file you open you will see something like:
+/*****[CHANGES]**********************************************************
+-=[Base]=-
+      Nuke Patched                             v3.1.0       06/26/2005
+-=[Mod]=-
+      Lock Modules                             v1.0.0       08/04/2005
+ ************************************************************************/
+
+I would suggest adding an entry for the arcade in every file but that
+is completely up to you.  Here is what that would look like:
+/*****[CHANGES]**********************************************************
+-=[Base]=-
+      Nuke Patched                             v3.1.0       06/26/2005
+-=[Custom]=-
+      Lock Modules                             v1.0.0       08/04/2005
+      Arcade                                   v3.0.2       09/16/2005
+ ************************************************************************/
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+index.php
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+/*--ARCADE MOD--*/
+
+#
+#-----[ REPLACE WITH ]---------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+//Arcade MOD - IBProSupport
+$arcade = $HTTP_GET_VARS['act'];
+$newscore = $HTTP_GET_VARS['do'];
+if($arcade == 'Arcade' && $newscore='newscore')
+{
+$gamename = str_replace("\'","''",$HTTP_POST_VARS['gname']);
+$gamename = preg_replace(array('#&(?!(\#[0-9]+;))#', '#<#', '#>#'), array('&amp;', '&lt;', '&gt;'),$gamename);
+$gamescore = intval($HTTP_POST_VARS['gscore']);
+
+//Get Game ID
+$row = $db->sql_fetchrow($db->sql_query("SELECT game_id FROM ".$prefix."_bbgames WHERE game_scorevar='$gamename'"));
+$gid = intval($row['game_id']);
+
+$ThemeSel = get_theme();
+echo "<link rel=\"StyleSheet\" href=\"themes/".$ThemeSel."/style/style.css\" type=\"text/css\">\n\n\n";
+echo "<form method='post' name='ibpro_score' action='modules.php?name=Forums&amp;file=proarcade&amp;valid=X&amp;gpaver=GFARV2'>";
+echo "<input type=hidden name='vscore' value='".$gamescore."'>";
+echo "<input type=hidden name='gid' value='".$gid."'>";
+echo "</form>";
+
+echo "<script type=\"text/javascript\">";
+echo "window.onload = function(){document.forms[\"ibpro_score\"].submit()}";
+echo "</script>";
+exit;
+}
+/*****[END]********************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+includes/constants.php
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+/*--ARCADE MOD #1--*/
+
+#
+#-----[ REPLACE WITH ]---------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+define('PAGE_GAME', -50);
+define('PAGE_ARCADES', -51);
+define('PAGE_TOPARCADES', -52);
+define('PAGE_STATARCADES', -53);
+define('PAGE_SCOREBOARD', -54);
+/*****[END]********************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+ 
+#
+#-----[ FIND ]-----------------------------------------
+#
+/*--ARCADE MOD #2--*/
+
+#
+#-----[ REPLACE WITH ]---------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+define('GAMES_TABLE', $prefix.'_bbgames');
+define('SCORES_TABLE', $prefix.'_bbscores');
+define('GAMEHASH_TABLE', $prefix.'_bbgamehash');
+define('HACKGAME_TABLE', $prefix.'_bbhackgame');
+define('ARCADE_CATEGORIES_TABLE', $prefix.'_bbarcade_categories');
+define('ARCADE_TABLE', $prefix.'_bbarcade');
+define('AUTH_ARCADE_ACCESS_TABLE', $prefix.'_bbauth_arcade_access');
+define('COMMENTS_TABLE', $prefix.'_bbarcade_comments'); 
+define('ARCADE_FAV_TABLE', $prefix.'_bbarcade_fav');
+/*****[END]********************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+includes/usercp_viewprofile.php
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+/*--ARCADE MOD--*/
+
+#
+#-----[ REPLACE WITH ]---------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+    'L_ARCADE' => $lang['lib_arcade'],
+    'URL_STATS' => '<a class="genmed" href="' . append_sid("statarcade.$phpEx?uid=" . $profiledata['user_id'] ) . '">' . $lang['statuser'] . '</a>',
+/*****[END]********************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+modules/Forums/admin/index.php
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+#
+/*--ARCADE MOD #1--*/
+
+#
+#-----[ REPLACE WITH ]---------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+                                                case PAGE_GAME:
+                                                        $location = $lang['Playing_game'];
+                                                        $location_url = "index.$phpEx?pane=right";
+                                                        break;
+                                                case PAGE_ARCADES:
+                                                        $location = $lang['Viewing_arcades'];
+                                                        $location_url = "index.$phpEx?pane=right";
+                                                        break;
+                                                case PAGE_TOPARCADES:
+                                                        $location = $lang['Viewing_toparcades'];
+                                                        $location_url = "index.$phpEx?pane=right";
+                                                        break;
+                                                case PAGE_STATARCADES:
+                                                        $location = $lang['watchingstats'];
+                                                        $location_url = "index.$phpEx?pane=right";
+                                                        break;
+                                                case PAGE_SCOREBOARD:
+                                                        $location = $lang['watchingboard'];
+                                                        $location_url = "index.$phpEx?pane=right";
+                                                        break;
+/*****[END]********************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+#
+/*--ARCADE MOD #2--*/
+
+#
+#-----[ REPLACE WITH ]---------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+                                        case PAGE_GAME:
+                                                $location = $lang['Playing_game'];
+                                                $location_url = "index.$phpEx?pane=right";
+                                                break;
+                                        case PAGE_ARCADES:
+                                                $location = $lang['Viewing_arcades'];
+                                                $location_url = "index.$phpEx?pane=right";
+                                                break;
+                                        case PAGE_TOPARCADES:
+                                                $location = $lang['Viewing_toparcades'];
+                                                $location_url = "index.$phpEx?pane=right";
+                                                break;
+                                        case PAGE_STATARCADES:
+                                                $location = $lang['watchingstats'];
+                                                $location_url = "index.$phpEx?pane=right";
+                                                break;
+                                        case PAGE_SCOREBOARD:
+                                                $location = $lang['watchingboard'];
+                                                $location_url = "index.$phpEx?pane=right";
+                                                break;
+/*****[END]********************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+modules/Forums/admin/admin_users.php
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+/*--ARCADE MOD--*/
+
+#
+#-----[ REPLACE WITH ]---------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+                                                $sql = "DELETE FROM " . SCORES_TABLE . " WHERE user_id = $user_id";
+
+                                                if ( !$db->sql_query($sql) )
+                                                {
+                                                                message_die(GENERAL_ERROR, 'Could not delete scores from table', '', __LINE__, __FILE__, $sql);
+                                                }
+
+                                                $sql = "SELECT * FROM " . GAMES_TABLE . " WHERE game_highuser = $user_id";
+
+                                                if( !($result = $db->sql_query($sql)) )
+                                                {
+                                                                message_die(GENERAL_ERROR, 'Could not read games table', '', __LINE__, __FILE__, $sql);
+                                                }
+
+                                                while ( $row_games = $db->sql_fetchrow($result) ) {
+                                                                $sql2 = "SELECT * FROM " . SCORES_TABLE . " WHERE game_id = " . $row_games['game_id'] . " ORDER BY score_game DESC, score_date ASC LIMIT 0,1";
+
+                                                                if( !($result2 = $db->sql_query($sql2)) )
+                                                                {
+                                                                                message_die(GENERAL_ERROR, 'Could not select scores', '', __LINE__, __FILE__, $sql2);
+                                                                }
+
+                                                                $game_highuser = 0 ;
+                                                                $game_highscore = 0 ;
+                                                                $game_highdate = 0 ;
+
+                                                                if ( $row_high = $db->sql_fetchrow($result2) )
+                                                                {
+                                                                                $game_highuser = $row_high['user_id'] ;
+                                                                                $game_highscore = $row_high['score_game'] ;
+                                                                                $game_highdate =  $row_high['score_date'] ;
+                                                                }
+
+                                                                $sql2 = "UPDATE " . GAMES_TABLE . " SET game_highuser = $game_highuser , game_highdate = $game_highdate , game_highscore = $game_highscore WHERE game_id = " . $row_games['game_id'];
+
+                                                                if ( !$db->sql_query($sql2) )
+                                                                {
+                                                                                message_die(GENERAL_ERROR, 'Could not update games table', '', __LINE__, __FILE__, $sql2);
+                                                                }
+
+                                                                $sql2 = "UPDATE " . COMMENTS_TABLE. " SET comments_value = '' WHERE game_id = " . $row_games['game_id'];
+                                                                if (!$db->sql_query($sql2))
+                                                                {
+                                                                                message_die(GENERAL_ERROR, 'Could not delete from comments table', '', __LINE__, __FILE__, $sql2);
+                                                                }
+                                                }
+/*****[END]********************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+ 
+#
+#-----[ OPEN ]-----------------------------------------
+#
+modules/Forums/language/lang_english/lang_main.php
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+/*--ARCADE MOD--*/
+
+#
+#-----[ REPLACE WITH ]---------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+$lang['lib_arcade'] = 'Arcade';
+$lang['statuser'] = 'User Stats';
+/*****[END]********************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+modules/Forums/viewonline.php
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+/*--ARCADE MOD--*/
+
+#
+#-----[ REPLACE WITH ]---------------------------------
+#
+/*****[BEGIN]******************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+                                case PAGE_GAME: 
+                                        $location = $lang['Playing_game']; 
+                                        $location_url = "arcade.$phpEx"; 
+                                        break; 
+                                case PAGE_ARCADES: 
+                                        $location = $lang['Viewing_arcades']; 
+                                        $location_url = "arcade.$phpEx"; 
+                                        break; 
+                                case PAGE_TOPARCADES: 
+                                        $location = $lang['Viewing_toparcades']; 
+                                        $location_url = "toparcade.$phpEx"; 
+                                        break; 
+                                case PAGE_STATARCADES: 
+                                        $location = $lang['watchingstats']; 
+                                        $location_url = "statarcade.$phpEx"; 
+                                        break; 
+                                case PAGE_SCOREBOARD: 
+                                        $location = $lang['watchingboard']; 
+                                        $location_url = "arcade.$phpEx"; 
+                                        break;
+/*****[END]********************************************
+ [ Mod:     Arcade                             v3.0.2 ]
+ ******************************************************/
+ 
+#
+#-----[ OPEN ]-----------------------------------------
+#
+themes/YOUR_THEME/forums/profile_view_body.tpl
+
+AND
+
+modules/Forums/templates/subSilver/profile_view_body.tpl
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+      <tr>
+        <td valign="top" align="right" nowrap="nowrap"><span class="gen">{L_INTERESTS}:</span></td>
+        <td><strong><span class="gen">{INTERESTS}</span></strong></td>
+      </tr>
+
+#
+#-----[ AFTER, ADD ]-----------------------------------
+#
+      <tr>
+        <td valign="top" align="right" nowrap="nowrap"><span class="gen">{L_ARCADE}:</span></td>
+        <td><strong><span class="gen">{URL_STATS}</span></strong></td>
+      </tr>
+
+#
+#-----[ SAVE/CLOSE/UPLOAD ALL FILES ]------------------------------------------
+#
+# EoM

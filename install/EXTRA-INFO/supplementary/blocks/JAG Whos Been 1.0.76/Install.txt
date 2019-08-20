@@ -1,0 +1,91 @@
+
+/* -------------------------------------------------------- for PHP-Nuke v7.6 v1.0.76  */
+/*                                                                                     */
+/*      ////////// //\\ \\\\\\\\\\       Created by Dashe at http://nsd.jagamarog.com  */
+/*             // //  \\ \\                                                            */
+/*            // //    \\ \\             Email Address: dashe@jagamarog.com            */
+/*           // /////\\\\\ \\   \\\\\                                                  */
+/*          // //        \\ \\      \\   For More Scripts Visit Our Site               */
+/*         // //          \\ \\\\\\\\\\                                                */
+/* /////////  a g a m a r o g . c o m   N u k e   S c r i p t   D e v e l o p m e n t  */
+/*                                                */
+/* Updated to work with PHP-Nuke 7.6 : BlueLion (admin@phpnuke-nederland.com)           */
+/*                                                                                     */     
+/* Original Who Is Where Developed at Surf 4 All [http://www.surf4all.com]             */ 
+/*                                                                                     */
+/* ----------------------------------------------------------------------------------- */
+
+/* INSTALLATION ---------------------------------------------------------------------- */
+
+************ PLEASE NOTE BACKUP YOUR FILES AND DATABASE BEFORE YOU REPLACE *************
+************   ANY FILES OR MODIFY YOUR DATABASE, YOU HAVE BEEN WARNED!!   *************
+
+1) Extract all the files from the downloaded zip file.
+
+2) Upload all the extracted files to there relivant locations within your site. The
+   following is a complete list of the files in the downloaded file:
+   
+   - JAG_Whos_Been-Install.php
+   - admin/case/case.JAG_Whos_Been.php
+   - admin/links/links.JAG_Whos_Been.php
+   - admin/modules/JAG_Whos_Been.php
+   - blocks/block-JAG_Whos_Been.php
+   - images/admin/whosbeen.png
+   - includes/custom_files/JAG_Whos_Been_Copy.php
+   - includes/custom_files/custom_head_JAG_Whos_Been.php
+   - language/JAG_Whos_Been/lang-english.php
+   - sql/jag_whos_been.sql ---------------------------------> NO NEED TO UPLOAD THIS !!!
+
+3) Run the Install file to setup the tables required for this block. The install file 
+   will also cehck the files are in there correct place and insert the relevant data
+   into the tables. To run the Install file  you must be loged in as an Admin, then
+   call it from your browser at:
+   
+   http://YOUR_SITE_ROOT/JAG_Whos_Been-Install.php
+   
+   Make sure you delete this file as well as the sql folder from your server once you are finished!
+   
+4) Open includes/custom_files/custom_head.php
+
+   Find:
+   //define_once("JAG_WHO", true);
+   //include_once("includes/custom_files/custom_head_JAG_Whos_Been.php");
+   
+   Delete the // before both lines
+
+   Save this file as custom_head.php and upload this file to includes/custom_files/
+   
+5) Log into your site as the Admin and go to the Admin -> Blocks Section. Select the block
+   from the combo box and add it to the left or right blocks.
+
+6) If you wish you can control the look of the block, ie Add/Remove different details, 
+   by clicking on the "JAG NSD Whos Been" link now available in the Admin section of 
+   PHP-Nuke. All features are active by default.
+
+
+/* HELP ------------------------------------------------------------------------------ */
+
+Should you run into a problem, you will find help for this block at 
+JAG NSD -> http://nsd.jagamarog.com in the Forums Section. Only thing i would ask is
+Search the Forum before posting, to avoide posting the same problems twice
+
+
+/* SUGGESTIONS ----------------------------------------------------------------------- */
+
+Please feel free to suggest any changes or extra features you would like to see in the 
+next release of the JAG Whos Been Block at JAG NSD -> http://nsd.jagamarog.com
+
+
+/* TO DO FOR NEXT RELEASE ------------------------------------------------------------ */
+
+In order to keep the block up to date and full of features if you do any modifications
+to the block if you could mail me them, it would be great to include them in the
+next release - full credit will be given to all moders.
+
+Enjoy the block, 
+
+Dashe, 
+Site Admin, JAG NSD
+http://nsd.jagamarog.comm
+
+/* EOF ------------------------------------------------------------------------------- */

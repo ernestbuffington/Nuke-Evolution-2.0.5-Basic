@@ -1,0 +1,44 @@
+/**
+ * 
+ * @version 1.0
+ * @copyright 16 September 2004
+ */
+/**
+ * 
+ * 
+ * Arcade Tweaks 1.0 RC2
+ * 
+ *         There was 2 "big" bugs in the RC1
+ *                 - links was "linked" to the root.. so didnt work on nuke system not
+ *                 installed in the root directory of the server.
+ *                 - For people that had the Comment Mod of JRSweet installed, Comments wasn't
+ *                  added and could cause an "error of authentification" when user tried to 
+ *                 submit comment.
+ *                     NB: Look the Tools menu , there is a little function to fix that.. :)
+ *     
+ *   - release candidate version 2
+ *   - Installation
+ *   - Upload html/* to your root directory
+ *   - Go to your Nuke Modules admin panel and activate Arcade Tweaks
+ *   - You should change default permission in Admin panel for "Administrator"
+ *     you can also set it as "invisible". (BTW , there is a Admin check so 
+ *        shouldnt be a problem)
+ * 
+ *      If you have already installed the Pre-release... Just overwrite yours files.
+ *   (NB: There is 2 mores little gif files in images)
+ * 
+ *   Author : Rica http://www.thehorde.be
+ *   Date: 13 September2004 
+ * 
+ *   Thanks to the original author of this arcade package and to the team from 
+ *   http://www.portedmods.com .
+ *                                   Phantomk, JRSweets ,TheSwede, barcrest
+ * 
+ * 
+ *     I cant stop to add stuff right now.... :( too much ideas for this module...
+ *  But i will wait for the V3.01 of the Arcade Mod before adding anything "heavy".
+ *  Please Feel free to contact me on http://www.portedmods.com or on 
+ *     http://www.thehorde.be for bugs, questions, and frengrish translation ;)
+ * 
+ * Dont worry about the file size... I love "comments" ... 
+ */ 

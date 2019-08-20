@@ -1,0 +1,31 @@
+Fancy Newsletter Installation:
+
+1. Simply upload the content within the html folder to your root directory
+2.
+
+#
+#-----[ OPEN ]-----------------------------------------
+#
+
+admin/language/custom/lang-english.php
+
+#
+#-----[ FIND ]-----------------------------------------
+#
+/*--FNL--*/
+
+#
+#-----[ REPLACE WITH ]---------------------------------
+#
+
+/*****[BEGIN]******************************************
+ [ Modules:  Fancy NewsLetter                  v2.5.0 ]
+ ******************************************************/
+define("_FANCYNL","Fancy Newsletter");
+/*****[END]********************************************
+ [ Modules:  Fancy NewsLetter                  v2.5.0 ]
+ ******************************************************/
+
+3. Execute the fnl_2_5.sql (located in the sql folder) in phpMyAdmin
+4. CHMOD the folder /archives to 757 (If your host is running PHP as CGI, set it to 755 and make sure proper pemissions is set in config.php)
+5. Go to your Nuke-Evolution Modules Administration and activate the module

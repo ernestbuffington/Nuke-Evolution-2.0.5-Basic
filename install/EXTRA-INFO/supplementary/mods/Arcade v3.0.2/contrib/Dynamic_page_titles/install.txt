@@ -1,0 +1,23 @@
+############################################################################
+##           DYNAMIC Page Titles (Forums and Arcade)
+############################################################################
+## MOD Author: http://www.portedmods.com/modules.php?name=Forums&file=kb&mode=article&k=36
+## 
+## MOD Description: 
+## Adds dynamic page title to your forums and arcade.
+## 
+############################################################################
+##           Author: JRSweets
+##           Email:  JRSweets@gmail.com
+##           Site:   http://jeffrusso.net
+############################################################################
+
+If anyone is using this... http://www.portedmods.com/modules.php?name=Forums&file=kb&mode=article&k=36
+
+I have made is so that when going to the arcade and when playing a game its added to the page title. 
+When viewing the arcade it adds 'Arcade' and when playing a game it adds 'Arcade | Game Name' 
+
+It does this for all the arcade pages, including the arcade search and comments. 
+
+Replace your modules/Forums/nukebb.php with this one by simply uploading the file while keep the folder
+structure intact.

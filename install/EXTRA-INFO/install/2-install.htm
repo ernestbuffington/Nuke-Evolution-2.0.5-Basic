@@ -1,0 +1,203 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>Installing PHP-Nuke Evolution</title>
+<div class="Section1">
+	<p class="MsoNormal" align="center" style="text-align:center"><b>
+	<span style="font-size:20.0pt">Installing Nuke-Evolution<o:p></o:p></span></b></p>
+	<p class="MsoNormal"><o:p>&nbsp;</o:p>These steps are condensed and to the point.
+	If you require more in depth help on any of these steps please look in the help/getting
+	started folder for more information.</p>
+	<p class="MsoNormal"><o:p>&nbsp;</o:p>Before you begin, you should check to
+	see if there have been any official fixes for this release.&nbsp; They will
+	be posted here:</p>
+	<p class="MsoNormal">
+	<a href="http://www.nuke-evolution.com/modules.php?name=Forums&file=viewforum&f=40">
+	http://www.nuke-evolution.com/modules.php?name=Forums&file=viewforum&f=40</a></p>
+	<p class="MsoNormal"><o:p>&nbsp;</o:p><b><span style="color:green">Step 1 –
+	Database Setup<o:p></o:p></span></b></p>
+	<ol style="margin-top:0pt" start="1" type="1">
+		<li class="MsoNormal">Create your database</li>
+		<li class="MsoNormal">Create a user for the Evolution database</li>
+		<li class="MsoNormal">Give that user all rights to the Evolution database</li>
+	</ol>
+	<p class="MsoNormal"><b><span style="color:red">The following steps are to be
+	completed only if you would like to manually install Nuke-Evolution</span></b>.
+	To make the install process easier we have included an installer which will
+	do all these steps for you.</p>
+	<p class="MsoNormal">To run the <span class="GramE">installer go</span> to
+	<a href="http://www.yoursite.xxx/install.php">http://www.yoursite.xxx/install.php</a>.&nbsp;
+	If you run the installer and you receive the safe mode error, or if you get
+	to the CHMOD screen saying that it fails to CHMOD the <span class="SpellE">config.php</span>,
+	you must follow the directions below.</p>
+	<p class="MsoNormal">If you have run the installer and it completed successfully,
+	then you have completed the installation and <b>DO NOT NEED TO CONTINUE</b>.</p>
+	<p class="MsoNormal"><b><span style="color:green">Step 2 – Change
+	<span class="SpellE">config.php</span><o:p></o:p></span></b></p>
+	<ol style="margin-top:0pt" start="1" type="1">
+		<li class="MsoNormal">In the html folder you will find
+		<span class="SpellE">config.php</span>.&nbsp; Open this file using any text
+		editor (notepad or <span class="SpellE">wordpad</span> are two examples)
+		or PHP editor you might have.</li>
+		<li class="MsoNormal"><span style="color:blue">Find</span>
+		<span style="font-size:10.0pt;font-family:
+     &quot;Courier New&quot;">$<span class="SpellE">dbuname</span> = &#39;xxx_evo&#39;;
+		and <span style="color:#FF6600">change</span> xxx_evo to match your database
+		username.</span></li>
+		<li class="MsoNormal"><span style="color:blue">Find</span>
+		<span style="font-size:10.0pt;font-family:
+     &quot;Courier New&quot;">$<span class="SpellE">dbpass</span> = &#39;&#39;; and between
+		the two &#39;&#39; put your password.</span></li>
+		<li class="MsoNormal"><span style="color:blue">Find</span>
+		<span style="font-size:10.0pt;font-family:
+     &quot;Courier New&quot;">$<span class="SpellE">dbname</span> = &#39;xxx_evo&#39;; and
+		<span style="color:#FF6600">change</span> xxx_evo to match your database
+		name.</span></li>
+	</ol>
+	<p class="MsoNormal"><b><span style="color:green">Step 3 – Upload<o:p></o:p></span></b></p>
+	<ol style="margin-top:0pt" start="1" type="1">
+		<li class="MsoNormal">Upload all the files inside the html folder to the
+		root of your website.</li>
+	</ol>
+	<p class="MsoNormal"><b><span style="color:green">Step 4 – Database install<o:p></o:p></span></b></p>
+	<ol style="margin-top:0pt" start="1" type="1">
+		<li class="MsoNormal">In your database, run the <span class="SpellE">install.sql</span>
+		located in the html/install folder.</li>
+	</ol>
+	<p><b><span style="color:green">Step 5 – CHMOD/Permissions</span></b></p>
+	<table border="0" width="50%" id="table1">
+		<tr>
+			<td align="right" width="28">1.</td>
+			<td width="387">.<span class="SpellE">htaccess</span> </td>
+			<td>[644 or 666] -&gt; see <b><span style="color:green">Step 6</span></b></td>
+		</tr>
+		<tr>
+			<td align="right" width="28">2.</td>
+			<td width="387">.<span class="SpellE">staccess</span></td>
+			<td>[644 or 666] -&gt; see <b><span style="color:green">Step 6</span></b></td>
+		</tr>
+		<tr>
+			<td align="right" width="28">3.</td>
+			<td width="387">&nbsp;ultramode.txt </td>
+			<td>[666 or 777]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">4.</td>
+			<td width="387">&nbsp;includes/log/<span class="SpellE">error.log</span>&nbsp;
+			</td>
+			<td>[757]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">5.</td>
+			<td width="387">&nbsp;includes/log/<span class="SpellE">admin.log</span>
+			</td>
+			<td>[757]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">6.</td>
+			<td width="387">&nbsp;modules/Forums/cache</td>
+			<td>[757]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">7.</td>
+			<td width="387">&nbsp;modules/Forums/files </td>
+			<td>[757]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">8.</td>
+			<td width="387">&nbsp;modules/Forums/files/thumbs</td>
+			<td>[757]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">9.</td>
+			<td width="387">&nbsp;modules/Forums/images/avatars</td>
+			<td>[757]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">10.</td>
+			<td width="387">&nbsp;modules/Forums/language/<span class="SpellE">lang_english/lang_bbcode.php</span></td>
+			<td>[666]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">11.</td>
+			<td width="387">modules/Forums/language/<span class="SpellE">lang_english/lang_faq.php</span></td>
+			<td>[666]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">12.</td>
+			<td width="387">modules/Forums/language/<span class="SpellE">lang_english/lang_faq_attach.php</span></td>
+			<td>[666]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">13.</td>
+			<td width="387">modules/Forums/language/<span class="SpellE">lang_english/lang_rules.php</span></td>
+			<td>[666]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">14.</td>
+			<td width="387">modules/Forums/modules</td>
+			<td>[757]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">15.</td>
+			<td width="387">modules/Forums/modules/cache</td>
+			<td>[757]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">16.</td>
+			<td width="387">modules/Forums/modules/cache/explain</td>
+			<td>[757]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">17.</td>
+			<td width="387">modules/Supporters/images/supporters </td>
+			<td>[757]</td>
+		</tr>
+		<tr>
+			<td align="right" width="28">18.</td>
+			<td width="387">includes/cache</td>
+			<td>[757]</td>
+		</tr>
+	</table>
+	<p class="MsoNormal"><b><span style="color:green">Step 6 – .<span class="SpellE">htaccess</span>
+	&amp; .<span class="SpellE">staccess</span> files</span></b></p>
+	<p class="MsoNormal"><b><span style="color:green">.<span class="SpellE">htaccess</span>
+	file:<o:p></o:p></span></b></p>
+	<p class="MsoNormal">You will find a file called <span class="SpellE">evo.htaccess</span>
+	in the html folder. If you do not have any .<span class="SpellE">htaccess</span>
+	on your web server, you may simply rename the <span class="SpellE">evo.htaccess</span>
+	file to .<span class="SpellE">htaccess</span>. If you have already an existing
+	.<span class="SpellE">htaccess</span> file on your web server, you may want
+	to merge the content together in order to keep all settings intact.</p>
+	<p class="MsoNormal">If you enable the feature “Write to
+	<span class="SpellE">htaccess</span>” in “<span class="SpellE">NukeSentinel</span>
+	Configuration”, you have to CHMOD .<span class="SpellE">htaccess</span> to 666
+	otherwise you can leave it as is. Do not forget to alter the “<span class="SpellE">AuthUserFile</span>”
+	in the .<span class="SpellE">htaccess</span> to match the full path to your
+	root directory. Make sure that there is at least 1 line break at the end. If
+	you do not know what the full path to your root directory is, you can take a
+	look in “<span class="SpellE">NukeSentinel</span> Administration” beside the
+	“<span class="SpellE">htaccess</span> Path:” option.</p>
+	<p class="MsoNormal"><b><span style="color:green">.<span class="SpellE">staccess</span>
+	file:</span></b></p>
+	<p class="MsoNormal">If you are planning to use <span class="SpellE">NukeSentinel’s</span>
+	<span class="SpellE">CGIAuth</span> or <span class="SpellE">HTTPAuth</span>,
+	you can rename the <span class="SpellE">evo.staccess</span> to .<span class="SpellE">staccess</span>
+	and add your admin(s) within this file. Also CHMOD it to 666 and add the full
+	path in “<span class="SpellE">NukeSentinel</span> Administration” beside the
+	“<span class="SpellE">staccess</span> Path:” option. Make sure that you have
+	at least 1 line break at the end. If you do not use <span class="SpellE">NukeSentinel’s</span>
+	<span class="SpellE">CGIAuth</span> or <span class="SpellE">HTTPAuth</span>,
+	you can delete this file now.</p>
+</div>
+<body>
+
+</body>
+</head>
+
+</html>
+
+<head>
+</head>
+
